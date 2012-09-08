@@ -1,0 +1,47 @@
+/*
+ *= require jquery.ui.all
+ *= require jquery-ui/ui-lightness
+ */
+
+@import 'bootstrap/font';
+@import 'bootstrap/colors';
+@import 'bootstrap/grid';
+@import 'bootstrap/layers';
+@import 'bootstrap';
+body {
+  padding-top: 60px;
+}
+@import 'bootstrap-responsive';
+@import 'font-awesome';
+
+.required {
+    font-weight: bold;
+}
+.required:before {
+    color: $red;
+    content: '(*Required) ';
+    display: inline;
+}
+.row-fluid [class*='span'].pull-right, .row [class*='span'].pull-right{
+  float: right;
+}
+.row>[class*='span']:first-child {
+  margin-left: 0;
+}
+
+
+.clear-right {
+  clear: right;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-all, .clear-both {
+  clear: both;
+}
+
+form.button_to, form.button_to div {
+  display: inline;
+}

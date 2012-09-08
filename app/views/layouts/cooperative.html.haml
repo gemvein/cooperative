@@ -1,0 +1,40 @@
+!!!
+%html
+  %head
+    %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html;charset=utf-8"}
+    =csrf_meta_tag
+
+    %title= page_title
+    -if @meta
+      -@meta.each do |key|
+        %meta{:name=>key[0], :content=>key[1]}
+
+    - if @rss_title && @rss_url
+      = auto_discovery_link_tag(:rss, @rss_url, {:title => @rss_title})
+      
+    = render "layouts/stylesheets"      
+    
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container.clearfix
+          .row
+            = render "layouts/navbar"
+            
+    .container
+      .row
+        = render "layouts/hero_unit"
+      .row
+        .span9
+          %h1=container_title
+          = render "layouts/messages"
+          = yield
+        .span3.pull-right
+          = render "layouts/sidebar"
+              
+      .row
+        .span12
+          = render "layouts/footer"
+
+    = render "layouts/javascripts"
