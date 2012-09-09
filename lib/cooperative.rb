@@ -9,6 +9,7 @@ module Cooperative
   require 'cooperative/version'
   
   require 'haml'
+  require 'haml-rails'
   require 'sass-rails'
   require 'bootstrap-sass'
   require 'font-awesome-sass-rails'
