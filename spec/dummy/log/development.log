@@ -9797,3 +9797,202 @@ Processing by PagesController#index as HTML
   Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (1.0ms)
   Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (2.3ms)
 Completed 200 OK in 84ms (Views: 83.5ms | ActiveRecord: 0.1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"NIiRzU8Mbg+OWxhWA8/KQHfxYC+zMNfUWbQ7DqphDPY=", "utf8"=>"✓", "user"=>{"email"=>"bogus@example.com", "remember_me"=>"0", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bogus@example.com' LIMIT 1[0m
+Completed 401 Unauthorized in 1ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"NIiRzU8Mbg+OWxhWA8/KQHfxYC+zMNfUWbQ7DqphDPY=", "utf8"=>"✓", "user"=>{"email"=>"bogus@example.com", "remember_me"=>"0", "password"=>"[FILTERED]"}}
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/devise/shared/_links.haml (3.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/devise/sessions/new.html.haml within layouts/cooperative (61.6ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (17.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (0.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (1.9ms)
+Completed 200 OK in 152ms (Views: 87.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 08 19:52:43 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin" for 127.0.0.1 at Sat Sep 08 19:53:35 -0600 2012
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/users/sign_in/" for 127.0.0.1 at Sat Sep 08 19:53:35 -0600 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/devise/shared/_links.haml (3.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (204.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (2.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (1.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (52.5ms)
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (7.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (60.0ms)
+Completed 200 OK in 413ms (Views: 354.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in/" for 127.0.0.1 at Sat Sep 08 19:53:36 -0600 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/devise/shared/_links.haml (0.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (16.6ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (1.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (2.2ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sat Sep 08 19:53:36 -0600 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Q+UsB9R1u7kkXGDmVZ4gUYmpuBtFbaHF81cNl6G8IVE=", "commit"=>"Sign In", "utf8"=>"✓", "user"=>{"password"=>"[FILTERED]", "email"=>"bogus@example.com", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bogus@example.com' LIMIT 1[0m
+Completed 401 Unauthorized in 6ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"Q+UsB9R1u7kkXGDmVZ4gUYmpuBtFbaHF81cNl6G8IVE=", "commit"=>"Sign In", "utf8"=>"✓", "user"=>{"password"=>"[FILTERED]", "email"=>"bogus@example.com", "remember_me"=>"0"}}
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/devise/shared/_links.haml (0.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (15.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (0.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (1.8ms)
+Completed 200 OK in 94ms (Views: 29.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Sep 08 19:53:36 -0600 2012
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (16.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (1.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (48.6ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (2.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (2.6ms)
+Completed 200 OK in 142ms (Views: 90.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Sep 08 19:53:36 -0600 2012
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" [0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (17.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (50.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pages".* FROM "pages" 
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (0.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (2.1ms)
+Completed 200 OK in 84ms (Views: 83.6ms | ActiveRecord: 0.1ms)
