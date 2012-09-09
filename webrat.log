@@ -15,3 +15,5 @@ REQUESTING PAGE: GET /users/sign_in/ with {} and HTTP headers {}
 REQUESTING PAGE: POST /users/sign_in with {"authenticity_token"=>"+pXJmYJH+GAJjhadejl4tf7XXLlfKms9C9ZiURZ/tuM=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "email"=>"bogus@example.com", "password"=>"password"}, "commit"=>"Sign In"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in/"}
 REQUESTING PAGE: GET /users/sign_in/ with {} and HTTP headers {}
 REQUESTING PAGE: POST /users/sign_in with {"authenticity_token"=>"Q+UsB9R1u7kkXGDmVZ4gUYmpuBtFbaHF81cNl6G8IVE=", "commit"=>"Sign In", "utf8"=>"✓", "user"=>{"password"=>"password", "email"=>"bogus@example.com", "remember_me"=>"0"}} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in/"}
+REQUESTING PAGE: GET /users/sign_in/ with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"user"=>{"remember_me"=>"0", "password"=>"password", "email"=>"bogus@example.com"}, "commit"=>"Sign In", "authenticity_token"=>"U4rHXjYwi0LLCgL+YeEzt9k2rDVq0tsjCcWpKHrAug4=", "utf8"=>"✓"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in/"}
