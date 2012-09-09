@@ -11,27 +11,24 @@ module Cooperative
     
     # all public methods in here will be run in order
     def add_initializer
-      output "To start with, you'll need an initializer.  This is where you put your configuration options."
+      output "To start with, you'll need an initializer.  This is where you put your configuration options.", :magenta
       template "initializer.rb", "config/initializers/cooperative.rb"
     end
     
     def install_rails_admin
-      output "Next we're installing rails admin, because it's nifty."
+      output "Next we're installing rails admin, because it's nifty.", :magenta
       generate("rails_admin:install")
+      output "Only we've got some special settings for rails admin", :magenta
+      gsub_file "config/initializers/rails_admin.rb", "config.main_app_name = ['Dummy', 'Admin']", "config.main_app_name = [Cooperative.configuration.application_name, 'Admin']"
     end
     
     def install_ckeditor
-      output "Ckeditor provides WYSIWYG editing in rails admin."
+      output "Ckeditor provides WYSIWYG editing in rails admin.", :magenta
       generate("ckeditor:install", "--orm=active_record --backend=paperclip")
     end
     
-    def add_cancan_ability_model
-      output "You can control who can do what by editing app/models/ability.rb"
-      template "ability.rb", "app/models/ability.rb"
-    end
-    
     def add_route
-      output "Adding Cooperative to your routes.rb file"
+      output "Adding Cooperative to your routes.rb file", :magenta
       gsub_file "config/routes.rb", /mount Cooperative::Engine => \'\/.*\', :as => \'cooperative\'/, ''
       route("mount Cooperative::Engine => '/', :as => 'cooperative'")
     end
@@ -42,7 +39,7 @@ module Cooperative
         if answer =~ /^y/i
           remove_file("public/index.html")
         else
-          output "You will need to delete it manually."
+          output "You will need to delete it manually.", :magenta
         end
       end
     end
@@ -50,6 +47,12 @@ module Cooperative
     def add_migrations
       unless ActiveRecord::Base.connection.table_exists? 'pages'
         migration_template 'migrate/create_pages_table.rb', 'db/migrate/create_pages_table.rb' rescue output $!.message
+      end
+      unless ActiveRecord::Base.connection.table_exists? 'roles'
+        migration_template 'migrate/create_roles_table.rb', 'db/migrate/create_roles_table.rb' rescue output $!.message
+      end
+      unless ActiveRecord::Base.connection.table_exists? 'roles_users'
+        migration_template 'migrate/create_roles_users_table.rb', 'db/migrate/create_roles_users_table.rb' rescue output $!.message
       end
     end
     

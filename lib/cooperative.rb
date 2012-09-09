@@ -2,6 +2,11 @@ module Cooperative
   require 'rails'
   require 'rails-i18n'
   
+  require 'rspec'
+  require 'webrat'
+  require 'factory_girl_rails'
+  require 'database_cleaner'
+  
   require 'cooperative/configuration'
   require 'cooperative/railtie'
   require 'cooperative/engine'
@@ -23,6 +28,8 @@ module Cooperative
   
   require 'cancan'
   require 'devise'
+  require 'authorization'
+  
   require 'fastercsv'
   require 'paperclip'
   require 'ckeditor'

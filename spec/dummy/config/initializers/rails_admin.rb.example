@@ -1,4 +1,4 @@
-# RailsAdmin config file. Generated on September 08, 2012 16:11
+# RailsAdmin config file. Generated on September 09, 2012 00:26
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
@@ -31,10 +31,10 @@ RailsAdmin.config do |config|
 
   #  ==> Included models
   # Add all excluded models here:
-  # config.excluded_models = [Ckeditor::Asset, Ckeditor::AttachmentFile, Ckeditor::Picture, Page, User]
+  # config.excluded_models = [Ckeditor::Asset, Ckeditor::AttachmentFile, Ckeditor::Picture, Page, Role, User]
 
   # Add models here if you want to go 'whitelist mode':
-  # config.included_models = [Ckeditor::Asset, Ckeditor::AttachmentFile, Ckeditor::Picture, Page, User]
+  # config.included_models = [Ckeditor::Asset, Ckeditor::AttachmentFile, Ckeditor::Picture, Page, Role, User]
 
   # Application wide tried label methods for models' instances
   # config.label_methods << :description # Default is [:name, :title]
@@ -166,9 +166,27 @@ RailsAdmin.config do |config|
   #   create do; end
   #   update do; end
   # end
+  # config.model Role do
+  #   # Found associations:
+  #     configure :authorizable, :polymorphic_association 
+  #     configure :users, :has_and_belongs_to_many_association   #   # Found columns:
+  #     configure :id, :integer 
+  #     configure :name, :string 
+  #     configure :authorizable_type, :string         # Hidden 
+  #     configure :authorizable_id, :integer         # Hidden 
+  #     configure :created_at, :datetime 
+  #     configure :updated_at, :datetime   #   # Sections:
+  #   list do; end
+  #   export do; end
+  #   show do; end
+  #   edit do; end
+  #   create do; end
+  #   update do; end
+  # end
   # config.model User do
   #   # Found associations:
-  #   # Found columns:
+  #     configure :accepted_roles, :has_many_association 
+  #     configure :roles, :has_and_belongs_to_many_association   #   # Found columns:
   #     configure :id, :integer 
   #     configure :email, :string 
   #     configure :password, :password         # Hidden 

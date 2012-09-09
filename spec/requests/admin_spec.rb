@@ -3,34 +3,84 @@ require 'spec_helper'
 describe "Admin" do
 
   it "requires login" do
-    get '/admin'
-    response.should redirect_to '/users/sign_in'
+    get rails_admin.dashboard_path
+    response.should redirect_to new_user_session_path
   end
   
-  it "has a login page that looks like the rest of the site" do
-    get '/users/sign_in/'
-    assert_select ".navbar", 1
-    assert_select ".container" do
-      assert_select "h1", :sign_in.l
-      assert_select ".form .control-group .controls #user_email", 1
-      assert_select ".form .control-group .controls #user_password", 1
-    end
-  end
-  
-  it "requires that the user be a real user" do
-    visit '/users/sign_in/'
-    fill_in "Email", :with => "bogus@example.com"
-    fill_in "Password", :with => "password"
+  it "does not provide access to dashboard to non-admin users" do
+    user = FactoryGirl.create(:user)
+    user.save
+    # Note that the user is not an admin at this point.
+    
+    visit new_user_session_path
+    
+    fill_in "Email", :with => user.email
+    fill_in "Password", :with => user.password
     click_button :sign_in.l
-    current_url.should match '/users/sign_in/?'
+    
+    visit rails_admin.dashboard_path
+    current_url.should == cooperative.home_url
     assert_select '.alert-warning', 1
   end
   
-  pending "does not provide access to dashboard when cancan says it can't" do
-    visit '/users/sign_in/'
+  it "provides access to dashboard to admin users" do
+    user = FactoryGirl.create(:user)
+    user.save
+    user.is_admin
+    # Note that the user is now an admin
+    
+    visit new_user_session_path
+    fill_in "Email", :with => user.email
+    fill_in "Password", :with => user.password
+    click_button :sign_in.l
+    
+    visit rails_admin.dashboard_path
+    current_url.should == rails_admin.dashboard_path
+    assert_select '.navbar', 1
   end
   
-  pending "provides access to pages"
-  pending "provides access to users"
-  pending "uses base configuration from cooperative"
+  it "provides access to pages" do
+    user = FactoryGirl.create(:user)
+    user.save
+    user.is_admin
+    # Note that the user is now an admin
+    
+    visit new_user_session_path
+    fill_in "Email", :with => user.email
+    fill_in "Password", :with => user.password
+    click_button :sign_in.l
+    
+    visit rails_admin.dashboard_path
+    click_link "Pages"
+  end
+  
+  it "provides access to users" do
+    user = FactoryGirl.create(:user)
+    user.save
+    user.is_admin
+    # Note that the user is now an admin
+    
+    visit new_user_session_path
+    fill_in "Email", :with => user.email
+    fill_in "Password", :with => user.password
+    click_button :sign_in.l
+    
+    visit rails_admin.dashboard_path
+    click_link "Users"
+  end
+  
+  it "uses base configuration from cooperative" do
+    user = FactoryGirl.create(:user)
+    user.save
+    user.is_admin
+    # Note that the user is now an admin
+    
+    visit new_user_session_path
+    fill_in "Email", :with => user.email
+    fill_in "Password", :with => user.password
+    click_button :sign_in.l
+    
+    visit rails_admin.dashboard_path
+    assert_select '.brand', /^#{Cooperative.configuration.application_name}/
+  end
 end
