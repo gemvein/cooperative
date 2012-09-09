@@ -1,0 +1,15 @@
+# Logfile created on Sat Sep 08 18:54:59 -0600 2012 by logger.rb/1.2.6
+REQUESTING PAGE: GET /users/sign_in/ with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"user"=>{"remember_me"=>"0", "email"=>"bogus@example.com", "password"=>"password"}, "commit"=>"Sign In", "authenticity_token"=>"xVho5vypn3RaB5WbvdlAEDuUyhxDUxep0CE02TeVEcA=", "utf8"=>"✓"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in/"}
+REQUESTING PAGE: GET /users/sign_in/ with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"commit"=>"Sign In", "utf8"=>"✓", "user"=>{"password"=>"password", "remember_me"=>"0", "email"=>"bogus@example.com"}, "authenticity_token"=>"ftvkfRu5gZ7gYwXyyya/mn5qg9uiIfRV3L6yafAR2jw="} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in/"}
+REQUESTING PAGE: GET /users/sign_in/ with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"user"=>{"password"=>"password", "remember_me"=>"0", "email"=>"bogus@example.com"}, "commit"=>"Sign In", "authenticity_token"=>"mikcrfcBw8UhdGU9LjJ6f6FkJjmFEa752DqZZxrqPsA=", "utf8"=>"✓"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in/"}
+REQUESTING PAGE: GET /users/sign_in/ with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"commit"=>"Sign In", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"password", "email"=>"bogus@example.com"}, "authenticity_token"=>"bveZ1UXjjJN/m5Es8OHASEJbX9FX7Ab1napXBP/LX/0="} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in/"}
+REQUESTING PAGE: GET /users/sign_in/ with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"user"=>{"remember_me"=>"0", "password"=>"password", "email"=>"bogus@example.com"}, "authenticity_token"=>"sI3FxYWMj66EM2qSfMfXVs1b7rZwiXwTGP3RxRjvbCg=", "commit"=>"Sign In", "utf8"=>"✓"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in/"}
+REQUESTING PAGE: GET /users/sign_in/ with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"user"=>{"remember_me"=>"0", "password"=>"password", "email"=>"bogus@example.com"}, "commit"=>"Sign In", "authenticity_token"=>"/gsHsFcj+q1FPB9/37AnrVOWsZ3fvN4gyeVxFyfkdqM=", "utf8"=>"✓"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in/"}
+REQUESTING PAGE: GET /users/sign_in/ with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"authenticity_token"=>"+pXJmYJH+GAJjhadejl4tf7XXLlfKms9C9ZiURZ/tuM=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "email"=>"bogus@example.com", "password"=>"password"}, "commit"=>"Sign In"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in/"}
