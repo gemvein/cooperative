@@ -9,7 +9,6 @@ describe "Admin" do
   
   it "does not provide access to dashboard to non-admin users" do
     user = FactoryGirl.create(:user)
-    user.save
     # Note that the user is not an admin at this point.
     
     visit new_user_session_path
@@ -25,7 +24,6 @@ describe "Admin" do
   
   it "provides access to dashboard to admin users" do
     user = FactoryGirl.create(:user)
-    user.save
     user.is_admin
     # Note that the user is now an admin
     
@@ -41,7 +39,6 @@ describe "Admin" do
   
   it "provides access to pages" do
     user = FactoryGirl.create(:user)
-    user.save
     user.is_admin
     # Note that the user is now an admin
     
@@ -56,7 +53,6 @@ describe "Admin" do
   
   it "provides access to users" do
     user = FactoryGirl.create(:user)
-    user.save
     user.is_admin
     # Note that the user is now an admin
     
@@ -71,7 +67,6 @@ describe "Admin" do
   
   it "uses base configuration from cooperative" do
     user = FactoryGirl.create(:user)
-    user.save
     user.is_admin
     # Note that the user is now an admin
     
