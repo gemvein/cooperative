@@ -1,33 +1,56 @@
 require 'spec_helper'
+require 'login_helper'
+
 
 describe "Users" do
+  include_context "login request"
+
+  it "has a login link" do
+    user = FactoryGirl.create(:user)
+    
+    visit cooperative.home_path
+    click_link :sign_in.l
+    page.should have_selector '#user_email'
+    page.should have_selector '#user_password'
+  end
+  
+  it "has a registration link" do
+    user = FactoryGirl.create(:user)
+    
+    visit cooperative.home_path
+    click_link :sign_up.l
+    page.should have_selector '#user_email'
+    page.should have_selector '#user_password'
+    page.should have_selector '#user_password_confirmation'
+  end
+  
   it "has a login page that looks like the rest of the site" do
-    get new_user_session_path
-    assert_select ".navbar", 1
-    assert_select ".container" do
-      assert_select "h1", :sign_in.l
-      assert_select ".form .control-group .controls #user_email", 1
-      assert_select ".form .control-group .controls #user_password", 1
+    visit new_user_session_path
+    
+    page.should have_selector ".navbar", :count => 1
+    page.should have_selector ".container" do
+      page.should have_selector "h1", :sign_in.l
+      page.should have_selector ".form .control-group .controls #user_email", :count => 1
+      page.should have_selector ".form .control-group .controls #user_password", :count => 1
     end
   end
   
   it "requires that the user be a real user" do
-    visit new_user_session_path
-    fill_in "Email", :with => "bogus@example.com"
-    fill_in "Password", :with => "not-the-password"
-    click_button :sign_in.l
+    user = FactoryGirl.build(:user)
+    # Note that we didn't save the user
+    sign_in user
     current_url.should match '/users/sign_in/?'
-    assert_select '.alert-warning', 1
+    page.should have_selector '.alert-warning', :count => 1
   end
   
   it "has a signup page that looks like the rest of the site" do
-    get new_user_registration_path
-    assert_select ".navbar", 1
-    assert_select ".container" do
-      assert_select "h1", :sign_up.l
-      assert_select ".form .control-group .controls #user_email", 1
-      assert_select ".form .control-group .controls #user_password", 1
-      assert_select ".form .control-group .controls #user_password_confirmation", 1
+    visit new_user_registration_path
+    page.should have_selector ".navbar", :count => 1
+    page.should have_selector ".container" do
+      page.should have_selector "h1", :sign_up.l
+      page.should have_selector ".form .control-group .controls #user_email", :count => 1
+      page.should have_selector ".form .control-group .controls #user_password", :count => 1
+      page.should have_selector ".form .control-group .controls #user_password_confirmation", :count => 1
     end
   end
   
@@ -36,9 +59,9 @@ describe "Users" do
     count = User.count
     
     visit new_user_registration_path
-    fill_in "Email", :with => user.email
-    fill_in "Password", :with => user.password
-    fill_in "Password Confirmation", :with => user.password
+    fill_in "user_email", :with => user.email
+    fill_in "user_password", :with => user.password
+    fill_in "user_password_confirmation", :with => user.password
     click_button :sign_up.l
     
     User.count.should be count + 1
@@ -46,14 +69,17 @@ describe "Users" do
   
   it "provides access to real users" do
     user = FactoryGirl.create(:user)
+    sign_in user
     
-    visit new_user_session_path
-    fill_in "Email", :with => user.email
-    fill_in "Password", :with => user.password
-    click_button :sign_in.l
-    
-    assert_select '.alert-info', /Signed in successfully/
+    page.should have_selector '.alert-info', :text => /Signed in successfully/
     
   end
   
+  it "has a logout link" do
+    user = FactoryGirl.create(:user)
+    sign_in user
+    
+    click_link :sign_out.l
+    page.should have_selector '.alert-info', :text => /Signed out successfully/
+  end    
 end

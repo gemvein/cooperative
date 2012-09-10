@@ -1,6 +1,8 @@
 require 'spec_helper'
+require 'login_helper'
 
 describe "Admin" do
+  include_context "login request"
 
   it "requires login" do
     get rails_admin.dashboard_path
@@ -11,15 +13,11 @@ describe "Admin" do
     user = FactoryGirl.create(:user)
     # Note that the user is not an admin at this point.
     
-    visit new_user_session_path
+    sign_in user
     
-    fill_in "Email", :with => user.email
-    fill_in "Password", :with => user.password
-    click_button :sign_in.l
-    
-    visit rails_admin.dashboard_path
+    visit rails_admin.dashboard_url
     current_url.should == cooperative.home_url
-    assert_select '.alert-warning', 1
+    page.should have_selector '.alert-warning', :count => 1
   end
   
   it "provides access to dashboard to admin users" do
@@ -27,25 +25,16 @@ describe "Admin" do
     user.is_admin
     # Note that the user is now an admin
     
-    visit new_user_session_path
-    fill_in "Email", :with => user.email
-    fill_in "Password", :with => user.password
-    click_button :sign_in.l
+    sign_in user
     
     visit rails_admin.dashboard_path
-    current_url.should == rails_admin.dashboard_path
-    assert_select '.navbar', 1
+    current_url.should == rails_admin.dashboard_url
+    page.should have_selector '.navbar', :count => 1
   end
   
   it "provides access to pages" do
     user = FactoryGirl.create(:user)
-    user.is_admin
-    # Note that the user is now an admin
-    
-    visit new_user_session_path
-    fill_in "Email", :with => user.email
-    fill_in "Password", :with => user.password
-    click_button :sign_in.l
+    sign_in_as_admin user
     
     visit rails_admin.dashboard_path
     click_link "Pages"
@@ -53,13 +42,7 @@ describe "Admin" do
   
   it "provides access to users" do
     user = FactoryGirl.create(:user)
-    user.is_admin
-    # Note that the user is now an admin
-    
-    visit new_user_session_path
-    fill_in "Email", :with => user.email
-    fill_in "Password", :with => user.password
-    click_button :sign_in.l
+    sign_in_as_admin user
     
     visit rails_admin.dashboard_path
     click_link "Users"
@@ -67,15 +50,9 @@ describe "Admin" do
   
   it "uses base configuration from cooperative" do
     user = FactoryGirl.create(:user)
-    user.is_admin
-    # Note that the user is now an admin
-    
-    visit new_user_session_path
-    fill_in "Email", :with => user.email
-    fill_in "Password", :with => user.password
-    click_button :sign_in.l
+    sign_in_as_admin user
     
     visit rails_admin.dashboard_path
-    assert_select '.brand', /^#{Cooperative.configuration.application_name}/
+    page.should have_selector '.brand', :text => /^#{Cooperative.configuration.application_name}/
   end
 end

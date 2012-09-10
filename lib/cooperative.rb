@@ -3,7 +3,7 @@ module Cooperative
   require 'rails-i18n'
   
   require 'rspec'
-  require 'webrat'
+  require 'capybara'
   require 'factory_girl_rails'
   require 'database_cleaner'
   
