@@ -4,3 +4,4 @@ Devise.setup do |config|
 
 end
 Devise::SessionsController.view_paths= File.expand_path('../../../app/views/', __FILE__)
+Devise::RegistrationsController.view_paths= File.expand_path('../../../app/views/', __FILE__)
