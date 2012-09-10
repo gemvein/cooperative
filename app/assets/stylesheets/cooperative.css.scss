@@ -3,10 +3,10 @@
  *= require jquery-ui/ui-lightness
  */
 
-@import 'bootstrap/font';
-@import 'bootstrap/colors';
-@import 'bootstrap/grid';
-@import 'bootstrap/layers';
+@import 'bootstrap_customizations/font';
+@import 'bootstrap_customizations/colors';
+@import 'bootstrap_customizations/grid';
+@import 'bootstrap_customizations/layers';
 @import 'bootstrap';
 body {
   padding-top: 60px;
