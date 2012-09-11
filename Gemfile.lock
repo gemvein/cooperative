@@ -12,6 +12,7 @@ PATH
       factory_girl_rails (= 1.7.0)
       fastercsv
       font-awesome-sass-rails
+      friendly_id
       haml
       haml-rails
       jquery-rails (>= 2.1.2)
@@ -103,6 +104,7 @@ GEM
     font-awesome-sass-rails (2.0.0.0)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
+    friendly_id (4.0.7)
     git (1.2.5)
     haml (3.1.7)
     haml-rails (0.3.5)
@@ -123,7 +125,7 @@ GEM
       rdoc
     journey (1.0.4)
     jquery-rails (2.1.2)
-      railties (>= 3.1.0, < 5.0)
+      railties (< 5.0, >= 3.1.0)
       thor (~> 0.14)
     jquery-ui-rails (1.1.1)
       jquery-rails
@@ -173,12 +175,12 @@ GEM
       i18n (~> 0.5)
     rails_admin (0.0.5)
       bbenezech-nested_form (~> 0.0.6)
-      bootstrap-sass (~> 2.0, >= 2.0.3)
+      bootstrap-sass (>= 2.0.3, ~> 2.0)
       builder (~> 3.0)
       coffee-rails (~> 3.1)
       haml (~> 3.1)
       jquery-rails (>= 1.0.17)
-      jquery-ui-rails (>= 0.5, < 2)
+      jquery-ui-rails (< 2, >= 0.5)
       kaminari (~> 0.12)
       rack-pjax (~> 0.5)
       rails (~> 3.1)

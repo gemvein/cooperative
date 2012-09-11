@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909032912) do
+ActiveRecord::Schema.define(:version => 20120910170709) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -29,20 +29,22 @@ ActiveRecord::Schema.define(:version => 20120909032912) do
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
   create_table "pages", :force => true do |t|
-    t.integer  "page_id"
-    t.integer  "user_id"
+    t.integer  "parent_id"
+    t.string   "pageable_type"
+    t.integer  "pageable_id"
     t.string   "slug"
     t.string   "title"
     t.text     "description"
     t.text     "keywords"
     t.text     "body"
     t.boolean  "public"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
-  add_index "pages", ["page_id"], :name => "index_pages_on_page_id"
-  add_index "pages", ["user_id"], :name => "index_pages_on_user_id"
+  add_index "pages", ["pageable_type", "pageable_id"], :name => "index_pages_on_pageable_type_and_pageable_id"
+  add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
+  add_index "pages", ["slug"], :name => "index_pages_on_slug"
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"

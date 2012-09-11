@@ -43,6 +43,8 @@ Gem::Specification.new do |s|
   s.add_dependency "paperclip", ">=2.7.0"
   s.add_dependency "ckeditor"
   s.add_dependency "rails_admin"
+  
+  s.add_dependency "friendly_id"
 
 
   s.add_development_dependency "sqlite3"

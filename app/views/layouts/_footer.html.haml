@@ -1,10 +1,6 @@
 %ul.nav.nav-pills
   %li{:class => current_page?(cooperative_path) ? 'active' : 'inactive'}
     =link_to :home.l, cooperative_path
-  - Page.find(:all).each do |page|
-    - if (logged_in? || page.page_public)
-      %li{:class => current_page?(pages_path(page)) ? 'active' : 'inactive'}
-        = link_to page.title, pages_path(page)
   - if signed_in?
     %li
       =link_to :sign_out.l, destroy_user_session_path, :method => 'delete'

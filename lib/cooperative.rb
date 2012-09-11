@@ -35,6 +35,8 @@ module Cooperative
   require 'ckeditor'
   require 'rails_admin'
   
+  require 'friendly_id'
+  
   def self.version_string
     "Cooperative version #{Cooperative::VERSION}"
   end
