@@ -30,6 +30,7 @@
       .row
         .span9
           %h1=container_title
+          %ul.breadcrumb= render_breadcrumbs :tag => 'li'
           = render "layouts/messages"
           = yield
         .span3.pull-right
