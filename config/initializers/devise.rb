@@ -1,7 +1,6 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-
+  config.scoped_views = true
 end
-Devise::SessionsController.view_paths= File.expand_path('../../../app/views/', __FILE__)
-Devise::RegistrationsController.view_paths= File.expand_path('../../../app/views/', __FILE__)
+Devise::DeviseController.view_paths= File.expand_path('../../../app/views/', __FILE__)
