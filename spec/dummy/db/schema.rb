@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910170709) do
+ActiveRecord::Schema.define(:version => 20120911112803) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(:version => 20120910170709) do
     t.text     "description"
     t.text     "keywords"
     t.text     "body"
-    t.boolean  "public"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.boolean  "public",        :default => true
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   add_index "pages", ["pageable_type", "pageable_id"], :name => "index_pages_on_pageable_type_and_pageable_id"

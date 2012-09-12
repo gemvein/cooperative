@@ -1,4 +1,4 @@
-# RailsAdmin config file. Generated on September 09, 2012 00:26
+# RailsAdmin config file. Generated on September 11, 2012 17:44
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
@@ -31,10 +31,10 @@ RailsAdmin.config do |config|
 
   #  ==> Included models
   # Add all excluded models here:
-  # config.excluded_models = [Ckeditor::Asset, Ckeditor::AttachmentFile, Ckeditor::Picture, Page, Role, User]
+  # config.excluded_models = [Page, Role]
 
   # Add models here if you want to go 'whitelist mode':
-  # config.included_models = [Ckeditor::Asset, Ckeditor::AttachmentFile, Ckeditor::Picture, Page, Role, User]
+  # config.included_models = [Page, Role]
 
   # Application wide tried label methods for models' instances
   # config.label_methods << :description # Default is [:name, :title]
@@ -79,78 +79,19 @@ RailsAdmin.config do |config|
 
   # All fields marked as 'hidden' won't be shown anywhere in the rails_admin unless you mark them as visible. (visible(true))
 
-  # config.model Ckeditor::Asset do
-  #   # Found associations:
-  #     configure :assetable, :polymorphic_association         # Hidden   #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :data_file_name, :string 
-  #     configure :data_content_type, :string 
-  #     configure :data_file_size, :integer 
-  #     configure :assetable_id, :integer         # Hidden 
-  #     configure :assetable_type, :string         # Hidden 
-  #     configure :type, :string 
-  #     configure :width, :integer 
-  #     configure :height, :integer 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
-  # config.model Ckeditor::AttachmentFile do
-  #   # Found associations:
-  #     configure :assetable, :polymorphic_association         # Hidden   #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :data_file_name, :string         # Hidden 
-  #     configure :data_content_type, :string         # Hidden 
-  #     configure :data_file_size, :integer         # Hidden 
-  #     configure :data, :paperclip 
-  #     configure :assetable_id, :integer         # Hidden 
-  #     configure :assetable_type, :string         # Hidden 
-  #     configure :type, :string 
-  #     configure :width, :integer 
-  #     configure :height, :integer 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
-  # config.model Ckeditor::Picture do
-  #   # Found associations:
-  #     configure :assetable, :polymorphic_association         # Hidden   #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :data_file_name, :string         # Hidden 
-  #     configure :data_content_type, :string         # Hidden 
-  #     configure :data_file_size, :integer         # Hidden 
-  #     configure :data, :paperclip 
-  #     configure :assetable_id, :integer         # Hidden 
-  #     configure :assetable_type, :string         # Hidden 
-  #     configure :type, :string 
-  #     configure :width, :integer 
-  #     configure :height, :integer 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
   # config.model Page do
   #   # Found associations:
-  #     configure :page, :belongs_to_association 
-  #     configure :user, :belongs_to_association   #   # Found columns:
+  #     configure :parent, :belongs_to_association 
+  #     configure :pageable, :polymorphic_association         # Hidden 
+  #     configure :descendant_hierarchies, :has_many_association         # Hidden 
+  #     configure :self_and_descendants, :has_many_association 
+  #     configure :ancestor_hierarchies, :has_many_association         # Hidden 
+  #     configure :children, :has_many_association 
+  #     configure :self_and_ancestors, :has_many_association   #   # Found columns:
   #     configure :id, :integer 
-  #     configure :page_id, :integer         # Hidden 
-  #     configure :user_id, :integer         # Hidden 
+  #     configure :parent_id, :integer         # Hidden 
+  #     configure :pageable_type, :string         # Hidden 
+  #     configure :pageable_id, :integer         # Hidden 
   #     configure :slug, :string 
   #     configure :title, :string 
   #     configure :description, :text 
@@ -168,37 +109,12 @@ RailsAdmin.config do |config|
   # end
   # config.model Role do
   #   # Found associations:
-  #     configure :authorizable, :polymorphic_association 
-  #     configure :users, :has_and_belongs_to_many_association   #   # Found columns:
+  #     configure :authorizable, :polymorphic_association         # Hidden 
+  #     configure :users, :has_and_belongs_to_many_association         # Hidden   #   # Found columns:
   #     configure :id, :integer 
   #     configure :name, :string 
   #     configure :authorizable_type, :string         # Hidden 
   #     configure :authorizable_id, :integer         # Hidden 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
-  # config.model User do
-  #   # Found associations:
-  #     configure :accepted_roles, :has_many_association 
-  #     configure :roles, :has_and_belongs_to_many_association   #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :email, :string 
-  #     configure :password, :password         # Hidden 
-  #     configure :password_confirmation, :password         # Hidden 
-  #     configure :reset_password_token, :string         # Hidden 
-  #     configure :reset_password_sent_at, :datetime 
-  #     configure :remember_created_at, :datetime 
-  #     configure :sign_in_count, :integer 
-  #     configure :current_sign_in_at, :datetime 
-  #     configure :last_sign_in_at, :datetime 
-  #     configure :current_sign_in_ip, :string 
-  #     configure :last_sign_in_ip, :string 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime   #   # Sections:
   #   list do; end

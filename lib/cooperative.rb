@@ -36,8 +36,4 @@ module Cooperative
   require 'rails_admin'
   
   require 'friendly_id'
-  
-  def self.version_string
-    "Cooperative version #{Cooperative::VERSION}"
-  end
 end

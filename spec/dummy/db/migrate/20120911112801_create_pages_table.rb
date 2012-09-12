@@ -9,7 +9,7 @@ class CreatePagesTable < ActiveRecord::Migration
        t.text :description
        t.text :keywords
        t.text :body
-       t.boolean :public
+       t.boolean :public, :default => true
        t.timestamps
     end
     add_index :pages, :slug
