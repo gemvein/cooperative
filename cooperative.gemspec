@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency "bootstrap-sass"
   s.add_dependency "font-awesome-sass-rails"
   s.add_dependency "bootstrap_forms"
+  s.add_dependency "breadcrumbs_on_rails"
   
   s.add_dependency "jquery-rails", ">=2.1.2"
   s.add_dependency "jquery-ui-rails"

@@ -19,6 +19,7 @@ module Cooperative
   require 'bootstrap-sass'
   require 'font-awesome-sass-rails'
   require 'bootstrap_forms'
+  require 'breadcrumbs_on_rails'
   
   require 'jquery-rails'
   require 'jquery-ui-rails'

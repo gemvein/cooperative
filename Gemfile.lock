@@ -5,6 +5,7 @@ PATH
       authorization
       bootstrap-sass
       bootstrap_forms
+      breadcrumbs_on_rails
       cancan
       ckeditor
       database_cleaner
@@ -62,6 +63,7 @@ GEM
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.1.0.0)
     bootstrap_forms (2.0.2)
+    breadcrumbs_on_rails (2.2.0)
     builder (3.0.3)
     cancan (1.6.8)
     capybara (1.1.2)
