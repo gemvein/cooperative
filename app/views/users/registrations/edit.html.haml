@@ -1,0 +1,11 @@
+-@title = :edit_my_account.l
+= bootstrap_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form form-horizontal' }) do |f|
+  = f.email_field :email, :autofocus => true
+  = f.check_box :public, :help_block => :your_account_must_be_public_for_other_users_to_find_you.l
+  = f.password_field :password, :autocomplete => "off", :help_inline => :leave_blank_if_you_dont_want_to_change_it.l
+  = f.password_field :password_confirmation, :autocomplete => "off"
+  = f.password_field :current_password, :required => true, :help_inline => :we_need_your_current_password_to_confirm_your_changes.l
+  .controls= f.submit :update.l
+%h2=:cancel_my_account.l
+= link_to :cancel_my_account.l, registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => "btn btn-danger"
+
