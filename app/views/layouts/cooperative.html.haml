@@ -17,7 +17,7 @@
       
     = render "layouts/stylesheets"      
     
-  %body
+  %body{:class => controller.controller_name}
     .navbar.navbar-fixed-top
       .navbar-inner
         .container.clearfix

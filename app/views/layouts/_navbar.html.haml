@@ -6,5 +6,6 @@
 = link_to Cooperative.configuration.application_name, cooperative_path, :class => 'brand'
 .nav-collapse
   %ul.nav
+    = render 'people/menu_item'
   %ul.nav.pull-right
     = render 'users/menu_item'

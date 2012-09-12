@@ -1,0 +1,5 @@
+-@title = :people.l
+-for person in @people
+  .person
+    %h2=link_to person.nickname, cooperative.person_path(person)
+=paginate @people

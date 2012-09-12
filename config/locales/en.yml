@@ -2,6 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  bio: "Bio"
   cancel_my_account: "Cancel My Account"
   change_my_password: "Change My Password"
   change_your_password: "Change Your Password"
@@ -14,6 +15,7 @@ en:
   leave_blank_if_you_dont_want_to_change_it: "Leave blank if you don't want to change it"
   logged_in_as: "Logged in as"
   new_password: "New Password"
+  people: "People"
   send_me_reset_password_instructions: "Send me Reset Password instructions"
   sign_in: "Sign In"
   sign_up: "Sign Up"

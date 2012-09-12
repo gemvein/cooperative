@@ -4,7 +4,7 @@ class PagesController < CooperativeController
     @page = Page.find_by_slug('home')
     
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # index.html.haml
       format.json { render :json => @page }
     end
   end
@@ -21,7 +21,7 @@ class PagesController < CooperativeController
     add_breadcrumb @page.title, @page.path
     
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # show.html.haml
       format.json { render :json => @page }
     end
   end

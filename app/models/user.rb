@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  
   # Authorization plugin
   acts_as_authorized_user
   acts_as_authorizable
@@ -14,4 +15,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :bio
   # attr_accessible :title, :body
   validates_presence_of :nickname
+  
+  def to_param
+    nickname
+  end
 end

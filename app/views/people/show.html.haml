@@ -1,0 +1,4 @@
+-@title = @person.nickname
+-unless @person.bio.blank?
+  %h2= :bio.l
+  =@person.bio.html_safe
