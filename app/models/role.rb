@@ -4,4 +4,8 @@ class Role < ActiveRecord::Base
   
   attr_accessible :name, :authorizable_type, :authorizable_id
   validates_presence_of :name
+  
+  rails_admin do
+    visible false
+  end
 end

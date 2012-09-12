@@ -1,5 +1,8 @@
 -@title = :people.l
 -for person in @people
-  .person
-    %h2=link_to person.nickname, cooperative.person_path(person)
+  .person.clearfix
+    -if person.image_file_name
+      .thumbnail.span3.pull-right= link_to image_tag(person.image.url(:medium)), cooperative.person_path(person)
+    %h2= link_to person.nickname, cooperative.person_path(person)
+    %p= truncate_words(person.bio, 75)
 =paginate @people

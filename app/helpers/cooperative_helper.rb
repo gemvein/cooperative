@@ -53,4 +53,11 @@ module CooperativeHelper
     Cooperative.configuration.tinymce_options.each {|key, value| js_parts << "#{key}: #{value.to_json}" }
     js_parts.join(",\n").html_safe
   end
+  
+  def truncate_words(str, n)
+    unless str
+      return ''
+    end
+    strip_tags(str).split(/\s+/, n+1)[0...n].join(' ') + '...'
+  end
 end

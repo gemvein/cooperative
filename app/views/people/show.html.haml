@@ -1,4 +1,7 @@
 -@title = @person.nickname
+-if @person.image_file_name
+  .thumbnail.span6.pull-right= link_to image_tag(@person.image.url(:large)), @person.image.url(:original)
+    
 -unless @person.bio.blank?
   %h2= :bio.l
-  =@person.bio.html_safe
+  =sanitize @person.bio.html_safe

@@ -9,4 +9,9 @@ Cooperative.configure do |config|
     :mode => 'specific_textareas',
     :editor_selector => 'wysiwyg'
   }
+  
+  # Configuration for Paperclip Image Uploader
+  config.paperclip_options = {
+    :users => {:large => "600x400>", :medium => "300x200>", :thumb => "150x100>"}
+  }
 end

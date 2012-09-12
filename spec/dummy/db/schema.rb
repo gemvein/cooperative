@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120912144053) do
+ActiveRecord::Schema.define(:version => 20120912212912) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -88,6 +88,10 @@ ActiveRecord::Schema.define(:version => 20120912144053) do
     t.string   "nickname"
     t.text     "bio"
     t.boolean  "public",                 :default => true
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "image_content_type"
+    t.string   "image_file_name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

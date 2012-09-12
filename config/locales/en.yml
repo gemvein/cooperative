@@ -2,6 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  admin_dashboard: "Admin Dashboard"
   bio: "Bio"
   cancel_my_account: "Cancel My Account"
   change_my_password: "Change My Password"
@@ -18,6 +19,7 @@ en:
   my_profile: "My Profile"
   new_password: "New Password"
   people: "People"
+  profile_image: "Profile Image"
   send_me_reset_password_instructions: "Send me Reset Password instructions"
   sign_in: "Sign In"
   sign_up: "Sign Up"

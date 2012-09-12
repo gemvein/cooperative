@@ -1,4 +1,4 @@
-# RailsAdmin config file. Generated on September 12, 2012 08:40
+# RailsAdmin config file. Generated on September 12, 2012 15:29
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
@@ -187,8 +187,8 @@ RailsAdmin.config do |config|
   # end
   # config.model User do
   #   # Found associations:
-  #     configure :roles, :has_and_belongs_to_many_association 
-  #     configure :accepted_roles, :has_many_association   #   # Found columns:
+  #     configure :accepted_roles, :has_many_association 
+  #     configure :roles, :has_and_belongs_to_many_association   #   # Found columns:
   #     configure :id, :integer 
   #     configure :email, :string 
   #     configure :password, :password         # Hidden 
@@ -202,7 +202,10 @@ RailsAdmin.config do |config|
   #     configure :current_sign_in_ip, :string 
   #     configure :last_sign_in_ip, :string 
   #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
+  #     configure :updated_at, :datetime 
+  #     configure :nickname, :string 
+  #     configure :bio, :text 
+  #     configure :public, :boolean   #   # Sections:
   #   list do; end
   #   export do; end
   #   show do; end

@@ -53,4 +53,25 @@ class Page < ActiveRecord::Base
   def self.find_by_path(path)
     self.find_all_by_path(path).first
   end
+  
+  rails_admin do
+    list do
+      field :parent
+      field :pageable
+      field :title
+      field :keywords
+    end
+    edit do
+      field :parent
+      field :pageable
+      field :public
+      field :title
+      field :keywords
+      field :description
+      field :body, :text do
+        ckeditor true
+      end
+      field :children
+    end
+  end
 end

@@ -1,7 +1,23 @@
 Dummy::Application.routes.draw do
 
   mount Cooperative::Engine => '/', :as => 'cooperative'
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
 
