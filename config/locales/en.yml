@@ -4,6 +4,7 @@
 en:
   hello: "Hello world"
   home: "Home"
+  in_this_section: "In This Section"
   sign_in: "Sign In"
   sign_up: "Sign Up"
   sign_out: "Sign Out"
