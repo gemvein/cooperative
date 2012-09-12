@@ -1,0 +1,5 @@
+-@title = :edit_my_profile.l
+= bootstrap_form_for(@user, :url => cooperative.profile_path, :html => { :method => :put, :class => 'form form-horizontal' }) do |f|
+  =f.text_area :bio, :class => 'wysiwyg'
+  =tinymce_init
+  .controls= f.submit :update.l

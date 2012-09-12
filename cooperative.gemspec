@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
   s.add_dependency "jquery-rails", ">=2.1.2"
   s.add_dependency "jquery-ui-rails"
   s.add_dependency "jquery-ui-themes"
+  s.add_dependency "tinymce-rails"
   
   s.add_dependency "kaminari"
   

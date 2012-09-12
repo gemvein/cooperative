@@ -24,6 +24,7 @@ module Cooperative
   require 'jquery-rails'
   require 'jquery-ui-rails'
   require 'jquery-ui-themes'
+  require 'tinymce-rails'
   
   require 'kaminari'
   
