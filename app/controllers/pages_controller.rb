@@ -1,10 +1,24 @@
 class PagesController < CooperativeController
 
+  def index
+    @page = Page.find_by_slug('home')
+    
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render :json => @page }
+    end
+  end
   # GET /pages/1
   # GET /pages/1.json
   def show
-    params[:id] ||= 'home'
-    @page = Page.find(params[:id])
+    @page = Page.find_by_path(params[:path])
+    
+    unless @page.ancestry.empty?
+      for page in @page.ancestry
+        add_breadcrumb page.title, page.path
+      end
+    end
+    add_breadcrumb @page.title, @page.path
     
     respond_to do |format|
       format.html # show.html.erb
