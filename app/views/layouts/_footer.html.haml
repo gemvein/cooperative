@@ -1,12 +1,8 @@
 %ul.nav.nav-pills
-  %li{:class => current_page?(cooperative_path) ? 'active' : 'inactive'}
-    =link_to :home.l, cooperative_path
+  =pages_menu_items
   - if signed_in?
-    %li
-      =link_to :sign_out.l, destroy_user_session_path, :method => 'delete'
+    =nav_item :sign_out.l, destroy_user_session_path, :method => 'delete'
   - else
-    %li{:class => current_page?(new_user_session_path) ? 'active' : 'inactive'}
-      =link_to :sign_in.l, new_user_session_path
-    %li{:class => current_page?(new_user_registration_path) ? 'active' : 'inactive'}
-      =link_to :sign_up.l, new_user_registration_path
+    =nav_item :sign_in.l, new_user_session_path
+    =nav_item :sign_up.l, new_user_registration_path
     
