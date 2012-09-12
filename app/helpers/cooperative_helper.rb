@@ -24,4 +24,15 @@ module CooperativeHelper
       when :alert then "alert-warning"
     end
   end
+  
+  def nav_item(text, href, options = {}) 
+    html = ""
+    html << render(:partial => 'layouts/nav_item', :locals => {:text => text, :href => href, :options => options})
+    html.html_safe
+  end
+  
+  def widget(html_options = {}, &block)
+    render(:partial => 'layouts/widget', :locals => {:body => capture(&block), :html_options => html_options})
+    return ''
+  end
 end
