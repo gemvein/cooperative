@@ -12,6 +12,7 @@ class PeopleController < CooperativeController
 
   def show
     @person = User.find_by_nickname(params[:nickname])
+    add_breadcrumb @person.nickname, cooperative.person_path(@person)
     
     respond_to do |format|
       format.html # show.html.haml
