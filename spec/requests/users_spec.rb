@@ -20,8 +20,23 @@ describe "Users" do
     visit cooperative.home_path
     click_link :sign_up.l
     page.should have_selector '#user_email'
+    page.should have_selector '#user_nickname'
     page.should have_selector '#user_password'
     page.should have_selector '#user_password_confirmation'
+  end
+  
+  it "has an edit account page" do
+    user = FactoryGirl.create(:user)
+    sign_in user
+    
+    visit cooperative.home_path
+    click_link :edit_my_account.l
+    page.should have_selector '#user_email'
+    page.should_not have_selector '#user_nickname'
+    page.should have_selector '#user_password'
+    page.should have_selector '#user_password_confirmation'
+    page.should have_selector '#user_current_password'
+    page.should have_selector '#user_public'
   end
   
   it "has a login page that looks like the rest of the site" do
@@ -60,6 +75,7 @@ describe "Users" do
     
     visit new_user_registration_path
     fill_in "user_email", :with => user.email
+    fill_in "user_nickname", :with => user.nickname
     fill_in "user_password", :with => user.password
     fill_in "user_password_confirmation", :with => user.password
     click_button :sign_up.l
