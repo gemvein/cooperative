@@ -1,4 +1,5 @@
 Cooperative::Engine.routes.draw do
-  root :to => 'pages#show', :as => 'home'
-  resources :pages, :except => 'index'
+  root :to => 'pages#index', :as => 'home'
+  match '/pages/home' => redirect('/')
+  match '/pages/*path' => 'pages#show'
 end
