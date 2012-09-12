@@ -58376,3 +58376,2439 @@ Served asset /cooperative.js - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 09:56:18 -0600 2012
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_widget.html.haml (2.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/shared/_links.haml (59.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/sessions/new.html.haml within layouts/cooperative (67.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (17.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (4.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (6.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (65.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (129.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (6.0ms)
+Completed 200 OK in 375ms (Views: 298.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:18 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:19 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Sep 12 10:06:25 -0600 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"webmaster@sourcherryweb.com", "remember_me"=>"0"}, "commit"=>"Sign In", "authenticity_token"=>"eGv/b6un1ZoJHFmohtTyCzyElw9/T+t44FFdVd/INxg=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'webmaster@sourcherryweb.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "sign_in_count" = 7, "updated_at" = '2012-09-12 16:06:25.886831', "last_sign_in_at" = '2012-09-12 04:44:07.692860', "current_sign_in_at" = '2012-09-12 16:06:25.885837' WHERE "users"."id" = 1[0m
+  [1m[35m (235.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 323ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."slug" = 'home' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pages" WHERE "pages"."parent_id" = 1
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/index.html.haml within layouts/cooperative (2.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (18.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_dropdown_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (7.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (9.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (5.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (8.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (5.6ms)
+Completed 200 OK in 169ms (Views: 167.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (58ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:26 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/registrations/edit.html.haml within layouts/cooperative (9.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (70.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_dropdown_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (6.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (8.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (50.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (55.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (59.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (6.0ms)
+Completed 200 OK in 172ms (Views: 169.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:28 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:29 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:29 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:29 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:29 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:29 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eGv/b6un1ZoJHFmohtTyCzyElw9/T+t44FFdVd/INxg="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."slug" = 'home' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pages" WHERE "pages"."parent_id" = 1[0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/index.html.haml within layouts/cooperative (1.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (75.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (4.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (6.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (57.6ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (64.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (5.7ms)
+Completed 200 OK in 169ms (Views: 167.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:46 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:47 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:47 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:47 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:47 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:47 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:47 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:47 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_widget.html.haml (0.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/shared/_links.haml (6.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/registrations/new.html.haml within layouts/cooperative (75.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (18.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (4.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (6.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))[0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (4.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (61.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (6.1ms)
+Completed 200 OK in 259ms (Views: 258.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:50 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:51 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Processing by Devise::PasswordsController#new as HTML
+  Rendered /var/lib/gems/1.8/gems/devise-2.1.2/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/passwords/new.html.haml within layouts/cooperative (5.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (75.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (4.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (6.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (58.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (64.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (6.1ms)
+Completed 200 OK in 174ms (Views: 172.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:06:52 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Sep 12 10:20:16 -0600 2012
+Processing by Devise::PasswordsController#new as HTML
+  Rendered /var/lib/gems/1.8/gems/devise-2.1.2/app/views/devise/shared/_links.erb (0.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/passwords/new.html.haml within layouts/cooperative (210.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (17.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (3.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (5.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))[0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (62.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (130.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (5.8ms)
+Completed 200 OK in 469ms (Views: 385.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (60ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:20:17 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Processing by Devise::PasswordsController#new as HTML
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_widget.html.haml (50.5ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/shared/_links.haml (56.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/passwords/new.html.haml within layouts/cooperative (214.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (18.5ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (4.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (5.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (62.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (131.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (5.9ms)
+Completed 200 OK in 469ms (Views: 392.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (47ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:07 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (54ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:22:08 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Sep 12 10:23:20 -0600 2012
+Processing by Devise::PasswordsController#new as HTML
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_widget.html.haml (0.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/shared/_links.haml (5.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/passwords/new.html.haml within layouts/cooperative (164.5ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (18.5ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (4.6ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (6.6ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))[0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (64.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (135.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (5.8ms)
+Completed 200 OK in 476ms (Views: 458.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:23:21 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at Wed Sep 12 10:33:00 -0600 2012
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"user"=>{"email"=>"karen.e.lundgren@gmail.com"}, "commit"=>"Send me Reset Password instructions", "authenticity_token"=>"nO2wAFJrmG9QfjGODi4TbK8uDNSnITouCXrCcHZFZtM=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'karen.e.lundgren@gmail.com' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = 'DzhNKeSXqqqwToUyXd5w' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "reset_password_sent_at" = '2012-09-12 16:33:00.568964', "reset_password_token" = 'DzhNKeSXqqqwToUyXd5w', "updated_at" = '2012-09-12 16:33:00.569732' WHERE "users"."id" = 2[0m
+  [1m[35m (128.7ms)[0m  commit transaction
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/mailer/reset_password_instructions.html.haml (4.2ms)
+Completed 500 Internal Server Error in 391ms
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    1: %p
+    2:   Hello #{@resource.email}!
+    3: %p Someone has requested a link to change your password, and you can do this through the link below.
+    4: %p= link_to 'Change my password', edit_password_url(@resource, :reset_password_token => @resource.reset_password_token)
+    5: %p If you didn't request this, please ignore this email.
+    6: %p Your password won't change until you access the link above and create a new one.
+  actionpack (3.2.8) lib/action_dispatch/http/url.rb:25:in `url_for'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:590:in `url_for'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:339:in `__send__'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:339:in `url_for'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:213:in `edit_user_password_url'
+  actionpack (3.2.8) lib/action_dispatch/routing/routes_proxy.rb:29:in `edit_user_password_url'
+  actionpack (3.2.8) lib/action_dispatch/routing/routes_proxy.rb:32:in `send'
+  actionpack (3.2.8) lib/action_dispatch/routing/routes_proxy.rb:32:in `method_missing'
+  devise (2.1.2) lib/devise/controllers/url_helpers.rb:50:in `send'
+  devise (2.1.2) lib/devise/controllers/url_helpers.rb:50:in `edit_password_url'
+  /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/mailer/reset_password_instructions.html.haml:4:in `__home_karen__ocuments__ptana__tudio____orkspace_cooperative_app_views_users_mailer_reset_password_instructions_html_haml__2006935228_70364258518140'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `send'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:46:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionmailer (3.2.8) lib/action_mailer/base.rb:701:in `collect_responses_and_parts_order'
+  actionmailer (3.2.8) lib/action_mailer/base.rb:712:in `each'
+  actionmailer (3.2.8) lib/action_mailer/base.rb:712:in `each_template'
+  actionmailer (3.2.8) lib/action_mailer/base.rb:697:in `collect_responses_and_parts_order'
+  actionmailer (3.2.8) lib/action_mailer/base.rb:636:in `mail'
+  devise (2.1.2) lib/devise/mailers/helpers.rb:16:in `devise_mail'
+  devise (2.1.2) app/mailers/devise/mailer.rb:9:in `reset_password_instructions'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionmailer (3.2.8) lib/action_mailer/base.rb:457:in `process'
+  actionmailer (3.2.8) lib/action_mailer/base.rb:452:in `initialize'
+  actionmailer (3.2.8) lib/action_mailer/base.rb:439:in `new'
+  actionmailer (3.2.8) lib/action_mailer/base.rb:439:in `method_missing'
+  devise (2.1.2) lib/devise/models/authenticatable.rb:163:in `send'
+  devise (2.1.2) lib/devise/models/authenticatable.rb:163:in `send_devise_notification'
+  devise (2.1.2) lib/devise/models/recoverable.rb:48:in `send_reset_password_instructions'
+  devise (2.1.2) lib/devise/models/recoverable.rb:110:in `send_reset_password_instructions'
+  devise (2.1.2) app/controllers/devise/passwords_controller.rb:13:in `create'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:458:in `_run__1359754771__process_action__1101785939__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `send'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `send'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/mapper.rb:42:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  rack-pjax (0.6.0) lib/rack/pjax.rb:12:in `call'
+  sass (3.2.1) lib/sass/./sass/plugin/rack.rb:54:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.0.2) lib/remotipart/middleware.rb:30:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__1913575902__call__4__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `send'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `send'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (64.3ms)
+Connecting to database specified by database.yml
+
+
+Started POST "/users/password" for 127.0.0.1 at Wed Sep 12 10:34:51 -0600 2012
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"nO2wAFJrmG9QfjGODi4TbK8uDNSnITouCXrCcHZFZtM=", "utf8"=>"✓", "commit"=>"Send me Reset Password instructions", "user"=>{"email"=>"karen.e.lundgren@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'karen.e.lundgren@gmail.com' LIMIT 1[0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/mailer/reset_password_instructions.html.haml (2.0ms)
+
+Sent mail to karen.e.lundgren@gmail.com (17ms)
+Date: Wed, 12 Sep 2012 10:34:52 -0600
+From: do-not-reply@example.com
+Reply-To: do-not-reply@example.com
+To: karen.e.lundgren@gmail.com
+Message-ID: <5050b9ac7290d_6c6c3fc4f3c0fb14294f1@SLATEBOX.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>
+Hello karen.e.lundgren@gmail.com!
+</p>
+<p>Someone has requested a link to change your password, and you can do this through the link below.</p>
+<p><a href="http://localhost/users/password/edit?reset_password_token=DzhNKeSXqqqwToUyXd5w">Change my password</a></p>
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 483ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Sep 12 10:34:52 -0600 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (1.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_widget.html.haml (1.6ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/shared/_links.haml (8.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/sessions/new.html.haml within layouts/cooperative (71.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (230.6ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (3.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (5.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (1.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.5ms)
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (126.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (129.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (34.0ms)
+Completed 200 OK in 487ms (Views: 483.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (67ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /pages.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:34:53 -0600 2012
+Served asset /application.js - 304 Not Modified (66ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_widget.html.haml (0.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/shared/_links.haml (2.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/passwords/edit.html.haml within layouts/cooperative (10.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (16.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (1.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (2.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))[0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (2.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (4.5ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (59.3ms)
+Completed 200 OK in 101ms (Views: 99.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:31 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/users/password" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"authenticity_token"=>"nO2wAFJrmG9QfjGODi4TbK8uDNSnITouCXrCcHZFZtM=", "utf8"=>"✓", "commit"=>"Change My Password", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."reset_password_token" = 'DzhNKeSXqqqwToUyXd5w' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_widget.html.haml (0.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/shared/_links.haml (2.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/passwords/edit.html.haml within layouts/cooperative (8.5ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (73.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (2.4ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (3.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (0.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.1ms)
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))[0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (2.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (5.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (6.0ms)
+Completed 200 OK in 176ms (Views: 102.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (63ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:40 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/users/password" for 127.0.0.1 at Wed Sep 12 10:35:46 -0600 2012
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"authenticity_token"=>"nO2wAFJrmG9QfjGODi4TbK8uDNSnITouCXrCcHZFZtM=", "utf8"=>"✓", "commit"=>"Change My Password", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."reset_password_token" = 'DzhNKeSXqqqwToUyXd5w' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "reset_password_sent_at" = NULL, "encrypted_password" = '$2a$10$KHblGCCmTqGk0EqPNZ3k7OvUsbeTNsbdGINGWGnCKvZGa9PquxXfK', "updated_at" = '2012-09-12 16:35:46.620824', "reset_password_token" = NULL WHERE "users"."id" = 2
+  [1m[36m (135.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "updated_at" = '2012-09-12 16:35:46.759855', "sign_in_count" = 2, "current_sign_in_at" = '2012-09-12 16:35:46.759267' WHERE "users"."id" = 2[0m
+  [1m[35m (88.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 300ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Sep 12 10:35:46 -0600 2012
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."slug" = 'home' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pages" WHERE "pages"."parent_id" = 1
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/index.html.haml within layouts/cooperative (67.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_stylesheets.html.haml (19.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (1.6ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.3ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_dropdown_nav_item.html.haml (2.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/users/_menu_item.html.haml (70.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_navbar.html.haml (74.1ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_hero_unit.html.haml (0.9ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_messages.html.haml (1.7ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_sidebar.html.haml (0.8ms)
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."public" = 't' AND (("pages"."parent_id" IN (0, 0) OR "pages"."parent_id" IS NULL)) AND (("pages"."pageable_type" IN (0, '') OR "pages"."pageable_type" IS NULL)) AND (("pages"."pageable_id" IN (0, 0) OR "pages"."pageable_id" IS NULL))
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/pages/_menu_items.html.haml (6.0ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_nav_item.html.haml (0.2ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_footer.html.haml (62.8ms)
+  Rendered /home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/views/layouts/_javascripts.html.haml (6.2ms)
+Completed 200 OK in 257ms (Views: 254.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.accordion.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.button.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.dialog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.progressbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.resizable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.selectable.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.slider.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.tabs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui/ui-lightness.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery-ui/ui-lightness.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.css?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /cooperative.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cooperative.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /cooperative.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Wed Sep 12 10:35:47 -0600 2012
+Served asset /application.js - 304 Not Modified (0ms)
