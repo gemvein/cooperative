@@ -35,4 +35,10 @@ module CooperativeHelper
     render(:partial => 'layouts/widget', :locals => {:body => capture(&block), :html_options => html_options})
     return ''
   end
+  
+  def dropdown_nav_item(text, href, active, &block)
+    html = ""
+    html << render(:partial => 'layouts/dropdown_nav_item', :locals => {:body => capture(&block), :text => text, :href => href, :active => active})
+    html.html_safe
+  end
 end
