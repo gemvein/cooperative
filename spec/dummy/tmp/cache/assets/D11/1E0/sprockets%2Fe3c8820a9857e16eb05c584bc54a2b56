@@ -1,6 +1,5 @@
-o: ActiveSupport::Cache::Entry	:@value"W˜{"required_assets_digest"%4f14d2b73ef8cfb696d46775459fff4c"logical_path"cooperative.js"
-mtime"2012-09-12T13:55:15-06:00"pathname"f/home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/assets/javascripts/cooperative.js"
-class"BundledAsset"lengthiÁ–"source"Á–/*!
+o: ActiveSupport::Cache::Entry	:@value"V˜{"_version"%9f3b95dd7ea3030dc35985c0a8020862"pathname"f/home/karen/Documents/Aptana Studio 3 Workspace/cooperative/app/assets/javascripts/cooperative.js"logical_path"cooperative.js"
+class"BundledAsset"lengthiÀ–"content_type"application/javascript"source"À–/*!
  * jQuery JavaScript Library v1.8.1
  * http://jquery.com/
  *
@@ -42049,6 +42048,6 @@ tinymce.onAddEditor.add(function(tinymce, ed) {
 
 
 
-
 ;
-"content_type"application/javascript"_version"%9f3b95dd7ea3030dc35985c0a8020862"digest"%ed2004dde04b2a97b41d221349a9e2f1:@expires_in0:@compressedF:@created_atf1347479718.918467 È*
+"
+mtime"2012-09-13T12:37:05-06:00"required_assets_digest"%38dec6ad150d510dab2d2d3ee3bb871d"digest"%82ac0d993a452c9ec2c6e6818f3683f8:@expires_in0:@compressedF:@created_atf1347561442.462302 –[

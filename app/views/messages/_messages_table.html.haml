@@ -1,0 +1,33 @@
+-unless @messages.empty?
+  %table.table.table-bordered
+    %tr
+      %th=:with.l
+      %th=:subject.l
+      %th=:sent.l
+      %th
+    -for message in @messages
+      -if message.thread.unread?(current_user)
+        -badge_class = 'badge badge-info'
+        -row_class = 'unread'
+      -else
+        -badge_class = 'badge'
+        -row_class = 'read'
+      %tr{:class => row_class}
+        %td=message.with(current_user).nickname
+        %td
+          = link_to message.thread.subject, cooperative.message_path(message)
+          -if message.thread.thread_count > 1
+            %span{:class => badge_class}
+              =(message.thread.thread_count-1).to_s
+          -if message.thread.unread?(current_user)
+            &nbsp;
+            %span.label.label-info
+              =:new.l + '!'
+        %td= message.created_at
+        %td
+          -if params[:action] == 'trash'
+            =link_to :restore.l, cooperative.restore_message_path(message), :class => 'btn btn-success'
+          -else
+            =link_to :move_to_trash.l, cooperative.move_to_trash_message_path(message), :class => 'btn btn-danger'
+      
+=paginate @messages

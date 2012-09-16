@@ -1,4 +1,4 @@
-# RailsAdmin config file. Generated on September 12, 2012 15:29
+# RailsAdmin config file. Generated on September 12, 2012 18:51
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
@@ -205,7 +205,12 @@ RailsAdmin.config do |config|
   #     configure :updated_at, :datetime 
   #     configure :nickname, :string 
   #     configure :bio, :text 
-  #     configure :public, :boolean   #   # Sections:
+  #     configure :public, :boolean 
+  #     configure :image_file_size, :integer         # Hidden 
+  #     configure :image_updated_at, :datetime         # Hidden 
+  #     configure :image_content_type, :string         # Hidden 
+  #     configure :image_file_name, :string         # Hidden 
+  #     configure :image, :paperclip   #   # Sections:
   #   list do; end
   #   export do; end
   #   show do; end

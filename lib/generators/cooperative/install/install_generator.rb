@@ -45,6 +45,9 @@ module Cooperative
     end
     
     def add_migrations
+      unless ActiveRecord::Base.connection.table_exists? 'messages'
+        migration_template 'migrate/create_messages_table.rb', 'db/migrate/create_messages_table.rb' rescue output $!.message
+      end
       unless ActiveRecord::Base.connection.table_exists? 'pages'
         migration_template 'migrate/create_pages_table.rb', 'db/migrate/create_pages_table.rb' rescue output $!.message
       end

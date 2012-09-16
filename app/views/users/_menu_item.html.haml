@@ -6,6 +6,8 @@
     = nav_item :edit_my_profile.l, cooperative.profile_path
     = nav_item :edit_my_account.l, edit_user_registration_path
     %li.divider
+    = nav_item :inbox.l, cooperative.messages_path
+    %li.divider
     = nav_item :sign_out.l, destroy_user_session_path, :method => 'delete'
 -else
   = nav_item :sign_in.l, new_user_session_path

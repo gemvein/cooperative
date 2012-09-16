@@ -1,0 +1,8 @@
+-@title = 'Re: '+@message.thread.subject
+=render 'messages/submenu'
+=bootstrap_form_for @message, :url => cooperative.messages_path, :html => {:class => 'form form-horizontal'} do |f|
+  =f.hidden_field :recipient_nickname
+  =f.hidden_field :parent_id
+  =f.uneditable_input :recipient_nickname
+  =f.text_area :body, :rows => 10, :style => 'width: 99%;'
+  .controls=f.submit :send.l

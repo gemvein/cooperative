@@ -1,0 +1,25 @@
+.clearfix
+  %dl.span3.pull-right.dl.dl-horizontal
+    %dt=:from.l
+    %dd=link_to message.sender.nickname, cooperative.people_path(message.sender)
+    %dt=:to.l
+    %dd=link_to message.recipient.nickname, cooperative.people_path(message.recipient)
+    %dt=:sent_at.l
+    %dd=message.created_at
+    %dt=:read_at.l
+    -if !message.read_at.blank?
+      %dd=message.read_at
+    -else 
+      %dd=:unread.l
+    -if current_user == message.recipient
+      %dt
+        %i.icon-envelope
+      %dd
+        =link_to :reply.l, cooperative.reply_message_path(message)
+      
+  %p=message.body
+%hr
+  
+-unless message.children.empty?
+  -for child in message.children
+    =render child

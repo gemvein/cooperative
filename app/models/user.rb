@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   validates_presence_of :nickname
   
+  has_many :messages, :foreign_key => :recipient_id
+  
   def to_param
     nickname
   end
