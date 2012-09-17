@@ -1,4 +1,5 @@
 class MessagesController < CooperativeController
+  before_filter :authenticate_user!
   add_breadcrumb :inbox.l, '/messages'
   
   def index

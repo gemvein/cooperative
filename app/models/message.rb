@@ -46,7 +46,6 @@ class Message < ActiveRecord::Base
   
   def recipient_nickname=(value)
     self.recipient = User.find_by_nickname(value)
-    puts recipient_nickname.to_yaml
   end
   
   def mark_as_read_by(user)
@@ -68,7 +67,7 @@ class Message < ActiveRecord::Base
   end
   
   def unread?(user)
-    if read_at.nil? and recipient == user
+    if read_at.blank? and recipient == user
       return true
     elsif !children.empty?
       for child in children
