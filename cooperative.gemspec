@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails-i18n"
 
   s.add_dependency "rspec"
+  s.add_dependency "capybara"
   s.add_dependency "factory_girl_rails", '1.7.0'
   s.add_dependency "database_cleaner"
   
