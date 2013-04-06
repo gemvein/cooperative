@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Cooperative: A Social Engine"
   s.description = "Cooperative provides Social Networking abilities to Rails 3 apps."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE.txt", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 3.2.8"
