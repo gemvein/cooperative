@@ -16,12 +16,12 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE.txt", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.8"
+  s.add_dependency "rails"
   s.add_dependency "rails-i18n"
 
   s.add_dependency "rspec"
   s.add_dependency "capybara"
-  s.add_dependency "factory_girl_rails", '1.7.0'
+  s.add_dependency "factory_girl_rails"
   s.add_dependency "database_cleaner"
   
   s.add_dependency "haml"
@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
   s.add_dependency "bootstrap_forms"
   s.add_dependency "breadcrumbs_on_rails"
   
-  s.add_dependency "jquery-rails", ">=2.1.2"
+  s.add_dependency "jquery-rails"
   s.add_dependency "jquery-ui-rails"
   s.add_dependency "jquery-ui-themes"
   s.add_dependency "tinymce-rails"
@@ -45,7 +45,7 @@ Gem::Specification.new do |s|
   
   
   s.add_dependency "fastercsv"
-  s.add_dependency "paperclip", ">=2.7.0"
+  s.add_dependency "paperclip"
   s.add_dependency "ckeditor"
   s.add_dependency "rails_admin"
   
