@@ -63,9 +63,12 @@ module Cooperative
     
     def self.next_migration_number(dirname)
       if ActiveRecord::Base.timestamped_migrations
-        migration_number = Time.now.utc.strftime("%Y%m%d%H%M%S").to_i
-        migration_number += 1
-        migration_number.to_s
+        unless @prev_migration_nr
+          @prev_migration_nr = Time.now.utc.strftime("%Y%m%d%H%M%S").to_i
+        else
+          @prev_migration_nr += 1
+        end
+        @prev_migration_nr.to_s
       else
         "%.3d" % (current_migration_number(dirname) + 1)
       end
