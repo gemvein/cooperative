@@ -47,6 +47,7 @@ Gem::Specification.new do |s|
   s.add_dependency "fastercsv"
   s.add_dependency "paperclip"
   s.add_dependency "ckeditor"
+  s.add_dependency 'safe_yaml', '0.8.6' # enable_arbitrary_object_deserialization! removed after this version
   s.add_dependency "rails_admin"
   
   s.add_dependency "friendly_id"
