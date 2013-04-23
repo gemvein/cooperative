@@ -1,7 +1,5 @@
 Cooperative::Engine.routes.draw do
-  devise_scope :user do
-    root to: "devise/sessions#new"
-  end
+  root :to => 'pages#index', :as => 'home'
   match '/pages/home' => redirect('/')
   match '/pages/*path' => 'pages#show'
   match '/people' => 'people#index', :as => 'people'

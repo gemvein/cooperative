@@ -2,7 +2,8 @@ class PagesController < CooperativeController
 
   def index
     @page = Page.find_by_slug('home')
-    
+    @page ||= Page.new
+
     respond_to do |format|
       format.html # index.html.haml
       format.json { render :json => @page }
