@@ -4,17 +4,12 @@ class PagesController < CooperativeController
     @page = Page.find_by_slug('home')
     
     if @page.nil?
-      respond_to do |format|
-        format.html { render :template => 'pages/index', :status => 'Create a page with a slug of "home" to enable this URL.' }
-        format.json { render :json => @page }
-      end
-    else 
-      respond_to do |format|
-        format.html #index.html
-        format.json { render :json => @page }
-      end
-    end
+      flash[:notice] = "Successfully saved!" 'Create a page with a slug of "home" to enable this URL.'
 
+    respond_to do |format|
+      format.html # index.html.haml
+      format.json { render :json => @page }
+    end
   end
   # GET /pages/1
   # GET /pages/1.json
