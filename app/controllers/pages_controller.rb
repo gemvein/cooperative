@@ -10,7 +10,7 @@ class PagesController < CooperativeController
     end
 
     respond_to do |format|
-      format.html { render :status => @status }
+      format.html { render :action => "index", :status => @status }
       format.json { render :json => @page }
     end
   end
