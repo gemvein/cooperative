@@ -5,6 +5,7 @@ class PagesController < CooperativeController
     
     if @page.nil?
       flash[:notice] = "Successfully saved!" 'Create a page with a slug of "home" to enable this URL.'
+    end
 
     respond_to do |format|
       format.html # index.html.haml
