@@ -2,10 +2,15 @@ class PagesController < CooperativeController
 
   def index
     @page = Page.find_by_slug('home')
-    @page ||= Page.new
+    
+    if @page.nil?
+      @page = Page.new
+      @status = 'Create a page with a slug of "home" to enable this URL.'
+    else 
+      @status = nil
 
     respond_to do |format|
-      format.html # index.html.haml
+      format.html { render :status => @status }
       format.json { render :json => @page }
     end
   end
