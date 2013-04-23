@@ -5,7 +5,7 @@ class PagesController < CooperativeController
     
     if @page.nil?
       respond_to do |format|
-        format.html { render :status => 'Create a page with a slug of "home" to enable this URL.' }
+        format.html { render :template => 'pages/index', :status => 'Create a page with a slug of "home" to enable this URL.' }
         format.json { render :json => @page }
       end
     else 
