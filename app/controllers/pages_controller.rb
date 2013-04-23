@@ -4,7 +4,6 @@ class PagesController < CooperativeController
     @page = Page.find_by_slug('home')
     
     if @page.nil?
-      @page = Page.new
       @status = 'Create a page with a slug of "home" to enable this URL.'
     else 
       @status = nil
