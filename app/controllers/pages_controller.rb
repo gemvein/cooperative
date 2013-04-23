@@ -4,7 +4,7 @@ class PagesController < CooperativeController
     @page = Page.find_by_slug('home')
     
     if @page.nil?
-      flash[:notice] = "Successfully saved!" 'Create a page with a slug of "home" to enable this URL.'
+      flash[:notice] = 'Create a page with a slug of "home" to enable this URL.'
     end
 
     respond_to do |format|
