@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
   validates_presence_of :nickname
   
   has_many :messages, :foreign_key => :recipient_id
+
+  has_many :pages, :as => :pageable
   
   def to_param
     nickname

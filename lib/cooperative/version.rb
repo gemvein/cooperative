@@ -1,5 +1,5 @@
 module Cooperative
-  VERSION = "0.1.4"
+  VERSION = File.read(File.expand_path('../../../VERSION', __FILE__))
   
   def self.version_string
     "Cooperative version #{Cooperative::VERSION}"
