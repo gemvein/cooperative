@@ -7,6 +7,7 @@ class PagesController < CooperativeController
       @status = 'Create a page with a slug of "home" to enable this URL.'
     else 
       @status = nil
+    end
 
     respond_to do |format|
       format.html { render :status => @status }
