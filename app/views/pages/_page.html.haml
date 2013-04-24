@@ -1,0 +1,6 @@
+-unless @page.nil?
+  -@title = @page.title
+  -@keywords = @page.keywords
+  -@description = @page.description
+
+  =@page.body.html_safe

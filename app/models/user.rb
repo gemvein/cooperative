@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   has_many :pages, :as => :pageable
   
   def to_param
-    nickname
+    self.nickname
   end
   
   rails_admin do

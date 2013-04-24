@@ -1,0 +1,5 @@
+-widget do
+  %h3= :nicknames_pages.l :nickname => @user.nickname
+  %ul.nav.nav-list
+    -for page in @user.pages
+      =nav_item page.title, page

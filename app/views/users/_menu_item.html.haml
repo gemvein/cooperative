@@ -8,6 +8,8 @@
     %li.divider
     = nav_item :inbox.l, cooperative.messages_path
     %li.divider
+    = nav_item :my_pages.l, cooperative.person_pages_path(current_user)
+    %li.divider
     = nav_item :sign_out.l, destroy_user_session_path, :method => 'delete'
 -else
   = nav_item :sign_in.l, new_user_session_path

@@ -1,0 +1,13 @@
+-if current_user == @person
+  -widget do
+    %h3= :my_pages.l
+    %ul.nav.nav-list
+      =nav_item :new_page.l, cooperative.new_person_page_path(@person)
+-else
+  -widget do
+    %h3= :about_nickname.l :nickname => @person.nickname
+    %p= truncate strip_tags(@person.bio), :length => 255, :separator => ' '
+    %p= link_to 'Read More...', cooperative.person_path(@person)
+
+-unless @person.pages.empty?
+  =render 'pages/submenu_for_person', :user => @person

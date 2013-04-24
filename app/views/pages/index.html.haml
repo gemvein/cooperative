@@ -1,13 +1,2 @@
--unless @page.nil?
-  -@title = @page.title
-  -@keywords = @page.keywords
-  -@description = @page.description
-
-  -unless @page.children.empty?
-    -widget do
-      %h3=:in_this_section.l
-      %ul.nav.nav-list
-        -for child in @page.children
-          =nav_item child.title, child.path
-
-  =@page.body.html_safe
+= render 'page'
+= render 'widget', :pages => @page.children unless @page.nil?

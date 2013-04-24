@@ -1,10 +1,15 @@
 class PagesController < CooperativeController
 
   def index
-    @page = Page.find_by_slug('home')
+    unless params[:person_id].blank?
+      @person = User.find_by_nickname(params[:person_id])
+      @page = Page.find_all_by_user_id(@person.id).find_by_slug('home')
+    else
+      @page = Page.find_all_root_pages.find_by_slug('home')
+    end
     
     if @page.nil?
-      flash[:notice] = 'Create a page with a slug of "home" to enable this URL.'
+      render :status => 404 and return
     end
 
     respond_to do |format|
@@ -12,21 +17,31 @@ class PagesController < CooperativeController
       format.json { render :json => @page }
     end
   end
+
   # GET /pages/1
   # GET /pages/1.json
   def show
-    @page = Page.find_by_path(params[:path])
+    unless params[:person_id].blank?
+      @person = User.find_by_nickname(params[:person_id])
+      @page = Page.find_all_by_user_id(@person.id).find_all_by_path(params[:path]).first
+    else
+      @page = Page.find_all_root_pages.find_all_by_path(params[:path]).first
+    end 
     
-    unless @page.ancestry.empty?
-      for page in @page.ancestry
-        add_breadcrumb page.title, page.path
+    if @page.nil?
+      render :status => 404 and return
+    else 
+      unless @page.ancestry.empty?
+        for page in @page.ancestry
+          add_breadcrumb page.title, page.path
+        end
       end
-    end
-    add_breadcrumb @page.title, @page.path
-    
-    respond_to do |format|
-      format.html # show.html.haml
-      format.json { render :json => @page }
+      add_breadcrumb @page.title, @page.path
+      
+      respond_to do |format|
+        format.html # show.html.haml
+        format.json { render :json => @page }
+      end
     end
   end
 

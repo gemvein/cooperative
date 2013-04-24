@@ -2,6 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  about_nickname: "About %{nickname}"
   admin_dashboard: "Admin Dashboard"
   bio: "Bio"
   cancel_my_account: "Cancel My Account"
@@ -22,8 +23,11 @@ en:
   logged_in_as: "Logged in as"
   move_to_trash: "Move to Trash"
   my_profile: "My Profile"
+  my_pages: "My Pages"
   new: "New"
+  new_page: "New Page"
   new_password: "New Password"
+  nicknames_pages: "%{nickname}'s Pages"
   people: "People"
   profile_image: "Profile Image"
   read_at: "Read At"

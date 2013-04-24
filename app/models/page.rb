@@ -35,6 +35,14 @@ class Page < ActiveRecord::Base
     parts << slug
     parts
   end
+
+  def self.find_all_root_pages
+    self.where({:pageable_id => [0, nil, '']})
+  end
+
+  def self.find_all_by_user_id(user_id)
+    self.where({:pageable_id => user_id, :pageable_type => 'User'})
+  end
   
   def self.find_all_by_path(path)
     parts = path.split('/')
