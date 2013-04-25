@@ -6,4 +6,12 @@ class CooperativeController < ActionController::Base
   def set_locale
     I18n.local = params[:lang] if params[:lang].present?
   end
+  
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
+
+  def access_denied (exception)
+    redirect_to cooperative.home_url, :alert => exception.message
+  end 
 end
