@@ -1,0 +1,16 @@
+-if @page.new_record?
+  - destination = cooperative.person_pages_path(@person)
+-else
+  - destination = @page.path
+
+= bootstrap_form_for @page, :url => destination, :html => {:class => 'form form-horizontal'} do |f|
+  .control-group
+    .control-label= :parent.l
+    .controls= collection_select :page, :parent_id, Page.find_all_by_user_id(current_user.id), :id, :title, :prompt => true
+  = f.text_field :title, :help_block => :tip_to_make_this_your_homepage_set_the_title_to_home.l
+  = f.text_area :description, :rows => 3
+  = f.text_area :keywords, :rows => 3
+  = f.text_area :body, :class => 'wysiwyg', :required => false
+  = tinymce_init
+  = f.check_box :public
+  .controls=f.submit :save_page.l
