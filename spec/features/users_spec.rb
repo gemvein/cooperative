@@ -9,7 +9,7 @@ describe "Users" do
     user = FactoryGirl.create(:user)
     
     visit cooperative.home_path
-    click_link :sign_in.l
+    find('.navbar').click_link :sign_in.l
     page.should have_selector '#user_email'
     page.should have_selector '#user_password'
   end
@@ -18,7 +18,7 @@ describe "Users" do
     user = FactoryGirl.create(:user)
     
     visit cooperative.home_path
-    click_link :sign_up.l
+    find('.navbar').click_link :sign_up.l
     page.should have_selector '#user_email'
     page.should have_selector '#user_nickname'
     page.should have_selector '#user_password'
@@ -94,8 +94,8 @@ describe "Users" do
   it "has a logout link" do
     user = FactoryGirl.create(:user)
     sign_in user
-    
-    click_link :sign_out.l
+
+    find('.navbar').click_link :sign_out.l
     page.should have_selector '.alert-info', :text => /Signed out successfully/
   end    
 end

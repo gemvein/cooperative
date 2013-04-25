@@ -33,7 +33,7 @@ describe "People" do
     person = User.find_all_by_public(true).first
     visit cooperative.person_path(person)
     page.should have_selector 'h1', :text => person.nickname
-    page.should have_selector '.container', :match => /#{person.bio}/
+    page.should have_selector '.container', :exact => person.bio
   end
   
 end

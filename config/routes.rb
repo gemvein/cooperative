@@ -6,9 +6,8 @@ Cooperative::Engine.routes.draw do
   put '/profile' => 'profile#update'
   
   resources :people, :only => [:index, :show], :constraints => { :id => /.*/ } do
-    resources :pages do
-      match '*path' => 'pages#show_for_person', :constraints => {:path => /.+/}
-    end
+    resources :pages, :except => [:show]
+    match 'pages/*path' => 'pages#show', :constraints => {:path => /.+/}
   end
 
   resources :messages, :only => [:index, :show, :new, :create] do

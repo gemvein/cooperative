@@ -1,2 +1,3 @@
 = render 'page'
-= render 'widget', :pages => @page.children unless @page.nil?
+= render 'widget', :pages => @page.children
+= render 'people/submenu' if @person

@@ -16,11 +16,11 @@ describe "Layout" do
   
   it "shows the appropriate page links" do
     visit cooperative.home_path
-    click_link "About Us"
-    click_link "Privacy Policy"
-    click_link "Terms of Use"
-    click_link "Contact Us"
-    click_link "Home"
+    find('.nav-pills').click_link "About Us"
+    find('.nav-pills').click_link "Privacy Policy"
+    find('.nav-pills').click_link "Terms of Use"
+    find('.nav-pills').click_link "Contact Us"
+    find('.nav-pills').click_link "Home"
   end
   
   it "shows child links on their parent pages only" do
@@ -28,10 +28,10 @@ describe "Layout" do
     child_page = FactoryGirl.create(:page, :title => 'Child Page', :parent_id => parent_page.id)
     visit parent_page.path
     page.should have_selector '.well li a', :text => 'Child Page'
-    click_link 'Child Page'
+    find('.well').click_link 'Child Page'
     page.should have_selector '.breadcrumb li a', :text => 'Parent Page'
-    click_link 'Parent Page'
-    click_link 'Home'
+    find('.breadcrumb').click_link 'Parent Page'
+    find('.nav-pills').click_link 'Home'
     page.should_not have_selector '.nav li a', :text => 'Child Page'
   end
 end

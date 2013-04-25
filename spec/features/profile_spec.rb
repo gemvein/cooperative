@@ -18,6 +18,6 @@ describe "Profiles" do
     fill_in "user_bio", :with => '<p>This is the new bio</p>'
     click_button :update.l
     page.should have_selector 'h1', :text => user.nickname
-    page.should have_selector '.container', :match => /This is the new bio/
+    page.should have_selector '.container', :text => 'This is the new bio'
   end
 end

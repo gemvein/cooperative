@@ -1,6 +1,6 @@
 class Page < ActiveRecord::Base
   extend FriendlyId
-  friendly_id :title, :use => :slugged
+  friendly_id :title, :use => :scoped, :scope => :pageable
   def should_generate_new_friendly_id?
     new_record?
   end
@@ -22,7 +22,13 @@ class Page < ActiveRecord::Base
   end
   
   def path
-    '/pages/' + path_parts.join('/')
+    if pageable_type.blank?
+      prefix = '/'
+    elsif pageable_type == 'User'
+      person = User.find(pageable_id)
+      prefix = '/people/' + person.nickname + '/'
+    end
+    prefix + 'pages/' + path_parts.join('/')
   end
   
   def path_parts

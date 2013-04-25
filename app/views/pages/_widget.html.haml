@@ -1,6 +1,6 @@
--unless @pages.nil? or @pages.empty?
+-unless pages.nil? or pages.empty?
   -widget do
     %h3=:in_this_section.l
     %ul.nav.nav-list
-      -for page in @pages
+      -for page in pages
         =nav_item page.title, page.path

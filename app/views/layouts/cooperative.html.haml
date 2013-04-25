@@ -29,8 +29,8 @@
         = render "layouts/hero_unit"
       .row
         .span9
-          %h1=container_title
           %ul.breadcrumb= render_breadcrumbs :tag => 'li'
+          %h1=container_title
           = render "layouts/messages"
           = yield
         .span3.pull-right

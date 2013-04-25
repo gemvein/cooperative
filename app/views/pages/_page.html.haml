@@ -3,4 +3,4 @@
   -@keywords = @page.keywords
   -@description = @page.description
 
-  =@page.body.html_safe
+  =@page.body.html_safe unless @page.body.nil?

@@ -23,6 +23,7 @@ Warden.test_mode!
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
+  config.include Capybara::DSL
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
