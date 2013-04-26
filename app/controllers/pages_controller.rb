@@ -1,4 +1,5 @@
 class PagesController < CooperativeController
+  load_and_authorize_resource
 
   def index
     unless params[:person_id].blank?
@@ -86,7 +87,7 @@ class PagesController < CooperativeController
   # PUT /pages/1
   # PUT /pages/1.json
   def update
-    @page = Page.find(params[:id])
+    @page = Page.find_all_by_user_id(current_user.id).find(params[:id])
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
@@ -102,11 +103,11 @@ class PagesController < CooperativeController
   # DELETE /pages/1
   # DELETE /pages/1.json
   def destroy
-    @page = Page.find(params[:id])
+    @page = Page.find_all_by_user_id(current_user.id).find(params[:id])
     @page.destroy
 
     respond_to do |format|
-      format.html { redirect_to cooperative.pages_url }
+      format.html { redirect_to cooperative.person_pages_path(current_user) }
       format.json { head :no_content }
     end
   end

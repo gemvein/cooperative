@@ -21,8 +21,6 @@ FactoryGirl.define do
           Quisque risus enim, ultricies sed porttitor et, ullamcorper in ipsum. Vestibulum id sapien tortor, quis pulvinar odio. Vivamus pulvinar lectus ut felis feugiat in tincidunt libero pellentesque. Aliquam erat volutpat. Sed at purus eu diam tincidunt vehicula. Nulla facilisi. Duis a purus diam. Donec in dui nec lorem tempor placerat quis in eros. In pellentesque ipsum quis leo commodo sed adipiscing diam rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sagittis vulputate leo vel pellentesque. Praesent pretium scelerisque felis. Etiam hendrerit ultricies magna, quis semper odio ultrices nec. Etiam tempus dapibus dui a fermentum.
           </p>"
     public true
-    pageable_id nil
-    pageable_type nil
     parent_id nil
   end
 end

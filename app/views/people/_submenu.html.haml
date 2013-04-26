@@ -1,4 +1,4 @@
--if current_user.id == @person.id
+-if user_signed_in? and current_user.id == @person.id
   -widget do
     %h3= :tools.l
     %ul.nav.nav-list

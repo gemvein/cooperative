@@ -1,13 +1,13 @@
 Cooperative::Engine.routes.draw do
   root :to => 'pages#index', :as => 'home'
   match '/pages/home' => redirect('/')
-  match '/pages/*path' => 'pages#show'
+  match '/pages/*path' => 'pages#show', :as => 'show'
   get '/profile' => 'profile#edit', :as => 'profile'
   put '/profile' => 'profile#update'
   
   resources :people, :only => [:index, :show], :constraints => { :id => /.*/ } do
     resources :pages, :except => [:show]
-    match 'pages/*path' => 'pages#show', :constraints => {:path => /.+/}
+    match 'pages/*path' => 'pages#show', :constraints => {:path => /.+/}, :as => 'show'
   end
 
   resources :messages, :only => [:index, :show, :new, :create] do
