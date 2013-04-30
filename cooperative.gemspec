@@ -26,23 +26,23 @@ Gem::Specification.new do |s|
   
   s.add_dependency "haml"
   s.add_dependency "haml-rails"
+
   s.add_dependency "sass-rails"
   s.add_dependency "bootstrap-sass"
   s.add_dependency "font-awesome-sass-rails"
+
   s.add_dependency "bootstrap_forms"
   s.add_dependency "breadcrumbs_on_rails"
+  s.add_dependency "kaminari"
   
   s.add_dependency "jquery-rails"
   s.add_dependency "jquery-ui-rails"
   s.add_dependency "jquery-ui-themes"
   s.add_dependency "tinymce-rails"
   
-  s.add_dependency "kaminari"
-  
   s.add_dependency "cancan"
   s.add_dependency "devise"
   s.add_dependency "authorization"
-  
   
   s.add_dependency "fastercsv"
   s.add_dependency "paperclip"
@@ -51,6 +51,9 @@ Gem::Specification.new do |s|
   s.add_dependency "rails_admin"
   
   s.add_dependency "friendly_id"
+
+  s.add_dependency 'public_activity'
+  s.add_dependency 'acts_as_follower'
 
   s.add_development_dependency "sqlite3"
 end

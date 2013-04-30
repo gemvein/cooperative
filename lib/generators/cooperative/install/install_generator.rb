@@ -61,6 +61,16 @@ module Cooperative
       migration_template 'migrate/add_image_to_users.rb', 'db/migrate/add_image_to_users.rb' rescue output $!.message
     end
     
+    def install_public_activity
+      output "Public Activity lets users keep up with what's happening", :magenta
+      generate("public_activity:migration")
+    end
+    
+    def install_acts_as_follower
+      output "Acts as Follower lets one model follow another.", :magenta
+      generate("acts_as_follower")
+    end
+    
     def self.next_migration_number(dirname)
       if ActiveRecord::Base.timestamped_migrations
         unless @prev_migration_nr

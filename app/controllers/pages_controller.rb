@@ -70,11 +70,10 @@ class PagesController < CooperativeController
   # POST /pages.json
   def create
     @page = Page.new(params[:page])
+    @page.pageable = current_user
 
     respond_to do |format|
       if @page.save
-        current_user.pages << @page
-        current_user.save
         format.html { redirect_to @page.path, :notice => 'Page was successfully created.' }
         format.json { render :json => @page, :status => :created, :location => @page }
       else

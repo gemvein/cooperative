@@ -1,4 +1,4 @@
-- if can?(:manage, @page) and @person
+- if can?(:manage, @page) and @person == current_user
   .pull-right
     =link_to '<i class="icon-file-alt"></i> '.html_safe + :edit_page.l, cooperative.edit_person_page_path(@person, @page.id), :class => 'btn btn-primary'
     =link_to '<i class="icon-trash"></i> '.html_safe + :delete_page.l, cooperative.person_page_path(@person, @page.id), :method => 'delete', :class => 'btn btn-danger'

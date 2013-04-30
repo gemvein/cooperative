@@ -40,4 +40,7 @@ module Cooperative
   
   require 'friendly_id'
 
+  require 'public_activity'
+  require 'acts_as_follower'
+
 end

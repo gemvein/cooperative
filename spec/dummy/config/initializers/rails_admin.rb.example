@@ -1,4 +1,4 @@
-# RailsAdmin config file. Generated on April 24, 2013 16:57
+# RailsAdmin config file. Generated on April 29, 2013 07:44
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
@@ -267,6 +267,7 @@ RailsAdmin.config do |config|
 
   #     configure :parent, :belongs_to_association 
   #     configure :pageable, :polymorphic_association 
+  #     configure :activities, :has_many_association         # Hidden 
   #     configure :children, :has_many_association 
 
   #   # Found columns:

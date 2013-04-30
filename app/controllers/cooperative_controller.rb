@@ -1,9 +1,11 @@
 class CooperativeController < ActionController::Base
+  include PublicActivity::StoreController
+
   protect_from_forgery
   before_filter :set_locale
   rescue_from CanCan::AccessDenied, :with => :access_denied 
   
-  add_breadcrumb :home.l, '/'
+  add_breadcrumb 'Home', '/'
 
 private
   def set_locale

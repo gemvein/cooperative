@@ -1,0 +1,4 @@
+- @activities.each do |activity|
+  .activity.clearfix
+    - unless activity.owner.nil?
+      = render_activity activity

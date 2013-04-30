@@ -17,6 +17,7 @@ en:
   edit_my_profile: "Edit My Profile"
   edit_page: "Edit Page"
   editing_page: "Editing Page"
+  follow: "Follow"
   forgot_your_password: "Forgot Your Password?"
   from: "From"
   home: "Home"
@@ -30,6 +31,7 @@ en:
   new: "New"
   new_page: "New Page"
   new_password: "New Password"
+  notifications: "Notifications"
   nicknames_pages: "%{nickname}'s Pages"
   pages: "Pages"
   parent: "Parent"
@@ -52,9 +54,19 @@ en:
   to: "To"
   tools: "Tools"
   trash: "Trash"
+  unfollow: "Unfollow"
   unread: "Unread"
   update: "Update"
   we_need_your_current_password_to_confirm_your_changes: "We need your current password to confirm your changes"
   with: "With"
   you_cant_send_messages_to_yourself: "You can't send messages to yourself"
   your_account_must_be_public_for_other_users_to_find_you: "Your account must be public for other users to find you."
+
+activity:
+  article:
+    create: 'Article has been created'
+    update: 'Someone has edited the article'
+    destroy: 'Some user removed an article!'
+
+  breadcrumbs:
+    home: Home
