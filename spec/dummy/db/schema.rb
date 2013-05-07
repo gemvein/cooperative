@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429134522) do
+ActiveRecord::Schema.define(:version => 20130507151719) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -119,6 +119,15 @@ ActiveRecord::Schema.define(:version => 20130429134522) do
     t.integer "user_id"
     t.integer "role_id"
   end
+
+  create_table "statuses", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "statuses", ["user_id"], :name => "index_statuses_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",   :null => false

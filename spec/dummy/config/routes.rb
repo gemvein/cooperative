@@ -1,5 +1,8 @@
 Dummy::Application.routes.draw do
 
+  resources :statuses
+
+
   mount Cooperative::Engine => '/', :as => 'cooperative'
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
