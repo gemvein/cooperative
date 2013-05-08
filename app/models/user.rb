@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
   has_many :messages, :foreign_key => :recipient_id
 
   has_many :pages, :as => :pageable
+  has_many :statuses
   
   def to_param
     self.nickname

@@ -1,0 +1,8 @@
+%div{:id => 'status_' + activity.trackable.id.to_s}
+  .thumbnail.span1
+    = link_to image_tag(activity.owner.image.url(:thumb)), cooperative.person_path(activity.owner)
+  .span5
+    %i.icon-check
+      &nbsp;
+    = link_to activity.owner.nickname, cooperative.person_path(activity.owner)
+    = activity.trackable.body

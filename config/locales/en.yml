@@ -46,6 +46,7 @@ en:
   sent: "Sent"
   sent_at: "Sent At"
   sent_messages: "Sent Messages"
+  set_status: "Set Status"
   sign_in: "Sign In"
   sign_up: "Sign Up"
   sign_out: "Sign Out"

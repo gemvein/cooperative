@@ -11,6 +11,16 @@ class Ability
 
     # Pages
     can :access, Page, :public => true
+    can :create, Page, !user.new_record?
     can :manage, Page, :pageable => user
+
+    # Statuses
+    can :access, Status do |status|
+      user.following? status.user
+    end
+    can :create, Status do |status|
+      !user.new_record?
+    end
+    can :manage, Status, :user => user
   end
 end
