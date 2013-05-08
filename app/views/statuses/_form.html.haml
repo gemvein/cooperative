@@ -1,4 +1,4 @@
 = bootstrap_form_for @status, :format => :js, :remote => true do |f|
-  = f.text_area :body, :rows => 3, :cols => 60
+  = f.text_area :body, :rows => 3, :cols => 60, :label => false
   .control-group
     = f.submit :set_status.l

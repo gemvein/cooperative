@@ -2,7 +2,7 @@
   .accordion-group
     .accordion-heading
       %a.btn.btn-success.accordion-toggle{:data => {:toggle => 'collapse', :parent => '#status'}, :href => '#statusCollapse'}
-        How are things going today?
+        = :whats_up_doc.l
     #statusCollapse.accordion-body.collapse
       .accordion-inner
         = render 'statuses/form'
