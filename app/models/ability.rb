@@ -16,11 +16,11 @@ class Ability
 
     # Statuses
     can :access, Status do |status|
-      user.following? status.user
+      user.following? status.owner or user == status.owner
     end
     can :create, Status do |status|
       !user.new_record?
     end
-    can :manage, Status, :user => user
+    can :manage, Status, :owner => user
   end
 end
