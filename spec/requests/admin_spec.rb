@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe "Admin" do
-  include_context "login request"
-  include_context "load site"
+  include_context "login support for requests"
+  include_context "pages support"
 
   it "requires login" do
     get rails_admin.dashboard_path

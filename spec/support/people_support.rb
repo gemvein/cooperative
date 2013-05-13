@@ -1,4 +1,4 @@
-shared_context "populate people" do
+shared_context "people support" do
   before(:each) do
     @public_users = []
     5.times do 

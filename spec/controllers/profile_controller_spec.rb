@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ProfileController do
-  include_context "populate people"
+  include_context "people support"
   describe "GET edit" do
     it "gets the @login_user and renders the edit template" do 
       sign_in :user, @login_user

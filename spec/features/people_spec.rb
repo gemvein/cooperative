@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe "People" do
-  include_context 'load site'
-  include_context 'login request'
+  include_context "pages support"
+  include_context "login support for requests"
   before(:each) do
     FactoryGirl.create(:user, :public => true)
     FactoryGirl.create(:user, :public => true)

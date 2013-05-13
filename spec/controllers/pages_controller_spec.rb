@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe PagesController do
-  include_context "load site"
+  include_context "pages support"
   describe "GET index" do
     it "assigns to @page the root home page when no person is specified" do 
       get :index

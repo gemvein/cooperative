@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Layout" do
-  include_context 'load site'
+  include_context "pages support"
   include RSpec::Rails::RequestExampleGroup
   it "looks like a bootstrap layout" do
     get '/'

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe "Profiles" do
-  include_context 'load site'
-  include_context 'login request'
+  include_context "pages support"
+  include_context "login support for requests"
   
   it "has a link in the navbar" do
     user = FactoryGirl.create(:user)

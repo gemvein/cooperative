@@ -1,4 +1,4 @@
-shared_context "load messages" do
+shared_context "messages support" do
   before(:each) do
     @sender = FactoryGirl.create(:user)
     @recipient = FactoryGirl.create(:user)

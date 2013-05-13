@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe PeopleController do
-  include_context "populate people"
+  include_context "people support"
   describe "GET index" do
     it "gets the public @people and renders the index template" do 
       get :index

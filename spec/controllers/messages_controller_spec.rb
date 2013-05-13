@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe MessagesController do
-  include_context "load site"
-  include_context "load messages"
+  include_context "pages support"
+  include_context "messages support"
   describe "GET index" do
     it "does not show messages when not logged in" do
       get :index

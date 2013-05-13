@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Pages" do
-  include_context 'load site'
+  include_context "pages support"
   it "shows pages" do
     my_page = FactoryGirl.create(:page)
     visit my_page.path

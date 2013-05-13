@@ -1,4 +1,4 @@
-shared_context "populate notifications" do
+shared_context "notifications support" do
   before(:each) do
     @following_user = FactoryGirl.create(:user, :public => false)
     @followed_user = FactoryGirl.create(:user, :public => false)

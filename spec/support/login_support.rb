@@ -1,4 +1,4 @@
-shared_context "login request" do
+shared_context "login support for requests" do
   def sign_in(user)
     visit new_user_session_path
     fill_in "user_email", :with => user.email

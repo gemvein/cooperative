@@ -2,8 +2,8 @@ require 'spec_helper'
 
 
 describe "Users" do
-  include_context "login request"
-  include_context "load site"
+  include_context "login support for requests"
+  include_context "pages support"
 
   it "has a login link" do
     user = FactoryGirl.create(:user)

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe FollowsController do
-  include_context "populate people"
+  include_context "people support"
   describe "POST create (person/nickname/follows)" do
     context "with valid attributes" do
       it "follows the named person" do

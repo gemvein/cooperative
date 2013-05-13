@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe "Admin" do
-  include_context "login request"
-  include_context "load site"
+  include_context "login support for requests"
+  include_context "pages support"
 
   it "does not provide access to dashboard to non-admin users" do
     user = FactoryGirl.create(:user)
