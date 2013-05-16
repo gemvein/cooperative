@@ -16,12 +16,12 @@ describe Page do
     page.updated_at.should_not == timestamp
   end
   describe "handles slugs appropriately" do
-    it "won't save without a slug" do
-      page = FactoryGirl.build(:page)
-      page.slug = nil
-      if page.save && !page.reload.slug
-        fail "It shouldn't save without a slug"
-      end
+      it "won't save without a slug" do
+        page = FactoryGirl.build(:page)
+        page.slug = nil
+        if page.save && !page.reload.slug
+          fail "It shouldn't save without a slug"
+        end
     end
     it "sets the slug on creation" do
       page = FactoryGirl.create(:page, :title => "This is the Page Title")
