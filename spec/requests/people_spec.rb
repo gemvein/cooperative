@@ -25,6 +25,7 @@ describe "People" do
     visit cooperative.people_path
     page.should have_selector '.person', :minimum => 5
     page.should_not have_selector '.person', :text => 'private'
+    page.should have_selector 'a', :text => 'Follow', :minimum => 5
   end
 
   it "shows individual users" do
@@ -34,6 +35,8 @@ describe "People" do
     visit cooperative.person_path(person)
     page.should have_selector 'h1', :text => person.nickname
     page.should have_selector '.container', :exact => person.bio
+
+    page.should have_selector 'a', :text => 'Follow'
   end
 
 end
