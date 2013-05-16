@@ -1,1 +1,2 @@
-=nav_item :people.l, cooperative.people_path
+- if user_signed_in?
+  =nav_item :people.l, cooperative.people_path

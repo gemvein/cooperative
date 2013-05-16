@@ -12,6 +12,6 @@ Cooperative.configure do |config|
   
   # Configuration for Paperclip Image Uploader
   config.paperclip_options = {
-    :users => {:large => "600x400>", :medium => "300x200>", :thumb => "150x100>"}
+    :users => {:large => "600x600>", :medium => "300x300>", :thumb => "150x150>"}
   }
 end

@@ -1,1 +1,2 @@
-=nav_item :notifications.l, cooperative.notifications_path
+- if user_signed_in?
+  =nav_item :notifications.l, cooperative.notifications_path
