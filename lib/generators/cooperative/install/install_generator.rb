@@ -65,10 +65,18 @@ module Cooperative
       output "Public Activity lets users keep up with what's happening", :magenta
       generate("public_activity:migration")
     end
-    
+
     def install_acts_as_follower
       output "Acts as Follower lets one model follow another.", :magenta
       generate("acts_as_follower")
+    end
+
+    def install_merit
+      output "Merit gives points and badges.", :magenta
+      generate("merit:install")
+      generate("merit user")
+      output "We're modifying the devise line in your routes file so that we can do nifty stuff with merit and devise together", :magenta
+      gsub_file "config/routes.rb", /^devise_for :users$/, 'devise_for :users, :controllers => { :registrations => "users/registrations" }'
     end
     
     def self.next_migration_number(dirname)

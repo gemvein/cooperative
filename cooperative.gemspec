@@ -43,7 +43,7 @@ Gem::Specification.new do |s|
   s.add_dependency "cancan"
   s.add_dependency "devise"
   s.add_dependency "authorization"
-  
+
   s.add_dependency "fastercsv"
   s.add_dependency "paperclip"
   s.add_dependency "ckeditor"
@@ -54,6 +54,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'public_activity'
   s.add_dependency 'acts_as_follower'
+  s.add_dependency 'merit'
 
   s.add_development_dependency "sqlite3"
 end

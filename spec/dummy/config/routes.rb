@@ -1,30 +1,8 @@
 Dummy::Application.routes.draw do
-
-  resources :statuses
-
-
   mount Cooperative::Engine => '/', :as => 'cooperative'
-
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
-  
-
-  
-
-  
-
-  
-
-  
-
   mount Ckeditor::Engine => '/ckeditor'
-
-  
-
-  
-  
-  mount Ckeditor::Engine => '/ckeditor'
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "users/registrations" }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -8,4 +8,4 @@
       = link_to activity.owner.nickname, cooperative.person_path(activity.owner)
       = activity.trackable.body
       - if activity.owner == current_user
-        = link_to '<i class="icon-remove"></i>'.html_safe, activity.trackable, :method => :delete, :remote => true, :class => 'pull-right', :format => :js
+        = link_to '<i class="icon-remove"></i>'.html_safe, cooperative.status_path(activity.trackable), :method => :delete, :remote => true, :class => 'pull-right', :format => :js
