@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517142333) do
+ActiveRecord::Schema.define(:version => 20130801001420) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -241,6 +241,8 @@ ActiveRecord::Schema.define(:version => 20130517142333) do
     t.datetime "image_updated_at"
     t.string   "image_content_type"
     t.string   "image_file_name"
+    t.integer  "sash_id"
+    t.integer  "level",                  :default => 0
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

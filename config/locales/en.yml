@@ -32,6 +32,7 @@ en:
   new_page: "New Page"
   new_password: "New Password"
   notifications: "Notifications"
+  nicknames_badges: "%{nickname}'s Badges"
   nicknames_pages: "%{nickname}'s Pages"
   pages: "Pages"
   parent: "Parent"
