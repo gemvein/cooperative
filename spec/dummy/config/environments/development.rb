@@ -36,4 +36,6 @@ Dummy::Application.configure do
   config.assets.debug = true
   
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  Paperclip.options[:command_path] = "C:/PROGRA~2/IMAGEM~1.6-Q"
 end
