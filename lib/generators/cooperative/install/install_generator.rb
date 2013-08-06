@@ -57,6 +57,9 @@ module Cooperative
       unless ActiveRecord::Base.connection.table_exists? 'roles_users'
         migration_template 'migrate/create_roles_users_table.rb', 'db/migrate/create_roles_users_table.rb' rescue output $!.message
       end
+      unless ActiveRecord::Base.connection.table_exists? 'groups'
+        migration_template 'migrate/create_groups_table.rb', 'db/migrate/create_groups_table.rb' rescue output $!.message
+      end
       migration_template 'migrate/add_fields_to_users.rb', 'db/migrate/add_fields_to_users.rb' rescue output $!.message
       migration_template 'migrate/add_image_to_users.rb', 'db/migrate/add_image_to_users.rb' rescue output $!.message
     end

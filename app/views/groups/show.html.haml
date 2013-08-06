@@ -1,0 +1,10 @@
+-@title = @group.name
+%p= @group.description
+
+-if can?('edit', @group)
+  .pull-right
+    =link_to '<i class="icon-file-alt"></i> '.html_safe + :edit_group.l, cooperative.edit_group_path(@group), :class => 'btn btn-primary'
+    =link_to '<i class="icon-trash"></i> '.html_safe + :delete_group.l, cooperative.group_path(@group), :method => 'delete', :class => 'btn btn-danger'
+
+%div{:id => 'join_group' + @group.id.to_s}
+  = render 'groups/join_button', :group => @group 

@@ -1,0 +1,11 @@
+-if @group.new_record?
+  - destination = cooperative.groups_path
+-else
+  - destination = cooperative.group_path @group
+
+= bootstrap_form_for @group, :url => destination, :html => {:class => 'form form-horizontal'} do |f|
+  = f.text_field :name
+  = f.text_area :description
+  #= f.check_box :public, :label => 'Make this group public?', :default => true
+  .controls
+    = f.submit 'Save'

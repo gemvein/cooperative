@@ -1,0 +1,1 @@
+$('#join_group<%= @group.id %>').html('<%= escape_javascript(render :partial => "groups/join_button", :locals => {:group => @group}) %>');

@@ -40,10 +40,6 @@ module Merit
       #   user.name.length > 4
       # end
       grant_on 'registrations#create', :badge => 'New User', :to => :itself
-
-      grant_on 'registrations#update', :badge => 'Profile Complete', :temporary => true, :model_name => 'User' do |user|
-        user.bio.present?
-      end
       
     end
   end

@@ -7,6 +7,13 @@ Cooperative::Engine.routes.draw do
   get '/notifications' => 'notifications#index', :as => 'notifications'
   resources :statuses, :only => [:create, :destroy]
   
+  resources :groups do
+    member do 
+      get 'join'
+      get 'leave'
+    end
+  end
+  
   resources :people, :only => [:index, :show], :constraints => { :id => /.*/ } do
     resources :follows, :only => [:create, :destroy]
     resources :pages, :except => [:show]

@@ -8,6 +8,27 @@ class Ability
       can :dashboard              # grant access to the dashboard
       can :manage, :all
     end
+    
+    # Groups
+    can :create, Group
+    can :join, Group do |group|
+      group.public? and !( user.has_role? 'moderator', group or user.has_role? 'owner', group )
+    end
+    can :leave, Group do |group|
+      user.has_role? 'member', group
+    end
+    can :read, Group do |group|
+      group.public? or user.has_role? 'member', group or user.has_role? 'moderator', group or user.has_role? 'owner', group
+    end
+    can :participate, Group do |group|
+      user.has_role? 'member', group or user.has_role? 'moderator', group or user.has_role? 'owner', group
+    end
+    can :moderate, Group do |group|
+      user.has_role? 'moderator', group or user.has_role? 'owner', group
+    end
+    can :manage, Group do |group|
+      user.has_role? 'owner', group
+    end
 
     # Pages
     can :access, Page, :public => true
