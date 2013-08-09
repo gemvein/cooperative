@@ -10,14 +10,16 @@ class Ability
     end
     
     # Groups
-    can :create, Group
+    can :create, Group do |group|
+      !user.new_record?
+    end   
     can :join, Group do |group|
       group.public? and !( user.has_role? 'moderator', group or user.has_role? 'owner', group )
     end
     can :leave, Group do |group|
       user.has_role? 'member', group
     end
-    can :read, Group do |group|
+    can :access, Group do |group|
       group.public? or user.has_role? 'member', group or user.has_role? 'moderator', group or user.has_role? 'owner', group
     end
     can :participate, Group do |group|
@@ -26,9 +28,7 @@ class Ability
     can :moderate, Group do |group|
       user.has_role? 'moderator', group or user.has_role? 'owner', group
     end
-    can :manage, Group do |group|
-      user.has_role? 'owner', group
-    end
+    can :manage, Group, :owner => user
 
     # Pages
     can :access, Page, :public => true

@@ -1,4 +1,7 @@
 -@title = @group.name
+%dl.horizontal
+  %dt= :tags.l
+  %dd= @group.tag_list.join(', ')
 %p= @group.description
 
 -if can?('edit', @group)

@@ -2,17 +2,14 @@ class User < ActiveRecord::Base
   # Paperclip plugin
   has_attached_file :image, :styles => Cooperative.configuration.paperclip_options[:users], :default_url => "/assets/cooperative/:style/missing.png"
   
-  # Merit plugin
-  has_merit
-  
   # Acts as Follower plugin
   acts_as_follower
   acts_as_followable
+  
+  acts_as_taggable_on :skills, :interests, :hobbies
 
   # Authorization plugin
   acts_as_authorized_user
-  acts_as_authorizable
-  has_and_belongs_to_many :roles
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -20,7 +17,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :bio, :image
+  attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :bio, :image, :skill_list, :interest_list, :hobby_list
   validates_presence_of :nickname
   
   has_many :messages, :foreign_key => :recipient_id

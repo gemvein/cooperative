@@ -15,5 +15,6 @@
 //= require jquery.ui.all
 //= require bootstrap
 //= require tinymce
+//= require tag-it.min
 //= require_tree .
 

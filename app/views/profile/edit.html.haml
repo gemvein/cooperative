@@ -2,5 +2,14 @@
 = bootstrap_form_for(@user, :url => cooperative.profile_path, :html => { :method => :put, :class => 'form form-horizontal' }) do |f|
   =f.file_field :image, :label => :profile_image.l
   =f.text_area :bio, :class => 'wysiwyg'
+  = f.text_field :skill_list, :class => 'skill-tag-box'
+  = f.text_field :interest_list, :class => 'interest-tag-box'
+  = f.text_field :hobby_list, :class => 'hobby-tag-box'
   =tinymce_init
   .controls= f.submit :update.l
+
+-content_for :end_javascript do
+  %script{:type => 'text/javascript'}
+    = "$('.skill-tag-box').tagit({availableTags: [\"#{User.tags_on('skills').join('", "')}\"]});".html_safe
+    = "$('.interest-tag-box').tagit({availableTags: [\"#{User.tags_on('interests').join('", "')}\"]});".html_safe
+    = "$('.hobby-tag-box').tagit({availableTags: [\"#{User.tags_on('hobbies').join('", "')}\"]});".html_safe

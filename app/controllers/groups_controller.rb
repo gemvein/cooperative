@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.json
   def index
-    @groups = Group.all
+    @groups = Group.find_all_by_public(true)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -92,7 +92,7 @@ class GroupsController < ApplicationController
     @group.destroy
 
     respond_to do |format|
-      format.html { redirect_to groups_url }
+      format.html { redirect_to cooperative.groups_url }
       format.json { head :no_content }
     end
   end

@@ -11,6 +11,11 @@
   = f.text_area :description, :rows => 3
   = f.text_area :keywords, :rows => 3
   = f.text_area :body, :class => 'wysiwyg', :required => false
+  = f.text_field :tag_list, :class => 'tag-box'
   = tinymce_init
   = f.check_box :public
   .controls=f.submit :save_page.l
+
+-content_for :end_javascript do
+  %script{:type => 'text/javascript'}
+    = "$('.tag-box').tagit({availableTags: [\"#{Page.all_tags.join('", "')}\"]});".html_safe

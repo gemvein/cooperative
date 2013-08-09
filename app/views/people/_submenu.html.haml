@@ -11,10 +11,3 @@
 
 -unless @person.pages.empty?
   =render 'pages/submenu_for_person', :user => @person
-  
--if @person.badges.count > 0  
-  -widget do
-    %h3= :nicknames_badges.l :nickname => @person.nickname
-    %ul.nav.nav-list
-      - for badge in @person.badges
-        = nav_item badge.name, '#', :title => badge.description

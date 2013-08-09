@@ -11,8 +11,10 @@ class Page < ActiveRecord::Base
   belongs_to :parent, :class_name => "Page"
   has_many :children, :foreign_key => :parent_id, :class_name => "Page"
   
+  acts_as_taggable
+  
   belongs_to :pageable, :polymorphic => true
-  attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :pageable_id, :pageable_type
+  attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :pageable_id, :pageable_type, :tag_list
   validates_presence_of :slug, :title, :body
   
   def ancestry

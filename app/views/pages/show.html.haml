@@ -3,6 +3,10 @@
     =link_to '<i class="icon-file-alt"></i> '.html_safe + :edit_page.l, cooperative.edit_person_page_path(@person, @page.id), :class => 'btn btn-primary'
     =link_to '<i class="icon-trash"></i> '.html_safe + :delete_page.l, cooperative.person_page_path(@person, @page.id), :method => 'delete', :class => 'btn btn-danger'
 
+%dl.horizontal
+  %dt= :tags.l
+  %dd= @page.tag_list.join(', ')
+  
 = render 'page'
 
 = render 'widget', :pages => @page.children

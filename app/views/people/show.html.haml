@@ -1,5 +1,13 @@
 -@title = @person.nickname
 
+%dl.horizontal
+  %dt= :skills.l
+  %dd= @person.skill_list.join(', ')
+  %dt= :hobbies.l
+  %dd= @person.hobby_list.join(', ')
+  %dt= :interests.l
+  %dd= @person.interest_list.join(', ')
+  
 =render 'submenu'
 
 %div{:id => 'follow_person' + @person.id.to_s}= render 'follows/person', :person => @person

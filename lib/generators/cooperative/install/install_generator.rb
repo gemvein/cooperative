@@ -73,19 +73,10 @@ module Cooperative
       output "Acts as Follower lets one model follow another.", :magenta
       generate("acts_as_follower")
     end
-
-    def install_merit
-      output "Merit gives points and badges.", :magenta
-      
-      # Rather than using merit's install script, we'll install it ourselves.
-      template 'merit.rb', 'config/initializers/merit.rb'
-      template 'merit_badge_rules.rb', 'app/models/merit/badge_rules.rb'
-      template 'merit_point_rules.rb', 'app/models/merit/point_rules.rb'
-      template 'merit_rank_rules.rb', 'app/models/merit/rank_rules.rb'
-      
-      generate("merit user")
-      output "We're modifying the devise line in your routes file so that we can do nifty stuff with merit and devise together", :magenta
-      gsub_file "config/routes.rb", /^devise_for :users$/, 'devise_for :users, :controllers => { :registrations => "users/registrations" }'
+    
+    def install_acts_as_taggable_on
+      output "Acts as Taggable On lets arbitrary models be taggable.", :magenta
+      generate("acts_as_taggable_on:migration")
     end
     
     def self.next_migration_number(dirname)

@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rspec"
   s.add_dependency "capybara"
   s.add_dependency "factory_girl_rails"
-  s.add_dependency "database_cleaner"
+  s.add_dependency "database_cleaner", "1.0.1" # problems with sql after this version
   
   s.add_dependency "haml"
   s.add_dependency "haml-rails"
@@ -54,7 +54,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'public_activity'
   s.add_dependency 'acts_as_follower'
-  s.add_dependency 'merit'
+  s.add_dependency 'acts-as-taggable-on'
 
   s.add_development_dependency "sqlite3"
 end

@@ -6,6 +6,11 @@
 = bootstrap_form_for @group, :url => destination, :html => {:class => 'form form-horizontal'} do |f|
   = f.text_field :name
   = f.text_area :description
-  #= f.check_box :public, :label => 'Make this group public?', :default => true
+  = f.text_field :tag_list, :class => 'tag-box'
+  = f.check_box :public, :label => 'Make this group public?', :default => true
   .controls
     = f.submit 'Save'
+
+-content_for :end_javascript do
+  %script{:type => 'text/javascript'}
+    = "$('.tag-box').tagit({availableTags: [\"#{Group.all_tags.join('", "')}\"]});".html_safe

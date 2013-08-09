@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     cooperative (0.1.6)
+      acts-as-taggable-on
       acts_as_follower
       authorization
       bootstrap-sass
@@ -10,7 +11,7 @@ PATH
       cancan
       capybara
       ckeditor
-      database_cleaner
+      database_cleaner (= 1.0.1)
       devise
       factory_girl_rails
       fastercsv
@@ -22,7 +23,6 @@ PATH
       jquery-ui-rails
       jquery-ui-themes
       kaminari
-      merit
       paperclip
       public_activity
       rails
@@ -63,11 +63,11 @@ GEM
     activesupport (3.2.14)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    acts-as-taggable-on (2.4.1)
+      rails (>= 3, < 5)
     acts_as_follower (0.1.1)
-    ambry (0.3.1)
     arel (3.0.2)
     authorization (1.0.12)
-    bcrypt-ruby (3.1.1)
     bcrypt-ruby (3.1.1-x86-mingw32)
     bootstrap-sass (2.3.2.1)
       sass (~> 3.2)
@@ -96,7 +96,7 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     database_cleaner (1.0.1)
-    devise (3.0.0)
+    devise (3.0.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -151,19 +151,17 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    merit (1.6.1)
-      ambry (~> 0.3.0)
     mime-types (1.23)
     mini_portile (0.5.1)
-    multi_json (1.7.7)
-    multi_xml (0.5.4)
+    multi_json (1.7.8)
+    multi_xml (0.5.5)
     nested_form (0.3.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     nokogiri (1.6.0-x86-mingw32)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
-    paperclip (3.5.0)
+    paperclip (3.5.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.0)
