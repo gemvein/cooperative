@@ -1,0 +1,4 @@
+-unless page.tags.empty?
+  -widget do
+    %h3= :tags.l
+    %p= tag_list page.tags

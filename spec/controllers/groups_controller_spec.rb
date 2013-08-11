@@ -116,9 +116,39 @@ describe GroupsController do
       }.to change(Group,:count).by(-1)
     end
       
-    it "redirects to pages#index" do        
+    it "redirects to groups#index" do        
       sign_in :user, @group_owner
       delete :destroy, :id => @public_groups.first.id
+      response.should redirect_to '/groups'
+    end
+  end
+  describe "GET join" do
+    it "adds the user to the group" do
+      sign_in :user, @group_joiner
+      get :join, :id => @public_groups.first.id
+      @public_groups.first.reload
+      @public_groups.first.has_members.should include @group_joiner
+    end
+      
+    it "redirects to group#show" do        
+      sign_in :user, @group_joiner
+      get :join, :id => @public_groups.first.id
+      response.should redirect_to '/groups/' + @public_groups.first.id.to_s
+    end
+  end
+  describe "GET leave" do
+    it "removes the user from the group" do
+      sign_in :user, @group_joiner
+      @group_joiner.is_member_of @public_groups.first
+      get :leave, :id => @public_groups.first.id
+      @public_groups.first.reload
+      @public_groups.first.has_members.should_not include @group_joiner
+    end
+      
+    it "redirects to groups" do        
+      sign_in :user, @group_joiner
+      @group_joiner.is_member_of @public_groups.first
+      get :leave, :id => @public_groups.first.id
       response.should redirect_to '/groups'
     end
   end

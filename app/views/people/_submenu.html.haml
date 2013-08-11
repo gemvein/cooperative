@@ -9,5 +9,7 @@
     %p= truncate strip_tags(@person.bio), :length => 255, :separator => ' '
     %p= link_to 'Read More...', cooperative.person_path(@person)
 
+=render 'tags/submenu_for_person', :person => @person
+
 -unless @person.pages.empty?
   =render 'pages/submenu_for_person', :user => @person

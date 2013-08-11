@@ -1,7 +1,10 @@
 -@title = @group.name
-%dl.horizontal
-  %dt= :tags.l
-  %dd= @group.tag_list.join(', ')
+
+-unless @group.tags.empty?
+  %dl.horizontal
+    %dt= :tags.l
+    %dd= tag_list @group.tags
+  
 %p= @group.description
 
 -if can?('edit', @group)

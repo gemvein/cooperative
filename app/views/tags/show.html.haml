@@ -1,0 +1,19 @@
+-@title = @tag.name
+
+-if !@tag.users.empty?
+  %h2= :people.l
+  %ul
+    -for user in @tag.users
+      %li= link_to user.nickname, cooperative.people_path(user)
+
+-if !@tag.groups.empty?
+  %h2= :groups.l
+  %ul
+    -for group in @tag.groups
+      %li= link_to group.name, cooperative.people_path(group)
+
+-if !@tag.pages.empty?
+  %h2= :pages.l
+  %ul
+    -for page in @tag.pages
+      %li= link_to page.title, page.path

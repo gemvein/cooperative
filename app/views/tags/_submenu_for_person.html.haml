@@ -1,0 +1,16 @@
+
+  
+-unless person.skills.empty?
+  -widget do
+    %h3= :skills.l
+    %p= tag_list person.skills
+  
+-unless person.hobbies.empty?
+  -widget do
+    %h3= :hobbies.l
+    %p= tag_list person.hobbies
+    
+-unless person.interests.empty?
+  -widget do
+    %h3= :interests.l
+    %p= tag_list person.interests

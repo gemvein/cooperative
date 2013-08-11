@@ -1,6 +1,7 @@
 shared_context "groups support" do
   before(:each) do
     @group_owner = FactoryGirl.create(:user)
+    @group_joiner = FactoryGirl.create(:user)
     @public_groups = []
     3.times do 
       @public_groups << FactoryGirl.create(:group)
