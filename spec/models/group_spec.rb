@@ -22,4 +22,10 @@ describe Group do
     Group.exists?(group.id).should be false
     Group.count.should be count
   end
+  it "can find the owner of a group" do
+    group = FactoryGirl.create(:group)
+    user = FactoryGirl.create(:user)
+    user.is_owner_of group
+    expect(group.owner).to eq user
+  end
 end
