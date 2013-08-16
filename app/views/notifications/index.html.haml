@@ -6,3 +6,18 @@
   .activity.clearfix
     - unless activity.owner.nil?
       = render_activity activity
+
+#modal.modal.hide.fade{:tabindex => -1, :role => 'dialog', :aria => {:labelledby => 'modalLabel', :hidden => true}}
+  .modal-header
+    %button.close{:type => 'button', :data => {:dismiss => 'modal'}, :aria => {:hidden => true}}= 'x'
+    %h3#modalLabel= :share.l
+  .modal-body
+    %h3= :please_wait.l
+    %p.spinner.clearfix
+    %p
+  .modal-footer
+    %button.close{:type => 'button', :data => {:dismiss => 'modal'}, :aria => {:hidden => true}}= :close.l
+      
+- content_for :end_javascript do
+  %script{:type => 'text/javascript'}
+    $('.spinner').spin();

@@ -4,8 +4,13 @@ Cooperative::Engine.routes.draw do
   match '/pages/*path' => 'pages#show', :as => 'show'
   get '/profile' => 'profile#edit', :as => 'profile'
   put '/profile' => 'profile#update'
-  get '/notifications' => 'notifications#index', :as => 'notifications'
+  resources :notifications, :only => [:index]
   resources :statuses, :only => [:create, :destroy]
+  resources :shares, :only => [:new, :create, :destroy] do
+    collection do
+      get 'images'
+    end
+  end
   resources :tags, :only => [:index, :show], :constraints => { :id => /.*/ }
   
   resources :groups do

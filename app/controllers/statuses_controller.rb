@@ -1,6 +1,13 @@
 class StatusesController < ApplicationController
   load_and_authorize_resource
 
+  # GET /statuses/new
+  # GET /statuses/new.js
+  def new
+    @status = Status.new
+    @share = Share.new
+  end
+
   # POST /statuses
   # POST /statuses.json
   def create
@@ -8,6 +15,7 @@ class StatusesController < ApplicationController
     @status.user = current_user
     @status.save
     @activity = @status.activities.first
+    @share = Share.new
   end
 
   # DELETE /statuses/1

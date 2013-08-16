@@ -1,0 +1,4 @@
+<% if(@share) %>
+    var please_wait = $('.modal-body').html();
+    $('.modal-body').html('<%= escape_javascript(render 'form') %>');
+<% end %>

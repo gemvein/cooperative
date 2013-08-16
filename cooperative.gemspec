@@ -1,60 +1,61 @@
-$:.push File.expand_path("../lib", __FILE__)
+$:.push File.expand_path('../lib', __FILE__)
 
 # Maintain your gem's version:
-require "cooperative/version"
+require 'cooperative/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "cooperative"
+  s.name        = 'cooperative'
   s.version     = Cooperative::VERSION
-  s.authors     = ["Karen Lundgren"]
-  s.email       = ["webmaster@sourcherryweb.com"]
-  s.homepage    = "https://github.com/nerakdon/cooperative.git"
-  s.summary     = "Cooperative: A Social Engine"
-  s.description = "Cooperative provides Social Networking abilities to Rails 3 apps."
+  s.authors     = ['Karen Lundgren']
+  s.email       = ['webmaster@sourcherryweb.com']
+  s.homepage    = 'https://github.com/nerakdon/cooperative.git'
+  s.summary     = 'Cooperative: A Social Engine'
+  s.description = 'Cooperative provides Social Networking abilities to Rails 3 apps.'
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE.txt", "Rakefile", "README.md"]
-  s.test_files = Dir["spec/**/*"]
+  s.files = Dir['{app,config,db,lib}/**/*'] + ['LICENSE.txt', 'Rakefile', 'README.md']
+  s.test_files = Dir['spec/**/*']
 
-  s.add_dependency "rails"
-  s.add_dependency "rails-i18n"
+  s.add_dependency 'rails'
+  s.add_dependency 'rails-i18n'
 
-  s.add_dependency "rspec"
-  s.add_dependency "capybara"
-  s.add_dependency "factory_girl_rails"
-  s.add_dependency "database_cleaner", "1.0.1" # problems with sql after this version
+  s.add_dependency 'rspec'
+  s.add_dependency 'capybara'
+  s.add_dependency 'factory_girl_rails'
+  s.add_dependency 'database_cleaner', '1.0.1' # problems with sql after this version
   
-  s.add_dependency "haml"
-  s.add_dependency "haml-rails"
+  s.add_dependency 'haml'
+  s.add_dependency 'haml-rails'
 
-  s.add_dependency "sass-rails"
-  s.add_dependency "bootstrap-sass"
-  s.add_dependency "font-awesome-sass-rails"
+  s.add_dependency 'sass-rails'
+  s.add_dependency 'bootstrap-sass'
+  s.add_dependency 'font-awesome-sass-rails'
 
-  s.add_dependency "bootstrap_forms"
-  s.add_dependency "breadcrumbs_on_rails"
-  s.add_dependency "kaminari"
+  s.add_dependency 'bootstrap_forms'
+  s.add_dependency 'breadcrumbs_on_rails'
+  s.add_dependency 'kaminari'
   
-  s.add_dependency "jquery-rails"
-  s.add_dependency "jquery-ui-rails"
-  s.add_dependency "jquery-ui-themes"
-  s.add_dependency "tinymce-rails"
+  s.add_dependency 'jquery-rails'
+  s.add_dependency 'jquery-ui-rails'
+  s.add_dependency 'jquery-ui-themes'
+  s.add_dependency 'tinymce-rails'
   
-  s.add_dependency "cancan"
-  s.add_dependency "devise"
-  s.add_dependency "authorization"
+  s.add_dependency 'cancan'
+  s.add_dependency 'devise'
+  s.add_dependency 'authorization'
 
-  s.add_dependency "fastercsv"
-  s.add_dependency "paperclip"
-  s.add_dependency "ckeditor"
+  s.add_dependency 'fastercsv'
+  s.add_dependency 'paperclip'
+  s.add_dependency 'nokogiri'
+  s.add_dependency 'ckeditor'
   s.add_dependency 'safe_yaml', '0.8.6' # enable_arbitrary_object_deserialization! removed after this version
-  s.add_dependency "rails_admin"
+  s.add_dependency 'rails_admin'
   
-  s.add_dependency "friendly_id"
+  s.add_dependency 'friendly_id'
 
   s.add_dependency 'public_activity'
   s.add_dependency 'acts_as_follower'
   s.add_dependency 'acts-as-taggable-on'
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'sqlite3'
 end

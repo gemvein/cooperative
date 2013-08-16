@@ -1,4 +1,4 @@
-class CreateStatuses < ActiveRecord::Migration
+class CreateStatusesTable < ActiveRecord::Migration
   def change
     create_table :statuses do |t|
       t.references :user

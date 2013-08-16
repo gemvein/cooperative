@@ -1,0 +1,6 @@
+%blockquote 
+  = status.body
+  %small
+    = :posted_by.l
+    %cite= link_to status.user.nickname, cooperative.person_path(status.user.nickname)
+      

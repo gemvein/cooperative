@@ -13,8 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
+//= require spin.min
+//= require jquery.spin
 //= require bootstrap
 //= require tinymce
 //= require tag-it.min
 //= require_tree .
 
+$('.spinner').on('load', spin);

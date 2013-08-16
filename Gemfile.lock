@@ -23,6 +23,7 @@ PATH
       jquery-ui-rails
       jquery-ui-themes
       kaminari
+      nokogiri
       paperclip
       public_activity
       rails

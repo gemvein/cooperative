@@ -34,6 +34,7 @@ module Cooperative
   
   require 'fastercsv'
   require 'paperclip'
+  require 'nokogiri'
   require 'ckeditor'
   require 'safe_yaml'
   require 'rails_admin'

@@ -1,5 +1,4 @@
 <% if(@activity) %>
     $('#notifications').prepend('<div class="activity clearfix"><%= escape_javascript(render_activity @activity) %></div>');
-    $('#status_body').val('');
-    $('#statusCollapse').collapse();
+	$('#status_body').val('');
 <% end %>

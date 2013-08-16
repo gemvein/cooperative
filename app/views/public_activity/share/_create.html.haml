@@ -1,0 +1,24 @@
+- if activity.trackable
+  %div{:id => 'share_' + activity.trackable.id.to_s}
+    .thumbnail.span1
+      = link_to image_tag(activity.owner.image.url(:thumb)), cooperative.person_path(activity.owner)
+    .span5
+      %i.icon-check
+        &nbsp;
+      = link_to activity.owner.nickname, cooperative.person_path(activity.owner)
+      = activity.trackable.body
+      %blockquote
+        - if activity.trackable.shareable_type == 'Status'
+          = activity.trackable.shareable.body
+          %small
+            = :posted_by.l
+            %cite= link_to activity.trackable.shareable.user.nickname, cooperative.person_path(activity.trackable.shareable.user.nickname)
+        - else
+          %ul.thumbnails
+            %li
+              .thumbnail
+                = link_to image_tag(activity.trackable.image.url(:thumb)), activity.trackable.url
+      - if activity.owner == current_user
+        = link_to '<i class="icon-remove"></i>'.html_safe, cooperative.share_path(activity.trackable), :method => :delete, :remote => true, :class => 'pull-right', :format => :js
+      %p.muted
+        = link_to :share.l, cooperative.new_share_path(:shareable_id => activity.trackable_id, :shareable_type => activity.trackable_type, :url => cooperative.share_url(activity.trackable)), :data => {:toggle => 'modal', :target => '#modal'}
