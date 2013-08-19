@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130813234311) do
+ActiveRecord::Schema.define(:version => 20130816221319) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -172,29 +172,18 @@ ActiveRecord::Schema.define(:version => 20130813234311) do
   add_index "rs_reputations", ["reputation_name"], :name => "index_rs_reputations_on_reputation_name"
   add_index "rs_reputations", ["target_id", "target_type"], :name => "index_rs_reputations_on_target_id_and_target_type"
 
-  create_table "shares", :force => true do |t|
+  create_table "statuses", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "shareable_id"
-    t.string   "shareable_type"
-    t.string   "url"
     t.text     "body"
-    t.text     "title"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.string   "url"
+    t.string   "title"
+    t.string   "description"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-  end
-
-  add_index "shares", ["shareable_id", "shareable_type"], :name => "index_shares_on_shareable_id_and_shareable_type"
-  add_index "shares", ["user_id"], :name => "index_shares_on_user_id"
-
-  create_table "statuses", :force => true do |t|
-    t.integer  "user_id"
-    t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   add_index "statuses", ["user_id"], :name => "index_statuses_on_user_id"

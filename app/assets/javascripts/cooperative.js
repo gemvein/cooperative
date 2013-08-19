@@ -20,4 +20,3 @@
 //= require tag-it.min
 //= require_tree .
 
-$('.spinner').on('load', spin);

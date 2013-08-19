@@ -6,6 +6,7 @@ module Cooperative
   require 'capybara'
   require 'factory_girl_rails'
   require 'database_cleaner'
+  require 'rails-dev-boost'
   
   require 'cooperative/configuration'
   require 'cooperative/railtie'

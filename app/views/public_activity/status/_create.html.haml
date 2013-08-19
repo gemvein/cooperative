@@ -1,14 +1,20 @@
 - if activity.trackable
-  %div{:id => 'status_' + activity.trackable.id.to_s}
+  .status{:id => 'status_' + activity.trackable.id.to_s}
     .thumbnail.span1
+      .pull-right= link_to activity.owner.nickname, cooperative.person_path(activity.owner)
       = link_to image_tag(activity.owner.image.url(:thumb)), cooperative.person_path(activity.owner)
-    .span5
+    .span7
       %i.icon-check
         &nbsp;
-      = link_to activity.owner.nickname, cooperative.person_path(activity.owner)
-      = activity.trackable.body
+      = status_format_body activity.trackable.body
       - if activity.owner == current_user
         = link_to '<i class="icon-remove"></i>'.html_safe, cooperative.status_path(activity.trackable), :method => :delete, :remote => true, :class => 'pull-right', :format => :js
-        
+      - if activity.trackable.url
+        .row.well
+          %blockquote
+            %ul.thumbnails.span3.pull-right
+              %li.thumbnail= link_to image_tag(activity.trackable.image.url(:medium)), activity.trackable.url
+            %h3= link_to activity.trackable.title, activity.trackable.url
+            %p= activity.trackable.description
       %p.muted
-        = link_to :share.l, cooperative.new_share_path(:shareable_id => activity.trackable_id, :shareable_type => activity.trackable_type, :url => cooperative.status_url(activity.trackable)), :data => {:toggle => 'modal', :target => '#modal'}
+        = link_to :share.l, cooperative.new_status_path(:status_id => activity.trackable.id), :data => {:toggle => 'modal', :target => '#modal'}

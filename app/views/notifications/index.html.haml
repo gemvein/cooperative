@@ -1,5 +1,11 @@
-#status
-  = render 'statuses/form'
+=#NOTE: Do not make more than one tab active or weird things will happen.
+
+%ul.nav.nav-tabs
+  %li.active= link_to :set_my_status.l, '#status', :data => {:toggle => 'tab'}
+  %li= link_to :send_a_message.l, '#message', :data => {:toggle => 'tab'}
+.tab-content
+  #status.tab-pane.active= render 'statuses/form_for_notifications'
+  #message.tab-pane= render 'messages/form_for_notifications'
 
 #notifications
 - @activities.each do |activity|
@@ -12,12 +18,10 @@
     %button.close{:type => 'button', :data => {:dismiss => 'modal'}, :aria => {:hidden => true}}= 'x'
     %h3#modalLabel= :share.l
   .modal-body
-    %h3= :please_wait.l
-    %p.spinner.clearfix
-    %p
+    %div.spinner
   .modal-footer
     %button.close{:type => 'button', :data => {:dismiss => 'modal'}, :aria => {:hidden => true}}= :close.l
       
 - content_for :end_javascript do
   %script{:type => 'text/javascript'}
-    $('.spinner').spin();
+    $('.spinner').spin('small');

@@ -1,7 +1,0 @@
-%blockquote 
-  %p= share.body
-  = image_tag share.image.url(:medium)
-  %small
-    = :shared_by.l
-    %cite= link_to share.user.nickname, cooperative.person_path(share.user.nickname)
-      

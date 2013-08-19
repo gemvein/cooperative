@@ -5,10 +5,9 @@ Cooperative::Engine.routes.draw do
   get '/profile' => 'profile#edit', :as => 'profile'
   put '/profile' => 'profile#update'
   resources :notifications, :only => [:index]
-  resources :statuses, :only => [:create, :destroy]
-  resources :shares, :only => [:new, :create, :destroy] do
+  resources :statuses, :only => [:create, :destroy, :new, :show] do
     collection do
-      get 'images'
+      get 'grab'
     end
   end
   resources :tags, :only => [:index, :show], :constraints => { :id => /.*/ }

@@ -1,0 +1,10 @@
+<% if @title %>
+	$('#status_grab').html('<%= escape_javascript(render :partial => 'grab', :locals => {:images => @images, :title => @title, :description =>truncate_words(@description, 100), :uri => @uri}) %>');
+	$('#status_title').val('<%= escape_javascript(@title) %>');
+	$('#status_description').val('<%= escape_javascript(truncate_words(@description, 100)) %>');
+	$('#status_grab_group').show();
+	$('#carousel').bind('slid', status_select).carousel('next').carousel('pause');
+<% else %>
+	$('#status_grab').html('<div class="spinner"></div>');
+	$('.spinner').spin('small');
+<% end %>

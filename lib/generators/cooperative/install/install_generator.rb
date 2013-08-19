@@ -63,12 +63,9 @@ module Cooperative
       unless ActiveRecord::Base.connection.table_exists? 'statuses'
         migration_template 'migrate/create_statuses_table.rb', 'db/migrate/create_statuses_table.rb' rescue output $!.message
       end
-      unless ActiveRecord::Base.connection.table_exists? 'shares'
-        migration_template 'migrate/create_shares_table.rb', 'db/migrate/create_shares_table.rb' rescue output $!.message
-      end
       migration_template 'migrate/add_fields_to_users.rb', 'db/migrate/add_fields_to_users.rb' rescue output $!.message
       migration_template 'migrate/add_image_to_users.rb', 'db/migrate/add_image_to_users.rb' rescue output $!.message
-      migration_template 'migrate/add_image_to_shares.rb', 'db/migrate/add_image_to_shares.rb' rescue output $!.message
+      migration_template 'migrate/add_fields_to_statuses.rb', 'db/migrate/add_fields_to_statuses.rb' rescue output $!.message
     end
     
     def install_public_activity

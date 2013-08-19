@@ -1,0 +1,11 @@
+%blockquote
+  -unless images.nil? or images.empty?
+    #carousel.carousel.slides.span2.pull-right
+      .carousel-inner
+        -images.each_with_index do |image, index|
+          .item
+            = link_to image_tag(image[:src], :data => {:size => image[:size]}, :class => 'thumbnail'), '#', :class => 'shareable_image', :id => 'image_' + index.to_s
+        = link_to '&lsaquo;'.html_safe, '#carousel', :data => {:slide => 'prev'}, :class => 'carousel-control left'
+        = link_to '&rsaquo;'.html_safe, '#carousel', :data => {:slide => 'next'}, :class => 'carousel-control right'
+  %h3= link_to title, uri
+  %p= description

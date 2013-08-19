@@ -1,4 +1,21 @@
-= bootstrap_form_for @status, :url => cooperative.statuses_path, :format => :js, :remote => true do |f|
+= bootstrap_form_for @status, :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal'} do |f|
+  = f.hidden_field :url
+  = f.hidden_field :title
+  = f.hidden_field :description
   = f.text_area :body, :rows => 3, :cols => 60, :label => false
   .control-group
-    = f.submit :set_status.l
+    %label.control-label
+      = :original.l
+    .controls
+      %blockquote
+        %ul.thumbnails
+          %li.thumbnail= image_tag @shared.image.url(:medium)
+        %h3= link_to @status.title, @status.url
+        %p= @status.description ? @status.description : @status.body
+      = f.hidden_field :image_remote_url
+  .control-group
+    .controls
+      = f.submit :set_status.l
+-content_for :end_javascript do
+  %script{:type => 'text/javascript'}
+    $('#status_url').load(status_grab_url);

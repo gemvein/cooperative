@@ -10,6 +10,6 @@ class NotificationsController < CooperativeController
     @activities = PublicActivity::Activity.where(:owner_id => notify_user_of, :owner_type => 'User').order('created_at DESC')
 
     @status = Status.new
-    @share = Share.new
+    @message = Message.new
   end
 end

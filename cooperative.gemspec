@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'capybara'
   s.add_dependency 'factory_girl_rails'
   s.add_dependency 'database_cleaner', '1.0.1' # problems with sql after this version
+  s.add_dependency 'rails-dev-boost'
   
   s.add_dependency 'haml'
   s.add_dependency 'haml-rails'
