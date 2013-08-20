@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   # Paperclip plugin
-  has_attached_file :image, :styles => Cooperative.configuration.paperclip_options[:users], :default_url => "/assets/cooperative/:style/missing.png"
+  has_attached_file :image, 
+      :styles => Cooperative.configuration.paperclip_options[:users], 
+      :default_url => "/assets/cooperative/:style/missing.png"
+
   
   # Acts as Follower plugin
   acts_as_follower

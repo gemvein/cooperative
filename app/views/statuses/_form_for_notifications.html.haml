@@ -2,13 +2,13 @@
   = f.hidden_field :url
   = f.hidden_field :title
   = f.hidden_field :description
+  = f.hidden_field :image_remote_url
   = f.text_area :body, :rows => 3, :cols => 60, :label => false
   #status_grab_group.control-group.hide
     %label.control-label
       = :preview.l
     .controls
       #status_grab
-      = f.hidden_field :image_remote_url
   .control-group
     .controls
       = f.submit :set_status.l

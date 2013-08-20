@@ -25,3 +25,7 @@ function status_select(e) {
     var src = $('.active.item img').attr('src');
     $('#status_image_remote_url').val(src);
 }
+
+function status_dismiss_modal(e) {
+	$('#modal-body').html('<div class="spinner"></div>')
+}

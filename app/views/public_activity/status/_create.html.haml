@@ -9,11 +9,12 @@
       = status_format_body activity.trackable.body
       - if activity.owner == current_user
         = link_to '<i class="icon-remove"></i>'.html_safe, cooperative.status_path(activity.trackable), :method => :delete, :remote => true, :class => 'pull-right', :format => :js
-      - if activity.trackable.url
+      - if !activity.trackable.url.nil? and activity.trackable.url != ''
         .row.well
           %blockquote
-            %ul.thumbnails.span3.pull-right
-              %li.thumbnail= link_to image_tag(activity.trackable.image.url(:medium)), activity.trackable.url
+            - if !activity.trackable.image_file_name.nil?
+              %ul.thumbnails.span3.pull-right
+                %li.thumbnail= link_to image_tag(activity.trackable.image.url(:medium)), activity.trackable.url
             %h3= link_to activity.trackable.title, activity.trackable.url
             %p= activity.trackable.description
       %p.muted

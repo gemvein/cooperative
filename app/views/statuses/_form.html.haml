@@ -2,17 +2,29 @@
   = f.hidden_field :url
   = f.hidden_field :title
   = f.hidden_field :description
+  = f.hidden_field :image_remote_url
   = f.text_area :body, :rows => 3, :cols => 60, :label => false
-  .control-group
-    %label.control-label
-      = :original.l
-    .controls
-      %blockquote
-        %ul.thumbnails
-          %li.thumbnail= image_tag @shared.image.url(:medium)
-        %h3= link_to @status.title, @status.url
-        %p= @status.description ? @status.description : @status.body
-      = f.hidden_field :image_remote_url
+  -if @status.shareable
+    .control-group
+      %label.control-label
+        = :original.l
+      .controls
+        %blockquote
+          -if !@status.shareable.image_file_name.nil?
+            %ul.thumbnails
+              %li.thumbnail= link_to image_tag(@status.shareable.image.url(:medium)), @status.url
+
+          -if @status.title
+            %h3= link_to @status.title, @status.url
+
+          -if @status.description
+            %p= @status.description
+
+          -if @status.shareable
+            %cite
+              = :posted_by.l
+              = link_to @status.shareable.user.nickname, cooperative.person_path(@status.shareable.user.nickname)
+
   .control-group
     .controls
       = f.submit :set_status.l

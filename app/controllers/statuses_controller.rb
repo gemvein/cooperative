@@ -14,11 +14,13 @@ class StatusesController < ApplicationController
   def new
     @status = Status.new
     if(!params[:status_id].nil?)
-      @shared = Status.find_by_id(params[:status_id])
-      @status.url = cooperative.status_url(@shared.id)
-      @status.title = @shared.title
-      @status.description = @shared.description ? @shared.description : @shared.body
-      @status.image_remote_url = URI::join('http://' + request.host_with_port, @shared.image.url).to_s
+      @status.shareable = Status.find_by_id(params[:status_id])
+      @status.url = cooperative.status_url(@status.shareable.id)
+      @status.title = @status.shareable.title
+      @status.description = !@status.shareable.description.nil? ? @status.shareable.description : @status.shareable.body
+      if !@status.shareable.image_file_name.nil?
+        @status.image_remote_url = URI::join('http://' + request.host_with_port, @status.shareable.image.url).to_s
+      end
     elsif(!params[:url].nil? && params[:url].length > 7)
       @status.url = URI.unescape(params[:url])
     end

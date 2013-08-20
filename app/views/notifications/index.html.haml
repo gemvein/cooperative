@@ -17,11 +17,11 @@
   .modal-header
     %button.close{:type => 'button', :data => {:dismiss => 'modal'}, :aria => {:hidden => true}}= 'x'
     %h3#modalLabel= :share.l
-  .modal-body
+  #modal-body.modal-body
     %div.spinner
   .modal-footer
     %button.close{:type => 'button', :data => {:dismiss => 'modal'}, :aria => {:hidden => true}}= :close.l
       
 - content_for :end_javascript do
   %script{:type => 'text/javascript'}
-    $('.spinner').spin('small');
+    $('#modal').on('hidden', status_dismiss_modal)
