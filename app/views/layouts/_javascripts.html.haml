@@ -1,3 +1,5 @@
 = javascript_include_tag 'cooperative'
 = javascript_include_tag 'application'
+%script{:type => 'text/javascript'}
+  $(function() {console.log('foo'); $('form[data-remote]').each(cooperative_initialize_remote_form).on('load', cooperative_initialize_remote_form);});
 = yield :end_javascript

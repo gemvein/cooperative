@@ -1,4 +1,4 @@
-= bootstrap_form_for @status, :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal'} do |f|
+= bootstrap_form_for @status, :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal', :id => 'modal-form'} do |f|
   %ul#mentions.thumbnails.span3.pull-right
   = f.hidden_field :url
   = f.hidden_field :title

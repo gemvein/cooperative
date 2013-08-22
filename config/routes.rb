@@ -22,6 +22,7 @@ Cooperative::Engine.routes.draw do
   resources :people, :only => [:index, :show] do
     member do
       get 'mini'
+      get 'followers' => 'follows#followers'
     end
     resources :follows, :only => [:create, :destroy, :index]
     resources :pages, :except => [:show]

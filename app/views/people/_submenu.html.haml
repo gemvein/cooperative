@@ -6,8 +6,12 @@
 -else
   -widget do
     %h3= :about_nickname.l :nickname => @person.nickname
-    %p= truncate strip_tags(@person.bio), :length => 255, :separator => ' '
-    %p= link_to 'Read More...', cooperative.person_path(@person)
+    -if @person.bio.length > 0
+      %p= truncate strip_tags(@person.bio), :length => 255, :separator => ' '
+    %ul
+      %li= link_to :nicknames_profile.l(:nickname => @person.nickname), cooperative.person_path(@person)
+      %li= link_to :nicknames_follows.l(:nickname => @person.nickname), cooperative.person_follows_path(@person)
+      %li= link_to :nicknames_followers.l(:nickname => @person.nickname), cooperative.followers_person_path(@person)
 
 =render 'tags/submenu_for_person', :person => @person
 

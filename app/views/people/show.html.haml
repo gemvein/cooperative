@@ -5,7 +5,8 @@
 %div{:id => 'follow_person' + @person.id.to_s}= render 'follows/person', :person => @person
 
 -if @person.image_file_name
-  .thumbnail.span6.pull-right= link_to image_tag(@person.image.url(:large)), @person.image.url(:original)
+  %ul.thumbnails.span6.pull-right
+    %li.thumbnail= link_to image_tag(@person.image.url(:large)), @person.image.url(:original)
     
 -unless @person.bio.blank?
   %h2= :bio.l

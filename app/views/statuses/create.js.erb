@@ -1,6 +1,6 @@
 <% if(@activity) %>
     $('#notifications').prepend('<div class="activity clearfix"><%= escape_javascript(render_activity @activity) %></div>');
-    $('#modal').modal('toggle');
+    <% if(@activity.trackable.shareable) %>$('#modal').modal('toggle');<% end %>
     $('#status_body, #status_title, #status_description, #status_image_remote_url').val('');
     $('#status_people').html('');
 	$('#status_grab, #modal-body').html('<div class="spinner"></div>');
