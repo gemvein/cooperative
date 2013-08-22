@@ -11,3 +11,9 @@
 -unless @person.bio.blank?
   %h2= :bio.l
   =sanitize @person.bio.html_safe
+
+-unless @person.activities.empty?
+  .clear-all
+    %h2= :nicknames_activities.l :nickname => @person.nickname
+    - for activity in @person.activities
+      .activity.clearfix= render_activity activity

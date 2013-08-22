@@ -11,6 +11,13 @@ class User < ActiveRecord::Base
   
   acts_as_taggable_on :skills, :interests, :hobbies
 
+  include PublicActivity::Activist
+  activist
+
+  def activities
+    ::PublicActivity::Activity.where('id IN (?)', activities_as_owner_ids|activities_as_recipient_ids).order('created_at desc')
+  end
+
   # Authorization plugin
   acts_as_authorized_user
 
@@ -31,7 +38,7 @@ class User < ActiveRecord::Base
 
   has_many :pages, :as => :pageable
   has_many :statuses
-  
+
   def to_param
     self.nickname
   end

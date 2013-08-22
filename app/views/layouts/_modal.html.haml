@@ -1,0 +1,8 @@
+#modal.modal.hide.fade{:tabindex => -1, :role => 'dialog', :aria => {:labelledby => 'modalLabel', :hidden => true}}
+  .modal-header
+    %button.close{:type => 'button', :data => {:dismiss => 'modal'}, :aria => {:hidden => true}}= 'x'
+    %h3#modalLabel=Cooperative.configuration.application_name
+  #modal-body.modal-body
+    %div.spinner
+  .modal-footer
+    %button.close{:type => 'button', :data => {:dismiss => 'modal'}, :aria => {:hidden => true}}= :close.l

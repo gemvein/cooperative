@@ -44,7 +44,7 @@ en:
   new_page: "New Page"
   new_password: "New Password"
   notifications: "Notifications"
-  nicknames_activity: "%{nickname}'s Activity"
+  nicknames_activities: "%{nickname}'s Activities"
   nicknames_badges: "%{nickname}'s Badges"
   nicknames_pages: "%{nickname}'s Pages"
   nicknames_profile: "%{nickname}'s Profile"

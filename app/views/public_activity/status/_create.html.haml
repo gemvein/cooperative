@@ -24,4 +24,4 @@
                 = link_to activity.trackable.shareable.user.nickname, cooperative.person_path(activity.trackable.shareable.user.nickname)
 
       %p.muted
-        = link_to :share.l, cooperative.new_status_path(:status_id => activity.trackable.id), :data => {:toggle => 'modal', :target => '#modal'}
+        = link_to :share.l, cooperative.new_status_path(:status_id => activity.trackable.id), :data => {:toggle => 'modal', :target => '#modal'}, :title => :share.l
