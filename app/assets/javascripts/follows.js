@@ -16,7 +16,7 @@ function follows_append_mention() {
 }
 
 function follows_elementFactory(element, e) {
-    var customItemTemplate = "<div><span />&nbsp;<img /></div>";
+    var customItemTemplate = "<div class='clearfix'><span />&nbsp;<div class='thumbnails span1 pull-right'><img class='thumbnail' /></div></div>";
 
     var template = $(customItemTemplate).find('span')
         .text('@' + e.val).end()

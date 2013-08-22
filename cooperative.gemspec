@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   
   s.add_dependency 'jquery-rails'
   s.add_dependency 'jquery-ui-rails'
-  s.add_dependency 'jquery-ui-themes'
+  s.add_dependency 'jquery-ui-bootstrap-rails-asset'
   s.add_dependency 'tinymce-rails'
   
   s.add_dependency 'cancan'

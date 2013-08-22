@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery-ui-bootstrap
 //= require spin.min
 //= require jquery.spin
 //= require bootstrap
