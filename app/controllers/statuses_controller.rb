@@ -17,7 +17,7 @@ class StatusesController < ApplicationController
       @status.shareable = Status.find_by_id(params[:status_id])
       @status.url = cooperative.status_url(@status.shareable.id)
       @status.title = @status.shareable.title
-      @status.description = !@status.shareable.description.nil? ? @status.shareable.description : @status.shareable.body
+      @status.description = @status.shareable.description.present? ? @status.shareable.description : @status.shareable.body
       if !@status.shareable.image_file_name.nil?
         @status.image_remote_url = URI::join('http://' + request.host_with_port, @status.shareable.image.url).to_s
       end
@@ -26,7 +26,7 @@ class StatusesController < ApplicationController
     end
     
     respond_to do |format|
-      format.html { render :layout => 'modal' }
+      format.html { render :layout => 'partial' }
     end
   end
 
@@ -34,9 +34,17 @@ class StatusesController < ApplicationController
   def create
     @status = Status.new(params[:status])
     @status.user = current_user
+
+    @status.tag_list = @status.body.gsub /^[^#]*\s?#([^\s]+)\s?[^#]*/, '\1,'
+
     respond_to do |format|
       if @status.save
         @activity = @status.activities.first
+        if(!params[:mentions].nil?)
+          for mention in params[:mentions]
+            @status.create_activity(:mentioned_in, :owner => current_user, :recipient => User.find_by_nickname(mention))
+          end
+        end
         format.js
       else
         format.js { render :action => 'new' }

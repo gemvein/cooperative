@@ -6,6 +6,7 @@
     .span7
       %i.icon-check
         &nbsp;
+      = link_to activity.owner.nickname, cooperative.person_path(activity.owner)
       = status_format_body activity.trackable.body
       - if activity.owner == current_user
         = link_to '<i class="icon-remove"></i>'.html_safe, cooperative.status_path(activity.trackable), :method => :delete, :remote => true, :class => 'pull-right', :format => :js
@@ -17,5 +18,10 @@
                 %li.thumbnail= link_to image_tag(activity.trackable.image.url(:medium)), activity.trackable.url
             %h3= link_to activity.trackable.title, activity.trackable.url
             %p= activity.trackable.description
+            -if !activity.trackable.shareable.nil?
+              %cite
+                = :posted_by.l
+                = link_to activity.trackable.shareable.user.nickname, cooperative.person_path(activity.trackable.shareable.user.nickname)
+
       %p.muted
         = link_to :share.l, cooperative.new_status_path(:status_id => activity.trackable.id), :data => {:toggle => 'modal', :target => '#modal'}

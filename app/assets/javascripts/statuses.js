@@ -2,11 +2,19 @@
 // All this logic will automatically be available in application.js.
 
 function status_parse_body(e) {
-	var reg = $(this).val().match(/.*\s?(https?:\/\/[^\s]+\.[a-z\.]{2,6}\/?[^\s]*)\s?.*/);
-	if(reg) {
-		$('#status_url').val(reg[1]);
-		status_grab(reg[1]);
-	}
+    var body = $(this).val();
+    status_grab_last_url(body);
+}
+
+function status_grab_last_url(text) {
+    var reg = text.match(/.*\s?(https?:\/\/[^\s]+\.[a-z\.]{2,6}\/?[^\s]*)\s?.*/);
+    if(reg) {
+        prev_value = $('#status_url').val();
+        if(reg[1] != prev_value) {
+            $('#status_url').val(reg[1]);
+            status_grab(reg[1]);
+        }
+    }
 }
 
 function status_grab_url(e) {
@@ -27,5 +35,6 @@ function status_select(e) {
 }
 
 function status_dismiss_modal(e) {
-	$('#modal-body').html('<div class="spinner"></div>')
+	$('#modal-body').html('<div class="spinner"></div>');
+    $('.spinner').spin('small');
 }

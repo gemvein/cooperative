@@ -19,8 +19,11 @@ Cooperative::Engine.routes.draw do
     end
   end
   
-  resources :people, :only => [:index, :show], :constraints => { :id => /.*/ } do
-    resources :follows, :only => [:create, :destroy]
+  resources :people, :only => [:index, :show] do
+    member do
+      get 'mini'
+    end
+    resources :follows, :only => [:create, :destroy, :index]
     resources :pages, :except => [:show]
     match 'pages/*path' => 'pages#show', :constraints => {:path => /.+/}, :as => 'show'
   end

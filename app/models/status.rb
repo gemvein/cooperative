@@ -1,6 +1,8 @@
 class Status < ActiveRecord::Base
   include PublicActivity::Model
   tracked owner: Proc.new{ |controller, model| controller.current_user }
+
+  acts_as_taggable
   
   attr_reader :image_remote_url
   has_attached_file :image, 
@@ -10,7 +12,7 @@ class Status < ActiveRecord::Base
   belongs_to :user
   belongs_to :shareable, :polymorphic => true
 
-  attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type
+  attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list
   validates_presence_of :body
 
   def image_remote_url=(url_value)

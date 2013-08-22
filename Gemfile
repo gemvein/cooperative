@@ -14,6 +14,7 @@ group :development, :test do
   gem "jeweler"
   gem "simplecov"
   gem "haml-rails"
+  gem "puma"
 end
 
 gemspec

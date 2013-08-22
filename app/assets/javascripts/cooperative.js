@@ -18,5 +18,7 @@
 //= require bootstrap
 //= require tinymce
 //= require tag-it.min
+//= require jquery.caretposition
+//= require jquery.tokenizer
 //= require_tree .
 

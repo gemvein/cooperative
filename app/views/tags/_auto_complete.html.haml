@@ -1,0 +1,3 @@
+- content_for :end_javascript do
+  %script{:type => 'text/javascript'}
+    = "$('#{selector}').tagizer({source: '#{source}', token: '#'});"

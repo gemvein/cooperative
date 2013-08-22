@@ -1,0 +1,4 @@
+%li.thumbnail.person.span1.clearfix{:id => 'person-' + @person.nickname.downcase}
+  = link_to image_tag(@person.image.url(:thumb)), cooperative.person_path(@person.nickname)
+  %h3= link_to @person.nickname, cooperative.person_path(@person.nickname)
+  = hidden_field_tag 'mentions[]', @person.nickname

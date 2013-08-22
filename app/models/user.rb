@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
 
   # Authorization plugin
   acts_as_authorized_user
+
+  # FriendlyId plugin
+  extend FriendlyId
+  friendly_id :nickname
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

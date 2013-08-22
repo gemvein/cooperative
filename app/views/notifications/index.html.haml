@@ -24,4 +24,5 @@
       
 - content_for :end_javascript do
   %script{:type => 'text/javascript'}
-    $('#modal').on('hidden', status_dismiss_modal)
+    $('.spinner').spin('small');
+    $('#modal').on('hidden', status_dismiss_modal);

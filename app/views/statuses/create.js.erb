@@ -1,8 +1,9 @@
 <% if(@activity) %>
     $('#notifications').prepend('<div class="activity clearfix"><%= escape_javascript(render_activity @activity) %></div>');
-	$('#status_body, #status_title, #status_description, #status_image_remote_url').val('');
-	$('#status_grab').html('<div class="spinner"></div>');
+    $('#modal').modal('toggle');
+    $('#status_body, #status_title, #status_description, #status_image_remote_url').val('');
+    $('#status_people').html('');
+	$('#status_grab, #modal-body').html('<div class="spinner"></div>');
 	$('#status_grab_group').hide();
-	$('#modal').modal('hide');
 	$('.spinner').spin('small');
 <% end %>

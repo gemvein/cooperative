@@ -1,4 +1,5 @@
 = bootstrap_form_for @status, :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal'} do |f|
+  %ul#mentions.thumbnails.span3.pull-right
   = f.hidden_field :url
   = f.hidden_field :title
   = f.hidden_field :description
@@ -16,3 +17,6 @@
   %script{:type => 'text/javascript'}
     $('#status_body').on('keyup', status_parse_body);
     $('#status_body').on('change', status_parse_body);
+
+= follows_auto_complete '#status_body', cooperative.person_follows_path(:person_id => current_user.nickname, :format => 'json')
+= tags_auto_complete '#status_body', cooperative.tags_path(:format => 'json')
