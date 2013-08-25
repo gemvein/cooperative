@@ -20,5 +20,7 @@
 //= require tag-it.min
 //= require jquery.caretposition
 //= require jquery.tokenizer
+//= require jquery.infinitescroll.min
+//= require infinitescroll
 //= require_tree .
 

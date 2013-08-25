@@ -1,0 +1,3 @@
+- if content > 0
+  %span{:class => 'badge ' + (type ? 'badge-' + type : '')}
+    = content.to_s

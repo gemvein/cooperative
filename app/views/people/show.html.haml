@@ -13,7 +13,7 @@
   =sanitize @person.bio.html_safe
 
 -unless @person.activities.empty?
-  .clear-all
+  .clear-all.activities
     %h2= :nicknames_activities.l :nickname => @person.nickname
     - for activity in @person.activities
-      .activity.clearfix= render_activity activity
+      = render_activity activity

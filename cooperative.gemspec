@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*'] + ['LICENSE.txt', 'Rakefile', 'README.md']
   s.test_files = Dir['spec/**/*']
 
-  s.add_dependency 'rails'
+  s.add_dependency 'rails', '3.2.14'
   s.add_dependency 'rails-i18n'
 
   s.add_dependency 'rspec'
@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'bootstrap_forms'
   s.add_dependency 'breadcrumbs_on_rails'
-  s.add_dependency 'kaminari'
+  s.add_dependency 'pager'
   
   s.add_dependency 'jquery-rails'
   s.add_dependency 'jquery-ui-rails'
@@ -57,6 +57,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'public_activity'
   s.add_dependency 'acts_as_follower'
   s.add_dependency 'acts-as-taggable-on'
+  s.add_dependency 'acts_as_commentable'
 
   s.add_development_dependency 'sqlite3'
 end

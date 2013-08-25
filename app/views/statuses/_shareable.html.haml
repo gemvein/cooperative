@@ -1,0 +1,14 @@
+- if !status.shareable.nil? or (!status.url.nil? and status.url != '')
+  .row.well
+    %blockquote
+      - if !status.image_file_name.nil?
+        %ul.thumbnails.span3.pull-right
+          %li.thumbnail= link_to image_tag(status.image.url(:medium)), status.url
+      %h3= link_to status.title, status.url
+      %p= status_format_body status.description
+      -if !status.shareable.nil?
+        %cite
+          = :posted_by.l
+          = link_to status.shareable.user.nickname, cooperative.person_path(status.shareable.user.nickname)
+          ,
+          = status.shareable.created_at

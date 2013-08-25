@@ -1,26 +1,11 @@
-- if activity.trackable
-  .status{:id => 'status_' + activity.trackable.id.to_s}
-    .thumbnail.span1
-      .pull-right= link_to activity.recipient.nickname, cooperative.person_path(activity.recipient)
-      = link_to image_tag(activity.recipient.image.url(:thumb)), cooperative.person_path(activity.recipient)
-    .span7
-      %i.icon-user
-        &nbsp;
-      = :nickname_was_mentioned_in_a_status.l :nickname => link_to(activity.recipient.nickname, cooperative.person_path(activity.recipient)).html_safe
-      .well
-        %i.icon-check
-          &nbsp;
-        = link_to activity.owner.nickname, cooperative.person_path(activity.owner)
-        = status_format_body activity.trackable.body
-        - if activity.owner == current_user
-          = link_to '<i class="icon-remove"></i>'.html_safe, cooperative.status_path(activity.trackable), :method => :delete, :remote => true, :class => 'pull-right', :format => :js
-        - if !activity.trackable.url.nil? and activity.trackable.url != ''
-          .row.well
-            %blockquote
-              - if !activity.trackable.image_file_name.nil?
-                %ul.thumbnails.span3.pull-right
-                  %li.thumbnail= link_to image_tag(activity.trackable.image.url(:medium)), activity.trackable.url
-              %h3= link_to activity.trackable.title, activity.trackable.url
-              %p= activity.trackable.description
-        %p.muted
-          = link_to :share.l, cooperative.new_status_path(:status_id => activity.trackable.id), :data => {:toggle => 'modal', :target => '#modal'}
+.activity.clearfix.infinitescroll-item
+  - if activity.trackable
+    .status{:id => 'status_' + activity.trackable.id.to_s}
+      - add_tab :show.l, 'show_status_' + activity.trackable.id.to_s do
+        .span1
+          = thumbnail link_to image_tag(activity.recipient.image.url(:thumb)), cooperative.person_path(activity.recipient)
+          .muted= activity.trackable.created_at
+        .span6
+          = icon 'user'
+          = :nickname_was_mentioned_in_a_status.l :nickname => link_to(activity.recipient.nickname, cooperative.person_path(activity.recipient)).html_safe
+          .well= render 'statuses/status', :locals => {:status => activity.trackable}

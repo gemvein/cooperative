@@ -1,27 +1,21 @@
 - if activity.trackable
-  .status{:id => 'status_' + activity.trackable.id.to_s}
-    .thumbnail.span1
-      .pull-right= link_to activity.owner.nickname, cooperative.person_path(activity.owner)
-      = link_to image_tag(activity.owner.image.url(:thumb)), cooperative.person_path(activity.owner)
-    .span7
-      %i.icon-check
-        &nbsp;
-      = link_to activity.owner.nickname, cooperative.person_path(activity.owner)
-      = status_format_body activity.trackable.body
-      - if activity.owner == current_user
-        = link_to '<i class="icon-remove"></i>'.html_safe, cooperative.status_path(activity.trackable), :method => :delete, :remote => true, :class => 'pull-right', :format => :js
-      - if !activity.trackable.url.nil? and activity.trackable.url != ''
-        .row.well
-          %blockquote
-            - if !activity.trackable.image_file_name.nil?
-              %ul.thumbnails.span3.pull-right
-                %li.thumbnail= link_to image_tag(activity.trackable.image.url(:medium)), activity.trackable.url
-            %h3= link_to activity.trackable.title, activity.trackable.url
-            %p= activity.trackable.description
-            -if !activity.trackable.shareable.nil?
-              %cite
-                = :posted_by.l
-                = link_to activity.trackable.shareable.user.nickname, cooperative.person_path(activity.trackable.shareable.user.nickname)
+  .activity.clearfix.infinitescroll-item
+    .status{:id => 'status_' + activity.trackable.id.to_s}
+      - add_tab :show.l, 'show_status_' + activity.trackable.id.to_s do
+        .span1
+          = thumbnail link_to image_tag(activity.owner.image.url(:thumb)), cooperative.person_path(activity.owner)
+          .muted= activity.trackable.created_at
+        .span6
+          = icon 'check'
+          = link_to activity.owner.nickname, cooperative.person_path(activity.owner)
+          = status_format_body activity.trackable.body
+          - if activity.owner == current_user
+            = link_to icon('remove'), cooperative.status_path(activity.trackable), :method => :delete, :remote => true, :class => 'pull-right', :format => :js
+          = render 'statuses/shareable', :status => activity.trackable
+      - add_tab badge(activity.trackable.statuses.count, 'info') + :share.l, 'share_status_' + activity.trackable.id.to_s do
+        = render :partial => 'statuses/form_for_sharing', :locals => {:status => activity.trackable.new_status}
+      - add_tab badge(activity.trackable.comments.count, 'info') + :comment.l, 'comment_status_' + activity.trackable.id.to_s do
+        = render :partial => 'comments/comments', :locals => {:comments => activity.trackable.comments}
+        = render :partial => 'comments/form', :locals => {:commentable => activity.trackable}
 
-      %p.muted
-        = link_to :share.l, cooperative.new_status_path(:status_id => activity.trackable.id), :data => {:toggle => 'modal', :target => '#modal'}, :title => :share.l
+      = render_tabs 'left'

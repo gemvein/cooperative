@@ -38,3 +38,30 @@ form.button_to, form.button_to div {
 .spinner {
   margin: auto;
 }
+
+ul.nav-tabs {
+    margin: 0;
+}
+
+.tab-content {
+  color: $textColor;
+  background-color: $bodyBackground;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  @include border-radius(4px 4px 0 0);
+  padding-top: 18px;
+}
+
+.tabs-left {
+
+  .nav-tabs {
+    margin-right: 0;
+  }
+
+  .tab-content {
+    border: 1px solid #ddd;
+    border-left-color: transparent;
+    padding-left: 0;
+    height: 100%;
+  }
+}

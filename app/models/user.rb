@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   activist
 
   def activities
-    ::PublicActivity::Activity.where('id IN (?)', activities_as_owner_ids|activities_as_recipient_ids).order('created_at desc')
+    Activity.where('id IN (?)', activities_as_owner_ids|activities_as_recipient_ids).order('created_at desc').limit(10)
   end
 
   # Authorization plugin

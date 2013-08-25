@@ -6,7 +6,7 @@
   = f.hidden_field :image_remote_url
   = f.hidden_field :shareable_type
   = f.hidden_field :shareable_id
-  = f.text_area :body, :rows => 3, :cols => 60, :label => false, :id => 'modal_status_body'
+  = f.text_area :body, :rows => 3, :cols => 60, :label => false, :class => 'tokenizer'
   -if @status.shareable
     .control-group
       %label.control-label
@@ -34,6 +34,3 @@
 -content_for :end_javascript do
   %script{:type => 'text/javascript'}
     $('#status_url').load(status_grab_url);
-
-= follows_auto_complete '#modal_status_body', cooperative.person_follows_path(:person_id => current_user.nickname, :format => 'json')
-= tags_auto_complete '#modal_status_body', cooperative.tags_path(:format => 'json')

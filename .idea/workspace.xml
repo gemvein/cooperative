@@ -2,63 +2,116 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_modal.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_badge.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/comments/_comment.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/comments/_comments.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/comments/_form.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/statuses/_form_for_sharing.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_icon.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/activities/_menu_item.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/statuses/_shareable.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_tabs.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_thumbnail.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/activity.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/comments.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/comments_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/activities/index.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.caretposition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.tokenizer.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/notifications.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/notifications/_menu_item.html.haml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/notifications/index.html.haml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/notifications.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/activities.css.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/notifications_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/activities_controller.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/messages/_form_for_notifications.html.haml" afterPath="$PROJECT_DIR$/app/views/messages/_form_for_activities.html.haml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/statuses/_form_for_notifications.html.haml" afterPath="$PROJECT_DIR$/app/views/statuses/_form_for_activities.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/sass/08771f95fa3c640136f1712df0f856504fb8a79f/cooperative.css.scssc" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/sass/08771f95fa3c640136f1712df0f856504fb8a79f/cooperative.css.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/development.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/sass/da6e32b593e422049d95eea83972576290774efd/overrides.css.scssc" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/sass/da6e32b593e422049d95eea83972576290774efd/overrides.css.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D7A/0D0/sprockets%2F69aefa394b4d1f69b6e75163c808ba5d" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D7A/0D0/sprockets%2F69aefa394b4d1f69b6e75163c808ba5d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D07/0E0/sprockets%2F7ce8093330d29f5e4280ac01d3c965aa" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D07/0E0/sprockets%2F7ce8093330d29f5e4280ac01d3c965aa" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D93/500/sprockets%2F85a8f69a721a4c9cdc7f203bbc0730ab" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D93/500/sprockets%2F85a8f69a721a4c9cdc7f203bbc0730ab" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/C48/160/sprockets%2F8d3242356422478d63a326b61c61ec35" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/C48/160/sprockets%2F8d3242356422478d63a326b61c61ec35" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D79/4D0/sprockets%2Fd4844821d2cdb8cd6867fb640ca9d17f" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D79/4D0/sprockets%2Fd4844821d2cdb8cd6867fb640ca9d17f" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D6F/FF0/sprockets%2Fdbf0eb68618a9b3cf85704e47ea3b314" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D6F/FF0/sprockets%2Fdbf0eb68618a9b3cf85704e47ea3b314" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/public_activity/page/_create.html.haml" afterPath="$PROJECT_DIR$/app/views/public_activity/page/_create.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/public_activity/status/_create.html.haml" afterPath="$PROJECT_DIR$/app/views/public_activity/status/_create.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_javascripts.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/_javascripts.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/cooperative.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/cooperative.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/public_activity/page/_destroy.html.haml" afterPath="$PROJECT_DIR$/app/views/public_activity/page/_destroy.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/statuses/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/statuses/_form.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/public_activity/status/_mentioned_in.html.haml" afterPath="$PROJECT_DIR$/app/views/public_activity/status/_mentioned_in.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_navbar.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/_navbar.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/statuses/_status.html.haml" afterPath="$PROJECT_DIR$/app/views/statuses/_status.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/public_activity/page/_update.html.haml" afterPath="$PROJECT_DIR$/app/views/public_activity/page/_update.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/cooperative.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/cooperative.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cooperative.gemspec" afterPath="$PROJECT_DIR$/cooperative.gemspec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cooperative.iml" afterPath="$PROJECT_DIR$/.idea/cooperative.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/cooperative.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/cooperative.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/cooperative.rb" afterPath="$PROJECT_DIR$/lib/cooperative.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/cooperative_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/cooperative_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/statuses/create.js.erb" afterPath="$PROJECT_DIR$/app/views/statuses/create.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/log/development.log" afterPath="$PROJECT_DIR$/spec/dummy/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/notifications/index.html.haml" afterPath="$PROJECT_DIR$/app/views/notifications/index.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/follows_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/follows_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/index.html.haml" afterPath="$PROJECT_DIR$/app/views/people/index.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb" afterPath="$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/notifications_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/notifications_controller_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/notifications_spec.rb" afterPath="$PROJECT_DIR$/spec/features/notifications_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/notifications_support.rb" afterPath="$PROJECT_DIR$/spec/support/notifications_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_customizations/overrides.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_customizations/overrides.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/routes.rb" afterPath="$PROJECT_DIR$/spec/dummy/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/schema.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/spec/dummy/tmp/pids/server.pid" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/show.html.haml" afterPath="$PROJECT_DIR$/app/views/people/show.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D39/F00/sprockets%2F003cbedb0769258b71112a3ffd9c868a" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D39/F00/sprockets%2F003cbedb0769258b71112a3ffd9c868a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D7A/0D0/sprockets%2F69aefa394b4d1f69b6e75163c808ba5d" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D7A/0D0/sprockets%2F69aefa394b4d1f69b6e75163c808ba5d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D0F/E40/sprockets%2F90ad3f3c0934c70e69517bfe8be30543" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D0F/E40/sprockets%2F90ad3f3c0934c70e69517bfe8be30543" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/statuses.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/statuses.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/status.rb" afterPath="$PROJECT_DIR$/app/models/status.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/time_formats.rb" afterPath="$PROJECT_DIR$/config/initializers/time_formats.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cooperative.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377196998050" ignored="false" />
+    <file path="/Dummy.txt" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377388466150" ignored="false" />
     <file path="/scaffolds.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367940541896" ignored="false" />
     <file path="/follows_controller_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367941059500" ignored="false" />
-    <file path="/user.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377203873943" ignored="false" />
+    <file path="/user.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377336918389" ignored="false" />
     <file path="/ability.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368459981089" ignored="false" />
     <file path="/statuses_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377130422791" ignored="false" />
     <file path="/create.js.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377190646830" ignored="false" />
-    <file path="/index.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377184784796" ignored="false" />
+    <file path="/index.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377336442125" ignored="false" />
     <file path="/notifications.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367958215917" ignored="false" />
     <file path="/destroy.js.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367958601767" ignored="false" />
-    <file path="/_create.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377204935059" ignored="false" />
-    <file path="/_form.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377150251992" ignored="false" />
-    <file path="/notifications_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368329946536" ignored="false" />
-    <file path="/en.yml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377204230441" ignored="false" />
-    <file path="/routes.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377185213712" ignored="false" />
+    <file path="/_create.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377349114546" ignored="false" />
+    <file path="/_form.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377210306604" ignored="false" />
+    <file path="/notifications_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283796219" ignored="false" />
+    <file path="/en.yml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283935895" ignored="false" />
+    <file path="/routes.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283911491" ignored="false" />
     <file path="/login_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368457939109" ignored="false" />
     <file path="/messages_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458022972" ignored="false" />
-    <file path="/notifications_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458029771" ignored="false" />
+    <file path="/notifications_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283681468" ignored="false" />
     <file path="/people_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458037958" ignored="false" />
     <file path="/site_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458048205" ignored="false" />
-    <file path="/a.dummy" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458802276" ignored="false" />
+    <file path="/a.dummy" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377377306886" ignored="false" />
     <file path="/*.regexp" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458885359" ignored="false" />
     <file path="/user_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368655339147" ignored="false" />
-    <file path="/_menu_item.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368715840960" ignored="false" />
-    <file path="/show.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377204267474" ignored="false" />
+    <file path="/_menu_item.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283710033" ignored="false" />
+    <file path="/show.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377336990592" ignored="false" />
     <file path="/people_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368728475241" ignored="false" />
-    <file path="/notifications_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368728845794" ignored="false" />
-    <file path="/cooperative.gemspec" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377163696536" ignored="false" />
-    <file path="/install_generator.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1369236173957" ignored="false" />
-    <file path="/cooperative.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377163783439" ignored="false" />
+    <file path="/notifications_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283725038" ignored="false" />
+    <file path="/cooperative.gemspec" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377331196278" ignored="false" />
+    <file path="/install_generator.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377207294598" ignored="false" />
+    <file path="/cooperative.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377300962648" ignored="false" />
     <file path="/merit.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1369235255779" ignored="false" />
     <file path="/badge_rules.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1369235329961" ignored="false" />
     <file path="/point_rules.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368982367839" ignored="false" />
     <file path="/badge_rules_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1369111965080" ignored="false" />
     <file path="/registrations_controller_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1369259761690" ignored="false" />
-    <file path="/status.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377126971048" ignored="false" />
-    <file path="/Gemfile" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377040976539" ignored="false" />
+    <file path="/status.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377337521929" ignored="false" />
+    <file path="/Gemfile" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377302537629" ignored="false" />
     <file path="/statuses.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377120326581" ignored="false" />
     <file path="/_form_for_notifications.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377191983180" ignored="false" />
     <file path="/people_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377104125091" ignored="false" />
@@ -66,19 +119,18 @@
     <file path="/follows_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377115720663" ignored="false" />
     <file path="/_auto_complete.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377129185017" ignored="false" />
     <file path="/jquery.tokenizer.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377129037669" ignored="false" />
-    <file path="/follows_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377185612987" ignored="false" />
-    <file path="/cooperative.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377165611556" ignored="false" />
+    <file path="/follows_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377290609256" ignored="false" />
+    <file path="/cooperative.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283825257" ignored="false" />
     <file path="/follows.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377167000320" ignored="false" />
-    <file path="/_mentioned_in.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377122823926" ignored="false" />
+    <file path="/_mentioned_in.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377348953240" ignored="false" />
     <file path="/statuses_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377129939895" ignored="false" />
     <file path="/tags_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377126776623" ignored="false" />
     <file path="/tags_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377145961660" ignored="false" />
     <file path="/tags.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377130013291" ignored="false" />
     <file path="/tag.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377146483799" ignored="false" />
-    <file path="/_status.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377138737971" ignored="false" />
+    <file path="/_status.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377347886831" ignored="false" />
     <file path="/tokenizer.css" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377166718055" ignored="false" />
     <file path="/VERSION" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377165002695" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/.generators" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377165256080" ignored="false" />
     <file path="/jquery-ui.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377166140448" ignored="false" />
     <file path="/_submenu.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377185117783" ignored="false" />
     <file path="/followers.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377185094131" ignored="false" />
@@ -88,6 +140,89 @@
     <file path="/cooperative.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377204573359" ignored="false" />
     <file path="/modal.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377204983504" ignored="false" />
     <file path="/_modal.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377205245787" ignored="false" />
+    <file path="/comments_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377209199359" ignored="false" />
+    <file path="/_comment.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377208626521" ignored="false" />
+    <file path="/cooperative_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377347608299" ignored="false" />
+    <file path="/_comments.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377337210104" ignored="false" />
+    <file path="/comments.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377209905608" ignored="false" />
+    <file path="/overrides.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377277027128" ignored="false" />
+    <file path="/time_formats.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377278461747" ignored="false" />
+    <file path="/_form_for_sharing.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377280224711" ignored="false" />
+    <file path="/notifications_controller_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283648578" ignored="false" />
+    <file path="/_navbar.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283870954" ignored="false" />
+    <file path="/activities.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377285774917" ignored="false" />
+    <file path="/activities.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377289274925" ignored="false" />
+    <file path="/activities_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377289372703" ignored="false" />
+    <file path="/comments_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377290637000" ignored="false" />
+    <file path="/Ruby Console" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377293155335" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/lib/pager/helpers/action_view_extension.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377333274127" ignored="false" />
+    <file path="/action_view_extension.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377333061785" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/lib/pager/version.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377336112165" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/spec/helpers/helpers_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377309537699" ignored="false" />
+    <file path="/tags.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377309579158" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/lib/pager/helpers/tags.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377309577232" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_page.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330877562" ignored="false" />
+    <file path="/_page.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330869260" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_page.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330922433" ignored="false" />
+    <file path="/_page.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330923309" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_page.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330947091" ignored="false" />
+    <file path="/_page.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330947091" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_first_page.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426324" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_first_page.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426323" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_first_page.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426323" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_gap.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377331453727" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_gap.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377331465487" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_gap.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377331437023" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_last_page.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426324" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_last_page.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426324" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_next_page.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426324" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_last_page.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426324" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_next_page.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426325" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_next_page.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426336" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_prev_page.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426336" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_prev_page.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426336" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_prev_page.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426336" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_paginator.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310485133" ignored="false" />
+    <file path="/_paginator.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310485133" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_paginator.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310496252" ignored="false" />
+    <file path="/_paginator.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310493662" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_paginator.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310507207" ignored="false" />
+    <file path="/_paginator.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310505526" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/pager.gemspec" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377311968951" ignored="false" />
+    <file path="/pager.gemspec" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377311581211" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/gemfiles/active_record_edge.gemfile" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377311959628" ignored="false" />
+    <file path="/active_record_edge.gemfile" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377311959629" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/Rakefile" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330394724" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/spec/requests/users_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377313135112" ignored="false" />
+    <file path="/users_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377312404048" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/spec/helpers/action_view_extension_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377313396835" ignored="false" />
+    <file path="/_gap.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377331435856" ignored="false" />
+    <file path="/_gap.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377331453728" ignored="false" />
+    <file path="/_gap.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377331464930" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/README.rdoc" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377388611757" ignored="false" />
+    <file path="/README.rdoc" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377388610006" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/views/pager/_infinitescroll_javascript.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377333241067" ignored="false" />
+    <file path="/_infinitescroll_javascript.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377333206183" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/assets/javascripts/infinitescroll.js.coffee" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377333391726" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/lib/pager/engine.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377335085204" ignored="false" />
+    <file path="/engine.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377335085502" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/app/assets/javascripts/infinitescroll.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377336108157" ignored="false" />
+    <file path="/infinitescroll.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377336098467" ignored="false" />
+    <file path="/_tabs.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377345920518" ignored="false" />
+    <file path="/badge.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377346452335" ignored="false" />
+    <file path="/_badge.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377346342922" ignored="false" />
+    <file path="/_thumbnail.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377346657910" ignored="false" />
+    <file path="/_icon.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377347644144" ignored="false" />
+    <file path="/_shareable.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377349042590" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/spec/fake_app/data_mapper/config.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377372344035" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/spec/fake_app/active_record/models.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377376722052" ignored="false" />
+    <file path="/models.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377376629246" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/lib/pager/models/active_record_relation_methods.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377387569361" ignored="false" />
+    <file path="/active_record_relation_methods.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377387544690" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/lib/pager/models/page_scope_methods.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377374185030" ignored="false" />
+    <file path="/page_scope_methods.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377374096604" ignored="false" />
+    <file path="$PROJECT_DIR$/../pager/spec/models/active_record/active_record_relation_methods_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377385282367" ignored="false" />
+    <file path="/active_record_relation_methods_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377378002470" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +246,80 @@
     <favorites_list name="cooperative" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="cooperative_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/cooperative_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="95" column="59" selection-start="2451" selection-end="2451" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_icon.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_icon.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_mentioned_in.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/public_activity/status/_mentioned_in.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="66" selection-start="642" selection-end="660" vertical-scroll-proportion="-6.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_status.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/statuses/_status.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_thumbnail.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_thumbnail.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="-1.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_create.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/public_activity/status/_create.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="70" selection-start="829" selection-end="829" vertical-scroll-proportion="0.5555556">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_shareable.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/statuses/_shareable.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="-1.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -138,22 +346,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_customizations/grid.css.scss" />
-        <option value="$PROJECT_DIR$/spec/dummy/config/application.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/cooperative.js" />
-        <option value="$PROJECT_DIR$/app/views/statuses/create.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/statuses/_form_for_notifications.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/forms.js" />
+        <option value="$PROJECT_DIR$/app/views/public_activity/page/_update.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/activities/index.html.haml" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/views/people/show.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/layouts/cooperative.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/notifications/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/statuses.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_javascripts.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/comments/_comments.html.haml" />
+        <option value="$PROJECT_DIR$/app/models/status.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/badge.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_tabs.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_badge.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_thumbnail.html.haml" />
+        <option value="$PROJECT_DIR$/app/helpers/cooperative_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_icon.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/statuses/_status.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/public_activity/status/_mentioned_in.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/statuses/_shareable.html.haml" />
         <option value="$PROJECT_DIR$/app/views/public_activity/status/_create.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/modal.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_modal.html.haml" />
       </list>
     </option>
   </component>
@@ -189,6 +397,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -207,232 +416,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-bootstrap-rails-asset (v0.0.3, RVM: ruby-1.9.3-p448) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-bootstrap-rails-asset (v0.0.3, RVM: ruby-1.9.3-p448) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-bootstrap-rails-asset (v0.0.3, RVM: ruby-1.9.3-p448) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asset" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-bootstrap-rails-asset (v0.0.3, RVM: ruby-1.9.3-p448) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-bootstrap-rails-asset (v0.0.3, RVM: ruby-1.9.3-p448) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-bootstrap-rails-asset (v0.0.3, RVM: ruby-1.9.3-p448) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-sass (v2.3.2.1, RVM: ruby-1.9.3-p448) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-sass (v2.3.2.1, RVM: ruby-1.9.3-p448) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-sass (v2.3.2.1, RVM: ruby-1.9.3-p448) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -452,32 +435,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -549,55 +506,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -707,6 +620,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="install" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -726,6 +701,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="locales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="initializers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -816,6 +809,10 @@
               <option name="myItemId" value="public_activity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -857,7 +854,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="notifications" />
+              <option name="myItemId" value="messages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -880,6 +877,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -929,6 +970,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -948,6 +1007,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap_customizations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -973,9 +1062,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -983,31 +1089,31 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/models" />
+      <recent name="$PROJECT_DIR$/app/views/statuses" />
+      <recent name="$PROJECT_DIR$/app/assets/javascripts" />
+      <recent name="$PROJECT_DIR$/app/helpers" />
       <recent name="$PROJECT_DIR$/app/views/follows" />
-      <recent name="$PROJECT_DIR$/app/views/tags" />
-      <recent name="$PROJECT_DIR$/app/views/public_activity/status" />
-      <recent name="C:\Users\Work\Sites\cooperative\app\views\public_activity" />
-      <recent name="C:\Users\Work\Sites\cooperative\app\views\public_activity\page" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/models" />
       <recent name="C:\Users\Work\Sites\cooperative\spec\controllers" />
       <recent name="C:\Users\Work\Sites\cooperative\config\initializers" />
       <recent name="C:\Users\Work\Sites\cooperative\app\assets\images\cooperative" />
       <recent name="C:\Users\Work\Sites\cooperative\app\assets\images\thumb" />
-      <recent name="C:\Users\Work\Sites\cooperative\app\assets\images\medium" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: cooperative">
@@ -1042,6 +1148,29 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="IRB console" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="cooperative" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p448/bin/irb" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--prompt simple" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -1170,6 +1299,27 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="IrbRunConfigurationType" factoryName="IRB console">
+      <module name="" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
@@ -1403,7 +1553,7 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <list size="8">
+    <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Rails.Production: cooperative" />
       <item index="1" class="java.lang.String" itemvalue="Rails.Development: cooperative" />
       <item index="2" class="java.lang.String" itemvalue="Rake.spec" />
@@ -1412,10 +1562,12 @@
       <item index="5" class="java.lang.String" itemvalue="Rake.db:rollback" />
       <item index="6" class="java.lang.String" itemvalue="Rake.routes" />
       <item index="7" class="java.lang.String" itemvalue="RSpec.FollowsController POST create (person/nickname/follows) with valid attributes follows the named person" />
+      <item index="8" class="java.lang.String" itemvalue="IRB console.IRB console" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.FollowsController POST create (person/nickname/follows) with valid attributes follows the named person" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="IRB console.IRB console" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.FollowsController POST create (person/nickname/follows) with valid attributes follows the named person" />
       </list>
     </recent_temporary>
   </component>
@@ -1507,7 +1659,11 @@
       <created>1377197023855</created>
       <updated>1377197023855</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added activities to person page">
+      <created>1377206840298</created>
+      <updated>1377206840298</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1534,21 +1690,21 @@
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25454545" sideWeight="0.7466443" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25417298" sideWeight="0.7327731" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.65829146" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26666668" sideWeight="0.7466443" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.275" sideWeight="0.60738254" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.6492424" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2533557" sideWeight="0.29242423" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2533557" sideWeight="0.70757574" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.275" sideWeight="0.12248322" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27013424" sideWeight="0.29242423" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27013424" sideWeight="0.70757574" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.6739496" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1596,7 +1752,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with multiple remote form submits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added activities to person page" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1623,28 +1779,20 @@
     <MESSAGE value="Added dimension to statuses such as tokenization" />
     <MESSAGE value="Got jquery-ui-bootstrap-rails-asset installed" />
     <MESSAGE value="Fixed bug with multiple remote form submits" />
+    <MESSAGE value="Added activities to person page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/follows.js">
+    <entry file="file://$PROJECT_DIR$/app/views/comments/_comments.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/forms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+        <state line="1" column="54" selection-start="80" selection-end="80" vertical-scroll-proportion="0.03875969">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/people_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/comments/_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1653,93 +1801,102 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/status.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+        <state line="30" column="39" selection-start="798" selection-end="798" vertical-scroll-proportion="0.54744524">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/activities.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="6" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="49" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/people/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="50" selection-start="529" selection-end="529" vertical-scroll-proportion="-10.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/notifications/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="525" selection-end="525" vertical-scroll-proportion="-9.375">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_javascripts.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="35" selection-start="223" selection-end="223" vertical-scroll-proportion="0.20775624">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_tabs.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="77" selection-start="328" selection-end="328" vertical-scroll-proportion="0.24590164">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/cooperative_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_badge.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="18" selection-start="95" selection-end="95" vertical-scroll-proportion="0.08196721">
+          <folding>
+            <marker date="1377346452785" expanded="true" signature="-1:-1" placeholder="- if content &gt; 0" />
+            <marker date="1377346452785" expanded="true" signature="-1:-1" placeholder="%span{:class =&gt; 'badge ' + (type ? 'badge-' + type : '')}" />
+            <marker date="1377346452785" expanded="true" signature="-1:-1" placeholder="= content" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_thumbnail.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/cooperative_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="59" selection-start="2451" selection-end="2451" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_icon.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/public_activity/status/_mentioned_in.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="66" selection-start="642" selection-end="660" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/statuses/_status.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/statuses/_shareable.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="-1.25">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/public_activity/status/_create.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="164" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.7643979">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="237" selection-end="237" vertical-scroll-proportion="0.25059667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/statuses/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/statuses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="1" selection-start="881" selection-end="881" vertical-scroll-proportion="0.77832514">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/cooperative.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="53" selection-start="320" selection-end="366" vertical-scroll-proportion="15.208333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/dummy/config/initializers/cooperative.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_modal.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="61" selection-start="295" selection-end="295" vertical-scroll-proportion="0.12465374">
+        <state line="13" column="70" selection-start="829" selection-end="829" vertical-scroll-proportion="0.5555556">
           <folding />
         </state>
       </provider>

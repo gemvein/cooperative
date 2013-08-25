@@ -1,4 +1,6 @@
 module CooperativeHelper
+  include CommentsHelper
+
   def page_title
     page_title = ""
     if @title
@@ -59,5 +61,39 @@ module CooperativeHelper
       return ''
     end
     strip_tags(str).split(/\s+/, n+1)[0...n].join(' ') + '...'
+  end
+
+  def add_tab(label, id, &block)
+    active = false
+    if @tabs.nil?
+      @tabs = []
+      active = true
+    end
+    @tabs << {:id => id, :label => label, :active => active, :content => capture(&block)}
+  end
+
+  def render_tabs(orientation = 'top')
+    html = ""
+    html << render(:partial => 'layouts/tabs', :locals => {:tabs => @tabs, :orientation => orientation})
+    @tabs = nil
+    html.html_safe
+  end
+
+  def badge(content, type)
+    html = ""
+    html << render(:partial => 'layouts/badge', :locals => {:content => content, :type => type})
+    html.html_safe
+  end
+
+  def thumbnail(content = '', &block)
+    html = ""
+    html << render(:partial => 'layouts/thumbnail', :locals => {:content => content ? content : capture(&block)})
+    html.html_safe
+  end
+
+  def icon(type)
+    html = ""
+    html << render(:partial => 'layouts/icon', :locals => {:type => type})
+    html.html_safe
   end
 end

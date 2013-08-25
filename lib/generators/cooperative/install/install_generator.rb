@@ -83,6 +83,11 @@ module Cooperative
       output "Acts as Taggable On lets arbitrary models be taggable.", :magenta
       generate("acts_as_taggable_on:migration")
     end
+
+    def install_acts_as_commentable
+      output "Acts as Commentable lets arbitrary models be commentable.", :magenta
+      generate("comment")
+    end
     
     def self.next_migration_number(dirname)
       if ActiveRecord::Base.timestamped_migrations

@@ -27,7 +27,7 @@ module Cooperative
   require 'jquery-ui-bootstrap-rails-asset'
   require 'tinymce-rails'
   
-  require 'kaminari'
+  require 'pager'
   
   require 'cancan'
   require 'devise'
@@ -45,5 +45,6 @@ module Cooperative
   require 'public_activity'
   require 'acts_as_follower'
   require 'acts-as-taggable-on'
+  require 'acts_as_commentable'
 
 end

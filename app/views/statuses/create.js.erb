@@ -1,5 +1,5 @@
 <% if(@activity) %>
-    $('#notifications').prepend('<div class="activity clearfix"><%= escape_javascript(render_activity @activity) %></div>');
+    $('#activities').prepend('<div class="activity clearfix"><%= escape_javascript(render_activity @activity) %></div>');
     <% if(@activity.trackable.shareable) %>$('#modal').modal('toggle');<% end %>
     $('#status_body, #status_title, #status_description, #status_image_remote_url').val('');
     $('#status_people').html('');

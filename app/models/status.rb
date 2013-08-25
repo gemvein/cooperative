@@ -3,6 +3,23 @@ class Status < ActiveRecord::Base
   tracked owner: Proc.new{ |controller, model| controller.current_user }
 
   acts_as_taggable
+
+  acts_as_commentable
+
+  def new_comment
+    Comment.new()
+  end
+
+  def new_status
+    status = Status.new()
+    status.shareable = self
+    status.title = title
+    status.description = description.present? ? description : body
+    if !image_file_name.nil?
+      status.image_file_name = image_file_name
+    end
+    status
+  end
   
   attr_reader :image_remote_url
   has_attached_file :image, 
@@ -11,6 +28,7 @@ class Status < ActiveRecord::Base
   
   belongs_to :user
   belongs_to :shareable, :polymorphic => true
+  has_many :statuses, :as => :shareable
 
   attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list
   validates_presence_of :body

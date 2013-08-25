@@ -17,4 +17,6 @@ group :development, :test do
   gem "puma"
 end
 
+gem 'pager', :path => '/home/work/Sites/pager'
+
 gemspec

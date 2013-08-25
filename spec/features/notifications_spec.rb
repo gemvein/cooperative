@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe "Notifications" do
-  include_context "notifications support"
+describe "Activities" do
+  include_context "activities support"
   include_context "login support for requests"
 
   it "has a link in the navbar" do
     user = FactoryGirl.create(:user)
     sign_in(user)
     visit cooperative.home_path
-    click_link :notifications.l
+    click_link :activities.l
   end
 
   it "has a list of followed peoples' activities" do

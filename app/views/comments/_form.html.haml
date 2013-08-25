@@ -1,0 +1,18 @@
+= bootstrap_form_for commentable.new_comment, :url => cooperative.comments_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal'} do |f|
+  %ul#mentions.thumbnails.span3.pull-right
+  = f.text_area :comment, :rows => 3, :cols => 60, :label => false
+  #comment_grab_group.control-group.hide
+    %label.control-label
+      = :preview.l
+    .controls
+      #comment_grab
+  .control-group
+    .controls
+      = f.submit :comment.l
+-content_for :end_javascript do
+  %script{:type => 'text/javascript'}
+    $('#comments_comment').on('keyup', comment_parse_comment);
+    $('#comments_comment').on('change', comment_parse_comment);
+
+= follows_auto_complete '#comment_comment', cooperative.person_follows_path(:person_id => current_user.nickname, :format => 'json')
+= tags_auto_complete '#comment_comment', cooperative.tags_path(:format => 'json')

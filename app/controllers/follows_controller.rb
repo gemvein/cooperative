@@ -1,4 +1,4 @@
-class FollowsController < ApplicationController
+class FollowsController < CooperativeController
 
   def index
     @person = User.find_by_nickname(params[:person_id])

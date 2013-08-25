@@ -4,7 +4,8 @@ Cooperative::Engine.routes.draw do
   match '/pages/*path' => 'pages#show', :as => 'show'
   get '/profile' => 'profile#edit', :as => 'profile'
   put '/profile' => 'profile#update'
-  resources :notifications, :only => [:index]
+  resources :activities, :only => [:index]
+  resources :comments
   resources :statuses, :only => [:create, :destroy, :new, :show] do
     collection do
       get 'grab'

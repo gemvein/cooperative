@@ -4,12 +4,14 @@
 en:
   about_nickname: "About %{nickname}"
   admin_dashboard: "Admin Dashboard"
+  activities: "Activities"
   bio: "Bio"
   cancel_my_account: "Cancel My Account"
   change_my_password: "Change My Password"
   change_your_password: "Change Your Password"
   close: "Close"
   compose: "Compose"
+  comment: "Comment"
   confirm_new_password: "Confirm New Password"
   create_a_group: "Create a Group"
   delete: "Delete"
@@ -43,7 +45,6 @@ en:
   new_group: "New Group"
   new_page: "New Page"
   new_password: "New Password"
-  notifications: "Notifications"
   nicknames_activities: "%{nickname}'s Activities"
   nicknames_badges: "%{nickname}'s Badges"
   nicknames_pages: "%{nickname}'s Pages"
@@ -78,6 +79,8 @@ en:
   sign_out: "Sign Out"
   share: "Share"
   shared_by: "Shared By"
+  show: "Show"
+  social: "Social"
   skills: "Skills"
   subject: "Subject"
   statuses: "Statuses"
@@ -89,18 +92,12 @@ en:
   unfollow: "Unfollow"
   unread: "Unread"
   update: "Update"
+  vote: "Vote"
   we_need_your_current_password_to_confirm_your_changes: "We need your current password to confirm your changes"
   what_are_you_sharing: "What are you sharing?"
   with: "With"
   you_cant_send_messages_to_yourself: "You can't send messages to yourself"
   your_account_must_be_public_for_other_users_to_find_you: "Your account must be public for other users to find you."
   your_message: "Your Message"
-
-activity:
-  article:
-    create: 'Article has been created'
-    update: 'Someone has edited the article'
-    destroy: 'Some user removed an article!'
-
   breadcrumbs:
     home: Home

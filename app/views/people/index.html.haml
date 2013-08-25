@@ -5,4 +5,4 @@
     %h2= link_to person.nickname, cooperative.person_path(person)
     %div{:id => 'follow_person' + person.id.to_s}= render 'follows/person', :person => person
     %p= truncate_words(person.bio, 75)
-=paginate @people
+= paginate @people, :engine_namespace => cooperative

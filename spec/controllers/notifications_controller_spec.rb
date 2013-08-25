@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe NotificationsController do
-  include_context "notifications support"
+describe ActivitiesController do
+  include_context "activities support"
   describe "GET index" do
     it "gets the followed @peoples' @activities and renders the index template" do
       sign_in :user, @following_user
