@@ -7,7 +7,7 @@ class FollowsController < CooperativeController
     respond_to do |format|
       format.html # index.html.haml
       format.json {
-        @formatted_follows = [{:val => '', :meta => ''}]
+        @formatted_follows = []
         for follow in @follows
           @formatted_follows << {:val => follow.nickname, :meta => follow.image.url(:thumb)}
         end

@@ -1,6 +1,14 @@
-= icon 'check'
-= link_to status.user.nickname, cooperative.person_path(status.user)
-= status_format_body status.body
-= render 'shareable', :locals => {:status => status}
+- if can? :access, status
+  = actionable_descriptor status, 'check'
+  = status_format_body status.body
+  = render 'statuses/shareable', :status => status
+  .comments.clearfix{:id => 'status_' + status.id.to_s + '_comments'}
+    - unless status.comments.empty?
+      = render :partial => 'comments/comments', :locals => {:comments => status.comments}
+  - if can? :comment, status
+    .clearfix
+      .span1
+        = thumbnail link_to image_tag(current_user.image.url(:thumb)), cooperative.person_path(current_user.nickname)
+      .span4{:id => 'status_' + status.id.to_s + '_comment_form'}
+        = render :partial => 'comments/form', :locals => {:commentable => status}
 
-      

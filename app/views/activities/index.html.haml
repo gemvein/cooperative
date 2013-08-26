@@ -9,7 +9,7 @@
 
 #activities.infinitescroll
   - for activity in @activities
-    - unless activity.owner.nil?
+    - unless activity.trackable.nil?
       = render_activity activity
   = paginate @activities, :engine_namespace => cooperative
 

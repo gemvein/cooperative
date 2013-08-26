@@ -96,4 +96,26 @@ module CooperativeHelper
     html << render(:partial => 'layouts/icon', :locals => {:type => type})
     html.html_safe
   end
+
+  def alert(css_class, title, message = nil)
+    html = ""
+    html << render(:partial => 'layouts/alert', :locals => {:css_class => css_class, :title => title, :message => message})
+    html.html_safe
+  end
+
+  def actionable_descriptor(actionable, actionable_icon)
+    html = ""
+    html << render(:partial => 'layouts/actionable_descriptor', :locals => {:actionable => actionable, :actionable_icon => actionable_icon})
+    html.html_safe
+  end
+
+  def error_messages(object)
+    if object.try(:errors) and object.errors.full_messages.any?
+      title = I18n.t('bootstrap_forms.errors.header', :model => object.class.model_name.human.downcase)
+      message = render(:partial => 'layouts/list', :locals => {:items => object.errors.full_messages.map})
+      alert('alert-error', title, message).html_safe
+    else
+      '' # return empty string
+    end
+  end
 end

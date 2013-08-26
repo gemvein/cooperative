@@ -1,0 +1,7 @@
+prefix = '<%= @commentable.class.name.downcase %>_<%= @commentable.id.to_s %>'
+<% if !@comment.new_record? %>
+    $('#' + prefix + '_comments').append('<%= escape_javascript(render @comment) %>');
+    $('#' + prefix + '_comment_comment').val('');
+<% else %>
+    $('#' + prefix + '_comments').append("<%= escape_javascript(error_messages @comment)%>");
+<% end %>

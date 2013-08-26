@@ -1,5 +1,5 @@
 = bootstrap_form_for @status, :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal', :id => 'modal-form'} do |f|
-  %ul#mentions.thumbnails.span3.pull-right
+  #status_people.mentions.thumbnails.span3.pull-right
   = f.hidden_field :url
   = f.hidden_field :title
   = f.hidden_field :description
@@ -15,5 +15,4 @@
       = f.submit :set_status.l
 -content_for :end_javascript do
   %script{:type => 'text/javascript'}
-    $('#status_body').on('keyup', status_parse_body);
-    $('#status_body').on('change', status_parse_body);
+    $('#status_body').on('keyup', status_parse_body).on('change', status_parse_body);

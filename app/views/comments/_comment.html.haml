@@ -1,1 +1,8 @@
-%pre=comment.to_yaml
+.comment.clearfix
+  .span1
+    = thumbnail link_to image_tag(comment.user.image(:thumb)), cooperative.person_path(comment.user.nickname)
+  .span4
+    = actionable_descriptor comment, 'comment'
+    = comment_parse_comment comment.comment
+    - if can? 'destroy', comment
+      = link_to icon('trash'), cooperative.status_path(comment), :method => :delete, :remote => true, :class => 'pull-right', :format => :js

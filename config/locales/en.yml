@@ -52,6 +52,7 @@ en:
   nicknames_follows: "%{nickname}'s Follows"
   nicknames_followers: "%{nickname}'s Followers"
   nickname_was_mentioned_in_a_status: "%{nickname} was mentioned in a status:"
+  nickname_said: "%{nickname} said:"
   original: "Original"
   pages: "Pages"
   parent: "Parent"

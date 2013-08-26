@@ -2,21 +2,12 @@
 // All this logic will automatically be available in application.js.
 
 function follows_append_mention() {
-    var mention = this;
-    var person = $('#person-' + mention.toLowerCase());
-    if(person.length) {
-        return;
-    }
-    $.ajax({
-        url: '/people/' + mention + '/mini',
-        success: function (data) {
-            $('#mentions, #modal_mentions').append(data);
-        }
-    });
+    console.log(this.field.parent('form').find('.mentions'));
+    this.field.closest('form').find('.mentions').append(this.element.clone(true));
 }
 
 function follows_elementFactory(element, e) {
-    var customItemTemplate = "<div class='clearfix'><span />&nbsp;<div class='thumbnails span1 pull-right'><img class='thumbnail' /></div></div>";
+    var customItemTemplate = "<div class='person thumbnail span1'><img /><span /></div>";
 
     var template = $(customItemTemplate).find('span')
         .text('@' + e.val).end()

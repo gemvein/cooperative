@@ -5,7 +5,7 @@
     border: 1px solid #DDD;
     border-radius: 3px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    min-width: 180px;
+    min-width: 300px;
     z-index: 1051;
 }
 
@@ -18,19 +18,10 @@
 }
 
 .-tokenizer-list-item {
-    display: block;
-    padding: 5px 10px;
-    border-bottom: 1px solid #DDD;
     cursor: pointer;
 }
 
-
-.-tokenizer-list-item small {
-    color: #afafaf;
-}
-
-.-tokenizer-list-item.selected {
+.-tokenizer-list .-tokenizer-list-item.-tokenizer-selected, .-tokenizer-list .-tokenizer-list-item.-tokenizer-selected .thumbnail {
     color: white;
-    background: #4183C4;
-    text-decoration: none;
+    background-color: #4183C4;
 }

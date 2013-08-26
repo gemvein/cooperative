@@ -16,6 +16,8 @@
             source: null
 		};
 
+    var checkedUrls = {}
+
 	function Plugin(element, options) {
 		this.element = element;
 		this.$element = $(element);
@@ -25,13 +27,19 @@
 
         if(this.options.source) {
             var values;
-            $.ajax({
-                async: false,
-                url: this.options.source,
-                success: function(data){
-                    values = data;
-                }
-            });
+
+            if(checkedUrls[this.options.source] == undefined) {
+                $.ajax({
+                    async: false,
+                    url: this.options.source,
+                    success: function(data){
+                        values = data;
+                    }
+                });
+                checkedUrls[this.options.source] = values;
+            } else {
+                values = checkedUrls[this.options.source];
+            }
             this.options.values = values;
         }
 
@@ -51,7 +59,7 @@
 
 	Plugin.ITEM_TEMPLATE = '<li class="-tokenizer-list-item"></li>';
 
-	Plugin.KEYS = [40, 38, 13, 27, 9];
+	Plugin.KEYS = [40, 39, 38, 37, 13, 27, 9];
 
 	Plugin.prototype.init = function () {
         if(this.options.values.length < 1) return;
@@ -86,7 +94,9 @@
 	};
 
 	Plugin.prototype.select = function () {
-		this.replace(this.filtered[this.index].val);
+        if(this.cleanupHandle) window.clearTimeout(this.cleanupHandle);
+
+        this.replace(this.filtered[this.index].val);
 		this.hideList();
 	};
 
@@ -114,10 +124,10 @@
 	};
 
 	Plugin.prototype.hightlightItem = function () {
-		this.$itemList.find(".-tokenizer-list-item").removeClass("selected");
+		this.$itemList.find(".-tokenizer-list-item").removeClass("-tokenizer-selected");
 
 		var container = this.$itemList.find(".-tokenizer-list-item").parent();
-		var element = this.filtered[this.index].element.addClass("selected");
+		var element = this.filtered[this.index].element.addClass("-tokenizer-selected");
 
 		var scrollPosition = element.position().top;
 		container.scrollTop(container.scrollTop() + scrollPosition);
@@ -156,7 +166,10 @@
 	Plugin.prototype.hideList = function () {
         if(this.options.callback) {
             var callback = this.options.callback;
-            eval(callback).call(this.filtered[this.index].val);
+            eval(callback).call({
+                element: this.filtered[this.index].element.children(".thumbnail"),
+                field: this.$element
+            });
         }
 		this.$itemList.hide();
 		this.reset();
@@ -245,9 +258,11 @@
 			case 13:
 				this.select();
 				break;
+            case 39:
 			case 40:
 				this.next();
 				break;
+            case 37:
 			case 38:
 				this.prev();
 				break;

@@ -1,8 +1,10 @@
 module CommentsHelper
-  def comments_render(commentable)
+  def comment_parse_comment(comment)
+    comment = comment.gsub /(https?:\/\/[^\s]+\.[a-z\.]{2,6}\/?[^\s]*)/, '<a href="\1">\1</a>'
+    comment = comment.gsub /@([^\s]+)/, '@<a href="/people/\1">\1</a>'
+    comment = comment.gsub /#([^\s]+)/, '#<a href="/tags/\1">\1</a>'
     html = ""
-    html << render(:partial => 'comments/form', :locals => {:commentable => commentable})
-    html << render(:partial => 'comments/comments', :locals => {:comments => commentable.comments})
+    html << comment
     html.html_safe
   end
 end

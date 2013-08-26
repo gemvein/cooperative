@@ -8,6 +8,17 @@ class Ability
       can :dashboard              # grant access to the dashboard
       can :manage, :all
     end
+
+    # Comments
+    can :access, Comment do |comment|
+      user.following? comment.commentable.user or user == comment.user
+    end
+    can :create, Comment do |comment|
+      !user.new_record?
+    end
+    can :destroy, Comment do |comment|
+      user == comment.commentable.user or user == comment.user
+    end
     
     # Groups
     can :create, Group do |group|
@@ -39,11 +50,14 @@ class Ability
 
     # Statuses
     can :access, Status do |status|
-      user.following? status.owner or user == status.user
+      status.user.public? or user.following? status.user or user == status.user
     end
     can :create, Status do |status|
       !user.new_record?
     end
-    can :manage, Status, :user => user
+    can :destroy, Status, :user => user
+    can :comment, Status do |status|
+      status.user.public? or user.following? status.user or user == status.user
+    end
   end
 end

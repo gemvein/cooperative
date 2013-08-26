@@ -5,7 +5,7 @@ Cooperative::Engine.routes.draw do
   get '/profile' => 'profile#edit', :as => 'profile'
   put '/profile' => 'profile#update'
   resources :activities, :only => [:index]
-  resources :comments
+  resources :comments, :only => [:create, :destroy, :new, :show]
   resources :statuses, :only => [:create, :destroy, :new, :show] do
     collection do
       get 'grab'

@@ -6,8 +6,10 @@ class Status < ActiveRecord::Base
 
   acts_as_commentable
 
-  def new_comment
-    Comment.new()
+  def new_comment(comment = nil)
+    comment ||= Comment.new()
+    comment.commentable = self
+    comment
   end
 
   def new_status
@@ -31,7 +33,7 @@ class Status < ActiveRecord::Base
   has_many :statuses, :as => :shareable
 
   attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list
-  validates_presence_of :body
+  validates_presence_of :body, :user
 
   def image_remote_url=(url_value)
     if url_value.length > 5
