@@ -40,9 +40,11 @@ class StatusesController < ApplicationController
     respond_to do |format|
       if @status.save
         @activity = @status.activities.first
-        if(!params[:mentions].nil?)
-          for mention in params[:mentions]
-            @status.create_activity(:mentioned_in, :owner => current_user, :recipient => User.find_by_nickname(mention))
+        for mention in @status.body.scan /@[^\s\?,;:'"<>]+/
+          mention[0] = '' # strips off first character
+          recipient = User.find_by_nickname(mention)
+          if can? :access, recipient
+            @status.create_activity(:mentioned_in, :owner => current_user, :recipient => recipient)
           end
         end
         format.js

@@ -2,14 +2,17 @@
 // All this logic will automatically be available in application.js.
 
 function follows_append_mention() {
-    console.log(this.field.parent('form').find('.mentions'));
-    this.field.closest('form').find('.mentions').append(this.element.clone(true));
+    var id = this.element.attr('id');
+    var person = this.element.clone(true).attr('id', id + '_' + $.now());
+    this.field.closest('form').find('.mentions').append(person);
 }
 
 function follows_elementFactory(element, e) {
     var customItemTemplate = "<div class='person thumbnail span1'><img /><span /></div>";
 
-    var template = $(customItemTemplate).find('span')
+    var template = $(customItemTemplate)
+        .attr('id', 'person_' + e.val)
+        .find('span')
         .text('@' + e.val).end()
         .find('img')
         .attr('src', e.meta).end();

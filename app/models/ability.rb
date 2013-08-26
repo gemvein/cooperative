@@ -59,5 +59,10 @@ class Ability
     can :comment, Status do |status|
       status.user.public? or user.following? status.user or user == status.user
     end
+
+    # Users
+    can :access, User do |person|
+      person.public? or person == user or person.following? user or user.following? person
+    end
   end
 end

@@ -4,6 +4,7 @@
 function status_parse_body(e) {
     var body = $(this).val();
     status_grab_last_url(body);
+    status_check_mentions(body);
 }
 
 function status_grab_last_url(text) {
@@ -32,4 +33,21 @@ function status_grab(url) {
 function status_select(e) {
     var src = $('.active.item img').attr('src');
     $('#status_image_remote_url').val(src);
+}
+
+function status_check_mentions(text) {
+    var mentions = text.match(/@[^\s\?\/,;:'"<>]+/g);
+    $('#status_people').find('.person span').each(function(index){
+       if($.inArray($(this).text(), mentions) == -1) {
+           $(this).closest('.person').remove();
+       }
+    });
+    var people = $('#status_people .person').get();
+    for(index in people) {
+        var person = $(people[index]);
+        other_people = $('#status_people .person:contains(' + person.text() + ')').not('#' + person.attr('id'));
+        if(other_people.length) {
+            person.remove();
+        }
+    }
 }
