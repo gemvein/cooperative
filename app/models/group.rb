@@ -11,6 +11,10 @@ class Group < ActiveRecord::Base
   def owner=(user)
     owner == user
   end
+
+  def self.open_to_the_public
+    where(:public => true)
+  end
   
   rails_admin do
     list do

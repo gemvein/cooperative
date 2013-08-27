@@ -6,7 +6,7 @@
 -else
   -widget do
     %h3= :about_nickname.l :nickname => @person.nickname
-    -if @person.bio.length > 0
+    -if @person.bio.present?
       %p= truncate strip_tags(@person.bio), :length => 255, :separator => ' '
     %ul
       %li= link_to :nicknames_profile.l(:nickname => @person.nickname), cooperative.person_path(@person)

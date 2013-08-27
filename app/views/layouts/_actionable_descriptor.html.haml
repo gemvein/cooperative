@@ -1,4 +1,9 @@
 .muted
-  = icon actionable_icon
+  - if actionable.respond_to?(:path)
+    = link_to icon(actionable_icon), actionable.path, :class => 'label', :title => :permalink.l
+  - elsif actionable.respond_to?(:commentable)
+    = link_to icon(actionable_icon), polymorphic_path([cooperative, actionable.commentable, actionable]), :class => 'label', :title => :permalink.l
+  - else
+    .label= icon(actionable_icon)
   = link_to actionable.user.nickname, cooperative.person_path(actionable.user.nickname)
   = actionable.created_at

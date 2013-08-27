@@ -1,6 +1,6 @@
-- if can? :access, status
+- if can? :index, status
   = actionable_descriptor status, 'check'
-  = status_format_body status.body
+  = tokenize status.body
   = render 'statuses/shareable', :status => status
   .comments.clearfix{:id => 'status_' + status.id.to_s + '_comments'}
     - unless status.comments.empty?

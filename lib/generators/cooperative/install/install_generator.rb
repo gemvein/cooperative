@@ -19,7 +19,7 @@ module Cooperative
       output "Next we're installing rails admin, because it's nifty.", :magenta
       generate("rails_admin:install")
       output "Only we've got some special settings for rails admin", :magenta
-      gsub_file "config/initializers/rails_admin.rb", "config.main_app_name = ['Dummy', 'Admin']", "config.main_app_name = [Cooperative.configuration.application_name, 'Admin']"
+      gsub_file "config/initializers/rails_admin.rb", "config.main_app_name = ['Dummy', 'Admin']", "config.main_app_name = [Cooperative.configuration.application_name, 'Admin']\nconfig.authorize_with :cancan"
     end
     
     def install_ckeditor
@@ -63,6 +63,9 @@ module Cooperative
       unless ActiveRecord::Base.connection.table_exists? 'statuses'
         migration_template 'migrate/create_statuses_table.rb', 'db/migrate/create_statuses_table.rb' rescue output $!.message
       end
+      unless ActiveRecord::Base.connection.table_exists? 'comments'
+        migration_template 'migrate/create_comments_table.rb', 'db/migrate/create_comments_table.rb' rescue output $!.message
+      end
       migration_template 'migrate/add_fields_to_users.rb', 'db/migrate/add_fields_to_users.rb' rescue output $!.message
       migration_template 'migrate/add_image_to_users.rb', 'db/migrate/add_image_to_users.rb' rescue output $!.message
       migration_template 'migrate/add_fields_to_statuses.rb', 'db/migrate/add_fields_to_statuses.rb' rescue output $!.message
@@ -82,11 +85,6 @@ module Cooperative
     def install_acts_as_taggable_on
       output "Acts as Taggable On lets arbitrary models be taggable.", :magenta
       generate("acts_as_taggable_on:migration")
-    end
-
-    def install_acts_as_commentable
-      output "Acts as Commentable lets arbitrary models be commentable.", :magenta
-      generate("comment")
     end
     
     def self.next_migration_number(dirname)

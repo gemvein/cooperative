@@ -1,8 +1,8 @@
-- id = commentable.class.name.to_s.downcase + '_' + commentable.id.to_s + '_comment_comment'
+- id = commentable.class.name.to_s.downcase + '_' + commentable.id.to_s + '_comment_body'
 = bootstrap_form_for commentable.new_comment(@comment), :url => cooperative.comments_path, :format => :js, :remote => true, :html => {:class => 'form'} do |f|
   = f.hidden_field :commentable_id
   = f.hidden_field :commentable_type
-  = f.text_area :comment, :rows => 2, :cols => 30, :label => false, :required => false, :placeholder => :comment.l, :id => id, :class => 'tokenizer'
+  = f.text_area :body, :rows => 2, :cols => 30, :label => false, :required => false, :placeholder => :comment.l, :id => id, :class => 'tokenizer'
   .control-group
     .controls
       = f.submit :comment.l

@@ -1,4 +1,4 @@
--if can? :access, activity.trackable
+-if can? :index, activity.trackable
   - unless activity.trackable.nil?
     .activity.clearfix.infinitescroll-item
       .status{:id => 'status_' + activity.trackable.id.to_s + '_mentions_' + activity.recipient.nickname}

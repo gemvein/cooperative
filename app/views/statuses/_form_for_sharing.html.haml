@@ -21,7 +21,7 @@
             %h3= status.title
 
           -if status.description
-            %p= status_format_body status.description
+            %p= tokenize status.description
 
           -if status.shareable
             %cite

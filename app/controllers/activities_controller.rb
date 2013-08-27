@@ -1,4 +1,5 @@
 class ActivitiesController < CooperativeController
+  add_breadcrumb :activities.l, '/activities'
   before_filter :authenticate_user!
   def index
     notify_user_of = []

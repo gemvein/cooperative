@@ -6,9 +6,9 @@
         = thumbnail link_to image_tag(activity.owner.image.url(:thumb)), cooperative.person_path(activity.owner.nickname)
       .span6
         = actionable_descriptor status, 'check'
-        = status_format_body status.body
+        = tokenize status.body
         - if can? :destroy, status
-          = link_to icon('trash'), cooperative.status_path(status), :method => :delete, :remote => true, :class => 'pull-right', :format => :js
+          = link_to icon('trash'), cooperative.status_path(status), :method => :delete, :remote => true, :class => 'pull-right', :format => :js, data: { :confirm => :are_you_sure.l }
         = render 'statuses/shareable', :status => status
         .comments.clearfix{:id => 'status_' + status.id.to_s + '_comments'}
           - unless status.comments.empty?

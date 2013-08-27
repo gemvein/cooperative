@@ -1,68 +1,79 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(user)
-    user ||= User.new # guest user (not logged in)
-    if user.has_role?('admin')
+  def initialize(current_user)
+    current_user ||= User.new # guest current_user (not logged in)
+
+    if current_user.has_role?('admin')
       can :access, :rails_admin   # grant access to rails_admin
       can :dashboard              # grant access to the dashboard
       can :manage, :all
-    end
+    else
+      # Comments
+      can :read, Comment do |comment|
+        current_user.following?(comment.commentable.user)
+      end
+      can :read, Comment, :user => current_user
+      can :create, Comment if !current_user.new_record?
+      can :destroy, Comment do |comment|
+        current_user == comment.commentable.user
+      end
+      can :destroy, Comment, :user => current_user
 
-    # Comments
-    can :access, Comment do |comment|
-      user.following? comment.commentable.user or user == comment.user
-    end
-    can :create, Comment do |comment|
-      !user.new_record?
-    end
-    can :destroy, Comment do |comment|
-      user == comment.commentable.user or user == comment.user
-    end
-    
-    # Groups
-    can :create, Group do |group|
-      !user.new_record?
-    end   
-    can :join, Group do |group|
-      group.public? and !( user.has_role? 'moderator', group or user.has_role? 'owner', group )
-    end
-    can :leave, Group do |group|
-      user.has_role? 'member', group
-    end
-    can :access, Group do |group|
-      group.public? or user.has_role? 'member', group or user.has_role? 'moderator', group or user.has_role? 'owner', group
-    end
-    can :participate, Group do |group|
-      user.has_role? 'member', group or user.has_role? 'moderator', group or user.has_role? 'owner', group
-    end
-    can :moderate, Group do |group|
-      user.has_role? 'moderator', group or user.has_role? 'owner', group
-    end
-    can :manage, Group, :owner => user
+      # Groups
+      can :create, Group if !current_user.new_record?
+      can :join, Group.open_to_the_public do |group|
+        !( current_user.has_role?('moderator', group) or current_user.has_role?('owner', group))
+      end
+      can :join, Group do |group|
+        current_user.has_role?('invitee', group)
+      end
+      can :leave, Group do |group|
+        current_user.has_role? 'member', group
+      end
+      can :read, Group, :public => true
+      can [:read, :participate], Group do |group|
+        current_user.has_role?('member', group)
+      end
+      can [:read, :participate, :moderate], Group do |group|
+        current_user.has_role?('moderator', group)
+      end
+      can [:read, :participate, :moderate, :manage], Group do |group|
+        current_user.has_role?('owner', group)
+      end
 
-    # Pages
-    can :access, Page, :public => true
-    can :create, Page do |page|
-      !user.new_record?
-    end
-    can :manage, Page, :pageable => user
+      # Pages
+      can :read, Page, :public => true
+      can :create, Page if !current_user.new_record?
+      can :manage, Page, :pageable => current_user
 
-    # Statuses
-    can :access, Status do |status|
-      status.user.public? or user.following? status.user or user == status.user
-    end
-    can :create, Status do |status|
-      !user.new_record?
-    end
-    can :destroy, Status, :user => user
-    can :comment, Status do |status|
-      status.user.public? or user.following? status.user or user == status.user
-    end
+      # Statuses
+      can :read, Status, :user => current_user
+      can :read, Status do |status|
+        status.user.public?
+      end
+      can :read, Status do |status|
+        current_user.following?(status.user)
+      end
+      can :create, Status if !current_user.new_record?
+      can :destroy, Status, :user => current_user
+      can :comment, Status, :user => current_user
+      can :comment, Status do |status|
+        status.user.public?
+      end
+      can :comment, Status do |status|
+        current_user.following?(status.user)
+      end
 
-    # Users
-    can :access, User do |person|
-      person.public? or person == user or person.following? user or user.following? person
+      # Users
+      can :read, User, :public => true
+      can :read, User, :id => current_user.id
+      can :read, User do |user|
+        user.following?(current_user)
+      end
+      can :read, User do |user|
+        current_user.following?(user)
+      end
     end
   end
 end

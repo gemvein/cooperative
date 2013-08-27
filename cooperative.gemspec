@@ -57,7 +57,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'public_activity'
   s.add_dependency 'acts_as_follower'
   s.add_dependency 'acts-as-taggable-on'
-  s.add_dependency 'acts_as_commentable'
 
   s.add_development_dependency 'sqlite3'
 end

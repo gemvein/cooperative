@@ -1,5 +1,4 @@
 module CooperativeHelper
-  include CommentsHelper
 
   def page_title
     page_title = ""
@@ -117,5 +116,12 @@ module CooperativeHelper
     else
       '' # return empty string
     end
+  end
+
+  def tokenize(text)
+    text.gsub(/(https?:\/\/[^\s]+\.[a-z\.]{2,6}\/?[^\s]*)/, '<a href="\1">\1</a>')
+      .gsub(/@([^\s\?\/,;:'"<>]+)/, '@<a href="/people/\1">\1</a>')
+      .gsub(/#([^\s\?\/,;:'"<>]+)/, '#<a href="/tags/\1">\1</a>')
+      .html_safe
   end
 end

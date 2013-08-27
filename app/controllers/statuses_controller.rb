@@ -1,9 +1,11 @@
 class StatusesController < ApplicationController
+  add_breadcrumb :activities.l, '/activities'
   load_and_authorize_resource
   
   # GET /statuses/1
   def show
     @status = Status.find_by_id(params[:id])
+    add_breadcrumb :status.l, @status.path
     
     respond_to do |format|
       format.html # show.html.haml
@@ -12,6 +14,7 @@ class StatusesController < ApplicationController
 
   # GET /statuses/new
   def new
+    add_breadcrumb :new_status.l, cooperative.new_status_path
     @status = Status.new
     if(!params[:status_id].nil?)
       @status.shareable = Status.find_by_id(params[:status_id])
@@ -43,7 +46,7 @@ class StatusesController < ApplicationController
         for mention in @status.body.scan /@[^\s\?,;:'"<>]+/
           mention[0] = '' # strips off first character
           recipient = User.find_by_nickname(mention)
-          if can? :access, recipient
+          if can? :show, recipient
             @status.create_activity(:mentioned_in, :owner => current_user, :recipient => recipient)
           end
         end

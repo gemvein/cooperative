@@ -21,7 +21,7 @@
             %h3= link_to @status.title, @status.url
 
           -if @status.description
-            %p= status_format_body @status.description
+            %p= tokenize @status.description
 
           -if @status.shareable
             %cite

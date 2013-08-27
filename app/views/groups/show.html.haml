@@ -9,8 +9,8 @@
 
 -if can?('edit', @group)
   .pull-right
-    =link_to '<i class="icon-file-alt"></i> '.html_safe + :edit_group.l, cooperative.edit_group_path(@group), :class => 'btn btn-primary'
-    =link_to '<i class="icon-trash"></i> '.html_safe + :delete_group.l, cooperative.group_path(@group), :method => 'delete', :class => 'btn btn-danger'
+    =link_to icon('file-alt') + :edit_group.l, cooperative.edit_group_path(@group), :class => 'btn btn-primary'
+    =link_to icon('trash') + :delete_group.l, cooperative.group_path(@group), :method => 'delete', :class => 'btn btn-danger', data: { :confirm => :are_you_sure.l }
 
 %div{:id => 'join_group' + @group.id.to_s}
   = render 'groups/join_button', :group => @group 

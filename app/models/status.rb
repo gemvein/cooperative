@@ -4,8 +4,6 @@ class Status < ActiveRecord::Base
 
   acts_as_taggable
 
-  acts_as_commentable
-
   def new_comment(comment = nil)
     comment ||= Comment.new()
     comment.commentable = self
@@ -31,6 +29,7 @@ class Status < ActiveRecord::Base
   belongs_to :user
   belongs_to :shareable, :polymorphic => true
   has_many :statuses, :as => :shareable
+  has_many :comments, :as => :commentable
 
   attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list
   validates_presence_of :body, :user
@@ -43,5 +42,9 @@ class Status < ActiveRecord::Base
       # image_content_type == "image/png"
       @image_remote_url = url_value
     end
+  end
+
+  def path
+    Cooperative::Engine.routes.url_helpers.status_path(id)
   end
 end

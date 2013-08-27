@@ -10,6 +10,7 @@ Cooperative::Engine.routes.draw do
     collection do
       get 'grab'
     end
+    resources :comments, :only => [:index, :show]
   end
   resources :tags, :only => [:index, :show], :constraints => { :id => /.*/ }
   

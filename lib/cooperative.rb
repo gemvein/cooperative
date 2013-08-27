@@ -45,6 +45,5 @@ module Cooperative
   require 'public_activity'
   require 'acts_as_follower'
   require 'acts-as-taggable-on'
-  require 'acts_as_commentable'
 
 end

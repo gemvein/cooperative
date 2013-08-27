@@ -3,7 +3,7 @@ class CooperativeController < ActionController::Base
 
   protect_from_forgery
   before_filter :set_locale
-  rescue_from CanCan::AccessDenied, :with => :access_denied 
+  rescue_from CanCan::AccessDenied, :with => :access_denied
   
   add_breadcrumb 'Home', '/'
 
@@ -17,6 +17,6 @@ private
   end
 
   def access_denied (exception)
-    redirect_to cooperative.home_url, :alert => exception.message
+    redirect_to cooperative.home_url, :alert => "#{exception.message}: Access denied on #{exception.action} #{exception.subject.inspect}"
   end 
 end

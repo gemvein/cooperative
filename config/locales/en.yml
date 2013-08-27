@@ -3,6 +3,7 @@
 
 en:
   about_nickname: "About %{nickname}"
+  are_you_sure: "Are you sure?"
   admin_dashboard: "Admin Dashboard"
   activities: "Activities"
   bio: "Bio"
@@ -12,6 +13,7 @@ en:
   close: "Close"
   compose: "Compose"
   comment: "Comment"
+  comments: "Comments"
   confirm_new_password: "Confirm New Password"
   create_a_group: "Create a Group"
   delete: "Delete"
@@ -57,6 +59,7 @@ en:
   pages: "Pages"
   parent: "Parent"
   people: "People"
+  permalink: "Permalink"
   please_wait: "Please Wait..."
   posted_by: "Posted By"
   profile_image: "Profile Image"
@@ -84,6 +87,7 @@ en:
   social: "Social"
   skills: "Skills"
   subject: "Subject"
+  status: "Status"
   statuses: "Statuses"
   tags: "Tags"
   tip_to_make_this_your_homepage_set_the_title_to_home: "Tip: To make this your homepage, set the title to 'Home'"

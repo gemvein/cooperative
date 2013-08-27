@@ -5,7 +5,7 @@
         %ul.thumbnails.span3.pull-right
           %li.thumbnail= link_to image_tag(status.image.url(:medium)), status.url
       %h3= link_to status.title, status.url
-      %p= status_format_body status.description
+      %p= tokenize status.description
       -if !status.shareable.nil?
         %cite
           = :posted_by.l
