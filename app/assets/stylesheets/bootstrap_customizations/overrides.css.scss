@@ -66,3 +66,12 @@ ul.nav-tabs {
     height: 100%;
   }
 }
+
+.relative {
+  position: relative;
+}
+
+object, embed, video {
+  max-width: 100%;
+  height: auto;
+}

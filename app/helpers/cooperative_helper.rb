@@ -27,9 +27,7 @@ module CooperativeHelper
   end
   
   def nav_item(text, href, options = {}) 
-    html = ""
-    html << render(:partial => 'layouts/nav_item', :locals => {:text => text, :href => href, :options => options})
-    html.html_safe
+    render(:partial => 'layouts/nav_item', :locals => {:text => text, :href => href, :options => options})
   end
   
   def widget(html_options = {}, &block)
@@ -38,15 +36,11 @@ module CooperativeHelper
   end
   
   def dropdown_nav_item(text, href, active, &block)
-    html = ""
-    html << render(:partial => 'layouts/dropdown_nav_item', :locals => {:body => capture(&block), :text => text, :href => href, :active => active})
-    html.html_safe
+    render(:partial => 'layouts/dropdown_nav_item', :locals => {:body => capture(&block), :text => text, :href => href, :active => active})
   end
   
   def tinymce_init
-    html = ""
-    html << render('layouts/tinymce_init')
-    html.html_safe
+    render('layouts/tinymce_init')
   end
   
   def tinymce_options_string
@@ -72,40 +66,29 @@ module CooperativeHelper
   end
 
   def render_tabs(orientation = 'top')
-    html = ""
-    html << render(:partial => 'layouts/tabs', :locals => {:tabs => @tabs, :orientation => orientation})
+    html = render(:partial => 'layouts/tabs', :locals => {:tabs => @tabs, :orientation => orientation})
     @tabs = nil
     html.html_safe
   end
 
   def badge(content, type)
-    html = ""
-    html << render(:partial => 'layouts/badge', :locals => {:content => content, :type => type})
-    html.html_safe
+    render(:partial => 'layouts/badge', :locals => {:content => content, :type => type})
   end
 
   def thumbnail(content = '', &block)
-    html = ""
-    html << render(:partial => 'layouts/thumbnail', :locals => {:content => content ? content : capture(&block)})
-    html.html_safe
+    render(:partial => 'layouts/thumbnail', :locals => {:content => content ? content : capture(&block)})
   end
 
   def icon(type)
-    html = ""
-    html << render(:partial => 'layouts/icon', :locals => {:type => type})
-    html.html_safe
+    render(:partial => 'layouts/icon', :locals => {:type => type})
   end
 
   def alert(css_class, title, message = nil)
-    html = ""
-    html << render(:partial => 'layouts/alert', :locals => {:css_class => css_class, :title => title, :message => message})
-    html.html_safe
+    render(:partial => 'layouts/alert', :locals => {:css_class => css_class, :title => title, :message => message})
   end
 
   def actionable_descriptor(actionable, actionable_icon)
-    html = ""
-    html << render(:partial => 'layouts/actionable_descriptor', :locals => {:actionable => actionable, :actionable_icon => actionable_icon})
-    html.html_safe
+    render(:partial => 'layouts/actionable_descriptor', :locals => {:actionable => actionable, :actionable_icon => actionable_icon})
   end
 
   def error_messages(object)
@@ -123,5 +106,9 @@ module CooperativeHelper
       .gsub(/@([^\s\?\/,;:'"<>]+)/, '@<a href="/people/\1">\1</a>')
       .gsub(/#([^\s\?\/,;:'"<>]+)/, '#<a href="/tags/\1">\1</a>')
       .html_safe
+  end
+
+  def video(url, type, args)
+    render :partial => 'layouts/video', :locals => {:url => url, :type => type, :width => args[:width], :height => args[:height]}
   end
 end

@@ -70,6 +70,7 @@ module Cooperative
       migration_template 'migrate/add_image_to_users.rb', 'db/migrate/add_image_to_users.rb' rescue output $!.message
       migration_template 'migrate/add_fields_to_statuses.rb', 'db/migrate/add_fields_to_statuses.rb' rescue output $!.message
       migration_template 'migrate/add_shareable_to_statuses.rb', 'db/migrate/add_shareable_to_statuses.rb' rescue output $!.message
+      migration_template 'migrate/add_media_to_statuses.rb', 'db/migrate/add_media_to_statuses.rb' rescue output $!.message
     end
     
     def install_public_activity

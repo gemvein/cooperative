@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130826231152) do
+ActiveRecord::Schema.define(:version => 20130827223833) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -154,6 +154,8 @@ ActiveRecord::Schema.define(:version => 20130826231152) do
     t.datetime "image_updated_at"
     t.string   "shareable_type"
     t.integer  "shareable_id"
+    t.string   "media_url"
+    t.string   "media_type"
   end
 
   add_index "statuses", ["shareable_type", "shareable_id"], :name => "index_statuses_on_shareable_type_and_shareable_id"

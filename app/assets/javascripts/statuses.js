@@ -8,7 +8,7 @@ function status_parse_body(e) {
 }
 
 function status_grab_last_url(text) {
-    var reg = text.match(/.*\s?(https?:\/\/[^\s]+\.[a-z\.]{2,6}\/?[^\s]*)\s?.*/);
+    var reg = text.match(/(https?:\/\/[^\s]+\.[a-z\.]{2,6}\/?[^\s]*)/);
     if(reg) {
         prev_value = $('#status_url').val();
         if(reg[1] != prev_value) {
@@ -32,7 +32,16 @@ function status_grab(url) {
 
 function status_select(e) {
     var src = $('.active.item img').attr('src');
-    $('#status_image_remote_url').val(src);
+    if(src != undefined) {
+        $('#status_image_remote_url').val(src);
+        $('#status_media_url').val('');
+        $('#status_media_type').val('');
+    } else {
+        var embed = $('.active.item embed');
+        $('#status_media_url').val(embed.attr('src'));
+        $('#status_media_type').val(embed.attr('type'));
+        $('#status_image_remote_url').val('');
+    }
 }
 
 function status_check_mentions(text) {

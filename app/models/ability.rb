@@ -55,7 +55,7 @@ class Ability
       can :read, Status do |status|
         current_user.following?(status.user)
       end
-      can :create, Status if !current_user.new_record?
+      can [:create, :grab], Status if !current_user.new_record?
       can :destroy, Status, :user => current_user
       can :comment, Status, :user => current_user
       can :comment, Status do |status|

@@ -1,0 +1,6 @@
+%object{:width => width, :height => height}
+  %param{:name => 'movie', :value => url}
+  %param{:name => 'allowFullScreen', :value => 'true'}
+  %param{:name => 'allowscriptaccess', :value => 'true'}
+  %param{:name => 'play', :value => 'false'}
+  %embed{:src => url, :type => type, :play => 'false', :allowscriptaccess => 'always', :allowfullscreen => 'true', :width => width, :height => height}

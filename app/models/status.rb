@@ -18,6 +18,10 @@ class Status < ActiveRecord::Base
     if !image_file_name.nil?
       status.image_file_name = image_file_name
     end
+    if !media_url.nil?
+      status.media_url = media_url
+      status.media_type = media_type
+    end
     status
   end
   
@@ -31,7 +35,7 @@ class Status < ActiveRecord::Base
   has_many :statuses, :as => :shareable
   has_many :comments, :as => :commentable
 
-  attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list
+  attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type
   validates_presence_of :body, :user
 
   def image_remote_url=(url_value)

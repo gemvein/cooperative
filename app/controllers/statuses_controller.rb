@@ -16,18 +16,7 @@ class StatusesController < ApplicationController
   def new
     add_breadcrumb :new_status.l, cooperative.new_status_path
     @status = Status.new
-    if(!params[:status_id].nil?)
-      @status.shareable = Status.find_by_id(params[:status_id])
-      @status.url = cooperative.status_url(@status.shareable.id)
-      @status.title = @status.shareable.title
-      @status.description = @status.shareable.description.present? ? @status.shareable.description : @status.shareable.body
-      if !@status.shareable.image_file_name.nil?
-        @status.image_remote_url = URI::join('http://' + request.host_with_port, @status.shareable.image.url).to_s
-      end
-    elsif(!params[:url].nil? && params[:url].length > 7)
-      @status.url = URI.unescape(params[:url])
-    end
-    
+
     respond_to do |format|
       format.html { render :layout => 'partial' }
     end
@@ -72,10 +61,18 @@ class StatusesController < ApplicationController
   def grab
     @uri = URI.unescape(params[:uri])
     begin
-      file = open(@uri)
-    rescue
+      !!URI.parse(@uri)
+    rescue URI::InvalidURIError
       return
     end
+
+    begin
+      file = open(@uri)
+    rescue
+      render inline: 'bad url, no data'
+      return
+    end
+
     doc = Nokogiri::HTML(file)
     @title = doc.xpath('//title').first.content
     @description = doc.xpath('//p').text
@@ -84,11 +81,23 @@ class StatusesController < ApplicationController
     doc.css('img').each do |img|
       image_uri = img["src"]
       image_src = URI::join(@uri, image_uri).to_s
-      image_size = _get_image_size(image_src)
+      image_size = _get_http_size(image_src)
       @images << {:src => image_src, :size => image_size}
     end
     @images.sort!{|k,l|l[:size] <=> k[:size]}
     @images.compact!
+
+    # get the videos
+    @videos = []
+    doc.css('embed').each do |video|
+      video_type = video["type"]
+      video_uri = video["src"].gsub('autoplay=1', '')
+      video_src = URI::join(@uri, video_uri).to_s
+      video_size = _get_http_size(video_src)
+      @videos << {:src => video_src, :size => video_size, :type => video_type}
+    end
+    @videos.sort!{|k,l|l[:size] <=> k[:size]}
+    @videos.compact!
     respond_to do |format|
       format.js
     end
@@ -96,7 +105,7 @@ class StatusesController < ApplicationController
   
   private
   
-    def _get_image_size(url)
+    def _get_http_size(url)
       uri = URI(url)
       Net::HTTP.start(uri.host, uri.port) do |http|
           # Send a HEAD requesti

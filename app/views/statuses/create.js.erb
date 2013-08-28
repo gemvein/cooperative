@@ -1,9 +1,8 @@
 <% if(@activity) %>
     $('#activities').prepend('<%= escape_javascript(render_activity @activity) %>');
-    <% if(@activity.trackable.shareable) %>$('#modal').modal('toggle');<% end %>
-    $('#status_body, #status_title, #status_description, #status_image_remote_url').val('');
+    $('#status_body, #status_title, #status_description, #status_image_remote_url, #status_media_url, #status_media_type').val('');
     $('#status_people').html('');
-	$('#status_grab ').html('<div class="spinner"></div>');
+	$('#status_grab').html('<div class="spinner"></div>');
 	$('#status_grab_group').hide();
 	$('.spinner').spin('small');
 <% end %>

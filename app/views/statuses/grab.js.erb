@@ -1,5 +1,5 @@
-<% if @title %>
-	$('#status_grab').html('<%= escape_javascript(render :partial => 'grab', :locals => {:images => @images, :title => @title, :description =>truncate_words(@description, 100), :uri => @uri}) %>');
+<% if @uri %>
+	$('#status_grab').html('<%= escape_javascript(render :partial => 'grab', :locals => {:images => @images, :videos => @videos, :title => @title, :description =>truncate_words(@description, 100), :uri => @uri}) %>');
 	$('#status_title').val('<%= escape_javascript(@title) %>');
 	$('#status_description').val('<%= escape_javascript(truncate_words(@description, 100)) %>');
 	$('#status_grab_group').show();
