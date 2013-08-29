@@ -4,5 +4,8 @@ class AddFieldsToUsers < ActiveRecord::Migration
     add_column :users, :bio, :text
     add_column :users, :public, :boolean, :default => true
     add_index :users, :nickname, :unique => true
+    change_table :users do |t|
+      t.has_attached_file :image
+    end
   end
 end
