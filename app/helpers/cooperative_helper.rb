@@ -104,8 +104,8 @@ module CooperativeHelper
 
   def tokenize(text)
     text.gsub(/(https?:\/\/[^\s]+\.[a-z\.]{2,6}\/?[^\s]*)/, '<a href="\1">\1</a>')
-      .gsub(/@([^\s\?\/,;:'"<>]+)/, '@<a href="/people/\1">\1</a>')
-      .gsub(/#([^\s\?\/,;:'"<>]+)/, '#<a href="/tags/\1">\1</a>')
+      .gsub(/(@[^\s\?\/,;:'"<>]+)/, '<a href="/people/\1">\1</a>')
+      .gsub(/(#[^\s\?\/,;:'"<>]+)/, '<a href="/tags/\1">\1</a>')
       .html_safe
   end
 

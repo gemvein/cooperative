@@ -16,9 +16,15 @@ class Tag < ActsAsTaggableOn::Tag
     named_tags.values
   end
 
-  def method_missing(meth)
+  def recent_taggables(taggable_type, *args, &block)
+    taggable_type.classify.constantize.tagged_with(name).order('created_at DESC')
+  end
+
+  def method_missing(meth, *args, &block)
     if meth.to_s =~ /^(.+)_tagged_with$/
-      run_tagged_with_method($1)
+      run_tagged_with_method($1, *args, &block)
+    elsif meth.to_s =~ /^recent_(.+)$/
+      recent_taggables($1, *args, &block)
     else
       super # You *must* call super if you don't handle the
             # method, otherwise you'll mess up Ruby's method
@@ -27,14 +33,14 @@ class Tag < ActsAsTaggableOn::Tag
   end
 
   def respond_to?(meth, include_private)
-    if meth =~ /^(.+)_tagged_with$/
+    if meth =~ /^(.+)_tagged_with$/ || meth =~ /^recent_(.+)$/
       true
     else
       super
     end
   end
 
-  def run_tagged_with_method(attrs)
+  def run_tagged_with_method(attrs, *args, &block)
     # Make an array of attribute names
     attrs = attrs.split('_and_')
 

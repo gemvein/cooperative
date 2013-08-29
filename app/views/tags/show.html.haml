@@ -1,26 +1,26 @@
--@title = @tag.name
+-@title = :tagged_with.l + ' ' + @tag.name
 
 -if !@tag.statuses_tagged_with.empty?
-  .span3.pull-right
+  .activities
     %h2= :statuses.l
-    - for status in @tag.statuses_tagged_with
+    - for status in @tag.statuses_tagged_with.first(5)
       = render status
 
 
 -if !@tag.users_tagged_with.empty?
   %h2= :people.l
   %ul
-    -for user in @tag.users_tagged_with
+    -for user in @tag.users_tagged_with.first(5)
       %li= link_to user.nickname, cooperative.people_path(user)
 
 -if !@tag.groups_tagged_with.empty?
   %h2= :groups.l
   %ul
-    -for group in @tag.groups_tagged_with
+    -for group in @tag.groups_tagged_with.first(5)
       %li= link_to group.name, cooperative.people_path(group)
 
 -if !@tag.pages_tagged_with.empty?
   %h2= :pages.l
   %ul
-    -for page in @tag.pages_tagged_with
+    -for page in @tag.pages_tagged_with.first(5)
       %li= link_to page.title, page.path
