@@ -4,6 +4,8 @@ Gemfile.lock
 .sqlite3
 tmp
 .pid
+system
+.idea
 
 # rcov generated
 coverage
