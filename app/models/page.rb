@@ -1,6 +1,6 @@
 class Page < ActiveRecord::Base
   include PublicActivity::Model
-  tracked owner: Proc.new{ |controller, model| controller.current_user }
+  tracked owner: Proc.new{ |controller, model| controller.nil? ? nil : controller.current_user }
   
   extend FriendlyId
   friendly_id :title, :use => :scoped, :scope => :pageable

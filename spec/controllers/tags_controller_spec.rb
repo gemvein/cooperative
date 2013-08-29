@@ -5,7 +5,7 @@ describe TagsController do
   describe "GET index" do
     it "assigns to @tags the tags found in the db" do 
       get :index
-      assigns(:tags).should eq Tag.all
+      assigns(:tags).count.should eq Tag.count
       response.should render_template("index")
     end
   end

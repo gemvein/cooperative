@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cooperative (0.3.0)
+    cooperative (0.4.1)
       acts-as-taggable-on
       acts_as_follower
       authorization

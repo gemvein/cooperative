@@ -1,4 +1,9 @@
-*.log
+.log
+Gemfile.lock
+.project
+.sqlite3
+tmp
+.pid
 
 # rcov generated
 coverage
