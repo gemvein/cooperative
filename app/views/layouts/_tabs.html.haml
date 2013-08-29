@@ -1,7 +1,9 @@
 %div{:class => 'tabbable tabs-' + orientation}
   %ul.nav.nav-tabs
     - for tab in tabs
-      %li{:class => tab[:active] ? 'active' : ''}= link_to tab[:label].html_safe, '#' + tab[:id], :data => {:toggle => 'tab'}
+      %li{:class => tab[:active] ? 'active' : ''}
+        = tab[:before_link]
+        = link_to tab[:label].html_safe, '#' + tab[:id], :data => {:toggle => 'tab'}
   .tab-content
     - for tab in tabs
       %div{:id => tab[:id], :class => tab[:active] ? 'tab-pane active' : 'tab-pane'}

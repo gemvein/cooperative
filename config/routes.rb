@@ -10,6 +10,10 @@ Cooperative::Engine.routes.draw do
     collection do
       get 'grab'
     end
+    member do
+      get 'rate/:rating', :to => 'ratings#rate', :as => 'rate', :constraints => { :rating => /\-?[0-9]+(\.[0-9])?/ }
+      get 'unrate', :to => 'ratings#unrate', :as => 'unrate'
+    end
     resources :comments, :only => [:index, :show]
   end
   resources :tags, :only => [:index, :show], :constraints => { :id => /.*/ }

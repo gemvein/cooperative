@@ -1,0 +1,10 @@
+- if can? :rate, rateable
+  - if rateable.has_been_rated_by?(current_user)
+    - if rateable.rating_of(current_user) > 0
+      - vote_icon = 'thumbs-down-alt'
+    - else
+      - vote_icon = 'thumbs-up-alt'
+    = link_to icon(vote_icon) + :unvote.l, polymorphic_path([cooperative, :unrate, rateable]), :class => css_class + ' btn-inverse', :remote => true
+  - else
+    = link_to icon('thumbs-down'), polymorphic_path([cooperative, :rate, rateable], :rating => '-1'), :class => css_class, :remote => true
+    = link_to icon('thumbs-up'), polymorphic_path([cooperative, :rate, rateable], :rating => '1'), :class => css_class, :remote => true

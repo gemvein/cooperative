@@ -4,11 +4,18 @@ class Status < ActiveRecord::Base
 
   acts_as_taggable
 
-  def new_comment(comment = nil)
-    comment ||= Comment.new()
-    comment.commentable = self
-    comment
-  end
+  # Cooperative extension to the Coletivo gem
+  acts_as_rateable
+
+  # Paperclip gem
+  attr_reader :image_remote_url
+  has_attached_file :image, 
+      :styles => Cooperative.configuration.paperclip_options[:statuses], 
+      :default_url => "/assets/cooperative/:style/missing.png"
+  
+  belongs_to :user
+  belongs_to :shareable, :polymorphic => true
+  has_many :statuses, :as => :shareable
 
   def new_status
     status = Status.new()
@@ -24,16 +31,14 @@ class Status < ActiveRecord::Base
     end
     status
   end
-  
-  attr_reader :image_remote_url
-  has_attached_file :image, 
-      :styles => Cooperative.configuration.paperclip_options[:statuses], 
-      :default_url => "/assets/cooperative/:style/missing.png"
-  
-  belongs_to :user
-  belongs_to :shareable, :polymorphic => true
-  has_many :statuses, :as => :shareable
+
   has_many :comments, :as => :commentable
+
+  def new_comment(comment = nil)
+    comment ||= Comment.new()
+    comment.commentable = self
+    comment
+  end
 
   attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type
   validates_presence_of :body, :user

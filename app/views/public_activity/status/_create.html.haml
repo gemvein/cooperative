@@ -18,9 +18,10 @@
             = thumbnail link_to image_tag(current_user.image.url(:thumb)), cooperative.person_path(current_user.nickname)
           .span4{:id => 'status_' + status.id.to_s + '_comment_form'}
             = render :partial => 'comments/form', :locals => {:commentable => status}
-    - add_tab badge(status.statuses.count, 'info') + :share.l, 'share_status_' + status.id.to_s do
+    - add_tab badge(status.statuses.count.to_s, 'info') + :share.l, 'share_status_' + status.id.to_s do
       = render :partial => 'statuses/form_for_sharing', :locals => {:status => status.new_status}
-    - add_tab :vote.l, 'vote_status_' + status.id.to_s do
-      = :vote.l
+    - add_tab :vote.l, 'vote_status_' + status.id.to_s, :before_link => rating_toggle(status) do
+      %div{:id => 'status_' + status.id.to_s + '_ratings_info'}= ratings_info status, :rates_name => :votes.l.downcase, :rated_name => :voted.l.downcase
+      %div{:id => 'status_' + status.id.to_s + '_vote_large_primary'}= rating_vote status, 'btn btn-primary btn-large'
 
     = render_tabs 'left'

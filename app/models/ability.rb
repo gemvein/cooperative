@@ -10,10 +10,10 @@ class Ability
       can :manage, :all
     else
       # Comments
-      can :read, Comment do |comment|
+      can [:read, :rate], Comment do |comment|
         current_user.following?(comment.commentable.user)
       end
-      can :read, Comment, :user => current_user
+      can [:read, :rate], Comment, :user => current_user
       can :create, Comment if !current_user.new_record?
       can :destroy, Comment do |comment|
         current_user == comment.commentable.user
@@ -48,11 +48,11 @@ class Ability
       can :manage, Page, :pageable => current_user
 
       # Statuses
-      can :read, Status, :user => current_user
-      can :read, Status do |status|
+      can [:read, :rate], Status, :user => current_user
+      can [:read, :rate], Status do |status|
         status.user.public?
       end
-      can :read, Status do |status|
+      can [:read, :rate], Status do |status|
         current_user.following?(status.user)
       end
       can [:create, :grab], Status if !current_user.new_record?

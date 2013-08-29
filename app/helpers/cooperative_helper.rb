@@ -56,13 +56,14 @@ module CooperativeHelper
     strip_tags(str).split(/\s+/, n+1)[0...n].join(' ') + '...'
   end
 
-  def add_tab(label, id, &block)
+  def add_tab(label, id, args = {}, &block)
     active = false
     if @tabs.nil?
       @tabs = []
       active = true
     end
-    @tabs << {:id => id, :label => label, :active => active, :content => capture(&block)}
+    before_link = args[:before_link] ? args[:before_link] : ''
+    @tabs << {:id => id, :label => label, :active => active, :before_link =>before_link, :content => capture(&block)}
   end
 
   def render_tabs(orientation = 'top')

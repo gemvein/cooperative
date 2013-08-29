@@ -18,5 +18,6 @@ group :development, :test do
 end
 
 gem 'pager', :path => '/home/work/Sites/pager'
+gem 'coletivo', :path => '/home/work/Sites/coletivo'
 
 gemspec

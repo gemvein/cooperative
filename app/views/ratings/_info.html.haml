@@ -1,0 +1,17 @@
+%h3
+  - if can? :rate, rateable
+    - if has_rated
+      = :you_rated_how_on_this_item.l :rated => rated_name, :how => rated_how, :item => rateable.class.name.downcase
+      = icon rate_icon
+    - else
+      = :you_have_not_rated_on_this_item.l :rated_on => :rated_on.l(:rated => rated_name).downcase, :item => rateable.class.name.downcase
+%p
+  %span{:class => prefix + '_ratings_total'}= rateable.person_ratings.sum(:weight)
+  = :total_items.l(:items => rates_name).downcase
+  - if !rateable.person_ratings.average(:weight).nil?
+    %span{:class => prefix + '_ratings_average'}= rateable.person_ratings.average(:weight)
+    = :average_over.l
+    %span{:class => prefix + '_ratings_count'}= rateable.person_ratings.count
+    = rates_name
+  - else
+    = :no_ratings_recorded.l :ratings => rates_name

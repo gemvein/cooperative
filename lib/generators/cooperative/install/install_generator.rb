@@ -87,6 +87,11 @@ module Cooperative
       output "Acts as Taggable On lets arbitrary models be taggable.", :magenta
       generate("acts_as_taggable_on:migration")
     end
+
+    def install_coletivo
+      output "Coletivo is a rating and recommendation engine.", :magenta
+      generate("coletivo")
+    end
     
     def self.next_migration_number(dirname)
       if ActiveRecord::Base.timestamped_migrations

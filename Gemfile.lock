@@ -11,6 +11,7 @@ PATH
       cancan
       capybara
       ckeditor
+      coletivo
       database_cleaner (= 1.0.1)
       devise
       factory_girl_rails
@@ -34,6 +35,12 @@ PATH
       safe_yaml (= 0.8.6)
       sass-rails
       tinymce-rails
+
+PATH
+  remote: /home/work/Sites/coletivo
+  specs:
+    coletivo (0.0.3)
+      rails (>= 3.0.7)
 
 PATH
   remote: /home/work/Sites/pager
@@ -283,6 +290,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   capybara
+  coletivo!
   cooperative!
   haml-rails
   jeweler

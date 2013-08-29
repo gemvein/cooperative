@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
   
   acts_as_taggable_on :skills, :interests, :hobbies
 
+  # Coletivo gem
+  has_own_preferences
+
   include PublicActivity::Activist
   activist
 

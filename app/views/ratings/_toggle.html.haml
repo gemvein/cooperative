@@ -1,0 +1,15 @@
+- if can? :rate, rateable
+  %span.toggle{:id => prefix + '_ratings_toggle'}
+    - if rateable.has_been_rated_by?(current_user)
+      - if rateable.rating_of(current_user) > 0
+        %span.up= icon('sort-up icon-white')
+        %span= ratings_total rateable
+        = link_to icon('sort-down'), polymorphic_path([cooperative, :unrate, rateable]), :remote => true, :class => 'down'
+      - else
+        = link_to icon('sort-up'), polymorphic_path([cooperative, :unrate, rateable]), :remote => true, :class => 'up'
+        %span= ratings_total rateable
+        %span.down= icon('sort-down icon-white')
+    - else
+      = link_to icon('sort-up'), polymorphic_path([cooperative, :rate, rateable], :rating => '1'), :remote => true, :class => 'up'
+      %span= ratings_total rateable
+      = link_to icon('sort-down'), polymorphic_path([cooperative, :rate, rateable], :rating => '-1'), :remote => true, :class => 'down'

@@ -3,16 +3,11 @@ class CommentsController < CooperativeController
   load_and_authorize_resource
 
   def index
-    path = request.fullpath
-    parts = path.split '/'
-    commentable_type = parts[1]
-    klass = commentable_type.classify.constantize
-    symbol = (commentable_type.singularize + '_id').to_sym
-    @commentable = klass.find(params[symbol])
-    @comments = Comment.where(:commentable_id => params[symbol], :commentable_type => commentable_type)
+    @commentable = polymorphic_parent_class.find(polymorphic_parent_id)
+    @comments = Comment.find_by_commentable(@commentable)
 
 
-    add_breadcrumb commentable_type.capitalize.singularize, polymorphic_path([cooperative, @commentable])
+    add_breadcrumb polymorphic_parent_name, polymorphic_path([cooperative, @commentable])
     add_breadcrumb :comments.l, polymorphic_path([cooperative, @commentable, :comments])
 
     respond_to do |format|
@@ -22,9 +17,10 @@ class CommentsController < CooperativeController
   end
 
   def show
-    @comment = Comment.find(params[:id])
-    add_breadcrumb @comment.commentable_type, polymorphic_path([cooperative, @comment.commentable])
-    add_breadcrumb :comment.l, polymorphic_path([cooperative, @comment.commentable, @comment])
+    @commentable = polymorphic_parent_class.find(polymorphic_parent_id)
+    @comment = Comment.find_by_commentable(@commentable).find(params[:id])
+    add_breadcrumb polymorphic_parent_name, polymorphic_path([cooperative, @commentable])
+    add_breadcrumb :comment.l, polymorphic_path([cooperative, @commentable, @comment])
 
     respond_to do |format|
       format.html # show.html.erb

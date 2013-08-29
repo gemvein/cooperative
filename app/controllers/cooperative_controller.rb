@@ -18,5 +18,17 @@ private
 
   def access_denied (exception)
     redirect_to cooperative.home_url, :alert => "#{exception.message}: Access denied on #{exception.action} #{exception.subject.inspect}"
-  end 
+  end
+  
+  def polymorphic_parent_class
+    polymorphic_resource.classify.constantize
+  end
+
+  def polymorphic_parent_name
+    polymorphic_resource.capitalize.singularize
+  end
+
+  def polymorphic_resource
+    request.fullpath.split('/')[1]
+  end
 end
