@@ -1,10 +1,8 @@
 .log
 Gemfile.lock
 .project
-.sqlite3
 tmp
 .pid
-system
 .idea
 
 # rcov generated
