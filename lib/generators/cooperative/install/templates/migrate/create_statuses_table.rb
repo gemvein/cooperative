@@ -1,5 +1,5 @@
 class CreateStatusesTable < ActiveRecord::Migration
-  def change
+  def up
     create_table :statuses do |t|
       t.references :user
       t.string :shareable_type
@@ -18,5 +18,8 @@ class CreateStatusesTable < ActiveRecord::Migration
     end
     add_index :statuses, :user_id
     add_index :statuses, [:shareable_type, :shareable_id]
+  end
+  def down
+    drop_table :statuses
   end
 end

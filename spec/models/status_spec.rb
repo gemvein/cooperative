@@ -2,12 +2,14 @@ require 'spec_helper'
 
 describe Status do
   it "can create a status" do
+    owner = FactoryGirl.create(:user)
     count = Status.count
-    FactoryGirl.create(:status)
+    FactoryGirl.create(:status, :user => owner)
     Status.count.should be count + 1
   end
   it "can update a status" do
-    status = FactoryGirl.create(:status)
+    owner = FactoryGirl.create(:user)
+    status = FactoryGirl.create(:status, :user => owner)
     timestamp = status.updated_at
     status.body = "This is the new body"
     status.save
@@ -17,7 +19,8 @@ describe Status do
   end
   it "can destroy a status" do
     count = Status.count
-    status = FactoryGirl.create(:status, :name => 'Delete Me')
+    owner = FactoryGirl.create(:user)
+    status = FactoryGirl.create(:status, :user => owner, :title => 'Delete Me')
     status.destroy
     Status.exists?(status.id).should be false
     Status.count.should be count

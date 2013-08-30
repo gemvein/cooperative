@@ -14,7 +14,7 @@ describe "Activities" do
   it "has a list of followed peoples' activities" do
     user = FactoryGirl.create(:user)
     sign_in(user)
-    visit cooperative.notifications_path
+    visit cooperative.activities_path
     page.should have_selector '.activity', :minimum => 5
     page.should_not have_selector '.activity', :text => 'private'
   end

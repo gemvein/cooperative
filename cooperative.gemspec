@@ -45,15 +45,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise'
   s.add_dependency 'authorization'
 
-  s.add_dependency 'fastercsv'
   s.add_dependency 'paperclip'
   s.add_dependency 'nokogiri'
-  s.add_dependency 'ckeditor'
-  s.add_dependency 'safe_yaml', '0.8.6' # enable_arbitrary_object_deserialization! removed after this version
-  s.add_dependency 'rails_admin'
-  
   s.add_dependency 'friendly_id'
-
   s.add_dependency 'public_activity'
   s.add_dependency 'acts_as_follower'
   s.add_dependency 'acts-as-taggable-on'

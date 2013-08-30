@@ -15,24 +15,6 @@ module Cooperative
       template "initializer.rb", "config/initializers/cooperative.rb"
     end
     
-    def install_rails_admin
-      output "Next we're installing rails admin, because it's nifty.", :magenta
-      generate("rails_admin:install")
-      output "Only we've got some special settings for rails admin", :magenta
-      gsub_file "config/initializers/rails_admin.rb", "config.main_app_name = ['Dummy', 'Admin']", "config.main_app_name = [Cooperative.configuration.application_name, 'Admin']\nconfig.authorize_with :cancan"
-    end
-    
-    def install_ckeditor
-      output "Ckeditor provides WYSIWYG editing in rails admin.", :magenta
-      generate("ckeditor:install", "--orm=active_record --backend=paperclip")
-    end
-    
-    def add_route
-      output "Adding Cooperative to your routes.rb file", :magenta
-      gsub_file "config/routes.rb", /mount Cooperative::Engine => \'\/.*\', :as => \'cooperative\'/, ''
-      route("mount Cooperative::Engine => '/', :as => 'cooperative'")
-    end
-    
     def remove_public_index
       if File.exists?(Rails.root.join("public/index.html"))
         answer = ask_for("Looks like you still have a public/index.html file.  May I delete it for you?", "Y")
@@ -45,6 +27,12 @@ module Cooperative
     end
     
     def add_migrations
+      unless ActiveRecord::Base.connection.table_exists? 'comments'
+        migration_template 'migrate/create_comments_table.rb', 'db/migrate/create_comments_table.rb' rescue output $!.message
+      end
+      unless ActiveRecord::Base.connection.table_exists? 'groups'
+        migration_template 'migrate/create_groups_table.rb', 'db/migrate/create_groups_table.rb' rescue output $!.message
+      end
       unless ActiveRecord::Base.connection.table_exists? 'messages'
         migration_template 'migrate/create_messages_table.rb', 'db/migrate/create_messages_table.rb' rescue output $!.message
       end
@@ -57,16 +45,12 @@ module Cooperative
       unless ActiveRecord::Base.connection.table_exists? 'roles_users'
         migration_template 'migrate/create_roles_users_table.rb', 'db/migrate/create_roles_users_table.rb' rescue output $!.message
       end
-      unless ActiveRecord::Base.connection.table_exists? 'groups'
-        migration_template 'migrate/create_groups_table.rb', 'db/migrate/create_groups_table.rb' rescue output $!.message
-      end
       unless ActiveRecord::Base.connection.table_exists? 'statuses'
         migration_template 'migrate/create_statuses_table.rb', 'db/migrate/create_statuses_table.rb' rescue output $!.message
       end
-      unless ActiveRecord::Base.connection.table_exists? 'comments'
-        migration_template 'migrate/create_comments_table.rb', 'db/migrate/create_comments_table.rb' rescue output $!.message
+      unless ActiveRecord::Base.connection.table_exists? 'users'
+        migration_template 'migrate/create_users_table.rb', 'db/migrate/create_users_table.rb' rescue output $!.message
       end
-      migration_template 'migrate/add_fields_to_users.rb', 'db/migrate/add_fields_to_users.rb' rescue output $!.message
     end
     
     def install_public_activity
@@ -87,6 +71,18 @@ module Cooperative
     def install_coletivo
       output "Coletivo is a rating and recommendation engine.", :magenta
       generate("coletivo")
+    end
+
+    def install_devise
+      output "Devise is used to authenticate users.", :magenta
+      generate("devise:install")
+    end
+
+    def add_route
+      output "Adding Cooperative to your routes.rb file", :magenta
+      gsub_file "config/routes.rb", /mount Cooperative::Engine => '\/.*', :as => 'cooperative'/, ''
+      gsub_file "config/routes.rb", /devise_for :users, :class_name => 'Cooperative::User', :module => :devise/, ''
+      route("mount Cooperative::Engine => '/', :as => 'cooperative'\n  devise_for :users, :class_name => 'Cooperative::User', :module => :devise")
     end
     
     def self.next_migration_number(dirname)

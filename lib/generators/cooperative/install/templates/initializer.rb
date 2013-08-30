@@ -15,7 +15,4 @@ Cooperative.configure do |config|
     :users => {:large => "600x600>", :medium => "300x300>", :thumb => "150x150>"},
     :statuses => {:large => "600x600>", :medium => "300x300>", :thumb => "150x150>"}
   }
-
-  config.assets.precompile += %w( video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff )
-
 end

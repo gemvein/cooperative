@@ -32,7 +32,7 @@ class Tag < ActsAsTaggableOn::Tag
     end
   end
 
-  def respond_to?(meth, include_private)
+  def respond_to?(meth, include_private = nil)
     if meth =~ /^(.+)_tagged_with$/ || meth =~ /^recent_(.+)$/
       true
     else

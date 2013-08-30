@@ -1,4 +1,6 @@
 class CooperativeController < ActionController::Base
+  include Rails.application.routes.url_helpers
+  include Rails.application.routes.mounted_helpers
   include PublicActivity::StoreController
 
   protect_from_forgery

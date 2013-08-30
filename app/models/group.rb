@@ -15,19 +15,4 @@ class Group < ActiveRecord::Base
   def self.open_to_the_public
     where(:public => true)
   end
-  
-  rails_admin do
-    list do
-      field :name
-    end
-    edit do
-      field :name
-      field :description
-      field :public
-      field :tag_list
-      field :owners
-      field :moderators
-      field :members
-    end
-  end
 end

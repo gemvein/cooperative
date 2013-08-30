@@ -19,17 +19,18 @@ describe Tag do
     expect(@person.interest_list).to include 'to'
   end
   it "can find users by tag" do
-    expect(@foo.users).to include @person
+    expect(@foo.users_tagged_with).to include @person
   end
   it "can find groups by tag" do
-    expect(@foo.groups).to include @group
+    expect(@foo.groups_tagged_with).to include @group
   end
   it "can find pages by tag" do
-    expect(@foo.pages).to include @page
+    expect(@foo.pages_tagged_with).to include @page
   end
   it "can find total item counts" do
     counts = Tag.total_item_counts
-    expect(counts).to include @foo
+    foo_hash = {:name => @foo.name, :count => 3}
+    expect(counts).to include foo_hash
     expect(counts.count).to eq 6
   end
 end

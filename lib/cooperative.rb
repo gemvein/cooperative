@@ -32,19 +32,12 @@ module Cooperative
   require 'cancan'
   require 'devise'
   require 'authorization'
-  
-  require 'fastercsv'
+
   require 'paperclip'
   require 'nokogiri'
-  require 'ckeditor'
-  require 'safe_yaml'
-  require 'rails_admin'
-  
   require 'friendly_id'
-
   require 'public_activity'
   require 'acts_as_follower'
   require 'acts-as-taggable-on'
   require 'coletivo'
-
 end

@@ -1,6 +1,6 @@
 class Status < ActiveRecord::Base
   include PublicActivity::Model
-  tracked owner: Proc.new{ |controller, model| controller.current_user }
+  tracked owner: Proc.new{ |controller, model| controller.nil? ? nil : controller.current_user }
 
   acts_as_taggable
 
@@ -17,28 +17,22 @@ class Status < ActiveRecord::Base
   belongs_to :shareable, :polymorphic => true
   has_many :statuses, :as => :shareable
 
-  def new_status
-    status = Status.new()
+  def build_status(status = nil)
+    status ||= Status.new()
     status.shareable = self
-    status.title = title
-    status.description = description.present? ? description : body
+    status.title ||= title
+    status.description ||= description.present? ? description : body
     if !image_file_name.nil?
-      status.image_file_name = image_file_name
+      status.image_file_name ||= image_file_name
     end
     if !media_url.nil?
-      status.media_url = media_url
-      status.media_type = media_type
+      status.media_url ||= media_url
+      status.media_type ||= media_type
     end
     status
   end
 
   has_many :comments, :as => :commentable
-
-  def new_comment(comment = nil)
-    comment ||= Comment.new()
-    comment.commentable = self
-    comment
-  end
 
   attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type
   validates_presence_of :body, :user
