@@ -1,8 +1,8 @@
-.log
+*.log
 Gemfile.lock
 .project
 tmp
-.pid
+*.pid
 .idea
 
 # rcov generated
