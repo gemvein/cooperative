@@ -2,129 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/lib/assets/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/development.sqlite3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/public/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/test.sqlite3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/.rspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214849_create_comments_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214850_create_groups_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214851_create_messages_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214852_create_pages_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214853_create_roles_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214854_create_roles_users_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214855_create_statuses_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214856_create_users_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214907_create_activities.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214918_acts_as_follower_migration.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214929_acts_as_taggable_on_migration.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214939_create_person_ratings.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/public/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/public/422.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/public/500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/activity_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/app/assets/stylesheets/application.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/app/assets/javascripts/application.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/application.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/initializers/backtrace_silencers.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/boot.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config.ru" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/initializers/cooperative.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/cooperative_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/database.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/environments/development.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/locales/devise.en.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/initializers/devise.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/locales/en.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/environment.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/support/follower_support.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/factories/groups.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/initializers/inflections.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/factories/messages.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/initializers/mime_types.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/factories/pages.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/environments/production.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/script/rails" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/routes.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/app/assets/stylesheets/scaffolds.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/db/schema.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/initializers/secret_token.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/initializers/session_store.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/spec_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/factories/statuses.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/features/statuses_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/support/statuses_support.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/environments/test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/factories/users.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec_old/dummy/config/initializers/wrap_parameters.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/generators/cooperative/uninstall/uninstall_generator.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/controllers/activities_controller_spec.rb" afterPath="$PROJECT_DIR$/spec_old/controllers/activities_controller_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/controllers/application_controller_spec.rb" afterPath="$PROJECT_DIR$/spec_old/controllers/application_controller_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/controllers/cooperative_controller_spec.rb" afterPath="$PROJECT_DIR$/spec_old/controllers/cooperative_controller_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/controllers/follows_controller_spec.rb" afterPath="$PROJECT_DIR$/spec_old/controllers/follows_controller_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/controllers/groups_controller_spec.rb" afterPath="$PROJECT_DIR$/spec_old/controllers/groups_controller_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/controllers/messages_controller_spec.rb" afterPath="$PROJECT_DIR$/spec_old/controllers/messages_controller_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/controllers/pages_controller_spec.rb" afterPath="$PROJECT_DIR$/spec_old/controllers/pages_controller_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/controllers/people_controller_spec.rb" afterPath="$PROJECT_DIR$/spec_old/controllers/people_controller_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/controllers/profile_controller_spec.rb" afterPath="$PROJECT_DIR$/spec_old/controllers/profile_controller_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/controllers/tags_controller_spec.rb" afterPath="$PROJECT_DIR$/spec_old/controllers/tags_controller_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/dummy/README.rdoc" afterPath="$PROJECT_DIR$/spec_old/dummy/README.rdoc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/dummy/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/spec_old/dummy/app/helpers/application_helper.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/dummy/app/models/follow.rb" afterPath="$PROJECT_DIR$/spec_old/dummy/app/models/follow.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/dummy/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec_old/dummy/spec/spec_helper.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/features/activities_spec.rb" afterPath="$PROJECT_DIR$/spec_old/features/activities_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/features/groups_spec.rb" afterPath="$PROJECT_DIR$/spec_old/features/groups_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/features/layout_spec.rb" afterPath="$PROJECT_DIR$/spec_old/features/layout_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/features/messages_spec.rb" afterPath="$PROJECT_DIR$/spec_old/features/messages_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/features/pages_spec.rb" afterPath="$PROJECT_DIR$/spec_old/features/pages_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/features/people_spec.rb" afterPath="$PROJECT_DIR$/spec_old/features/people_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/features/profile_spec.rb" afterPath="$PROJECT_DIR$/spec_old/features/profile_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/features/tags_spec.rb" afterPath="$PROJECT_DIR$/spec_old/features/tags_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/features/users_spec.rb" afterPath="$PROJECT_DIR$/spec_old/features/users_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/models/group_spec.rb" afterPath="$PROJECT_DIR$/spec_old/models/group_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/models/message_spec.rb" afterPath="$PROJECT_DIR$/spec_old/models/message_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/models/page_spec.rb" afterPath="$PROJECT_DIR$/spec_old/models/page_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/models/status_spec.rb" afterPath="$PROJECT_DIR$/spec_old/models/status_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/models/tag_spec.rb" afterPath="$PROJECT_DIR$/spec_old/models/tag_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/spec_old/models/user_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/support/activities_support.rb" afterPath="$PROJECT_DIR$/spec_old/support/activities_support.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/support/controller_hacks_support.rb" afterPath="$PROJECT_DIR$/spec_old/support/controller_hacks_support.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/support/devise_support.rb" afterPath="$PROJECT_DIR$/spec_old/support/devise_support.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/support/groups_support.rb" afterPath="$PROJECT_DIR$/spec_old/support/groups_support.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/support/login_support.rb" afterPath="$PROJECT_DIR$/spec_old/support/login_support.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/support/messages_support.rb" afterPath="$PROJECT_DIR$/spec_old/support/messages_support.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/support/pages_support.rb" afterPath="$PROJECT_DIR$/spec_old/support/pages_support.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/support/people_support.rb" afterPath="$PROJECT_DIR$/spec_old/support/people_support.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/support/tags_support.rb" afterPath="$PROJECT_DIR$/spec_old/support/tags_support.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/development.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D7A/0D0/sprockets%2F69aefa394b4d1f69b6e75163c808ba5d" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D7A/0D0/sprockets%2F69aefa394b4d1f69b6e75163c808ba5d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D79/4D0/sprockets%2Fd4844821d2cdb8cd6867fb640ca9d17f" afterPath="$PROJECT_DIR$/spec/dummy/tmp/cache/assets/D79/4D0/sprockets%2Fd4844821d2cdb8cd6867fb640ca9d17f" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/.rspec" afterPath="$PROJECT_DIR$/spec/dummy/.rspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/comments/_form.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ability.rb" afterPath="$PROJECT_DIR$/app/models/ability.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/activities_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/activities_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/activities_support.rb" afterPath="$PROJECT_DIR$/spec/support/activities_support.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/activity.rb" afterPath="$PROJECT_DIR$/app/models/activity.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories/messages.rb" afterPath="$PROJECT_DIR$/spec/factories/messages.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/page.rb" afterPath="$PROJECT_DIR$/app/models/page.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories/pages.rb" afterPath="$PROJECT_DIR$/spec/factories/pages.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/routes.rb" afterPath="$PROJECT_DIR$/spec/dummy/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/status.rb" afterPath="$PROJECT_DIR$/app/models/status.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/statuses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/statuses_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories/users.rb" afterPath="$PROJECT_DIR$/spec/factories/users.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cooperative.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378058088701" ignored="false" />
+    <file path="/Dummy.txt" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378058367579" ignored="false" />
     <file path="/scaffolds.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367940541896" ignored="false" />
     <file path="/follows_controller_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367941059500" ignored="false" />
     <file path="/user.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378054493571" ignored="false" />
@@ -366,10 +252,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="status.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="status.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/status.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="29" selection-start="156" selection-end="156" vertical-scroll-proportion="0.16703786">
+            <state line="5" column="29" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/factories/messages.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="5" selection-start="37" selection-end="37" vertical-scroll-proportion="0.13363029">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/factories/users.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -412,6 +325,11 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GitLogSettings">
     <option name="myDateState">
@@ -421,7 +339,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/support/followers_support.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/spec/support/follower_support.rb" />
         <option value="$PROJECT_DIR$/spec/models/activity_spec.rb" />
@@ -437,6 +354,7 @@
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/spec/models/user_spec.rb" />
         <option value="$PROJECT_DIR$/app/models/status.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -695,46 +613,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="factories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1565,7 +1443,11 @@
       <created>1377800895744</created>
       <updated>1377800895744</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="User model written, tests passing.">
+      <created>1378058136732</created>
+      <updated>1378058136732</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1603,8 +1485,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18120806" sideWeight="0.630303" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25454545" sideWeight="0.53235906" order="3" side_tool="false" content_ui="tabs" />
@@ -1612,14 +1495,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28863636" sideWeight="0.8187919" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.6492424" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28863636" sideWeight="0.6107383" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18120806" sideWeight="0.3689394" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18120806" sideWeight="0.36969697" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37578288" sideWeight="0.70757574" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26174498" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.6739496" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1711,27 +1593,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/models/activity_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="8" selection-start="376" selection-end="376" vertical-scroll-proportion="0.5769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448/gems/shoulda-matchers-2.3.0/lib/shoulda/matchers/active_model/allow_mass_assignment_of_matcher.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="78" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="45" selection-start="857" selection-end="857" vertical-scroll-proportion="1.1094675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1821,7 +1682,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/status.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="156" selection-end="156" vertical-scroll-proportion="0.16703786">
+        <state line="5" column="29" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories/messages.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories/users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="5" selection-start="37" selection-end="37" vertical-scroll-proportion="0.13363029">
           <folding />
         </state>
       </provider>
