@@ -1,48 +1,59 @@
 class User < ActiveRecord::Base
-  # Paperclip plugin
+  delegate :can?, :cannot?, :to => :ability
+
+  # Paperclip gem
   has_attached_file :image, 
       :styles => Cooperative.configuration.paperclip_options[:users], 
       :default_url => "/assets/cooperative/:style/missing.png"
 
   
-  # Acts as Follower plugin
+  # Acts as Follower gem
   acts_as_follower
   acts_as_followable
-  
+
+  # Acts as Taggable On gem
   acts_as_taggable_on :skills, :interests, :hobbies
 
   # Coletivo gem
   has_own_preferences
 
+  # Public Activity gem
   include PublicActivity::Activist
   activist
 
-  def activities
-    Activity.where('id IN (?)', activities_as_owner_ids|activities_as_recipient_ids).order('created_at desc').limit(10)
-  end
+  # Authorization gem
+  acts_as_authorized_user # TODO: replace this gem's functionality, as it is not being actively maintained.
 
-  # Authorization plugin
-  acts_as_authorized_user
-
-  # FriendlyId plugin
+  # FriendlyId gem
   extend FriendlyId
   friendly_id :nickname
   
+  # Devise gem
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
-  # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :bio, :image, :skill_list, :interest_list, :hobby_list
   validates_presence_of :nickname
-  
-  has_many :messages, :foreign_key => :recipient_id
 
+  has_many :messages, :foreign_key => :recipient_id
   has_many :pages, :as => :pageable
   has_many :statuses
 
-  def to_param
-    self.nickname
+  def show_me
+    following_users.pluck(:id) << id
+  end
+
+  def activities
+    Activity.where('id IN (?)', activities_as_owner_ids|activities_as_recipient_ids).order('created_at desc').limit(10)
+  end
+
+  def activities_as_follower
+    Activity.find_all_by_users(show_me)
+  end
+
+  def ability
+    @ability ||= Ability.new(self)
   end
 end

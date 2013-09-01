@@ -4,6 +4,7 @@ Gemfile.lock
 tmp
 *.pid
 .idea
+spec_old
 
 # rcov generated
 coverage

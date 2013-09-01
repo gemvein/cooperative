@@ -1,6 +1,6 @@
 class Page < ActiveRecord::Base
   include PublicActivity::Model
-  tracked owner: Proc.new{ |controller, model| controller.nil? ? nil : controller.current_user }
+  tracked :owner => :pageable
   
   extend FriendlyId
   friendly_id :title, :use => :scoped, :scope => :pageable
@@ -12,7 +12,7 @@ class Page < ActiveRecord::Base
   has_many :children, :foreign_key => :parent_id, :class_name => "Page"
   
   acts_as_taggable
-  
+
   belongs_to :pageable, :polymorphic => true
   attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :pageable_id, :pageable_type, :tag_list
   validates_presence_of :slug, :title, :body

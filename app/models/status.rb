@@ -1,6 +1,9 @@
 class Status < ActiveRecord::Base
+  before_save  :tokenize_tags
+  after_create :tokenize_mentions
+
   include PublicActivity::Model
-  tracked owner: Proc.new{ |controller, model| controller.nil? ? nil : controller.current_user }
+  tracked :owner => :user
 
   acts_as_taggable
 
@@ -49,5 +52,18 @@ class Status < ActiveRecord::Base
 
   def path
     Cooperative::Engine.routes.url_helpers.status_path(id)
+  end
+
+  def tokenize_tags
+    self.tag_list = body.scan(/#(\S+)/).join(',')
+  end
+
+  def tokenize_mentions
+    for mention in body.scan /@([^\s\?,;:'"<>]+)/
+      recipient = User.find_by_nickname(mention)
+      if user.can? :mention, recipient
+        create_activity(:mentioned_in, :owner => user, :recipient => recipient)
+      end
+    end
   end
 end

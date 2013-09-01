@@ -61,12 +61,12 @@ class Ability
     end
 
     # Users
-    can :read, User, :public => true
-    can :read, User, :id => current_user.id
-    can :read, User do |user|
+    can [:read, :mention], User, :public => true
+    can [:read, :mention], User, :id => current_user.id
+    can [:read, :mention], User do |user|
       user.following?(current_user)
     end
-    can :read, User do |user|
+    can [:read, :mention], User do |user|
       current_user.following?(user)
     end
   end

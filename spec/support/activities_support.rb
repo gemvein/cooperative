@@ -1,13 +1,30 @@
-shared_context "activities support" do
-  before(:each) do
-    @following_user = FactoryGirl.create(:user, :public => false)
-    @followed_user = FactoryGirl.create(:user, :public => false)
-    @following_user.follows @followed_user
-    @followed_user.pages << FactoryGirl.create(:page, :title => 'Created Page')
-    @followed_user.pages << FactoryGirl.create(:page, :title => 'Created Page 2')
-    @followed_user.pages.last.title = 'Edited Page'
-    @followed_user.pages.last.save
-    @followed_user.pages << FactoryGirl.create(:page, :title => 'Deletable Page')
-    @followed_user.pages.last.destroy
-  end
+shared_context 'activities support' do
+  include_context 'follower support'
+
+  let!(:created_page) { FactoryGirl.create(:page, :title => 'Created Page', :pageable => followed_user) }
+  let!(:created_page_activity) { Activity.find(created_page.activities.find_by_key('page.create').id) }
+
+  let!(:edited_page) {
+    edited_page = FactoryGirl.create(:page, :title => 'Created Page 2', :pageable => followed_user)
+    edited_page.title = 'Edited Page'
+    edited_page.save!
+    edited_page
+  }
+  let!(:edited_page_activity) { Activity.find(edited_page.activities.find_by_key('page.update').id) }
+
+  let!(:deleted_page) {
+    FactoryGirl.create(:page, :title => 'Deletable Page', :pageable => followed_user)
+    .destroy
+  }
+  let!(:deleted_page_activity) { Activity.find(deleted_page.activities.find_by_key('page.destroy').id) }
+
+  let!(:owned_status) { FactoryGirl.create(:status, :user => followed_user) }
+  let!(:owned_status_activity) { Activity.find(owned_status.activities.find_by_key('status.create').id) }
+
+  let!(:followed_status) { FactoryGirl.create(:status, :user => follower_user) }
+  let!(:followed_status_activity) { Activity.find(followed_status.activities.find_by_key('status.create').id) }
+
+  let!(:mentioned_in_status) { FactoryGirl.create(:status, :user => follower_user, :body => "This status mentions @#{followed_user.nickname} ").reload }
+  let!(:mentioned_in_status_activity) { Activity.find(mentioned_in_status.activities.find_by_key('status.mentioned_in').id) }
+
 end

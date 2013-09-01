@@ -13,6 +13,8 @@ FactoryGirl.definition_file_paths = %w(spec/factories)
 FactoryGirl.find_definitions
 
 require 'database_cleaner'
+require 'shoulda-matchers'
+require 'paperclip/matchers'
 require 'cooperative'
 
 include Warden::Test::Helpers
@@ -23,7 +25,8 @@ Warden.test_mode!
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
-  config.include Capybara::DSL
+  config.include Capybara::DSL, :type => feature
+  config.include Paperclip::Shoulda::Matchers
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
@@ -37,6 +40,4 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
-  
-  config.include ControllerHacks, :type => :controller
 end

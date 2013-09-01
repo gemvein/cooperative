@@ -27,18 +27,9 @@ class StatusesController < ApplicationController
     @status = Status.new(params[:status])
     @status.user = current_user
 
-    @status.tag_list = @status.body.gsub /^[^#]*\s?#([^\s]+)\s?[^#]*/, '\1,'
-
     respond_to do |format|
       if @status.save
         @activity = @status.activities.first
-        for mention in @status.body.scan /@[^\s\?,;:'"<>]+/
-          mention[0] = '' # strips off first character
-          recipient = User.find_by_nickname(mention)
-          if can? :show, recipient
-            @status.create_activity(:mentioned_in, :owner => current_user, :recipient => recipient)
-          end
-        end
         format.js
       else
         format.js { render :action => 'new' }
