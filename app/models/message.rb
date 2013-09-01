@@ -1,26 +1,48 @@
 class Message < ActiveRecord::Base
-  belongs_to :sender, :class_name => 'User'
-  belongs_to :recipient, :class_name => 'User'
-  belongs_to :parent, :class_name => 'Message'
-  has_many :children, :foreign_key => 'parent_id', :class_name => 'Message'
-  
   attr_accessible :recipient_id, :sender_id, :subject, :body, :parent_id, :recipient_nickname
   validates_presence_of :body, :sender
   validates_presence_of :subject, :if => "parent.nil?"
-  validates_presence_of :recipient_nickname  
+  validates_presence_of :recipient_nickname
   validate :you_cant_send_messages_to_yourself
+
+  belongs_to :sender, :class_name => 'User'
+  belongs_to :recipient, :class_name => 'User'
+  belongs_to :parent, :class_name => 'Message'
+
+  has_many :children, :foreign_key => 'parent_id', :class_name => 'Message'
+
+  def self.unread
+    where(:read_at => nil)
+  end
+
+  def self.threads
+    where('id IN (?)', self.all.map(&:thread))
+  end
+
+  def self.sent_by(sent_by)
+    where(:sender_id => sent_by, :deleted_by_sender => [false, nil, '', 0])
+  end
+
+  def self.received_by(received_by)
+    where(:recipient_id => received_by, :deleted_by_recipient => [false, nil, '', 0])
+  end
+
+  def self.trash_by(trash_by)
+    where("(sender_id = ? AND deleted_by_sender = 't') OR (recipient_id = ? AND deleted_by_recipient = 't')", trash_by, trash_by)
+  end
+
   
   def you_cant_send_messages_to_yourself
     if(recipient == sender)
-      errors.add(:recipient_nickname, "can't be yourself")
+      errors.add(:recipient_nickname, "can't be yourself") #TDDO Internationalize this
     end
   end
   
   def thread
-    if !parent.nil?
-      parent.thread
+    if self.parent.nil?
+      self.id
     else
-      self
+      self.parent.thread
     end
   end
   
@@ -43,7 +65,7 @@ class Message < ActiveRecord::Base
       recipient.nickname
     end
   end
-  
+
   def recipient_nickname=(value)
     self.recipient = User.find_by_nickname(value)
   end
@@ -79,10 +101,6 @@ class Message < ActiveRecord::Base
       return false
     end
     false
-  end
-  
-  def self.unread
-    where(:read_at => nil)
   end
   
   def with(user)
@@ -123,13 +141,5 @@ class Message < ActiveRecord::Base
     for child in children
       child.restore(user)
     end
-  end
-  
-  def self.threads(messages)
-    thread_ids = []
-    for message in messages do
-      thread_ids << message.thread.id
-    end
-    self.where('id IN (?)', thread_ids)
   end
 end
