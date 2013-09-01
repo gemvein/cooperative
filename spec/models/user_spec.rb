@@ -67,7 +67,7 @@ describe User do
     describe '#activities_as_follower' do
       include_context 'activities support'
       subject { follower_user.activities_as_follower }
-      it { should have_at_least(5).items }
+      it { should have_at_least(6).items }
       it { should include created_page_activity }
       it { should include edited_page_activity }
       it { should include deleted_page_activity }
