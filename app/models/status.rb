@@ -2,9 +2,11 @@ class Status < ActiveRecord::Base
   before_save  :tokenize_tags
   after_create :tokenize_mentions
 
+  # Public Activity gem
   include PublicActivity::Model
   tracked :owner => :user
 
+  # Acts as Taggable gem
   acts_as_taggable
 
   # Cooperative extension to the Coletivo gem
@@ -15,10 +17,15 @@ class Status < ActiveRecord::Base
   has_attached_file :image, 
       :styles => Cooperative.configuration.paperclip_options[:statuses], 
       :default_url => "/assets/cooperative/:style/missing.png"
+
+
+  attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type
+  validates_presence_of :body, :user
   
   belongs_to :user
   belongs_to :shareable, :polymorphic => true
   has_many :statuses, :as => :shareable
+  has_many :comments, :as => :commentable
 
   def build_status(status = nil)
     status ||= Status.new()
@@ -34,11 +41,6 @@ class Status < ActiveRecord::Base
     end
     status
   end
-
-  has_many :comments, :as => :commentable
-
-  attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type
-  validates_presence_of :body, :user
 
   def image_remote_url=(url_value)
     if url_value.length > 5
