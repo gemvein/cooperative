@@ -13,6 +13,8 @@ describe User do
     describe '#total_item_counts' do
       subject { Tag.total_item_counts }
       it { should include({:name => 'reading', :count => 5})}
+      it { should include({:name => 'apprehension', :count => 3})}
+      it { should include({:name => 'disco', :count => 1})}
 
     end
 
