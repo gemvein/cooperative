@@ -4,7 +4,7 @@ class PagesController < CooperativeController
   def index
     unless params[:person_id].blank?
       @person = User.find_by_nickname(params[:person_id])
-      @page = Page.find_all_by_user_id(@person.id).find_by_slug('home') || Page.new
+      @page = @person.pages.find_by_slug('home') || Page.new
     else
       @page = Page.find_all_root_pages.find_by_slug('home') || Page.new
     end
@@ -25,7 +25,7 @@ class PagesController < CooperativeController
   def show
     unless params[:person_id].blank?
       @person = User.find_by_nickname(params[:person_id])
-      @page = Page.find_all_by_user_id(@person.id).find_by_path(params[:path]) || not_found
+      @page = @person.pages.find_by_path(params[:path]) || not_found
     else
       @page = Page.find_all_root_pages.find_by_path(params[:path]) || not_found
     end 
@@ -63,7 +63,7 @@ class PagesController < CooperativeController
 
   # GET /pages/1/edit
   def edit
-    @page = Page.find_all_by_user_id(current_user.id).find(params[:id])
+    @page = current_user.pages.find(params[:id])
   end
 
   # POST /pages
@@ -86,7 +86,7 @@ class PagesController < CooperativeController
   # PUT /pages/1
   # PUT /pages/1.json
   def update
-    @page = Page.find_all_by_user_id(current_user.id).find(params[:id])
+    @page = current_user.pages.find(params[:id])
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
@@ -102,7 +102,7 @@ class PagesController < CooperativeController
   # DELETE /pages/1
   # DELETE /pages/1.json
   def destroy
-    @page = Page.find_all_by_user_id(current_user.id).find(params[:id])
+    @page = current_user.pages.find(params[:id])
     @page.destroy
 
     respond_to do |format|

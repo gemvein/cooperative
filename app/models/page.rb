@@ -1,22 +1,53 @@
 class Page < ActiveRecord::Base
+  # Public Activity gem
   include PublicActivity::Model
   tracked :owner => :pageable
-  
+
+  # Friendly ID gem
   extend FriendlyId
   friendly_id :title, :use => :scoped, :scope => :pageable
+
+  # Acts as Taggable gem
+  acts_as_taggable
+
+  # Accessible attributes
+  attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :pageable_id, :pageable_type, :tag_list
+
+  # Required attributes
+  validates_presence_of :slug, :title, :body
+
+  # Relationships
+  belongs_to :pageable, :polymorphic => true
+
+  belongs_to :parent, :class_name => 'Page'
+  has_many :children, :foreign_key => :parent_id, :class_name => 'Page'
+
+  # Class methods
+  def self.find_all_root_pages
+    where({:pageable_id => [0, nil, '']})
+  end
+  
+  def self.find_all_by_path(path)
+    parts = path.split('/')
+    conditions = {:parent_id => [0, nil, '']}
+    for part in parts
+      current_pages = self.where(conditions).where(:slug => part)
+      conditions = { :parent_id => current_pages.pluck(:id) }
+    end
+    current_pages
+  end
+  
+  def self.find_by_path(path)
+    find_all_by_path(path).first
+  end
+
+  # Instance methods
+
+  # This one has to do with the Friendly ID gem.
   def should_generate_new_friendly_id?
     new_record?
   end
-  
-  belongs_to :parent, :class_name => "Page"
-  has_many :children, :foreign_key => :parent_id, :class_name => "Page"
-  
-  acts_as_taggable
 
-  belongs_to :pageable, :polymorphic => true
-  attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :pageable_id, :pageable_type, :tag_list
-  validates_presence_of :slug, :title, :body
-  
   def ancestry
     if parent
       my_ancestry = parent.ancestry
@@ -25,7 +56,7 @@ class Page < ActiveRecord::Base
       my_ancestry = []
     end
   end
-  
+
   def path
     if pageable_type.blank?
       prefix = '/'
@@ -35,7 +66,7 @@ class Page < ActiveRecord::Base
     end
     prefix + 'pages/' + path_parts.join('/')
   end
-  
+
   def path_parts
     parts = []
     unless ancestry.empty?
@@ -45,31 +76,5 @@ class Page < ActiveRecord::Base
     end
     parts << slug
     parts
-  end
-
-  def self.find_all_root_pages
-    self.where({:pageable_id => [0, nil, '']})
-  end
-
-  def self.find_all_by_user_id(user_id)
-    self.where({:pageable_id => user_id, :pageable_type => 'User'})
-  end
-  
-  def self.find_all_by_path(path)
-    parts = path.split('/')
-    conditions = {:parent_id => [0, nil, '']}
-    for part in parts
-      current_pages = self.where(conditions).find_all_by_slug(part)
-      current_page_ids = []
-      for current_page in current_pages
-        current_page_ids << current_page.id
-      end
-      conditions = {:parent_id => current_page_ids}
-    end
-    current_pages
-  end
-  
-  def self.find_by_path(path)
-    self.find_all_by_path(path).first
   end
 end
