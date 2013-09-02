@@ -1,6 +1,8 @@
 class PagesController < CooperativeController
   load_and_authorize_resource
 
+  # GET /pages or /people/nickname/pages
+  # GET /pages.json or /people/nickname/pages.json
   def index
     unless params[:person_id].blank?
       @person = User.find_by_nickname(params[:person_id])
@@ -20,8 +22,8 @@ class PagesController < CooperativeController
     end
   end
 
-  # GET /pages/1
-  # GET /pages/1.json
+  # GET /pages/path or /people/nickname/pages/path
+  # GET /pages/path.json or /people/nickname/pages/path.json
   def show
     unless params[:person_id].blank?
       @person = User.find_by_nickname(params[:person_id])
@@ -64,6 +66,11 @@ class PagesController < CooperativeController
   # GET /pages/1/edit
   def edit
     @page = current_user.pages.find(params[:id])
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render :json => @page }
+    end
   end
 
   # POST /pages

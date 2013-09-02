@@ -1,7 +1,9 @@
 class MessagesController < CooperativeController
   before_filter :authenticate_user!
   add_breadcrumb :inbox.l, '/messages'
-  
+
+  # GET /messages
+  # GET /messages.json
   def index
     @messages = Message.received_by(current_user).threads.order('created_at').page(params[:page])
     

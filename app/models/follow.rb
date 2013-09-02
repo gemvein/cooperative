@@ -1,3 +1,4 @@
+# TODO: Replace this file
 class Follow < ActiveRecord::Base
 
   extend ActsAsFollower::FollowerLib
@@ -9,6 +10,14 @@ class Follow < ActiveRecord::Base
 
   def block!
     self.update_attribute(:blocked, true)
+  end
+
+  def self.to_json
+    formatted_follows = []
+    for follow in self
+      formatted_follows << {:val => follow.nickname, :meta => follow.image.url(:thumb)}
+    end
+    formatted_follows.to_json
   end
 
 end

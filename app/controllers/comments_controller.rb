@@ -2,6 +2,8 @@ class CommentsController < CooperativeController
   add_breadcrumb :activities.l, '/activities'
   load_and_authorize_resource
 
+  # GET /statuses/1/comments
+  # GET /statuses/1/comments.json
   def index
     @commentable = polymorphic_parent_class.find(polymorphic_parent_id)
     @comments = Comment.find_by_commentable(@commentable)
@@ -16,6 +18,8 @@ class CommentsController < CooperativeController
     end
   end
 
+  # GET /statuses/1/comments/1
+  # GET /statuses/1/comments/1.json
   def show
     @commentable = polymorphic_parent_class.find(polymorphic_parent_id)
     @comment = Comment.find_by_commentable(@commentable).find(params[:id])

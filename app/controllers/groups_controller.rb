@@ -1,4 +1,4 @@
-class GroupsController < ApplicationController
+class GroupsController < CooperativeController
   load_and_authorize_resource :except => :show
   
   # GET /groups
@@ -37,8 +37,14 @@ class GroupsController < ApplicationController
   end
 
   # GET /groups/1/edit
+  # GET /groups/1/edit.json
   def edit
     @group = Group.find(params[:id])
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render :json => @group }
+    end
   end
 
   # POST /groups
@@ -75,6 +81,7 @@ class GroupsController < ApplicationController
   end
   
   # GET /groups/1/join
+  # GET /groups/1/join.js
   def join
     @group = Group.find(params[:id])
     current_user.is_member_of @group
@@ -86,6 +93,7 @@ class GroupsController < ApplicationController
   end
   
   # GET /groups/1/leave
+  # GET /groups/1/leave.js
   def leave
     @group = Group.find(params[:id])
     @role = Role.where(:name => 'member', :authorizable_type => 'Group', :authorizable_id => @group)

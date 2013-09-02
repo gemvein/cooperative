@@ -1,21 +1,19 @@
 class FollowsController < CooperativeController
 
+  # GET /people/nickname/follows
+  # GET /people/nickname/follows.json
   def index
-    @person = User.find_by_nickname(params[:person_id])
+    @person = User.find(params[:person_id])
     @follows = @person.following_users.order(:nickname).page(params[:page])
 
     respond_to do |format|
       format.html # index.html.haml
-      format.json {
-        @formatted_follows = []
-        for follow in @follows
-          @formatted_follows << {:val => follow.nickname, :meta => follow.image.url(:thumb)}
-        end
-        render :json => @formatted_follows
-      }
+      format.json { render :json => @follows }
     end
   end
 
+  # GET /people/nickname/followers
+  # GET /people/nickname/followers.json
   def followers
     @person = User.find_by_nickname(params[:id])
     @followers = Kaminari.paginate_array(@person.followers).page(params[:page])
@@ -31,15 +29,25 @@ class FollowsController < CooperativeController
       }
     end
   end
- 
+
+  # POST /follows.js
   def create
     @person = User.find_by_nickname(params[:person_id])
     current_user.follow(@person)
+
+    respond_to do |format|
+      format.js
+    end
   end
- 
+
+  # DELETE /follows/1.js
   def destroy
     @person = User.find_by_nickname(params[:person_id])
     current_user.stop_following(@person)
+
+    respond_to do |format|
+      format.js
+    end
   end
  
 end

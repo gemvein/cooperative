@@ -1,4 +1,4 @@
-class StatusesController < ApplicationController
+class StatusesController < CooperativeController
   add_breadcrumb :activities.l, '/activities'
   load_and_authorize_resource
   
@@ -37,8 +37,7 @@ class StatusesController < ApplicationController
     end
   end
 
-  # DELETE /statuses/1
-  # DELETE /statuses/1.json
+  # DELETE /statuses/1.js
   def destroy
     @status = Status.find(params[:id])
     @activity = @status.activities.first
@@ -49,6 +48,7 @@ class StatusesController < ApplicationController
   end
   
   # GET /statuses/grab.js
+  # TODO: Put this elsewhere, it's ugly.
   def grab
     @uri = URI.unescape(params[:uri])
     begin

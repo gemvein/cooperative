@@ -1,5 +1,5 @@
-class RatingsController < ApplicationController
-  # GET /statuses/1/rate/5
+class RatingsController < CooperativeController
+  # GET /statuses/1/rate/5.js
   def rate
     @rateable = polymorphic_parent_class.find(params[:id])
 
