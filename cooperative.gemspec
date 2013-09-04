@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'bootstrap_forms'
   s.add_dependency 'breadcrumbs_on_rails'
-  s.add_dependency 'pager'
+  s.add_dependency 'bootstrap_pager'
   
   s.add_dependency 'jquery-rails'
   s.add_dependency 'jquery-ui-rails'

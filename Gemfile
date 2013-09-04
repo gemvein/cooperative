@@ -18,7 +18,6 @@ group :development, :test do
   gem "puma"
 end
 
-gem 'pager', :path => '/home/work/Sites/pager'
 gem 'coletivo', :path => '/home/work/Sites/coletivo'
 
 gemspec

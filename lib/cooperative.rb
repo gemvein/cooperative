@@ -27,7 +27,7 @@ module Cooperative
   require 'jquery-ui-bootstrap-rails-asset'
   require 'tinymce-rails'
   
-  require 'pager'
+  require 'bootstrap_pager'
   
   require 'cancan'
   require 'devise'
