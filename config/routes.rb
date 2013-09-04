@@ -3,9 +3,12 @@ Cooperative::Engine.routes.draw do
   root :to => 'pages#index', :as => 'home'
   match '/pages/home' => redirect('/')
   match '/pages/*path' => 'pages#show', :as => 'show'
+
   get '/profile' => 'profile#edit', :as => 'profile'
   put '/profile' => 'profile#update'
+
   resources :activities, :only => [:index]
+
   resources :comments, :only => [:create, :destroy, :new, :show]
   resources :statuses, :only => [:create, :destroy, :new, :show] do
     collection do
@@ -15,9 +18,10 @@ Cooperative::Engine.routes.draw do
       get 'rate/:rating', :to => 'ratings#rate', :as => 'rate', :constraints => { :rating => /\-?[0-9]+(\.[0-9])?/ }
       get 'unrate', :to => 'ratings#unrate', :as => 'unrate'
     end
-    resources :comments, :only => [:index, :show]
+    resources :comments, :only => [:index]
   end
-  resources :tags, :only => [:index, :show], :constraints => { :id => /.*/ }
+
+  resources :tags, :only => [:index, :show]
   
   resources :groups do
     member do 
@@ -32,7 +36,7 @@ Cooperative::Engine.routes.draw do
     end
     resources :follows, :only => [:create, :destroy, :index]
     resources :pages, :except => [:show]
-    match 'pages/*path' => 'pages#show', :constraints => {:path => /.+/}, :as => 'show'
+    match 'pages/*path' => 'pages#show', :as => 'show'
   end
 
   resources :messages, :only => [:index, :show, :new, :create] do
