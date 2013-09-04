@@ -4,8 +4,8 @@
   %li.active= link_to :set_my_status.l, '#status', :data => {:toggle => 'tab'}
   %li= link_to :send_a_message.l, '#message', :data => {:toggle => 'tab'}
 .tab-content
-  #status.tab-pane.active= render 'statuses/form_for_activities'
-  #message.tab-pane= render 'messages/form_for_activities'
+  #status.tab-pane.active= statuses_form_for_activities
+  #message.tab-pane= messages_form_for_activities
 
 #activities.infinitescroll
   - for activity in @activities

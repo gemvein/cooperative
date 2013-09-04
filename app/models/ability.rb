@@ -4,6 +4,11 @@ class Ability
   def initialize(current_user)
     current_user ||= User.new # guest current_user (not logged in)
 
+    # Activities
+    can [:index], Activity do |comment|
+      !current_user.new_record?
+    end
+
     # Comments
     can [:read, :rate], Comment do |comment|
       current_user.following?(comment.commentable.user)
