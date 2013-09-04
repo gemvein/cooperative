@@ -1,5 +1,8 @@
 class ActivitiesController < CooperativeController
-  load_and_authorize_resource
+  before_filter :authenticate_user!
+
+  # Don't be a shmoe like this: We're scoping it our own way and we don't want to do it the cancan way this time.
+  # load_and_authorize_resource
 
   add_breadcrumb :activities.l, '/activities'
 
