@@ -1,9 +1,11 @@
 class FollowsController < CooperativeController
+  before_filter :authenticate_user!
 
   # GET /people/nickname/follows
   # GET /people/nickname/follows.json
   def index
     @person = User.find(params[:person_id])
+    authorize! :show, @person
     @follows = @person.following_users.order(:nickname).page(params[:page])
 
     respond_to do |format|
@@ -16,7 +18,8 @@ class FollowsController < CooperativeController
   # GET /people/nickname/followers.json
   def followers
     @person = User.find_by_nickname(params[:id])
-    @followers = Kaminari.paginate_array(@person.followers).page(params[:page])
+    authorize! :show, @person
+    @followers = BootstrapPager.paginate_array(@person.followers).page(params[:page])
 
     respond_to do |format|
       format.html # followers.html.haml

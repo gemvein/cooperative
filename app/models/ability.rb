@@ -69,7 +69,7 @@ class Ability
     end
 
     # Users
-    can [:read, :mention], User, :public => true
+    can [:read, :mention, :follow], User, :public => true
     can [:read, :mention], User, :id => current_user.id
     can [:read, :mention], User do |user|
       user.following?(current_user)
@@ -77,5 +77,6 @@ class Ability
     can [:read, :mention], User do |user|
       current_user.following?(user)
     end
+    can [:follow], User if !current_user.new_record?
   end
 end
