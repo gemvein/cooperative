@@ -4,4 +4,8 @@ class Comment < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :commentable, :polymorphic => true
+
+  def self.find_by_commentable(commentable)
+    where("commentable_type = '#{commentable.class.name}'").where(:commentable_id => commentable.id)
+  end
 end

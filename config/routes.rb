@@ -9,7 +9,7 @@ Cooperative::Engine.routes.draw do
 
   resources :activities, :only => [:index]
 
-  resources :comments, :only => [:create, :destroy, :new, :show]
+  resources :comments, :only => [:create, :destroy, :show]
   resources :statuses, :only => [:create, :destroy, :new, :show] do
     collection do
       get 'grab'

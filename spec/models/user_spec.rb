@@ -59,8 +59,8 @@ describe User do
       it { should include created_page_activity }
       it { should include edited_page_activity }
       it { should include deleted_page_activity }
-      it { should include owned_status_activity }
-      it { should_not include followed_status_activity }
+      it { should include followed_status_activity }
+      it { should_not include owned_status_activity }
       it { should include mentioned_in_status_activity }
     end
 

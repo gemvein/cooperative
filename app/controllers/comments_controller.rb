@@ -1,13 +1,17 @@
 class CommentsController < CooperativeController
+  before_filter :authenticate_user!
+
+  load_and_authorize_resource :comment, :except => [:index, :create]
+
   add_breadcrumb :activities.l, '/activities'
-  load_and_authorize_resource
 
   # GET /statuses/1/comments
   # GET /statuses/1/comments.json
+  # @comments NOT loaded by cancan this time, so we use Comment here.
   def index
-    @commentable = polymorphic_parent_class.find(polymorphic_parent_id)
-    @comments = Comment.find_by_commentable(@commentable)
-
+    @commentable = polymorphic_parent || ( not_found and return )
+    authorize! :comment, @commentable
+    @comments = Comment.find_by_commentable(@commentable) || ( not_found and return )
 
     add_breadcrumb polymorphic_parent_name, polymorphic_path([cooperative, @commentable])
     add_breadcrumb :comments.l, polymorphic_path([cooperative, @commentable, :comments])
@@ -18,13 +22,14 @@ class CommentsController < CooperativeController
     end
   end
 
-  # GET /statuses/1/comments/1
-  # GET /statuses/1/comments/1.json
+  # GET /comments/1
+  # GET /comments/1.json
+  # @comment loaded by cancan
   def show
-    @commentable = polymorphic_parent_class.find(polymorphic_parent_id)
-    @comment = Comment.find_by_commentable(@commentable).find(params[:id])
+    @commentable = @comment.commentable || ( not_found and return )
+
     add_breadcrumb polymorphic_parent_name, polymorphic_path([cooperative, @commentable])
-    add_breadcrumb :comment.l, polymorphic_path([cooperative, @commentable, @comment])
+    add_breadcrumb :comment.l, cooperative.comment_path(@comment)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -32,23 +37,14 @@ class CommentsController < CooperativeController
     end
   end
 
-  # GET /comments/new
-  # GET /comments/new.json
-  def new
-    @comment = Comment.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @comment }
-    end
-  end
-
   # POST /comments
   # POST /comments.json
+  # @comment NOT loaded by cancan this time, so we use Comment.new(params[:comment]) here.
   def create
     @comment = Comment.new(params[:comment])
-    @comment.user = current_user
     @commentable = @comment.commentable
+    authorize! :comment, @commentable
+    @comment.user = current_user
     @comment.save
 
     respond_to do |format|
@@ -58,13 +54,12 @@ class CommentsController < CooperativeController
 
   # DELETE /comments/1
   # DELETE /comments/1.json
+  # @comment loaded by cancan
   def destroy
-    @comment = Comment.find(params[:id])
     @comment.destroy
 
     respond_to do |format|
-      format.html { redirect_to cooperative.comments_url }
-      format.json { head :no_content }
+      format.js
     end
   end
 end

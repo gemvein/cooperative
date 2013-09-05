@@ -7,7 +7,7 @@ describe ActivitiesController do
     it { should route(:get, '/activities').to(:action => 'index') }
   end
 
-  describe 'GET #index' do
+  describe 'GET index' do
     include_context 'activities support'
     context 'when not logged in' do
       before do

@@ -2,16 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/comments.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/support/comments_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/development.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_actionable_descriptor.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/_actionable_descriptor.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ability.rb" afterPath="$PROJECT_DIR$/app/models/ability.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/activities_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/activities_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/activities_support.rb" afterPath="$PROJECT_DIR$/spec/support/activities_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/comment.rb" afterPath="$PROJECT_DIR$/app/models/comment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/comment_spec.rb" afterPath="$PROJECT_DIR$/spec/models/comment_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/comments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/comments_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/comments_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/cooperative_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/cooperative_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/follower_support.rb" afterPath="$PROJECT_DIR$/spec/support/follower_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cooperative.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378323638356" ignored="false" />
+    <file path="/Dummy.txt" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378343253286" ignored="false" />
     <file path="/scaffolds.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367940541896" ignored="false" />
     <file path="/follows_controller_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367941059500" ignored="false" />
     <file path="/user.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378054493571" ignored="false" />
-    <file path="/ability.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378312024307" ignored="false" />
+    <file path="/ability.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378348947057" ignored="false" />
     <file path="/statuses_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378099337373" ignored="false" />
     <file path="/create.js.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377655132956" ignored="false" />
     <file path="/index.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378311846631" ignored="false" />
@@ -27,7 +42,7 @@
     <file path="/notifications_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283681468" ignored="false" />
     <file path="/people_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458037958" ignored="false" />
     <file path="/site_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458048205" ignored="false" />
-    <file path="/a.dummy" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378097898068" ignored="false" />
+    <file path="/a.dummy" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378328738745" ignored="false" />
     <file path="/*.regexp" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458885359" ignored="false" />
     <file path="/user_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378057699856" ignored="false" />
     <file path="/_menu_item.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283710033" ignored="false" />
@@ -85,7 +100,7 @@
     <file path="/activities.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377736798084" ignored="false" />
     <file path="/activities.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377289274925" ignored="false" />
     <file path="/activities_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378321975491" ignored="false" />
-    <file path="/comments_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378094622373" ignored="false" />
+    <file path="/comments_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378350427066" ignored="false" />
     <file path="/Ruby Console" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377293155335" ignored="false" />
     <file path="$PROJECT_DIR$/../pager/lib/pager/helpers/action_view_extension.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377333274127" ignored="false" />
     <file path="/action_view_extension.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377333061785" ignored="false" />
@@ -157,7 +172,7 @@
     <file path="/active_record_relation_methods_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377378002470" ignored="false" />
     <file path="/comments.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377451637100" ignored="false" />
     <file path="/new.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377841806978" ignored="false" />
-    <file path="/comment.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378059738312" ignored="false" />
+    <file path="/comment.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378330999348" ignored="false" />
     <file path="/activities_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377457726289" ignored="false" />
     <file path="/_descriptor.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377457835887" ignored="false" />
     <file path="/new.js.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377462286942" ignored="false" />
@@ -172,7 +187,7 @@
     <file path="/temp.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377533476262" ignored="false" />
     <file path="/rails_admin.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377538047288" ignored="false" />
     <file path="/group.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378067086711" ignored="false" />
-    <file path="/cooperative_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377706157360" ignored="false" />
+    <file path="/cooperative_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378349582430" ignored="false" />
     <file path="/create_comments_table.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377623791180" ignored="false" />
     <file path="/20130826231152_create_comments_table.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377623797516" ignored="false" />
     <file path="/grab.js.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377630379503" ignored="false" />
@@ -219,10 +234,10 @@
     <file path="/statuses_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378085368522" ignored="false" />
     <file path="/spec_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377995985995" ignored="false" />
     <file path="/activity_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378059557929" ignored="false" />
-    <file path="/activities_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378054932265" ignored="false" />
+    <file path="/activities_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378343684039" ignored="false" />
     <file path="/followers_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377997879768" ignored="false" />
     <file path="/ability_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378059843571" ignored="false" />
-    <file path="/comment_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378059637370" ignored="false" />
+    <file path="/comment_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378330815756" ignored="false" />
     <file path="/group_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378067648333" ignored="false" />
     <file path="/group_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378067484281" ignored="false" />
     <file path="/message_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378076594817" ignored="false" />
@@ -238,13 +253,17 @@
     <file path="/activities_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378322904829" ignored="false" />
     <file path="/pages_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378308655646" ignored="false" />
     <file path="/profile_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378297942063" ignored="false" />
-    <file path="/comments_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378303889218" ignored="false" />
+    <file path="/comments_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378350692587" ignored="false" />
     <file path="/ratings_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378303277692" ignored="false" />
     <file path="/tags_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378306553428" ignored="false" />
     <file path="/groups_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378306737325" ignored="false" />
     <file path="/follows_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378308104508" ignored="false" />
     <file path="/messages_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378310882355" ignored="false" />
     <file path="/messages_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378312142833" ignored="false" />
+    <file path="/comments_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378335559608" ignored="false" />
+    <file path="/comments.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378327367861" ignored="false" />
+    <file path="/follower_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378331133222" ignored="false" />
+    <file path="/groups.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378327335925" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,10 +292,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activities_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/activities_controller.rb">
+      <file leaf-file-name="comments_spec.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/controllers/comments_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="2" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+            <state line="145" column="29" selection-start="4739" selection-end="4739" vertical-scroll-proportion="0.5916955">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="destroy.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/comments/destroy.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -285,28 +313,7 @@
       <file leaf-file-name="activities_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/controllers/activities_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="9" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="36" selection-start="645" selection-end="645" vertical-scroll-proportion="0.53571427">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="39" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
+            <state line="9" column="16" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -315,34 +322,61 @@
       <file leaf-file-name="cooperative_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/cooperative_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="13" column="50" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="devise_support.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec_old/support/devise_support.rb">
+      <file leaf-file-name="_comment.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/comments/_comment.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="devise_support.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/support/devise_support.rb">
+      <file leaf-file-name="_actionable_descriptor.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_actionable_descriptor.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="4" column="68" selection-start="255" selection-end="255" vertical-scroll-proportion="-2.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activities_support.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/support/activities_support.rb">
+      <file leaf-file-name="comment.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="8" column="99" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments_support.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/support/comments_support.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="81" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="15" selection-start="1819" selection-end="1819" vertical-scroll-proportion="-3.27451">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ability.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/ability.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="46" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -381,22 +415,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/controllers/tags_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/controllers/groups_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/controllers/people_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/controllers/follows_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/controllers/pages_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/factories/groups.rb" />
+        <option value="$PROJECT_DIR$/spec/factories/comments.rb" />
+        <option value="$PROJECT_DIR$/spec/models/comment_spec.rb" />
+        <option value="$PROJECT_DIR$/app/models/comment.rb" />
+        <option value="$PROJECT_DIR$/spec/support/follower_support.rb" />
+        <option value="$PROJECT_DIR$/spec/support/comments_support.rb" />
+        <option value="$USER_HOME$/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/rexml/functions.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/spec/controllers/messages_spec.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/cooperative_helper.rb" />
-        <option value="$PROJECT_DIR$/app/models/ability.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/messages_helper.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/statuses_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/public_activity/status/_create.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/activities/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/activities_controller.rb" />
+        <option value="$PROJECT_DIR$/spec/support/activities_support.rb" />
+        <option value="$PROJECT_DIR$/spec/models/user_spec.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_actionable_descriptor.html.haml" />
         <option value="$PROJECT_DIR$/spec/controllers/activities_spec.rb" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/controllers/cooperative_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/ability.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
+        <option value="$PROJECT_DIR$/spec/controllers/comments_spec.rb" />
       </list>
     </option>
   </component>
@@ -530,6 +564,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="factories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -577,6 +629,108 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -651,11 +805,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spec/factories" />
       <recent name="$PROJECT_DIR$/spec/support" />
       <recent name="$PROJECT_DIR$/app/helpers" />
       <recent name="$PROJECT_DIR$/spec/controllers" />
       <recent name="$PROJECT_DIR$/spec/models" />
-      <recent name="$PROJECT_DIR$/spec" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/cooperative/gem_extensions" />
@@ -665,77 +819,7 @@
       <recent name="C:\Users\Work\Sites\cooperative\config\initializers" />
     </key>
   </component>
-  <component name="RunManager" selected="Rake.routes">
-    <configuration default="false" name="Groups" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="cooperative" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/features/groups_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Groups" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Groups shows individual groups" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="cooperative" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/features/groups_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Groups shows individual groups" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="RSpec.CommentsController DELETE destroy when logged in as owner">
     <configuration default="false" name="Status can destroy a status" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="cooperative" />
@@ -831,6 +915,76 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="User Instance Methods #activities" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CommentsController GET index when logged in" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="cooperative" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/controllers/comments_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="CommentsController GET index when logged in" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CommentsController DELETE destroy when logged in as owner" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="cooperative" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/controllers/comments_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="CommentsController DELETE destroy when logged in as owner" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -1229,19 +1383,19 @@
       <item index="4" class="java.lang.String" itemvalue="Rake.db:test:load" />
       <item index="5" class="java.lang.String" itemvalue="Rake.db:rollback" />
       <item index="6" class="java.lang.String" itemvalue="Rake.routes" />
-      <item index="7" class="java.lang.String" itemvalue="RSpec.Groups" />
-      <item index="8" class="java.lang.String" itemvalue="RSpec.Groups shows individual groups" />
-      <item index="9" class="java.lang.String" itemvalue="RSpec.Status can destroy a status" />
-      <item index="10" class="java.lang.String" itemvalue="RSpec.Statuses shows individual statuses" />
-      <item index="11" class="java.lang.String" itemvalue="RSpec.User Instance Methods #activities" />
+      <item index="7" class="java.lang.String" itemvalue="RSpec.Status can destroy a status" />
+      <item index="8" class="java.lang.String" itemvalue="RSpec.Statuses shows individual statuses" />
+      <item index="9" class="java.lang.String" itemvalue="RSpec.User Instance Methods #activities" />
+      <item index="10" class="java.lang.String" itemvalue="RSpec.CommentsController GET index when logged in" />
+      <item index="11" class="java.lang.String" itemvalue="RSpec.CommentsController DELETE destroy when logged in as owner" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.User Instance Methods #activities" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.Statuses shows individual statuses" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.Status can destroy a status" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.Groups" />
-        <item index="4" class="java.lang.String" itemvalue="RSpec.Groups shows individual groups" />
+        <item index="0" class="java.lang.String" itemvalue="RSpec.CommentsController DELETE destroy when logged in as owner" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.CommentsController GET index when logged in" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.User Instance Methods #activities" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.Statuses shows individual statuses" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.Status can destroy a status" />
       </list>
     </recent_temporary>
   </component>
@@ -1429,7 +1583,11 @@
       <created>1378323640344</created>
       <updated>1378323640344</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Update to readme">
+      <created>1378323837180</created>
+      <updated>1378323837180</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1467,7 +1625,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18120806" sideWeight="0.630303" order="7" side_tool="false" content_ui="tabs" />
@@ -1479,7 +1637,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.6492424" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28863636" sideWeight="0.6107383" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37416106" sideWeight="0.29242423" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29362416" sideWeight="0.70757574" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29362416" sideWeight="0.70757574" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26174498" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1575,117 +1733,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/tags_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/activities_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="541" vertical-scroll-proportion="0.0">
+        <state line="0" column="52" selection-start="50" selection-end="86" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ability.rb">
+    <entry file="file://$USER_HOME$/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/rexml/functions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="31" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/messages_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="53" selection-start="137" selection-end="137" vertical-scroll-proportion="0.11392405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/statuses_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="85" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/cooperative_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="58" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/statuses/_form_for_activities.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/public_activity/status/_create.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="101" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.46089387">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/activities/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="365" selection-end="552" vertical-scroll-proportion="0.37709498">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/support/activities_support.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec_old/support/devise_support.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/support/devise_support.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="295" column="19" selection-start="8959" selection-end="8959" vertical-scroll-proportion="0.3315508">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="39" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
+        <state line="11" column="52" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/cooperative_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/activity.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/activities_controller.rb">
+    <entry file="file://$PROJECT_DIR$/spec/support/activities_support.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+        <state line="23" column="72" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/user_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="35" selection-start="2197" selection-end="2197" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="99" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_actionable_descriptor.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="68" selection-start="255" selection-end="255" vertical-scroll-proportion="-2.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/controllers/activities_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+        <state line="9" column="16" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/controllers/cooperative_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="36" selection-start="645" selection-end="645" vertical-scroll-proportion="0.53571427">
+        <state line="13" column="50" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ability.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="46" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/comments/_comment.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/comments/destroy.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="15" selection-start="1819" selection-end="1819" vertical-scroll-proportion="-3.27451">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/support/comments_support.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="81" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllers/comments_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="29" selection-start="4739" selection-end="4739" vertical-scroll-proportion="0.5916955">
           <folding />
         </state>
       </provider>

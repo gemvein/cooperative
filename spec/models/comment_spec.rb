@@ -14,4 +14,12 @@ describe Comment do
   it { should belong_to(:user) }
   it { should belong_to(:commentable) }
 
+  describe 'Class Methods' do
+    describe '.find_by_commentable' do
+      include_context 'comments support'
+      subject { Comment.find_by_commentable(owned_status) }
+      it { should include owned_comment }
+      it { should include followed_comment }
+    end
+  end
 end

@@ -5,20 +5,23 @@ class Ability
     current_user ||= User.new # guest current_user (not logged in)
 
     # Activities
-    can [:index], Activity do |comment|
-      !current_user.new_record?
-    end
+    can [:index], Activity if !current_user.new_record?
 
     # Comments
+    can [:read, :rate], Comment do |comment|
+      current_user.following?(comment.user)
+    end
     can [:read, :rate], Comment do |comment|
       current_user.following?(comment.commentable.user)
     end
     can [:read, :rate], Comment, :user => current_user
-    can :create, Comment if !current_user.new_record?
+    can :create, Comment do |comment|
+      current_user.can? :comment, comment.commentable
+    end
+    can :destroy, Comment, :user => current_user
     can :destroy, Comment do |comment|
       current_user == comment.commentable.user
     end
-    can :destroy, Comment, :user => current_user
 
     # Groups
     can :create, Group if !current_user.new_record?
@@ -48,11 +51,11 @@ class Ability
     can :manage, Page, :pageable => current_user
 
     # Statuses
-    can [:read, :rate], Status, :user => current_user
-    can [:read, :rate], Status do |status|
+    can [:read, :rate, :comment], Status, :user => current_user
+    can [:read, :rate, :comment], Status do |status|
       status.user.public?
     end
-    can [:read, :rate], Status do |status|
+    can [:read, :rate, :comment], Status do |status|
       current_user.following?(status.user)
     end
     can [:create, :grab], Status if !current_user.new_record?

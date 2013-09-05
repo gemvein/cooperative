@@ -18,13 +18,16 @@ shared_context 'activities support' do
   }
   let!(:deleted_page_activity) { Activity.find(deleted_page.activities.find_by_key('page.destroy').id) }
 
-  let!(:owned_status) { FactoryGirl.create(:status, :user => followed_user) }
+  let!(:owned_status) { FactoryGirl.create(:status, :user => follower_user) }
   let!(:owned_status_activity) { Activity.find(owned_status.activities.find_by_key('status.create').id) }
 
-  let!(:followed_status) { FactoryGirl.create(:status, :user => follower_user) }
+  let!(:followed_status) { FactoryGirl.create(:status, :user => followed_user) }
   let!(:followed_status_activity) { Activity.find(followed_status.activities.find_by_key('status.create').id) }
 
   let!(:mentioned_in_status) { FactoryGirl.create(:status, :user => follower_user, :body => "This status mentions @#{followed_user.nickname} ").reload }
   let!(:mentioned_in_status_activity) { Activity.find(mentioned_in_status.activities.find_by_key('status.mentioned_in').id) }
+
+  let!(:unfollowed_status) { FactoryGirl.create(:status, :user => unfollowed_user) }
+  let!(:unfollowed_status_activity) { Activity.find(unfollowed_status.activities.find_by_key('status.create').id) }
 
 end
