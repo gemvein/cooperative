@@ -24,11 +24,11 @@ class Ability
     end
 
     # Groups
-    can :create, Group if !current_user.new_record?
+    can [:new, :create], Group if !current_user.new_record?
     can :join, Group.open_to_the_public do |group|
       !( current_user.has_role?('moderator', group) or current_user.has_role?('owner', group))
     end
-    can :join, Group do |group|
+    can [:index, :join], Group do |group|
       current_user.has_role?('invitee', group)
     end
     can :leave, Group do |group|
@@ -41,8 +41,8 @@ class Ability
     can [:read, :participate, :moderate], Group do |group|
       current_user.has_role?('moderator', group)
     end
-    can [:read, :participate, :moderate, :manage], Group do |group|
-      current_user.has_role?('owner', group)
+    can [:read, :participate, :moderate, :edit, :update, :destroy], Group do |group|
+      current_user == group.owner
     end
 
     # Pages

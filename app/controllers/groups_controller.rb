@@ -1,11 +1,12 @@
 class GroupsController < CooperativeController
-  load_and_authorize_resource :except => :show
+  before_filter :authenticate_user!
+
+  load_and_authorize_resource
   
   # GET /groups
   # GET /groups.json
+  # @groups is assigned by cancan
   def index
-    @groups = Group.find_all_by_public(true)
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @groups }
@@ -14,22 +15,18 @@ class GroupsController < CooperativeController
 
   # GET /groups/1
   # GET /groups/1.json
+  # @group is assigned by cancan
   def show
-    @group = Group.find(params[:id])
-    
-    if can?('access', @group)
-      respond_to do |format|
-        format.html # show.html.erb
-        format.json { render :json => @group }
-      end
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render :json => @group }
     end
   end
 
   # GET /groups/new
   # GET /groups/new.json
+  # @group is assigned by cancan
   def new
-    @group = Group.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @group }
@@ -38,9 +35,8 @@ class GroupsController < CooperativeController
 
   # GET /groups/1/edit
   # GET /groups/1/edit.json
+  # @group is assigned by cancan
   def edit
-    @group = Group.find(params[:id])
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @group }
@@ -49,9 +45,8 @@ class GroupsController < CooperativeController
 
   # POST /groups
   # POST /groups.json
+  # @group is assigned by cancan
   def create
-    @group = Group.new(params[:group])
-
     respond_to do |format|
       if @group.save
         current_user.has_role 'owner', @group
@@ -66,9 +61,8 @@ class GroupsController < CooperativeController
 
   # PUT /groups/1
   # PUT /groups/1.json
+  # @group is assigned by cancan
   def update
-    @group = Group.find(params[:id])
-
     respond_to do |format|
       if @group.update_attributes(params[:group])
         format.html { redirect_to cooperative.group_url(@group), :notice => 'Group was successfully updated.' }
@@ -82,8 +76,8 @@ class GroupsController < CooperativeController
   
   # GET /groups/1/join
   # GET /groups/1/join.js
+  # @group is assigned by cancan
   def join
-    @group = Group.find(params[:id])
     current_user.is_member_of @group
 
     respond_to do |format|
@@ -94,8 +88,8 @@ class GroupsController < CooperativeController
   
   # GET /groups/1/leave
   # GET /groups/1/leave.js
+  # @group is assigned by cancan
   def leave
-    @group = Group.find(params[:id])
     @role = Role.where(:name => 'member', :authorizable_type => 'Group', :authorizable_id => @group)
     current_user.roles.delete(@role)
 
@@ -107,8 +101,8 @@ class GroupsController < CooperativeController
 
   # DELETE /groups/1
   # DELETE /groups/1.json
+  # @group is assigned by cancan
   def destroy
-    @group = Group.find(params[:id])
     @group.destroy
 
     respond_to do |format|
