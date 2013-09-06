@@ -109,6 +109,7 @@ en:
   unvote: "Unvote"
   update: "Update"
   up: "Up"
+  visible_to_anyone_with_an_account: "Visible to anyone with an account."
   vote: "Vote"
   voted: "Voted"
   votes: "Votes"
@@ -117,7 +118,6 @@ en:
   with: "With"
   you_rated_how_on_this_item: "You %{rated} %{how} on this %{item}."
   you_have_not_rated_on_this_item: "You have not %{rated_on} this %{item}."
-  your_account_must_be_public_for_other_users_to_find_you: "Your account must be public for other users to find you."
   your_message: "Your Message"
   breadcrumbs:
     home: Home

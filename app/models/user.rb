@@ -41,6 +41,8 @@ class User < ActiveRecord::Base
   has_many :messages_as_sender, :class_name => 'Message', :foreign_key => :sender_id
   has_many :pages, :as => :pageable
   has_many :statuses
+  has_many :permissions
+  accepts_nested_attributes_for :permissions
 
   def show_me
     following_users.pluck(:id) << id

@@ -146,7 +146,6 @@ describe MessagesController do
         before do
           sign_in message_sender
           post :create, :message => {:subject => 'Subject', :body => 'Body', :recipient_nickname => message_recipient.nickname}
-          puts response.headers.to_yaml
         end
         it { should respond_with(:redirect) }
         it { should set_the_flash }

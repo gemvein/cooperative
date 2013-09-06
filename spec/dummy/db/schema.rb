@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130829214939) do
+ActiveRecord::Schema.define(:version => 20130906144029) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -97,6 +97,15 @@ ActiveRecord::Schema.define(:version => 20130829214939) do
   add_index "pages", ["pageable_type", "pageable_id"], :name => "index_pages_on_pageable_type_and_pageable_id"
   add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
   add_index "pages", ["slug"], :name => "index_pages_on_slug"
+
+  create_table "permissions", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "permissible_type"
+    t.integer  "permissible_id"
+    t.string   "whom"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "person_ratings", :force => true do |t|
     t.integer  "person_id"

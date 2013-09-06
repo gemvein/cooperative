@@ -1,8 +1,5 @@
 Dummy::Application.routes.draw do
 
-  mount Cooperative::Engine => '/', :as => 'cooperative'
-  devise_for :users, :class_name => 'Cooperative::User', :module => :devise
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

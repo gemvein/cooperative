@@ -42,6 +42,8 @@ describe User do
   it { should have_many(:messages_as_sender) }
   it { should have_many(:pages) }
   it { should have_many(:statuses) }
+  it { should have_many(:permissions) }
+  it { should accept_nested_attributes_for(:permissions) }
 
   context 'Instance Methods' do
 

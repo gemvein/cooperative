@@ -1,4 +1,3 @@
-# TODO: Replace this file, which centers on the Authorization gem
 class Role < ActiveRecord::Base
   attr_accessible :name, :authorizable_type, :authorizable_id, :authorizable
   validates_presence_of :name

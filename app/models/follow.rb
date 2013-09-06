@@ -1,4 +1,3 @@
-# TODO: Replace this file
 class Follow < ActiveRecord::Base
 
   extend ActsAsFollower::FollowerLib
@@ -14,8 +13,8 @@ class Follow < ActiveRecord::Base
 
   def self.to_json
     formatted_follows = []
-    for follow in self
-      formatted_follows << {:val => follow.nickname, :meta => follow.image.url(:thumb)}
+    for follow in self.all
+      formatted_follows << {:val => follow.followable.nickname || follow.followable.name, :meta => follow.followable.image.url(:thumb)}
     end
     formatted_follows.to_json
   end

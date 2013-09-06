@@ -39,6 +39,9 @@ module Cooperative
       unless ActiveRecord::Base.connection.table_exists? 'pages'
         migration_template 'migrate/create_pages_table.rb', 'db/migrate/create_pages_table.rb' rescue output $!.message
       end
+      unless ActiveRecord::Base.connection.table_exists? 'permissions'
+        migration_template 'migrate/create_permissions_table.rb', 'db/migrate/create_permissions_table.rb' rescue output $!.message
+      end
       unless ActiveRecord::Base.connection.table_exists? 'roles'
         migration_template 'migrate/create_roles_table.rb', 'db/migrate/create_roles_table.rb' rescue output $!.message
       end
@@ -81,8 +84,8 @@ module Cooperative
     def add_route
       output "Adding Cooperative to your routes.rb file", :magenta
       gsub_file "config/routes.rb", /mount Cooperative::Engine => '\/.*', :as => 'cooperative'/, ''
-      gsub_file "config/routes.rb", /devise_for :users, :class_name => 'Cooperative::User', :module => :devise/, ''
-      route("mount Cooperative::Engine => '/', :as => 'cooperative'\n  devise_for :users, :class_name => 'Cooperative::User', :module => :devise")
+      gsub_file "config/routes.rb", /devise_for :users, :class_name => 'User', :module => :devise/, ''
+      route("mount Cooperative::Engine => '/', :as => 'cooperative'\n  devise_for :users, :class_name => 'User', :module => :devise")
     end
     
     def self.next_migration_number(dirname)
