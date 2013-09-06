@@ -5,7 +5,7 @@ class MessagesController < CooperativeController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.received_by(current_user).threads.order('created_at').page(params[:page])
+    @messages = current_user.messages.threads.order('created_at').page(params[:page])
     
     respond_to do |format|
       format.html # index.html.haml
@@ -16,7 +16,7 @@ class MessagesController < CooperativeController
   # GET /messages/sent
   # GET /messages/sent.json
   def sent
-    @messages = Message.sent_by(current_user).threads.order('created_at').page(params[:page])
+    @messages = current_user.messages_as_sender.threads.order('created_at').page(params[:page])
     add_breadcrumb :sent.l, cooperative.sent_messages_path
     
     respond_to do |format|
@@ -28,7 +28,7 @@ class MessagesController < CooperativeController
   # GET /messages/trash
   # GET /messages/trash.json
   def trash
-    @messages = Message.trash_by(current_user).threads.order('created_at').page(params[:page])
+    @messages = current_user.message_trash.threads.order('created_at').page(params[:page])
     
     respond_to do |format|
       format.html # index.html.haml
@@ -40,6 +40,7 @@ class MessagesController < CooperativeController
   # GET /messages/1.json
   def show
     @message = Message.find(params[:id])
+    authorize! :show, @message
     @message.thread.mark_as_read_by(current_user)
     
     add_breadcrumb @message.thread.subject, cooperative.message_path(@message)
@@ -67,8 +68,17 @@ class MessagesController < CooperativeController
   def create
     @message = Message.new(params[:message])
     @message.sender = current_user
+    if @message.invalid?
+      render :action => @message.parent ? "reply":"new"
+      return
+    end
+    if current_user.cannot? :message, @message.recipient
+      flash['error'] = :messaging_that_user_not_permitted.l
+      render :action => @message.parent ? "reply":"new"
+      return
+    end
 
-    add_breadcrumb :compose.l, cooperative.new_message_path   
+    add_breadcrumb :compose.l, cooperative.new_message_path
     
     respond_to do |format|
       if @message.save
@@ -85,8 +95,9 @@ class MessagesController < CooperativeController
   # GET /messages/1/reply.json
   def reply
     @message = Message.new
-    @message.parent = Message.find_by_id(params[:id])
+    @message.parent = Message.find_by_id(params[:id]) || ( not_found and return )
     @message.recipient = @message.parent.sender
+    authorize! :reply, @message.parent
     add_breadcrumb @message.thread.subject, cooperative.message_path(@message.parent)
     add_breadcrumb :reply.l, cooperative.reply_message_path(@message.parent)
 
@@ -100,6 +111,7 @@ class MessagesController < CooperativeController
   # GET /pages/1/trash.json
   def move_to_trash
     @message = Message.find(params[:id])
+    authorize! :move, @message
 
     respond_to do |format|
       if @message.thread.move_to_trash(current_user)
@@ -116,6 +128,7 @@ class MessagesController < CooperativeController
   # GET /messages/1/restore.json
   def restore
     @message = Message.find(params[:id])
+    authorize! :move, @message
 
     respond_to do |format|
       if @message.thread.restore(current_user)

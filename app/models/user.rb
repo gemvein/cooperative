@@ -38,6 +38,7 @@ class User < ActiveRecord::Base
   validates_presence_of :nickname
 
   has_many :messages, :foreign_key => :recipient_id
+  has_many :messages_as_sender, :class_name => 'Message', :foreign_key => :sender_id
   has_many :pages, :as => :pageable
   has_many :statuses
 
@@ -55,5 +56,9 @@ class User < ActiveRecord::Base
 
   def ability
     @ability ||= Ability.new(self)
+  end
+
+  def message_trash
+    Message.trash_by(self.id)
   end
 end

@@ -40,7 +40,7 @@ class Message < ActiveRecord::Base
   
   def thread
     if self.parent.nil?
-      self.id
+      self
     else
       self.parent.thread
     end

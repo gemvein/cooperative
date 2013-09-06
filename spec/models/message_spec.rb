@@ -89,17 +89,17 @@ describe Message do
     describe '#thread' do
       context 'when self' do
         subject { parent_message.thread }
-        it { should be parent_message.id }
+        it { should be parent_message }
       end
 
       context 'when parent' do
         subject { child_message.thread }
-        it { should be parent_message.id }
+        it { should be parent_message }
       end
 
       context 'when absent' do
         subject { unread_message.thread }
-        it { should be unread_message.id }
+        it { should be unread_message }
       end
     end
 

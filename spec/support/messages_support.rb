@@ -1,6 +1,7 @@
 shared_context 'messages support' do
   let!(:message_sender) { FactoryGirl.create(:user) }
   let!(:message_recipient) { FactoryGirl.create(:user) }
+  let!(:message_nonrecipient) { FactoryGirl.create(:user) }
 
   let!(:unread_message) { FactoryGirl.create(:message, :sender => message_sender, :recipient => message_recipient)}
 

@@ -39,6 +39,7 @@ describe User do
 
   # Check relationships
   it { should have_many(:messages) }
+  it { should have_many(:messages_as_sender) }
   it { should have_many(:pages) }
   it { should have_many(:statuses) }
 
@@ -80,6 +81,14 @@ describe User do
       include_context 'follower support'
       subject { followed_user.ability }
       it { should be_an Ability }
+    end
+
+    describe '#message_trash' do
+      include_context 'messages support'
+      subject { message_sender.message_trash }
+      it { should have_exactly(2).items }
+      it { should include trash_by_sender_message }
+      it { should include trash_by_sender_reversed_message }
     end
   end
 

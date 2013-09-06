@@ -42,6 +42,7 @@ en:
   leave_group: "Leave Group"
   link: "Link"
   logged_in_as: "Logged in as"
+  messaging_that_user_not_permitted: "Messaging that user is not permitted."
   move_to_trash: "Move to Trash"
   more: "More"
   my_profile: "My Profile"

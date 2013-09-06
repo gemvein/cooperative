@@ -45,6 +45,14 @@ class Ability
       current_user == group.owner
     end
 
+    # Messages
+    can :create, Message if !current_user.new_record?
+    can [:read, :move], Message, :sender => current_user
+    can [:read, :move, :reply], Message, :recipient => current_user
+    cannot :reply, Message do |message|
+      message.sender.follows.blocked.include? current_user
+    end
+
     # Pages
     can :read, Page, :public => true
     can :create, Page if !current_user.new_record?
@@ -77,6 +85,9 @@ class Ability
     can [:read, :mention], User do |user|
       current_user.following?(user)
     end
-    can [:follow], User if !current_user.new_record?
+    can [:follow, :message], User if !current_user.new_record?
+    cannot :message, User do |user|
+      user.follows.blocked.include? current_user
+    end
   end
 end
