@@ -1,4 +1,10 @@
 class User < ActiveRecord::Base
+  # PrivatePerson gem
+  acts_as_permissor :of => [:following_users, :user_followers], :class_name => 'User'
+  acts_as_permissible :by => :self
+  after_create :create_default_permissions
+
+  # Cancan gem
   delegate :can?, :cannot?, :to => :ability
 
   # Paperclip gem
@@ -62,5 +68,13 @@ class User < ActiveRecord::Base
 
   def message_trash
     Message.trash_by(self.id)
+  end
+
+  def create_default_permissions
+    for type in %w{User Activity Comment Page Status}
+      temp = Permission.new({:permissible_type => type, :relationship_type => 'public'})
+      temp.permissor = self
+      temp.save!
+    end
   end
 end

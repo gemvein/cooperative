@@ -1,4 +1,7 @@
 class Comment < ActiveRecord::Base
+  # PrivatePerson gem
+  acts_as_permissible :by => :user
+
   attr_accessible :body, :commentable_id, :commentable_type
   validates_presence_of :body, :commentable
 

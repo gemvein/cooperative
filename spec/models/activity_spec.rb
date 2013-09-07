@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe Activity do
   # Check that gems are installed
+  # PrivatePerson gem
+  it { should have_many :permissions}
+
   # Public Activity gem
   it { should belong_to :owner }
   it { should belong_to :recipient }

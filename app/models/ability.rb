@@ -5,14 +5,13 @@ class Ability
     current_user ||= User.new # guest current_user (not logged in)
 
     # Activities
-    can [:index], Activity if !current_user.new_record?
+    can [:index], Activity do |activity|
+      current_user.is_permitted? activity.owner, activity
+    end
 
     # Comments
     can [:read, :rate], Comment do |comment|
-      current_user.following?(comment.user)
-    end
-    can [:read, :rate], Comment do |comment|
-      current_user.following?(comment.commentable.user)
+      current_user.is_permitted? comment.user, comment
     end
     can [:read, :rate], Comment, :user => current_user
     can :create, Comment do |comment|
@@ -54,40 +53,33 @@ class Ability
     end
 
     # Pages
-    can :read, Page, :public => true
+    can :read, Page, :pageable => nil
+    can :read, Page do |page|
+      current_user.is_permitted?(page.pageable, page)
+    end
     can :create, Page if !current_user.new_record?
     can :manage, Page, :pageable => current_user
 
     # Statuses
     can [:read, :rate, :comment], Status, :user => current_user
     can [:read, :rate, :comment], Status do |status|
-      status.user.public?
-    end
-    can [:read, :rate, :comment], Status do |status|
-      current_user.following?(status.user)
+      current_user.is_permitted?(status.user, status)
     end
     can [:create, :grab], Status if !current_user.new_record?
     can :destroy, Status, :user => current_user
-    can :comment, Status, :user => current_user
-    can :comment, Status do |status|
-      status.user.public?
-    end
-    can :comment, Status do |status|
-      current_user.following?(status.user)
-    end
 
     # Users
     can [:read, :mention, :follow], User, :public => true
     can [:read, :mention], User, :id => current_user.id
     can [:read, :mention], User do |user|
-      user.following?(current_user)
-    end
-    can [:read, :mention], User do |user|
-      current_user.following?(user)
+      current_user.is_permitted?(user, user)
     end
     can [:follow, :message], User if !current_user.new_record?
     cannot :message, User do |user|
       user.follows.blocked.include? current_user
+    end
+    cannot :message, User do |user|
+      current_user.follows.blocked.include? user # No fair doing the opposite, either.
     end
   end
 end

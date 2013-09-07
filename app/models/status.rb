@@ -1,4 +1,8 @@
 class Status < ActiveRecord::Base
+
+  # PrivatePerson gem
+  acts_as_permissible :by => :user
+
   before_save  :tokenize_tags
   after_create :tokenize_mentions
 

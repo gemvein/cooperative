@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe Status do
   # Check that gems are installed
+  # PrivatePerson gem
+  it { should have_many :permissions }
   # Public Activity gem
   it { should have_many(:activities) }
   # Acts as Taggable on gem

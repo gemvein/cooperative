@@ -3,7 +3,6 @@ Gemfile.lock
 .project
 tmp
 *.pid
-spec_old
 .idea
 
 # rcov generated

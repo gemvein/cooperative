@@ -13,7 +13,8 @@ module Cooperative
   require 'cooperative/engine'
   require 'cooperative/localization'
   require 'cooperative/version'
-  
+  require 'cooperative/models/permission_extension'
+
   require 'haml'
   require 'haml-rails'
   require 'sass-rails'
@@ -21,17 +22,18 @@ module Cooperative
   require 'font-awesome-sass-rails'
   require 'bootstrap_forms'
   require 'breadcrumbs_on_rails'
-  
+
   require 'jquery-rails'
   require 'jquery-ui-rails'
   require 'jquery-ui-bootstrap-rails-asset'
   require 'tinymce-rails'
-  
+
   require 'bootstrap_pager'
-  
+
   require 'cancan'
   require 'devise'
   require 'authorization'
+  require 'private_person'
 
   require 'paperclip'
   require 'nokogiri'

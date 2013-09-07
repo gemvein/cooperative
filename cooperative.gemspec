@@ -44,6 +44,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'cancan'
   s.add_dependency 'devise'
   s.add_dependency 'authorization'
+  s.add_dependency 'private_person'
 
   s.add_dependency 'paperclip'
   s.add_dependency 'nokogiri'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130906144029) do
+ActiveRecord::Schema.define(:version => 20130907191213) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -99,13 +99,17 @@ ActiveRecord::Schema.define(:version => 20130906144029) do
   add_index "pages", ["slug"], :name => "index_pages_on_slug"
 
   create_table "permissions", :force => true do |t|
-    t.integer  "user_id"
+    t.string   "permissor_type"
+    t.integer  "permissor_id"
     t.string   "permissible_type"
     t.integer  "permissible_id"
-    t.string   "whom"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.string   "relationship_type", :default => "none"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
+
+  add_index "permissions", ["permissible_type", "permissible_id"], :name => "index_permissions_on_permissible_type_and_permissible_id"
+  add_index "permissions", ["permissor_type", "permissor_id"], :name => "index_permissions_on_permissor_type_and_permissor_id"
 
   create_table "person_ratings", :force => true do |t|
     t.integer  "person_id"

@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Comment do
+  # PrivatePerson gem
+  it { should have_many :permissions}
   # Check that appropriate fields are accessible
   it { should allow_mass_assignment_of(:body) }
   it { should allow_mass_assignment_of(:commentable_id) }

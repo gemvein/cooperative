@@ -39,9 +39,6 @@ module Cooperative
       unless ActiveRecord::Base.connection.table_exists? 'pages'
         migration_template 'migrate/create_pages_table.rb', 'db/migrate/create_pages_table.rb' rescue output $!.message
       end
-      unless ActiveRecord::Base.connection.table_exists? 'permissions'
-        migration_template 'migrate/create_permissions_table.rb', 'db/migrate/create_permissions_table.rb' rescue output $!.message
-      end
       unless ActiveRecord::Base.connection.table_exists? 'roles'
         migration_template 'migrate/create_roles_table.rb', 'db/migrate/create_roles_table.rb' rescue output $!.message
       end
@@ -57,23 +54,38 @@ module Cooperative
     end
     
     def install_public_activity
-      output "Public Activity lets users keep up with what's happening", :magenta
-      generate("public_activity:migration")
+      unless ActiveRecord::Base.connection.table_exists? 'activities'
+        output "Public Activity lets users keep up with what's happening", :magenta
+        generate("public_activity:migration")
+      end
     end
 
     def install_acts_as_follower
-      output "Acts as Follower lets one model follow another.", :magenta
-      generate("acts_as_follower")
+      unless ActiveRecord::Base.connection.table_exists? 'follows'
+        output "Acts as Follower lets one model follow another.", :magenta
+        generate("acts_as_follower")
+      end
     end
     
     def install_acts_as_taggable_on
-      output "Acts as Taggable On lets arbitrary models be taggable.", :magenta
-      generate("acts_as_taggable_on:migration")
+      unless ActiveRecord::Base.connection.table_exists? 'tags'
+        output "Acts as Taggable On lets arbitrary models be taggable.", :magenta
+        generate("acts_as_taggable_on:migration")
+      end
     end
 
     def install_coletivo
-      output "Coletivo is a rating and recommendation engine.", :magenta
-      generate("coletivo")
+      unless ActiveRecord::Base.connection.table_exists? 'person_ratings'
+        output "Coletivo is a rating and recommendation engine.", :magenta
+        generate("coletivo")
+      end
+    end
+
+    def install_private_person
+      unless ActiveRecord::Base.connection.table_exists? 'permissions'
+        output "Private Person gives users control over their own privacy.", :magenta
+        generate("private_person:install")
+      end
     end
 
     def install_devise

@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe User do
   # Check that gems are installed
+  # PrivatePerson gem
+  it { should respond_to(:is_permitted?) }
   # Paperclip gem
   it { should have_attached_file(:image) }
   # Acts as Follower gem
@@ -42,7 +44,6 @@ describe User do
   it { should have_many(:messages_as_sender) }
   it { should have_many(:pages) }
   it { should have_many(:statuses) }
-  it { should have_many(:permissions) }
   it { should accept_nested_attributes_for(:permissions) }
 
   context 'Instance Methods' do
