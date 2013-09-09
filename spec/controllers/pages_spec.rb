@@ -19,7 +19,9 @@ describe PagesController do
     end
   end
 
-  pending 'GET index'
+  describe 'GET index' do
+    include_context 'pages support'
+  end
   pending 'GET show'
   pending 'GET new'
   pending 'POST create'

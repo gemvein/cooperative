@@ -19,5 +19,6 @@ group :development, :test do
 end
 
 gem 'coletivo', :path => '/home/work/Sites/coletivo'
+gem 'bootstrap_leather', :path => '/home/work/Sites/bootstrap_leather'
 
 gemspec

@@ -9,8 +9,8 @@ require 'rspec/rails'
 require 'capybara/rspec'
 
 require 'factory_girl_rails'
-FactoryGirl.definition_file_paths = %w(spec/factories)
-FactoryGirl.find_definitions
+#FactoryGirl.definition_file_paths = %w(spec/factories)
+#FactoryGirl.find_definitions
 
 require 'database_cleaner'
 require 'shoulda-matchers'

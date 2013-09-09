@@ -14,20 +14,28 @@
 
     - if @rss_title && @rss_url
       = auto_discovery_link_tag(:rss, @rss_url, {:title => @rss_title})
-      
-    = render "layouts/stylesheets"      
-    
+
+    = render "layouts/stylesheets"
+
   %body{:class => controller.controller_name}
     .navbar.navbar-static-top
       .navbar-inner
         .container.clearfix
           .row
-            = render "layouts/navbar"
-            
+            = nav_bar
+              %ul.nav
+                = render 'people/menu_item'
+                = render 'activities/menu_item'
+                = render 'groups/menu_item'
+                = render 'tags/menu_item'
+              %ul.nav.pull-right
+                = render 'messages/menu_item'
+                = render 'users/menu_item'
+
     .container
       .row
         = render "layouts/hero_unit"
-            
+
     .container
       .row
         .span9
@@ -37,7 +45,7 @@
           = yield
         .span3.pull-right
           = render "layouts/sidebar"
-            
+
     .container
       .row
         .span12

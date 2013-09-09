@@ -1,8 +1,0 @@
-%ul.nav.nav-pills
-  =pages_menu_items
-  - if signed_in?
-    =nav_item :sign_out.l, destroy_user_session_path, :method => 'delete'
-  - else
-    =nav_item :sign_in.l, new_user_session_path
-    =nav_item :sign_up.l, new_user_registration_path
-    

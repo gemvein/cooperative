@@ -1,5 +1,7 @@
 shared_context 'pages support' do
   let!(:page_owner) { FactoryGirl.create(:user) }
+  let!(:page_follower) { FactoryGirl.create(:user) }
+  let!(:page_stranger) { FactoryGirl.create(:user) }
 
   let!(:root_parent_page) { FactoryGirl.create(:page, :title => 'Parent') }
   let!(:root_child_page) { FactoryGirl.create(:page, :title => 'Child', :parent => root_parent_page) }
@@ -8,4 +10,8 @@ shared_context 'pages support' do
   let!(:owned_parent_page) { FactoryGirl.create(:page, :title => 'Parent', :pageable => page_owner) }
   let!(:owned_child_page) { FactoryGirl.create(:page, :title => 'Child', :pageable => page_owner, :parent => owned_parent_page) }
   let!(:owned_grandchild_page) { FactoryGirl.create(:page, :title => 'Grandchild', :pageable => page_owner, :parent => owned_child_page) }
+
+  before do
+    page_follower.follow page_owner
+  end
 end

@@ -1,11 +1,6 @@
 module Cooperative
   require 'rails'
   require 'rails-i18n'
-  
-  require 'rspec'
-  require 'capybara'
-  require 'factory_girl_rails'
-  require 'database_cleaner'
   require 'rails-dev-boost'
   
   require 'cooperative/configuration'
@@ -22,6 +17,7 @@ module Cooperative
   require 'font-awesome-sass-rails'
   require 'bootstrap_forms'
   require 'breadcrumbs_on_rails'
+  require 'bootstrap_leather'
 
   require 'jquery-rails'
   require 'jquery-ui-rails'
