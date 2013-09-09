@@ -1,4 +1,4 @@
--@title = :edit_my_account.l
+- add_title :edit_my_account.l
 = bootstrap_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form form-horizontal' }) do |f|
   = f.email_field :email, :autofocus => true
   = f.password_field :password, :autocomplete => "off", :help_inline => :leave_blank_if_you_dont_want_to_change_it.l

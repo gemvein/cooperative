@@ -1,8 +1,9 @@
--@title = :groups.l
+- add_title :groups.l
 
 = link_to :create_a_group.l, cooperative.new_group_path, :class => 'btn btn-success'
 
-%dl
-  - @groups.each do |group|
-    %dt= link_to group.name, cooperative.group_path(group)
-    %dd= truncate group.description, :length => 100, :separator => ' '
+- unless @groups.nil?
+  %dl
+    - @groups.each do |group|
+      %dt= link_to group.name, cooperative.group_path(group)
+      %dd= truncate group.description, :length => 100, :separator => ' '

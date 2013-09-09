@@ -1,3 +1,8 @@
-- content_for :end_javascript do
-  %script{:type => 'text/javascript'}
-    = "$('#{selector}').tokenizer({source: '#{source}', token: '@', callback: 'follows_append_mention', elementFactory: follows_elementFactory});"
+- add_footer_javascript do
+  :javascript
+    $('#{selector}').tokenizer({
+      source: '#{source}',
+      token: '@',
+      callback: 'follows_append_mention',
+      elementFactory: follows_elementFactory
+    });

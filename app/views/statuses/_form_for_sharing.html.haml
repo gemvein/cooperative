@@ -32,6 +32,6 @@
   .control-group
     .controls
       = f.submit :set_status.l
--content_for :end_javascript do
-  %script{:type => 'text/javascript'}
+-add_footer_javascript do
+  :javascript
     $('#status_url').load(status_grab_url);

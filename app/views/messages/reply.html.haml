@@ -1,4 +1,4 @@
--@title = 'Re: '+@message.thread.subject
+- add_title 'Re: '+@message.thread.subject
 =render 'messages/submenu'
 =bootstrap_form_for @message, :url => cooperative.messages_path, :html => {:class => 'form form-horizontal'} do |f|
   =f.hidden_field :recipient_nickname

@@ -1,10 +1,10 @@
 -if user_signed_in? and current_user.id == @person.id
-  -widget do
+  - add_widget do
     %h3= :tools.l
     %ul.nav.nav-list
       =nav_item '<i class="icon-file"></i>'.html_safe + :new_page.l, cooperative.new_person_page_path(@person), :class => 'btn btn-primary'
 -else
-  -widget do
+  - add_widget do
     %h3= :about_nickname.l :nickname => @person.nickname
     -if @person.bio.present?
       %p= truncate strip_tags(@person.bio), :length => 255, :separator => ' '

@@ -1,9 +1,9 @@
--@title = :compose.l
+- add_title :compose.l
 =render 'messages/submenu'
 =bootstrap_form_for @message, :url => cooperative.messages_path, :html => {:class => 'form form-horizontal'} do |f|
   =f.text_field :recipient_nickname, :label => :to.l
   =f.text_field :subject
   =f.text_area :body, :rows => 10, :style => 'width: 99%;'
   .controls=f.submit :send.l
--content_for :end_javascript do
+-add_footer_javascript do
   =people_auto_complete('#message_recipient_nickname')

@@ -3,11 +3,13 @@
   %head
     %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html;charset=utf-8"}
-    %meta{"name"=>"description", :content=>@description || Cooperative.configuration.application_description || ''}
-    %meta{"name"=>"keywords", :content=>@keywords || Cooperative.configuration.application_keywords || ''}
-    =csrf_meta_tag
+    = render_title
+    = render_description
+    = render_keywords
 
-    %title= page_title
+    = responsive_meta_tag
+    = csrf_meta_tag
+
     -if @meta
       -@meta.each do |key|
         %meta{:name=>key[0], :content=>key[1]}
@@ -15,42 +17,41 @@
     - if @rss_title && @rss_url
       = auto_discovery_link_tag(:rss, @rss_url, {:title => @rss_title})
 
-    = render "layouts/stylesheets"
+    = stylesheet_link_tag 'cooperative'
+    = stylesheet_link_tag 'application'
+    = render_head_css
 
   %body{:class => controller.controller_name}
-    .navbar.navbar-static-top
-      .navbar-inner
-        .container.clearfix
-          .row
-            = nav_bar
-              %ul.nav
-                = render 'people/menu_item'
-                = render 'activities/menu_item'
-                = render 'groups/menu_item'
-                = render 'tags/menu_item'
-              %ul.nav.pull-right
-                = render 'messages/menu_item'
-                = render 'users/menu_item'
+    = nav_bar do
+      = nav_list do
+        = render 'people/menu_item'
+        = render 'activities/menu_item'
+        = render 'groups/menu_item'
+        = render 'tags/menu_item'
+      = nav_list do
+        = render 'messages/menu_item'
+        = render 'users/menu_item'
 
     .container
       .row
-        = render "layouts/hero_unit"
+        = render_hero_unit
 
     .container
       .row
         .span9
-          %ul.breadcrumb= render_breadcrumbs :tag => 'li'
-          %h1=container_title
-          = render "layouts/messages"
+          = render_h1
+          = alert_flash_messages
           = yield
         .span3.pull-right
-          = render "layouts/sidebar"
+          = render_widgets
 
     .container
-      .row
-        .span12
-          = render "layouts/footer"
+      = nav_list :class =>  'nav-pills' do
+        = pages_menu_items
+        - if signed_in?
+          = nav_item :sign_out.l, destroy_user_session_path, :method => 'delete'
+        - else
+          = nav_item :sign_in.l, new_user_session_path
+          = nav_item :sign_up.l, new_user_registration_path
 
-    = render "layouts/modal"
-
-    = render "layouts/javascripts"
+    = render_footer_javascript

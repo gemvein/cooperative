@@ -1,7 +1,7 @@
--@title = :people.l
+- add_title :people.l
 -for person in @people
   .person.clearfix
-    .thumbnail.span3.pull-right= link_to image_tag(person.image.url(:medium)), cooperative.person_path(person)
+    .span3.pull-right= thumbnail link_to image_tag(person.image.url(:medium)), cooperative.person_path(person)
     %h2= link_to person.nickname, cooperative.person_path(person)
     %div{:id => 'follow_person' + person.id.to_s}= render 'follows/person', :person => person
     %p= truncate_words(person.bio, 75)

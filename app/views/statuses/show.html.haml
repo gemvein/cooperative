@@ -1,4 +1,4 @@
-- @title = :status.l
+- add_title :status.l
 - add_tab :show.l, 'show_status_' + @status.id.to_s do
   .span1
     = thumbnail link_to image_tag(@status.user.image.url(:thumb)), cooperative.person_path(@status.user.nickname)

@@ -11,6 +11,8 @@
   .controls
     = f.submit 'Save'
 
--content_for :end_javascript do
-  %script{:type => 'text/javascript'}
-    = "$('.tag-box').tagit({availableTags: [\"#{Group.all_tags.join('", "')}\"]});".html_safe
+-add_footer_javascript do
+  :javascript
+    $('.tag-box').tagit({
+      availableTags: ["#{Group.all_tags.join('", "')}"]});
+    }

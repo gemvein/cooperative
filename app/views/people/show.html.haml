@@ -1,6 +1,7 @@
--@title = @person.nickname
+- add_title @person.nickname
+- add_keywords @person.skill_list | @person.hobby_list | @person.interest_list
   
-=render 'submenu'
+= render 'submenu'
 
 %div{:id => 'follow_person' + @person.id.to_s}= render 'follows/person', :person => @person
 

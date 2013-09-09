@@ -88,6 +88,13 @@ module Cooperative
       end
     end
 
+    def install_private_person
+      unless ActiveRecord::Base.connection.table_exists? 'permissions'
+        output "Private Person gives users control over their own privacy.", :magenta
+        generate("private_person:install")
+      end
+    end
+
     def install_devise
       output "Devise is used to authenticate users.", :magenta
       generate("devise:install")

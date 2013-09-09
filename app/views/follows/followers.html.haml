@@ -1,11 +1,11 @@
--@title = :nicknames_followers.l :nickname => @person.nickname
+- add_title :nicknames_followers.l :nickname => @person.nickname
 
 = render 'people/submenu'
 
--for person in @followers
+- for person in @followers
   .person.clearfix
     .thumbnail.span3.pull-right= link_to image_tag(person.image.url(:medium)), cooperative.person_path(person)
     %h2= link_to person.nickname, cooperative.person_path(person)
     %div{:id => 'follow_person' + person.id.to_s}= render 'follows/person', :person => person
     %p= truncate_words(person.bio, 75)
-=paginate @followers
+= paginate @followers

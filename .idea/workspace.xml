@@ -1,50 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="PrivatePerson built as separate gem, then installed">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_alert.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_badge.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_dropdown_nav_item.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_footer.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_hero_unit.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_icon.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_javascripts.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_list.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_messages.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_modal.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_nav_item.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_navbar.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_sidebar.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_stylesheets.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_tabs.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_thumbnail.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_widget.html.haml" afterPath="" />
+    <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/development.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/development.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cooperative.gemspec" afterPath="$PROJECT_DIR$/cooperative.gemspec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/follows/_auto_complete.html.haml" afterPath="$PROJECT_DIR$/app/views/follows/_auto_complete.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tags/_auto_complete.html.haml" afterPath="$PROJECT_DIR$/app/views/tags/_auto_complete.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/groups/_form.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/pages/_form.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/statuses/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/statuses/_form.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/messages/_form_for_activities.html.haml" afterPath="$PROJECT_DIR$/app/views/messages/_form_for_activities.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/statuses/_form_for_activities.html.haml" afterPath="$PROJECT_DIR$/app/views/statuses/_form_for_activities.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/statuses/_form_for_sharing.html.haml" afterPath="$PROJECT_DIR$/app/views/statuses/_form_for_sharing.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/shared/_links.haml" afterPath="$PROJECT_DIR$/app/views/users/shared/_links.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/_page.html.haml" afterPath="$PROJECT_DIR$/app/views/pages/_page.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/messages/_submenu.html.haml" afterPath="$PROJECT_DIR$/app/views/messages/_submenu.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/_submenu.html.haml" afterPath="$PROJECT_DIR$/app/views/people/_submenu.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tags/_submenu_for_page.html.haml" afterPath="$PROJECT_DIR$/app/views/tags/_submenu_for_page.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/_submenu_for_person.html.haml" afterPath="$PROJECT_DIR$/app/views/pages/_submenu_for_person.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tags/_submenu_for_person.html.haml" afterPath="$PROJECT_DIR$/app/views/tags/_submenu_for_person.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_tinymce_init.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/_tinymce_init.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/_widget.html.haml" afterPath="$PROJECT_DIR$/app/views/pages/_widget.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/cooperative.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/cooperative.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/cooperative.rb" afterPath="$PROJECT_DIR$/lib/cooperative.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/cooperative_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/cooperative_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/pages_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/pages_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/pages_support.rb" afterPath="$PROJECT_DIR$/spec/support/pages_support.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/groups/edit.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/pages/edit.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/profile/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/profile/edit.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/passwords/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/users/passwords/edit.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/registrations/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/users/registrations/edit.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/follows/followers.html.haml" afterPath="$PROJECT_DIR$/app/views/follows/followers.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/index.html.haml" afterPath="$PROJECT_DIR$/app/views/comments/index.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/follows/index.html.haml" afterPath="$PROJECT_DIR$/app/views/follows/index.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/index.html.haml" afterPath="$PROJECT_DIR$/app/views/groups/index.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/messages/index.html.haml" afterPath="$PROJECT_DIR$/app/views/messages/index.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/index.html.haml" afterPath="$PROJECT_DIR$/app/views/people/index.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tags/index.html.haml" afterPath="$PROJECT_DIR$/app/views/tags/index.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb" afterPath="$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/new.html.haml" afterPath="$PROJECT_DIR$/app/views/groups/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/messages/new.html.haml" afterPath="$PROJECT_DIR$/app/views/messages/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/new.html.haml" afterPath="$PROJECT_DIR$/app/views/pages/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/statuses/new.html.haml" afterPath="$PROJECT_DIR$/app/views/statuses/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/confirmations/new.html.haml" afterPath="$PROJECT_DIR$/app/views/users/confirmations/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/passwords/new.html.haml" afterPath="$PROJECT_DIR$/app/views/users/passwords/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/registrations/new.html.haml" afterPath="$PROJECT_DIR$/app/views/users/registrations/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/sessions/new.html.haml" afterPath="$PROJECT_DIR$/app/views/users/sessions/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/unlocks/new.html.haml" afterPath="$PROJECT_DIR$/app/views/users/unlocks/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/messages/reply.html.haml" afterPath="$PROJECT_DIR$/app/views/messages/reply.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/routes.rb" afterPath="$PROJECT_DIR$/spec/dummy/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/messages/sent.html.haml" afterPath="$PROJECT_DIR$/app/views/messages/sent.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/show.html.haml" afterPath="$PROJECT_DIR$/app/views/comments/show.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/show.html.haml" afterPath="$PROJECT_DIR$/app/views/groups/show.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/messages/show.html.haml" afterPath="$PROJECT_DIR$/app/views/messages/show.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/show.html.haml" afterPath="$PROJECT_DIR$/app/views/people/show.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/statuses/show.html.haml" afterPath="$PROJECT_DIR$/app/views/statuses/show.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tags/show.html.haml" afterPath="$PROJECT_DIR$/app/views/tags/show.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/messages/trash.html.haml" afterPath="$PROJECT_DIR$/app/views/messages/trash.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cooperative.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378745154094" ignored="false" />
+    <file path="/Dummy.txt" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378745297983" ignored="false" />
     <file path="/scaffolds.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367940541896" ignored="false" />
     <file path="/follows_controller_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367941059500" ignored="false" />
     <file path="/user.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378582302135" ignored="false" />
     <file path="/ability.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378582722466" ignored="false" />
     <file path="/statuses_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378099337373" ignored="false" />
     <file path="/create.js.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377655132956" ignored="false" />
-    <file path="/index.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378311846631" ignored="false" />
+    <file path="/index.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378756825827" ignored="false" />
     <file path="/notifications.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367958215917" ignored="false" />
     <file path="/destroy.js.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377654583410" ignored="false" />
     <file path="/_create.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377871539563" ignored="false" />
-    <file path="/_form.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378079501208" ignored="false" />
+    <file path="/_form.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378748461103" ignored="false" />
     <file path="/notifications_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283796219" ignored="false" />
     <file path="/en.yml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378477410487" ignored="false" />
     <file path="/routes.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378309081446" ignored="false" />
@@ -53,15 +79,15 @@
     <file path="/notifications_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283681468" ignored="false" />
     <file path="/people_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458037958" ignored="false" />
     <file path="/site_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458048205" ignored="false" />
-    <file path="/a.dummy" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378545991231" ignored="false" />
+    <file path="/a.dummy" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378751745616" ignored="false" />
     <file path="/*.regexp" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1368458885359" ignored="false" />
     <file path="/user_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378582647161" ignored="false" />
     <file path="/_menu_item.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283710033" ignored="false" />
-    <file path="/show.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377871550891" ignored="false" />
+    <file path="/show.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378747734574" ignored="false" />
     <file path="/people_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378307084539" ignored="false" />
     <file path="/notifications_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377842691498" ignored="false" />
     <file path="/cooperative.gemspec" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378744370174" ignored="false" />
-    <file path="/install_generator.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378581079450" ignored="false" />
+    <file path="/install_generator.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378748834783" ignored="false" />
     <file path="/cooperative.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378614234906" ignored="false" />
     <file path="/merit.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1369235255779" ignored="false" />
     <file path="/badge_rules.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1369235329961" ignored="false" />
@@ -75,7 +101,7 @@
     <file path="/people_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378098136355" ignored="false" />
     <file path="/mini.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377121896217" ignored="false" />
     <file path="/follows_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377115720663" ignored="false" />
-    <file path="/_auto_complete.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377129185017" ignored="false" />
+    <file path="/_auto_complete.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378748436460" ignored="false" />
     <file path="/jquery.tokenizer.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377506029491" ignored="false" />
     <file path="/follows_controller.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378355834763" ignored="false" />
     <file path="/cooperative.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377451485551" ignored="false" />
@@ -90,12 +116,12 @@
     <file path="/tokenizer.css" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377480346254" ignored="false" />
     <file path="/VERSION" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378549842742" ignored="false" />
     <file path="/jquery-ui.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377166140448" ignored="false" />
-    <file path="/_submenu.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377624810278" ignored="false" />
+    <file path="/_submenu.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378750119896" ignored="false" />
     <file path="/followers.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377185094131" ignored="false" />
     <file path="/_javascripts.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377204819261" ignored="false" />
     <file path="/application.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378600457484" ignored="false" />
     <file path="/forms.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377193952410" ignored="false" />
-    <file path="/cooperative.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377204573359" ignored="false" />
+    <file path="/cooperative.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378749683239" ignored="false" />
     <file path="/modal.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377204983504" ignored="false" />
     <file path="/_modal.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377205245787" ignored="false" />
     <file path="/comments_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377624107729" ignored="false" />
@@ -105,7 +131,7 @@
     <file path="/comments.js" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377209905608" ignored="false" />
     <file path="/overrides.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377742566161" ignored="false" />
     <file path="/time_formats.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377278461747" ignored="false" />
-    <file path="/_form_for_sharing.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377654929174" ignored="false" />
+    <file path="/_form_for_sharing.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378748418905" ignored="false" />
     <file path="/notifications_controller_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377283648578" ignored="false" />
     <file path="/_navbar.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378659181072" ignored="false" />
     <file path="/activities.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377736798084" ignored="false" />
@@ -122,7 +148,7 @@
     <file path="$PROJECT_DIR$/../pager/app/views/pager/_page.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330877562" ignored="false" />
     <file path="/_page.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330869260" ignored="false" />
     <file path="$PROJECT_DIR$/../pager/app/views/pager/_page.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330922433" ignored="false" />
-    <file path="/_page.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330923309" ignored="false" />
+    <file path="/_page.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378747756112" ignored="false" />
     <file path="$PROJECT_DIR$/../pager/app/views/pager/_page.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330947091" ignored="false" />
     <file path="/_page.html.slim" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377330947091" ignored="false" />
     <file path="$PROJECT_DIR$/../pager/app/views/pager/_first_page.html.erb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377310426324" ignored="false" />
@@ -192,7 +218,7 @@
     <file path="/forms_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377464786126" ignored="false" />
     <file path="/_list.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377467553218" ignored="false" />
     <file path="/activity.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378551160778" ignored="false" />
-    <file path="/_form_for_activities.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377478098350" ignored="false" />
+    <file path="/_form_for_activities.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378748405570" ignored="false" />
     <file path="/RegExp Fragment (statuses.js:980).regexp" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377496440341" ignored="false" />
     <file path="/_actionable_descriptor.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377544106346" ignored="false" />
     <file path="/temp.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378489694885" ignored="false" />
@@ -238,7 +264,7 @@
     <file path="/configuration.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377812753940" ignored="false" />
     <file path="/add_fields_to_users.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377805545286" ignored="false" />
     <file path="/README.md" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378323822071" ignored="false" />
-    <file path="/devise.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377811337243" ignored="false" />
+    <file path="/devise.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378756113438" ignored="false" />
     <file path="/20130829214855_create_statuses_table.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1377813368515" ignored="false" />
     <file path="/tag_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378090378130" ignored="false" />
     <file path="/statuses_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378302267800" ignored="false" />
@@ -276,7 +302,7 @@
     <file path="/follower_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378486955991" ignored="false" />
     <file path="/groups.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378327335925" ignored="false" />
     <file path="/groups_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378410175026" ignored="false" />
-    <file path="/edit.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378476838958" ignored="false" />
+    <file path="/edit.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378748324048" ignored="false" />
     <file path="/create_permissions_table.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378522052623" ignored="false" />
     <file path="/permissions.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378521839684" ignored="false" />
     <file path="/permission_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378549572897" ignored="false" />
@@ -285,7 +311,7 @@
     <file path="/permission.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378549380748" ignored="false" />
     <file path="/active_record_extension.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378489700845" ignored="false" />
     <file path="/permission_extension.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378492905953" ignored="false" />
-    <file path="/railtie.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378491912960" ignored="false" />
+    <file path="/railtie.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378755981995" ignored="false" />
     <file path="$PROJECT_DIR$/../private_person/Rakefile" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378500979114" ignored="false" />
     <file path="$PROJECT_DIR$/../private_person/Gemfile" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378549758318" ignored="false" />
     <file path="$PROJECT_DIR$/../private_person/.gitignore" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378496650959" ignored="false" />
@@ -346,20 +372,23 @@
     <file path="$PROJECT_DIR$/../bootstrap_leather/Gemfile" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378605069915" ignored="false" />
     <file path="$PROJECT_DIR$/../bootstrap_leather/.gitignore" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378596078044" ignored="false" />
     <file path="$PROJECT_DIR$/../bootstrap_leather/lib/bootstrap_leather/version.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378599259508" ignored="false" />
-    <file path="$PROJECT_DIR$/../bootstrap_leather/lib/bootstrap_leather/railtie.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378599264561" ignored="false" />
     <file path="$PROJECT_DIR$/../bootstrap_leather/spec/bootstrap_leather_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378599466924" ignored="false" />
     <file path="/bootstrap_leather_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378599466924" ignored="false" />
     <file path="$PROJECT_DIR$/../bootstrap_leather/spec/dummy/config/application.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378605580470" ignored="false" />
-    <file path="/bootstrap_leather.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378605094267" ignored="false" />
+    <file path="/bootstrap_leather.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378756444101" ignored="false" />
     <file path="$PROJECT_DIR$/../bootstrap_leather/lib/bootstrap_leather.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378605095515" ignored="false" />
     <file path="$PROJECT_DIR$/../bootstrap_leather/VERSION" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378614300465" ignored="false" />
     <file path="$PROJECT_DIR$/../bootstrap_leather/spec/dummy/config/environments/development.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378604931706" ignored="false" />
     <file path="$PROJECT_DIR$/../bootstrap_leather/spec/dummy/config/environments/test.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378604952264" ignored="false" />
     <file path="$PROJECT_DIR$/../bootstrap_leather/spec/spec_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378605486332" ignored="false" />
     <file path="/bootstrap_leather_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378659440144" ignored="false" />
-    <file path="$PROJECT_DIR$/../bootstrap_leather/app/helpers/bootstrap_leather_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378659463278" ignored="false" />
+    <file path="$PROJECT_DIR$/../bootstrap_leather/app/helpers/bootstrap_leather_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378749831057" ignored="false" />
     <file path="/application.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378658491180" ignored="false" />
     <file path="/nav_list.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378659747404" ignored="false" />
+    <file path="$PROJECT_DIR$/../bootstrap_leather/app/views/bootstrap_leather/_footer_javascript.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378748083237" ignored="false" />
+    <file path="$PROJECT_DIR$/../bootstrap_leather/app/views/bootstrap_leather/_head_css.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378748087339" ignored="false" />
+    <file path="$PROJECT_DIR$/../bootstrap_leather/lib/generators/bootstrap_leather/install/install_generator.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378748834784" ignored="false" />
+    <file path="$PROJECT_DIR$/../bootstrap_leather/README.rdoc" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378749772915" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,8 +417,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pages_support.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/support/pages_support.rb">
+      <file leaf-file-name="_submenu.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/messages/_submenu.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="11" selection-start="27" selection-end="27" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configuration.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/cooperative/configuration.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -397,19 +435,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pages_spec.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/controllers/pages_spec.rb">
+      <file leaf-file-name="engine.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/cooperative/engine.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="35" selection-start="1768" selection-end="1768" vertical-scroll-proportion="0.3382353">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+      <file leaf-file-name="railtie.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/cooperative/railtie.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="31" selection-start="349" selection-end="403" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -418,7 +456,52 @@
       <file leaf-file-name="cooperative.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/cooperative.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="22" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="devise.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="36" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap_leather.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/initializers/bootstrap_leather.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="28" selection-start="67" selection-end="70" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/groups/show.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/groups/index.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="21" selection-start="130" selection-end="130" vertical-scroll-proportion="0.19480519">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="26" selection-start="0" selection-end="26" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -456,22 +539,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/models/activity_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/comment_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/page_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/status_spec.rb" />
+        <option value="$PROJECT_DIR$/app/views/follows/followers.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/follows/_auto_complete.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/groups/_form.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/profile/edit.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/statuses/_form.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/statuses/_form_for_activities.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/statuses/_form_for_sharing.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/tags/_auto_complete.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/pages/_form.html.haml" />
         <option value="$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/spec/models/user_spec.rb" />
-        <option value="$PROJECT_DIR$/app/models/ability.rb" />
-        <option value="$PROJECT_DIR$/spec/support/pages_support.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/lib/cooperative.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/cooperative_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/cooperative.html.haml" />
-        <option value="$PROJECT_DIR$/cooperative.gemspec" />
-        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
-        <option value="$PROJECT_DIR$/spec/controllers/pages_spec.rb" />
+        <option value="$PROJECT_DIR$/app/views/messages/_submenu.html.haml" />
+        <option value="$PROJECT_DIR$/../bootstrap_leather/lib/bootstrap_leather/railtie.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/bootstrap_leather.rb" />
+        <option value="$PROJECT_DIR$/app/views/groups/index.html.haml" />
       </list>
     </option>
   </component>
@@ -550,7 +633,255 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dummy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dummy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dummy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dummy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="initializers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="install" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="initializers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groups" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -597,11 +928,11 @@
       <recent name="$PROJECT_DIR$/spec/factories" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/initializers" />
       <recent name="$PROJECT_DIR$/app/views/layouts" />
       <recent name="$PROJECT_DIR$/lib/cooperative/gem_extensions" />
       <recent name="$PROJECT_DIR$/app/models" />
       <recent name="C:\Users\Work\Sites\cooperative\spec\controllers" />
-      <recent name="C:\Users\Work\Sites\cooperative\config\initializers" />
     </key>
   </component>
   <component name="RunManager" selected="Rake.spec">
@@ -1396,7 +1727,11 @@
       <created>1378584297596</created>
       <updated>1378584297596</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Installed bootstrap_leather, preparing to integrate it &#10;">
+      <created>1378745302518</created>
+      <updated>1378745302518</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1436,21 +1771,21 @@
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26342282" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2993311" sideWeight="0.630303" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19966443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25454545" sideWeight="0.70637584" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.32718122" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32272726" sideWeight="0.63590604" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.6492424" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2977273" sideWeight="0.4395973" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36409396" sideWeight="0.29242423" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36409396" sideWeight="0.70757574" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36409396" sideWeight="0.70757574" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26174498" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26342282" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.6739496" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1498,7 +1833,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="PrivatePerson built as separate gem, then installed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Installed bootstrap_leather, preparing to integrate it &#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1512,7 +1847,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Replaced acts_as_commentable; comments system now complete." />
     <MESSAGE value="Added videos to statuses" />
     <MESSAGE value="Added voting" />
     <MESSAGE value="Minor improvements to tags' display of statuses" />
@@ -1537,107 +1871,120 @@
     <MESSAGE value="Messages controller tested and passing." />
     <MESSAGE value="Roles, follows, and permissions models tested and passing." />
     <MESSAGE value="PrivatePerson built as separate gem, then installed" />
+    <MESSAGE value="Installed bootstrap_leather, preparing to integrate it &#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448/gems/bootstrap_forms-4.0.1/lib/bootstrap_forms/helpers/form_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/pages/_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448/gems/bootstrap_forms-4.0.1/lib/bootstrap_forms/helpers/form_tag_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448/gems/bootstrap_forms-4.0.1/lib/bootstrap_forms/helpers/nested_form_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448/gems/bootstrap_forms-4.0.1/lib/bootstrap_forms/helpers/wrappers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448/gems/bootstrap_forms-4.0.1/lib/bootstrap_forms/form_builder.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.5526316" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448/gems/bootstrap_pager-0.9.2/app/helpers/bootstrap_pager_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../bootstrap_leather/app/views/bootstrap_leather/_navbar.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="18" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="-11.25">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/cooperative_helper.rb">
+    <entry file="file://$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/people/_menu_item.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="96" column="39" selection-start="4148" selection-end="4148" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/cooperative.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="90" selection-start="155" selection-end="241" vertical-scroll-proportion="-0.625">
+        <state line="56" column="30" selection-start="1458" selection-end="1458" vertical-scroll-proportion="-8.208333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="9" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cooperative.gemspec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="37" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/support/pages_support.rb">
+    <entry file="file://$PROJECT_DIR$/spec/dummy/config/initializers/cooperative.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/messages/_submenu.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="349" selection-end="403" vertical-scroll-proportion="0.0">
+        <state line="1" column="11" selection-start="27" selection-end="27" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/cooperative/configuration.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/cooperative/engine.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/cooperative/railtie.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/cooperative.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/pages_spec.rb">
+    <entry file="file://$PROJECT_DIR$/../bootstrap_leather/lib/bootstrap_leather/railtie.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="1768" selection-end="1768" vertical-scroll-proportion="0.3382353">
+        <state line="5" column="0" selection-start="220" selection-end="220" vertical-scroll-proportion="0.22590362">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p448/gems/railties-3.2.14/lib/rails/railtie/configuration.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="0" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.45783132">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="36" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="26" selection-start="0" selection-end="26" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/bootstrap_leather.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="28" selection-start="67" selection-end="70" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/groups/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/groups/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="21" selection-start="130" selection-end="130" vertical-scroll-proportion="0.19480519">
           <folding />
         </state>
       </provider>
