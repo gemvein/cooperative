@@ -19,14 +19,34 @@ describe PagesController do
     end
   end
 
-  describe 'GET index' do
+  describe 'at the root' do
     include_context 'pages support'
+    describe 'GET index' do
+      before do
+        get :index
+      end
+      it { should respond_with(:success) }
+      it { should render_template(:index) }
+      it { should_not set_the_flash }
+    end
+    describe 'GET show' do
+      before do
+        get :show, :path => root_child_page.path
+      end
+      it { should respond_with(:success) }
+      it { should render_template(:index) }
+      it { should_not set_the_flash }
+    end
   end
-  pending 'GET show'
-  pending 'GET new'
-  pending 'POST create'
-  pending 'GET edit'
-  pending 'PUT update'
-  pending 'DELETE destroy'
+
+  describe 'within a person' do
+    pending 'GET index'
+    pending 'GET show'
+    pending 'GET new'
+    pending 'POST create'
+    pending 'GET edit'
+    pending 'PUT update'
+    pending 'DELETE destroy'
+  end
 
 end

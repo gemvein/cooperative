@@ -1,6 +1,6 @@
 class PeopleController < CooperativeController
+  before_filter :authenticate_user!
   add_breadcrumb :people.l, '/people'
-  load_and_authorize_resource
 
   # GET /people
   # GET /people.json

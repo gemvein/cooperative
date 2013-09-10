@@ -39,6 +39,7 @@
     .container
       .row
         .span9
+          %ul.breadcrumb= render_breadcrumbs :tag => :li
           = render_h1
           = alert_flash_messages
           = yield
