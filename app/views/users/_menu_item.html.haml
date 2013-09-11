@@ -1,5 +1,5 @@
 -if signed_in?
-  =dropdown_nav_item :logged_in_as.l + ' ' + current_user.nickname, '#', params[:controller] == 'users' do
+  =dropdown_nav_item :logged_in_as.l + ' ' + current_user.nickname, cooperative.profile_path, params[:controller] == 'users' do
     -if can?(:access, :rails_admin)
       =nav_item :admin_dashboard.l, rails_admin.dashboard_path
       %li.divider

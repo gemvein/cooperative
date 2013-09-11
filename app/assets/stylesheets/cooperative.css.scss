@@ -2,14 +2,7 @@
  *= require jquery-ui-bootstrap
  */
 
-@import 'bootstrap_customizations/font';
-@import 'bootstrap_customizations/colors';
-@import 'bootstrap_customizations/grid';
-@import 'bootstrap_customizations/layers';
-@import 'bootstrap';
-@import 'bootstrap-responsive';
-@import 'font-awesome';
-@import 'bootstrap_customizations/overrides';
+@import 'customizable_bootstrap';
 
 @import 'pages';
 @import 'people';

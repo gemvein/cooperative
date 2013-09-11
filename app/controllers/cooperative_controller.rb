@@ -8,7 +8,7 @@ class CooperativeController < ActionController::Base
   rescue_from CanCan::AccessDenied, :with => :not_found
   rescue_from ActiveRecord::RecordNotFound, :with => :not_found
   
-  add_breadcrumb :home.l, '/'
+  #add_breadcrumb :home.l, '/'
 
   def not_found
     render :status => 404, :layout => 'cooperative', :file => "#{Rails.root}/public/404"

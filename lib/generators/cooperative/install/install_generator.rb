@@ -95,6 +95,11 @@ module Cooperative
       end
     end
 
+    def install_customizable_bootstrap
+      output "Customizable Bootstrap gives you a set of files that will help you modify the appearance of Bootstrap with a set of SCSS files.", :magenta
+      generate("customizable_bootstrap:install")
+    end
+
     def install_devise
       output "Devise is used to authenticate users.", :magenta
       generate("devise:install")

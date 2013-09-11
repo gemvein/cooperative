@@ -1,4 +1,4 @@
-// This is a manifest file that'll be compiled into cooperative.js, which will include all the files
+// This is a manifest file that'll be compiled into customizable_bootstrap.js, which will include all the files
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
@@ -10,17 +10,6 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//= require jquery-ui-bootstrap
-//= require customizable_bootstrap
-//= require spin.min
-//= require jquery.spin
-//= require tinymce
-//= require tag-it.min
-//= require jquery.caretposition
-//= require jquery.tokenizer
-//= require jquery.infinitescroll.min
-//= require infinitescroll
+//= require bootstrap
 //= require_tree .
 
