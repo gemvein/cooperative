@@ -1,12 +1,14 @@
 class RatingsController < CooperativeController
+  before_filter :authenticate_user!
+
   # GET /statuses/1/rate/5.js
   def rate
-    @rateable = polymorphic_parent_class.find(params[:id])
+    @rateable = polymorphic_parent_class.find(params[:id]) || ( not_found and return )
 
-    if(can? :rate, @rateable)
-      current_user.rate! @rateable, params[:rating]
-      @rateable.reload
-    end
+    authorize! :rate, @rateable
+
+    current_user.rate! @rateable, params[:rating]
+    @rateable.reload
 
     respond_to do |format|
       format.js { render :action => 'rate'}
@@ -15,12 +17,12 @@ class RatingsController < CooperativeController
 
   # GET /statuses/1/unrate
   def unrate
-    @rateable = polymorphic_parent_class.find(params[:id])
+    @rateable = polymorphic_parent_class.find(params[:id]) || ( not_found and return )
 
-    if(can? :rate, @rateable)
-      @rateable.person_ratings.find_all_by_person(current_user).destroy_all
-      @rateable.reload
-    end
+    authorize! :rate, @rateable
+
+    @rateable.person_ratings.find_all_by_person(current_user).destroy_all
+    @rateable.reload
 
     respond_to do |format|
       format.js { render :action => 'rate'}
