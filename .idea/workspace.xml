@@ -2,20 +2,103 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ability.rb" afterPath="$PROJECT_DIR$/app/models/ability.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/follower_support.rb" afterPath="$PROJECT_DIR$/spec/support/follower_support.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/pages_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/pages_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/statuses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/statuses_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/statuses_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/statuses_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/statuses_support.rb" afterPath="$PROJECT_DIR$/spec/support/statuses_support.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tags_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tags_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/tags_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/tags_spec.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/controllers/activities_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/controllers/application_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/controllers/cooperative_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/controllers/follows_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/controllers/groups_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/controllers/messages_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/controllers/pages_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/controllers/people_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/controllers/profile_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/controllers/tags_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/cooperative_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/.rspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/README.rdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/app/assets/javascripts/application.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/app/assets/stylesheets/application.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/app/assets/stylesheets/scaffolds.css.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/app/helpers/application_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/app/models/follow.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config.ru" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/application.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/boot.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/database.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/environment.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/environments/development.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/environments/production.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/environments/test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/initializers/backtrace_silencers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/initializers/cooperative.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/initializers/devise.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/initializers/inflections.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/initializers/mime_types.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/initializers/secret_token.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/initializers/session_store.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/initializers/wrap_parameters.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/locales/devise.en.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/locales/en.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/config/routes.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/development.sqlite3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214849_create_comments_table.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214850_create_groups_table.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214851_create_messages_table.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214852_create_pages_table.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214853_create_roles_table.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214854_create_roles_users_table.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214855_create_statuses_table.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214856_create_users_table.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214907_create_activities.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214918_acts_as_follower_migration.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214929_acts_as_taggable_on_migration.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/migrate/20130829214939_create_person_ratings.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/schema.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/db/test.sqlite3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/lib/assets/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/public/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/public/422.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/public/500.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/public/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/script/rails" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/dummy/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/factories/groups.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/factories/messages.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/factories/pages.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/factories/statuses.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/factories/users.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/features/activities_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/features/groups_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/features/layout_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/features/messages_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/features/pages_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/features/people_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/features/profile_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/features/statuses_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/features/tags_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/features/users_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/models/group_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/models/message_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/models/page_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/models/status_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/models/tag_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/models/user_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/support/activities_support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/support/controller_hacks_support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/support/devise_support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/support/groups_support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/support/login_support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/support/messages_support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/support/pages_support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/support/people_support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/support/statuses_support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec_old/support/tags_support.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cooperative.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1379110359111" ignored="false" />
+    <file path="/Dummy.txt" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1379110370321" ignored="false" />
     <file path="/scaffolds.css.scss" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367940541896" ignored="false" />
     <file path="/follows_controller_spec.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1367941059500" ignored="false" />
     <file path="/user.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1379090067943" ignored="false" />
@@ -381,15 +464,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pages_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/controllers/pages_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="28" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ability.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/ability.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -402,7 +476,7 @@
       <file leaf-file-name="statuses_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/statuses_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="4" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.33144477">
+            <state line="56" column="30" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.58640224">
               <folding />
             </state>
           </provider>
@@ -439,15 +513,6 @@
         <entry file="file://$PROJECT_DIR$/spec/support/tags_support.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="follower_support.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/support/follower_support.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="61" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1560,7 +1625,11 @@
       <created>1379103736953</created>
       <updated>1379103736954</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Statuses and Tags controllers' specs written, all tests passing.">
+      <created>1379110379360</created>
+      <updated>1379110379360</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers>
       <GitHub shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1606,7 +1675,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19966443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25454545" sideWeight="0.70637584" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.32718122" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33030304" sideWeight="0.67114097" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33030304" sideWeight="0.67114097" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.6492424" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33030304" sideWeight="0.26845637" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36409396" sideWeight="0.29242423" order="8" side_tool="true" content_ui="tabs" />
@@ -1706,20 +1775,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/support/activities_support.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/profile_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="35" selection-start="83" selection-end="83" vertical-scroll-proportion="0.03916449">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/controllers/people_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="31" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.9399478">
@@ -1813,7 +1868,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/statuses_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="4" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.33144477">
+        <state line="56" column="30" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.58640224">
           <folding />
         </state>
       </provider>
