@@ -8,7 +8,6 @@ module Cooperative
   require 'cooperative/engine'
   require 'cooperative/localization'
   require 'cooperative/version'
-  require 'cooperative/models/permission_extension'
 
   require 'haml'
   require 'haml-rails'

@@ -14,7 +14,7 @@ class Page < ActiveRecord::Base
   acts_as_taggable
 
   # Accessible attributes
-  attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :pageable_id, :pageable_type, :tag_list
+  attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :tag_list
 
   # Required attributes
   validates_presence_of :slug, :title, :body
@@ -28,6 +28,10 @@ class Page < ActiveRecord::Base
   # Class methods
   def self.find_all_root_pages
     where({:pageable_id => [0, nil, '']})
+  end
+
+  def self.find_all_owned_pages
+    where('pageable_id IS NOT NULL AND pageable_type IS NOT NULL')
   end
   
   def self.find_all_by_path(path)
@@ -79,5 +83,9 @@ class Page < ActiveRecord::Base
     end
     parts << slug
     parts
+  end
+
+  def test_path
+    path_parts.join('/')
   end
 end

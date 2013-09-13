@@ -1,5 +1,8 @@
 -if @page.new_record?
-  - destination = cooperative.person_pages_path(@person)
+  - if @pageable_resource == 'people'
+    - destination = cooperative.person_pages_path(@pageable)
+  - else
+    - destination = polymorphic_path([cooperative, @pageable, :pages])
 -else
   - destination = @page.path
 
@@ -7,13 +10,12 @@
   .control-group
     .control-label= :parent.l
     .controls= collection_select :page, :parent_id, current_user.pages, :id, :title, :prompt => true
-  = f.text_field :title, :help_block => :tip_to_make_this_your_homepage_set_the_title_to_home.l
+  = f.text_field :title, :help_block => :tip_this_is_also_used_for_part_of_the_link_url.l
   = f.text_area :description, :rows => 3
   = f.text_area :keywords, :rows => 3
   = f.text_area :body, :class => 'wysiwyg', :required => false
   = f.text_field :tag_list, :class => 'tag-box'
   = tinymce_init
-  = f.check_box :public
   .controls=f.submit :save_page.l
 
 - add_footer_javascript do

@@ -89,7 +89,6 @@ ActiveRecord::Schema.define(:version => 20130907191213) do
     t.text     "description"
     t.text     "keywords"
     t.text     "body"
-    t.boolean  "public"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -175,8 +174,8 @@ ActiveRecord::Schema.define(:version => 20130907191213) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "",   :null => false
-    t.string   "encrypted_password",     :default => "",   :null => false
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -195,9 +194,8 @@ ActiveRecord::Schema.define(:version => 20130907191213) do
     t.string   "authentication_token"
     t.string   "nickname"
     t.text     "bio"
-    t.boolean  "public",                 :default => true
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"

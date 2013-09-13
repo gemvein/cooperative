@@ -20,5 +20,6 @@ end
 
 gem 'coletivo', :path => '/home/work/Sites/coletivo'
 gem 'bootstrap_leather', :path => '/home/work/Sites/bootstrap_leather'
+gem 'private_person', :path => '/home/work/Sites/private_person'
 
 gemspec

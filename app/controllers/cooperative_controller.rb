@@ -5,7 +5,7 @@ class CooperativeController < ActionController::Base
   protect_from_forgery
   before_filter :set_locale
 
-  rescue_from CanCan::AccessDenied, :with => :not_found
+  rescue_from CanCan::AccessDenied, :with => :access_denied
   rescue_from ActiveRecord::RecordNotFound, :with => :not_found
   
   #add_breadcrumb :home.l, '/'
@@ -14,13 +14,13 @@ class CooperativeController < ActionController::Base
     render :status => 404, :layout => 'cooperative', :file => "#{Rails.root}/public/404"
   end
 
+  def access_denied
+    authenticate_user! and render :status => 403, :layout => 'cooperative', :file => "#{Rails.root}/public/403"
+  end
+
 private
   def set_locale
     I18n.local = params[:lang] if params[:lang].present?
-  end
-
-  def access_denied (exception)
-    redirect_to cooperative.home_url, :alert => exception.message
   end
   
   def polymorphic_parent_class
@@ -39,7 +39,11 @@ private
     polymorphic_parent_class.find(polymorphic_parent_id)
   end
 
+  def polymorphic_object
+    params[:id] ? polymorphic_parent_class.find(params[:id]) : nil
+  end
+
   def polymorphic_resource
-    params[:nesting_resource] || request.fullpath.split('/')[1]
+    params[:nesting_resource] || request.fullpath.split('/')[1] || nil
   end
 end

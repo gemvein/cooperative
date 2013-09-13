@@ -1,7 +1,6 @@
 Cooperative::Engine.routes.draw do
 
-  root :to => 'pages#index', :as => 'home'
-  match '/pages/home' => redirect('/')
+  root :to => 'activities#index', :as => 'home'
   match '/pages/*path' => 'pages#show', :as => 'show'
 
   get '/profile' => 'profile#edit', :as => 'profile'
@@ -9,7 +8,7 @@ Cooperative::Engine.routes.draw do
 
   resources :activities, :only => [:index]
 
-  resources :comments, :only => [:create, :destroy, :show]
+  resources :comments, :only => [:create, :destroy]
   resources :statuses, :only => [:create, :destroy, :new, :show] do
     collection do
       get 'grab'
@@ -18,7 +17,6 @@ Cooperative::Engine.routes.draw do
       get 'rate/:rating', :to => 'ratings#rate', :as => 'rate', :constraints => { :rating => /\-?[0-9]+(\.[0-9])?/ }
       get 'unrate', :to => 'ratings#unrate', :as => 'unrate'
     end
-    resources :comments, :only => [:index]
   end
 
   resources :tags, :only => [:index, :show]
@@ -33,9 +31,10 @@ Cooperative::Engine.routes.draw do
   resources :people, :only => [:index, :show] do
     member do
       get 'followers' => 'follows#followers'
+      delete 'follows' => 'follows#destroy'
     end
-    resources :follows, :only => [:create, :destroy, :index]
-    resources :pages, :except => [:show]
+    resources :follows, :only => [:create, :index]
+    resources :pages, :except => [:show, :index]
     match 'pages/*path' => 'pages#show', :as => 'show'
   end
 

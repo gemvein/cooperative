@@ -40,11 +40,11 @@ describe User do
   it { should validate_presence_of(:nickname) }
 
   # Check relationships
+  it { should have_many(:comments) }
   it { should have_many(:messages) }
   it { should have_many(:messages_as_sender) }
   it { should have_many(:pages) }
   it { should have_many(:statuses) }
-  it { should accept_nested_attributes_for(:permissions) }
 
   context 'Instance Methods' do
 

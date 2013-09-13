@@ -2,7 +2,7 @@
   - add_widget do
     %h3= :tools.l
     %ul.nav.nav-list
-      =nav_item '<i class="icon-file"></i>'.html_safe + :new_page.l, cooperative.new_person_page_path(@person), :class => 'btn btn-primary'
+      =nav_item icon('file') + :new_page.l, cooperative.new_person_page_path(@person), :class => 'btn btn-primary'
 -else
   - add_widget do
     %h3= :about_nickname.l :nickname => @person.nickname

@@ -1,3 +1,5 @@
+# At the end, Person = User makes polymorphic finders work.
+
 class User < ActiveRecord::Base
   # PrivatePerson gem
   acts_as_permissor :of => [:following_users, :user_followers], :class_name => 'User'
@@ -43,12 +45,11 @@ class User < ActiveRecord::Base
   attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :bio, :image, :skill_list, :interest_list, :hobby_list
   validates_presence_of :nickname
 
+  has_many :comments
   has_many :messages, :foreign_key => :recipient_id
   has_many :messages_as_sender, :class_name => 'Message', :foreign_key => :sender_id
   has_many :pages, :as => :pageable
   has_many :statuses
-  has_many :permissions
-  accepts_nested_attributes_for :permissions
 
   def show_me
     following_users.pluck(:id) << id
@@ -71,10 +72,13 @@ class User < ActiveRecord::Base
   end
 
   def create_default_permissions
-    for type in %w{User Activity Comment Page Status}
-      temp = Permission.new({:permissible_type => type, :relationship_type => 'public'})
-      temp.permissor = self
-      temp.save!
+    for type in %w{Activity Comment Page Status}
+      self.wildcard_permit! 'following_users', type
+      self.wildcard_permit! 'user_followers', type
     end
+    self.permit! 'following_users', self
+    self.permit! 'user_followers', self
   end
 end
+
+Person = User

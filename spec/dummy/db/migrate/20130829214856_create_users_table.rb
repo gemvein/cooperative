@@ -37,7 +37,6 @@ class CreateUsersTable < ActiveRecord::Migration
       ## Specific to Cooperative
       t.string :nickname
       t.text :bio
-      t.boolean :public, :default => true
 
       t.timestamps
     end

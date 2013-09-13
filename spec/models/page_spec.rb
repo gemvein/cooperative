@@ -18,8 +18,6 @@ describe Page do
   it { should allow_mass_assignment_of(:public) }
   it { should allow_mass_assignment_of(:title) }
   it { should allow_mass_assignment_of(:parent_id) }
-  it { should allow_mass_assignment_of(:pageable_id) }
-  it { should allow_mass_assignment_of(:pageable_type) }
   it { should allow_mass_assignment_of(:tag_list) }
 
   # Check that validations are happening properly
@@ -43,6 +41,16 @@ describe Page do
       it { should_not include owned_parent_page }
       it { should_not include owned_child_page }
       it { should_not include owned_grandchild_page }
+    end
+
+    describe '#find_all_owned_pages' do
+      subject { Page.find_all_owned_pages }
+      it { should_not include root_parent_page }
+      it { should_not include root_child_page }
+      it { should_not include root_grandchild_page }
+      it { should include owned_parent_page }
+      it { should include owned_child_page }
+      it { should include owned_grandchild_page }
     end
 
     describe '#find_all_by_path' do

@@ -7,7 +7,7 @@ describe FollowsController, 'routing' do
       it { should route(:get, "/#{nicknamed_nesting_resource}/nickname/followers").to(:action => 'followers', :id => 'nickname') }
       it { should route(:get, "/#{nicknamed_nesting_resource}/nickname/follows").to(:action => 'index', "#{nicknamed_nesting_resource.singularize}_id".to_sym => 'nickname') }
       it { should route(:post, "/#{nicknamed_nesting_resource}/nickname/follows").to(:action => 'create', "#{nicknamed_nesting_resource.singularize}_id".to_sym => 'nickname') }
-      it { should route(:delete, "/#{nicknamed_nesting_resource}/nickname/follows/1").to(:action => 'destroy', "#{nicknamed_nesting_resource.singularize}_id".to_sym => 'nickname', :id => 1) }
+      it { should route(:delete, "/#{nicknamed_nesting_resource}/nickname/follows").to(:action => 'destroy', :id => 'nickname') }
     end
   end
 
@@ -75,7 +75,7 @@ describe FollowsController, 'routing' do
     include_context 'follower support'
     context 'when not logged in' do
       before do
-        delete :destroy, :nesting_resource => 'people', :person_id => followed_user.nickname, :format => :js
+        delete :destroy, :nesting_resource => 'people', :id => followed_user.nickname, :format => :js
       end
       it { should respond_with(401) }
       it { should_not set_the_flash }
@@ -83,7 +83,7 @@ describe FollowsController, 'routing' do
     context 'when logged in' do
       before do
         sign_in follower_user
-        delete :destroy, :nesting_resource => 'people', :person_id => followed_user.nickname, :format => :js
+        delete :destroy, :nesting_resource => 'people', :id => followed_user.nickname, :format => :js
       end
       it { should respond_with(:success) }
       it { should render_template(:follow) }

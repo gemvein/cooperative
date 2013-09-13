@@ -15,7 +15,7 @@ class Ability
     end
     can [:read, :rate], Comment, :user => current_user
     can :create, Comment do |comment|
-      current_user.can? :comment, comment.commentable
+      current_user.can?(:comment, comment.commentable)
     end
     can :destroy, Comment, :user => current_user
     can :destroy, Comment do |comment|
@@ -53,8 +53,11 @@ class Ability
     end
 
     # Pages
-    can :read, Page, :pageable => nil
-    can :read, Page do |page|
+    can :read, Page.find_all_root_pages
+    can :read, Page.find_all_owned_pages do |page|
+      page.is_public?
+    end
+    can :read, Page.find_all_owned_pages do |page|
       current_user.is_permitted?(page.pageable, page)
     end
     can :create, Page if !current_user.new_record?
@@ -68,7 +71,7 @@ class Ability
     can [:create, :grab], Status if !current_user.new_record?
     can :destroy, Status, :user => current_user
 
-    # Users
+    # People
     can [:read, :mention, :follow], User, :public => true
     can [:read, :mention], User, :id => current_user.id
     can [:read, :mention], User do |user|

@@ -99,7 +99,7 @@ en:
   statuses: "Statuses"
   tagged_with: "Tagged With"
   tags: "Tags"
-  tip_to_make_this_your_homepage_set_the_title_to_home: "Tip: To make this your homepage, set the title to 'Home'"
+  tip_this_is_also_used_for_part_of_the_link_url: "Tip: This is also used for part of the link URL."
   to: "To"
   tools: "Tools"
   total_items: "Total %{items}"

@@ -126,7 +126,7 @@ describe GroupsController do
         sign_in group_member
         get :edit, :id => owned_group.id
       end
-      it { should respond_with(404) }
+      it { should respond_with(403) }
       it { should_not set_the_flash }
     end
     context 'when logged in as owner' do
@@ -162,7 +162,7 @@ describe GroupsController do
         sign_in group_member
         put :update, :id => owned_group.id, :group => {:name => 'Edited'}
       end
-      it { should respond_with(404) }
+      it { should respond_with(403) }
       it { should_not set_the_flash }
     end
     context 'when logged in as owner' do
@@ -208,7 +208,7 @@ describe GroupsController do
         sign_in group_member
         delete :destroy, :id => owned_group.id
       end
-      it { should respond_with(404) }
+      it { should respond_with(403) }
       it { should_not set_the_flash }
     end
     context 'when logged in as owner' do

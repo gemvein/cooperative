@@ -167,7 +167,7 @@ describe MessagesController do
         sign_in message_nonrecipient
         get :reply, :id => child_message.id
       end
-      it { should respond_with(404) }
+      it { should respond_with(403) }
       it { should_not set_the_flash }
     end
     context 'when logged in as the recipient' do
@@ -203,7 +203,7 @@ describe MessagesController do
         sign_in message_nonrecipient
         get :move_to_trash, :id => readable_message.id
       end
-      it { should respond_with(404) }
+      it { should respond_with(403) }
       it { should_not set_the_flash }
     end
     context 'when logged in as owner' do
@@ -238,7 +238,7 @@ describe MessagesController do
         sign_in message_nonrecipient
         get :restore, :id => readable_message.id
       end
-      it { should respond_with(404) }
+      it { should respond_with(403) }
       it { should_not set_the_flash }
     end
     context 'when logged in as owner' do

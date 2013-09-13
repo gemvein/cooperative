@@ -33,7 +33,7 @@ class FollowsController < CooperativeController
     end
   end
 
-  # POST /follows.js
+  # POST /people/nickname/follows.js
   def create
     @person = User.find_by_nickname(params[:person_id])
     current_user.follow(@person)
@@ -43,9 +43,9 @@ class FollowsController < CooperativeController
     end
   end
 
-  # DELETE /follows/1.js
+  # DELETE /people/nickname/follows.js
   def destroy
-    @person = User.find_by_nickname(params[:person_id])
+    @person = User.find_by_nickname(params[:id])
     current_user.stop_following(@person)
 
     respond_to do |format|

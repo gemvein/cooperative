@@ -4,7 +4,7 @@ describe ActivitiesController do
   routes { Cooperative::Engine.routes }
 
   describe 'routing' do
-    it { should route(:get, '/activities').to(:action => 'index') }
+    it { should route(:get, '/').to(:action => 'index') }
   end
 
   describe 'GET index' do
