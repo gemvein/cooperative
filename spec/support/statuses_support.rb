@@ -1,6 +1,7 @@
 shared_context 'statuses support' do
   include_context 'follower support'
 
+  let!(:public_status) { FactoryGirl.create(:status, :user => public_user) }
   let!(:unshared_status) { FactoryGirl.create(:status, :user => followed_user) }
   let!(:shared_status) { FactoryGirl.create(:status, :user => followed_user) }
   let!(:sharing_status) { FactoryGirl.create(:status, :user => followed_user, :shareable => shared_status) }

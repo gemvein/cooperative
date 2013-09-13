@@ -88,7 +88,7 @@ describe PagesController do
     end
     describe 'POST create' do
 
-      include_context 'groups support'
+      include_context 'pages support'
       context 'when not logged in' do
         before do
           post :create, :nesting_resource => 'people', :person_id => page_owner.nickname

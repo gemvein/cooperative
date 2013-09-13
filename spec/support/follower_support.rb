@@ -7,6 +7,14 @@ shared_context 'follower support' do
     user.permissions.reload
     user
   }
+  let!(:public_user) {
+    user = FactoryGirl.create(:user)
+    for permission in user.permissions_as_permissor
+      permission.update_attribute :relationship_type, 'public'
+    end
+    user.permissions.reload
+    user
+  }
   let!(:followed_user) {
     user = FactoryGirl.create(:user)
     for permission in user.permissions_as_permissor

@@ -84,5 +84,8 @@ class Ability
     cannot :message, User do |user|
       current_user.follows.blocked.include? user # No fair doing the opposite, either.
     end
+
+    # Tags
+    can [:read], Tag
   end
 end

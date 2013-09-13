@@ -1,10 +1,12 @@
 class TagsController < CooperativeController
+  load_and_authorize_resource
   add_breadcrumb :tags.l, '/tags'
 
   # GET /tags
   # GET /tags.json
+  # @tags has already been loaded by cancan
   def index
-    @tags = Tag.total_item_counts
+    @tags = @tags.total_item_counts
 
     @tags.sort_by! {|t| t[:name]}
 
@@ -22,8 +24,8 @@ class TagsController < CooperativeController
 
   # GET /tag/tag-name
   # GET /tag/tag-name.js
+  # @tag has already been loaded by cancan
   def show
-    @tag = Tag.find_by_name(params[:id])
     add_breadcrumb @tag.name, cooperative.tag_path(@tag)
     
     respond_to do |format|

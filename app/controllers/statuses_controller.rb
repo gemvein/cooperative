@@ -3,8 +3,8 @@ class StatusesController < CooperativeController
   load_and_authorize_resource
   
   # GET /statuses/1
+  # @status loaded by cancan
   def show
-    @status = Status.find_by_id(params[:id])
     add_breadcrumb :status.l, @status.path
     
     respond_to do |format|
@@ -13,9 +13,9 @@ class StatusesController < CooperativeController
   end
 
   # GET /statuses/new
+  # @status loaded by cancan
   def new
     add_breadcrumb :new_status.l, cooperative.new_status_path
-    @status = Status.new
 
     respond_to do |format|
       format.html { render :layout => 'partial' }
@@ -23,8 +23,8 @@ class StatusesController < CooperativeController
   end
 
   # POST /statuses.js
+  # @status loaded by cancan
   def create
-    @status = Status.new(params[:status])
     @status.user = current_user
 
     respond_to do |format|
@@ -38,8 +38,8 @@ class StatusesController < CooperativeController
   end
 
   # DELETE /statuses/1.js
+  # @status loaded by cancan
   def destroy
-    @status = Status.find(params[:id])
     @activity = @status.activities.first
     @status.destroy
     respond_to do |format|
@@ -48,7 +48,7 @@ class StatusesController < CooperativeController
   end
   
   # GET /statuses/grab.js
-  # TODO: Put this elsewhere, it's ugly.
+  # TODO: Put this elsewhere, it's ugly.  Also find way to prevent it from being abused.
   def grab
     @uri = URI.unescape(params[:uri])
     begin
@@ -94,16 +94,16 @@ class StatusesController < CooperativeController
     end
   end
   
-  private
-  
-    def _get_http_size(url)
-      uri = URI(url)
-      Net::HTTP.start(uri.host, uri.port) do |http|
-          # Send a HEAD requesti
-          response = http.head(uri.path)
-        
-          # Get the Content-Length header from response['Your-Header-Here']
-          len = response['Content-Length'].to_i
-      end
+private
+
+  def _get_http_size(url)
+    uri = URI(url)
+    Net::HTTP.start(uri.host, uri.port) do |http|
+        # Send a HEAD requesti
+        response = http.head(uri.path)
+
+        # Get the Content-Length header from response['Your-Header-Here']
+        len = response['Content-Length'].to_i
     end
+  end
 end
