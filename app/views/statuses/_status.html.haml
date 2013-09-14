@@ -10,5 +10,5 @@
       .span1
         = thumbnail link_to image_tag(current_user.image.url(:thumb)), cooperative.person_path(current_user.nickname)
       .span4{:id => 'status_' + status.id.to_s + '_comment_form'}
-        = render :partial => 'comments/form', :locals => {:commentable => status}
+        = render :partial => 'comments/form', :locals => {:commentable => status, :activity_type => 'render'}
 

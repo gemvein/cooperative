@@ -13,8 +13,9 @@ require 'factory_girl_rails'
 #FactoryGirl.find_definitions
 
 require 'database_cleaner'
-require 'shoulda-matchers'
+require 'shoulda/matchers'
 require 'paperclip/matchers'
+require 'w3c_rspec_validators'
 require 'cooperative'
 
 include Warden::Test::Helpers

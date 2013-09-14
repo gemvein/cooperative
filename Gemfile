@@ -16,10 +16,11 @@ group :development, :test do
   gem 'simplecov'
   gem 'haml-rails'
   gem 'puma'
+  gem 'w3c_rspec_validators'
 end
 
-gem 'coletivo', :path => '/home/work/Sites/coletivo'
-gem 'bootstrap_leather', :path => '/home/work/Sites/bootstrap_leather'
-gem 'private_person', :path => '/home/work/Sites/private_person'
+gem 'coletivo', :git => "git://github.com/nerakdon/coletivo.git"
+gem 'bootstrap_leather', :git => "git://github.com/nerakdon/bootstrap_leather.git"
+gem 'private_person', :git => "git://github.com/nerakdon/private_person.git"
 
 gemspec

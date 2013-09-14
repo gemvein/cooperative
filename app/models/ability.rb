@@ -72,7 +72,6 @@ class Ability
     can :destroy, Status, :user => current_user
 
     # People
-    can [:read, :mention, :follow], User, :public => true
     can [:read, :mention], User, :id => current_user.id
     can [:read, :mention], User do |user|
       current_user.is_permitted?(user, user)

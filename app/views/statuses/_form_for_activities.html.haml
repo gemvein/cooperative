@@ -1,20 +1,17 @@
-= bootstrap_form_for @status, :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal', :id => 'modal-form'} do |f|
+= bootstrap_form_for @status, :namespace => [:status, :new], :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal', :id => 'modal-form'} do |f|
   #status_people.mentions.thumbnails.span3.pull-right
-  = f.hidden_field :url
+  = f.hidden_field :url, :class => 'grab-url'
   = f.hidden_field :title
   = f.hidden_field :description
   = f.hidden_field :image_remote_url
   = f.hidden_field :media_url
   = f.hidden_field :media_type
-  = f.text_area :body, :rows => 3, :cols => 60, :label => false, :class => 'tokenizer'
-  #status_grab_group.control-group.hide
+  = f.text_area :body, :rows => 3, :cols => 60, :label => false, :class => 'tokenizer url-container'
+  #status_new_grab_group.control-group.hide
     %label.control-label
       = :preview.l
     .controls
-      #status_grab
+      #status_new_grab
   .control-group
     .controls
-      = f.submit :set_status.l
--add_footer_javascript do
-  :javascript
-    $('#status_body').on('keyup', status_parse_body).on('change', status_parse_body);
+      = f.submit :set_status.l, :namespace => nil

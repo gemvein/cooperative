@@ -1,12 +1,12 @@
-- prefix = commentable.class.name.downcase + '_' + commentable.id.to_s
+- prefix = [commentable.class.name.downcase, commentable.id.to_s, activity_type].join('_')
 .row
   .span1
     = thumbnail link_to image_tag(@current_user.image.url(:thumb)), cooperative.person_path(@current_user.nickname)
-  .span4{:id => prefix + '_comment_form'}
-    = bootstrap_form_for commentable.comments.new(@comment), :url => cooperative.comments_path, :format => :js, :remote => true, :html => {:class => 'form'} do |f|
+  .span4{:id => prefix + '_comment_form_div'}
+    = bootstrap_form_for commentable.comments.new(@comment), :namespace => [commentable.class.name.downcase.to_sym, commentable.id, activity_type.to_sym], :url => cooperative.comments_path, :format => :js, :remote => true, :html => {:class => 'form'} do |f|
       = f.hidden_field :commentable_id
       = f.hidden_field :commentable_type
       = f.text_area :body, :rows => 2, :cols => 30, :label => false, :required => false, :placeholder => :comment.l, :id => prefix + '_comment_body', :class => 'tokenizer'
       .control-group
         .controls
-          = f.submit :comment.l
+          = f.submit :comment.l, :namespace => nil

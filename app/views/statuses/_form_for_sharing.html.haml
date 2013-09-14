@@ -1,6 +1,5 @@
-= bootstrap_form_for status, :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal'} do |f|
-
-  = f.hidden_field :url
+= bootstrap_form_for status, :namespace => [status.shareable.class.name.downcase.to_sym, status.shareable.id], :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal'} do |f|
+  = f.hidden_field :url, :class => 'grab-url'
   = f.hidden_field :title
   = f.hidden_field :description
   = f.hidden_field :image_remote_url
@@ -31,7 +30,4 @@
             = link_to status.shareable.user.nickname, cooperative.person_path(status.shareable.user.nickname)
   .control-group
     .controls
-      = f.submit :set_status.l
--add_footer_javascript do
-  :javascript
-    $('#status_url').load(status_grab_url);
+      = f.submit :set_status.l, :namespace => nil

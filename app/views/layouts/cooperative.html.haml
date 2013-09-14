@@ -55,7 +55,7 @@
           = nav_item :sign_in.l, new_user_session_path
           = nav_item :sign_up.l, new_user_registration_path
 
-
-    = javascript_include_tag 'cooperative'
-    = javascript_include_tag 'application'
-    = render_footer_javascript
+    %footer
+      = javascript_include_tag 'cooperative'
+      = javascript_include_tag 'application'
+      = render_footer_javascript
