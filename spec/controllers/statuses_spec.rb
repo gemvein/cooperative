@@ -80,7 +80,7 @@ describe StatusesController, 'routing' do
           post :create, :format => 'js'
         end
         it { should respond_with(:success) }
-        it { should render_template(:new) }
+        it { should render_template(:create) }
         it { should_not set_the_flash }
       end
       context 'with valid attributes' do

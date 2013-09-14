@@ -32,7 +32,7 @@ class StatusesController < CooperativeController
         @activity = @status.activities.first
         format.js
       else
-        format.js { render :action => 'new' }
+        format.js
       end
     end
   end
