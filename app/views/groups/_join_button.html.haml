@@ -1,4 +1,4 @@
--if current_user.has_role? 'member', group or current_user.has_role? 'moderator', group
-  =link_to '<i class="icon-remove"></i> '.html_safe + :leave_group.l, cooperative.leave_group_path(group), :class => 'btn btn-warning', :remote => true
--elsif !(current_user.has_role? 'owner', group) and !(current_user.has_role? 'moderator', group) and !(current_user.has_role? 'member', group)
-  =link_to '<i class="icon-check"></i> '.html_safe + :join_group.l, cooperative.join_group_path(group), :class => 'btn btn-success', :remote => true
+-if can? :leave, group
+  =link_to icon('remove') + :leave_group.l, cooperative.leave_group_path(group), :class => 'btn btn-warning', :remote => true
+-elsif can? :join, group
+  =link_to icon('remove') + :join_group.l, cooperative.join_group_path(group), :class => 'btn btn-success', :remote => true

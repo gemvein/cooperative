@@ -24,10 +24,19 @@ shared_context 'activities support' do
   let!(:followed_status) { FactoryGirl.create(:status, :user => followed_user) }
   let!(:followed_status_activity) { Activity.find(followed_status.activities.find_by_key('status.create').id) }
 
-  let!(:mentioned_in_status) { FactoryGirl.create(:status, :user => follower_user, :body => "This status mentions @#{followed_user.nickname} ").reload }
+  let!(:mentioned_in_status) { FactoryGirl.create(:status, :user => followed_user, :body => "This status mentions @#{followed_user.nickname} ") }
   let!(:mentioned_in_status_activity) { Activity.find(mentioned_in_status.activities.find_by_key('status.mentioned_in').id) }
 
   let!(:unfollowed_status) { FactoryGirl.create(:status, :user => unfollowed_user) }
   let!(:unfollowed_status_activity) { Activity.find(unfollowed_status.activities.find_by_key('status.create').id) }
+
+  let!(:flame_war_status) { FactoryGirl.create(:status, :user => followed_user) }
+  let!(:flame_war_status_activity) { Activity.find(flame_war_status.activities.find_by_key('status.create').id) }
+
+  let!(:junk_statuses) {
+    25.times do
+      FactoryGirl.create(:status, :user => followed_user)
+    end
+  }
 
 end

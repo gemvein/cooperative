@@ -1,12 +1,10 @@
 <% if(@activity) %>
-    console.log('lol');
     $('#activities').prepend('<%= escape_javascript(render_activity @activity) %>');
-    $('#status_body, #status_title, #status_description, #status_image_remote_url, #status_media_url, #status_media_type').val('');
-    $('#status_people').html('');
-	$('#status_grab').html('<div class="spinner"></div>');
-	$('#status_grab_group').hide();
+    $('.status_people').html('');
+	$('.status_grab').html('<div class="spinner"></div>');
+	$('.status_grab_group').hide();
 	$('.spinner').spin('small');
 <% else %>
-    alert('oh noes!');
-
+    $('#activities').prepend('<%= escape_javascript(error_messages(@status)) %>');
 <% end %>
+$('.status_body, .status_title, .status_description, .status_image_remote_url, .status_media_url, .status_media_type').val('');

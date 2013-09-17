@@ -1,17 +1,17 @@
-= bootstrap_form_for @status, :namespace => [:status, :new], :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form form-horizontal', :id => 'modal-form'} do |f|
-  #status_people.mentions.thumbnails.span3.pull-right
-  = f.hidden_field :url, :class => 'grab-url'
-  = f.hidden_field :title
-  = f.hidden_field :description
-  = f.hidden_field :image_remote_url
-  = f.hidden_field :media_url
-  = f.hidden_field :media_type
-  = f.text_area :body, :rows => 3, :cols => 60, :label => false, :class => 'tokenizer url-container', :required => false
-  #status_new_grab_group.control-group.hide
+= bootstrap_form_for @status, :namespace => [:activities, :top], :url => cooperative.statuses_path, :format => :js, :remote => true, :html => {:class => 'form'} do |f|
+  #status_people.status_people.mentions.thumbnails.span3.pull-right
+  = f.hidden_field :url, :class => 'grab-url', :class => 'status_url'
+  = f.hidden_field :title, :class => 'status_title'
+  = f.hidden_field :description, :class => 'status_description'
+  = f.hidden_field :image_remote_url, :class => 'status_image_remote_url'
+  = f.hidden_field :media_url, :class => 'status_media_url'
+  = f.hidden_field :media_type, :class => 'status_media_type'
+  = f.text_area :body, :rows => 3, :cols => 60, :label => false, :class => 'tokenizer url-container status_body', :required => false
+  #status_new_grab_group.status_grab_group.control-group.hide
     %label.control-label
       = :preview.l
     .controls
-      #status_new_grab
+      #status_new_grab.status_grab
   .control-group
     .controls
       = f.submit :set_status.l, :namespace => nil

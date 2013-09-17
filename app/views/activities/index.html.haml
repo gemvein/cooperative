@@ -1,16 +1,15 @@
-=#NOTE: Do not make more than one tab active or weird things will happen.
+- add_title :activities.l
 
-%ul.nav.nav-tabs
-  %li.active= link_to :set_my_status.l, '#status', :data => {:toggle => 'tab'}
-  %li= link_to :send_a_message.l, '#message', :data => {:toggle => 'tab'}
-.tab-content
-  #status.tab-pane.active= statuses_form_for_activities
-  #message.tab-pane= messages_form_for_activities
+- add_tab :set_my_status.l, 'new_status_tab' do
+  = statuses_form_for_activities
+-#- add_tab :send_a_message.l, 'new_message_tab' do
+-#  = messages_form_for_activities
+= render_tabs 'top'
 
 #activities.infinitescroll
   - for activity in @activities
     - unless activity.trackable.nil?
-      = render_activity activity, :current_user => current_user
+      = render_activity activity
   = paginate @activities, :engine_namespace => cooperative
 
 = follows_auto_complete '.active .tokenizer', cooperative.person_follows_path(:person_id => current_user.nickname, :format => 'json')

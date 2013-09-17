@@ -134,7 +134,7 @@ describe StatusesController, 'routing' do
     include_context 'follower support'
     context 'when not logged in' do
       before do
-        get :grab, :uri => 'http://www.cnn.com/', :format => 'js'
+        get :grab, :uri => 'http://www.queenoftarot.com/', :format => 'js'
       end
       it { should respond_with(401) }
       it { should_not set_the_flash }
@@ -142,7 +142,7 @@ describe StatusesController, 'routing' do
     context 'when logged in' do
       before do
         sign_in followed_user
-        get :grab, :uri => 'http://www.cnn.com/', :format => 'js'
+        get :grab, :uri => 'http://www.queenoftarot.com/', :format => 'js'
       end
       it { should respond_with(:success) }
       it { should render_template(:grab) }

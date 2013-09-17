@@ -1,0 +1,32 @@
+
+
+ul.nav-tabs {
+  margin: 0;
+}
+
+.tab-content {
+  color: $textColor;
+  background-color: $bodyBackground;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  @include border-radius(4px 4px 0 0);
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.tabs-left {
+
+  .nav-tabs {
+    margin-right: 0;
+
+    li {
+      position: relative;
+    }
+  }
+
+  .tab-content {
+    border: 1px solid #ddd;
+    border-left-color: transparent;
+    height: 100%;
+  }
+}

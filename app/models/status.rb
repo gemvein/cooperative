@@ -61,11 +61,11 @@ class Status < ActiveRecord::Base
   end
 
   def tokenize_tags
-    self.tag_list = body.scan(/#(\S+)/).join(',')
+    self.tag_list = body.scan(/#([^\s\?,;:'"<>]+[^\s\?,;:'"<>\.-])/).join(',')
   end
 
   def tokenize_mentions
-    for mention in body.scan /@([^\s\?,;:'"<>]+)/
+    for mention in body.scan /@([^\s\?,;:'"<>]+[^\s\?,;:'"<>\.-])/
       recipient = User.find_by_nickname(mention)
       if user.can? :mention, recipient
         create_activity(:mentioned_in, :owner => user, :recipient => recipient)

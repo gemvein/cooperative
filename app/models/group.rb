@@ -3,7 +3,7 @@ class Group < ActiveRecord::Base
   acts_as_taggable
 
   # Authorization gem
-  acts_as_authorizable # TODO: replace this gem's functionality, as it is not being actively maintained.
+  acts_as_authorizable
 
   attr_accessible :description, :name, :public, :tag_list
   validates_presence_of :name
@@ -12,7 +12,6 @@ class Group < ActiveRecord::Base
     where(:public => true)
   end
 
-  # TODO: replace owner and owner=
   def owner
     has_owners.first
   end

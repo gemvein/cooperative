@@ -27,12 +27,13 @@ class Ability
     can :join, Group.open_to_the_public do |group|
       !( current_user.has_role?('moderator', group) or current_user.has_role?('owner', group))
     end
-    can [:index, :join], Group do |group|
+    can :join, Group do |group|
       current_user.has_role?('invitee', group)
     end
     can :leave, Group do |group|
       current_user.has_role? 'member', group
     end
+    can :index, Group
     can :read, Group, :public => true
     can [:read, :participate], Group do |group|
       current_user.has_role?('member', group)

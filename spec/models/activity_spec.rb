@@ -15,7 +15,7 @@ describe Activity do
       context 'when full' do
         include_context 'activities support'
         subject { Activity.find_all_by_users([followed_user, follower_user]) }
-        it { should have_exactly(9).items }
+        it { should have_at_least(9).items }
         it { should include created_page_activity }
         it { should include edited_page_activity }
         it { should include deleted_page_activity }

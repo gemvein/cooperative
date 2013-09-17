@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
   activist
 
   # Authorization gem
-  acts_as_authorized_user # TODO: replace this gem's functionality, as it is not being actively maintained.
+  acts_as_authorized_user
 
   # FriendlyId gem
   extend FriendlyId
@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
   end
 
   def activities
-    Activity.where('id IN (?)', activities_as_owner_ids|activities_as_recipient_ids).order('created_at desc').limit(10)
+    Activity.where('id IN (?)', activities_as_owner_ids|activities_as_recipient_ids).order('created_at desc')
   end
 
   def activities_as_follower
