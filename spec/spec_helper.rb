@@ -21,7 +21,7 @@ if $LOADED_FEATURES.grep(/spec\/spec_helper\.rb/).any?
   end
 end
 
-ENV["RAILS_ENV"] ||= 'test'
+ENV["RAILS_ENV"] = 'test'
 require File.expand_path("../dummy/config/environment", __FILE__)
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))

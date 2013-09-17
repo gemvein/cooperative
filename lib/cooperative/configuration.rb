@@ -24,7 +24,8 @@ module Cooperative
       }
       self.paperclip_options = {
         :users => {:large => "600x400>", :medium => "300x200>", :thumb => "150x100>"},
-        :statuses => {:large => "600x600>", :medium => "300x300>", :thumb => "150x150>"}
+        :statuses => {:large => "600x600>", :medium => "300x300>", :thumb => "150x150>"},
+        :groups => {:large => "600x600>", :medium => "300x300>", :thumb => "150x150>"}
       }
     end
   end

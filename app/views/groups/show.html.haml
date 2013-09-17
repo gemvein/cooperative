@@ -1,4 +1,7 @@
 - add_title @group.name
+- add_keywords @group.tag_list
+- add_description @group.description
+- add_opengraph_data @group
 
 -unless @group.tags.empty?
   %dl.horizontal

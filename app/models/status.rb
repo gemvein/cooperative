@@ -16,6 +16,12 @@ class Status < ActiveRecord::Base
   # Cooperative extension to the Coletivo gem
   acts_as_rateable
 
+  # Acts as Opengraph gem
+  acts_as_opengraph :values => {
+      :type => 'website',
+      :site_name => Cooperative.configuration.application_name
+  }
+
   # Paperclip gem
   attr_reader :image_remote_url
   has_attached_file :image, 
@@ -71,5 +77,17 @@ class Status < ActiveRecord::Base
         create_activity(:mentioned_in, :owner => user, :recipient => recipient)
       end
     end
+  end
+
+  def url
+    Cooperative::Engine.routes.url_helpers.status_url(id)
+  end
+
+  def og_image
+    image.url(:thumb)
+  end
+
+  def title
+    :status_by_nickname.l :nickname => user.nickname
   end
 end

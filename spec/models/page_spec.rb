@@ -10,6 +10,8 @@ describe Page do
   it { should respond_to(:friendly_id) }
   # Acts as Taggable on gem
   it { should have_many(:base_tags).through(:taggings) }
+  # Acts As Opengraph gem
+  it { should respond_to(:opengraph_data) }
 
   # Check that appropriate fields are accessible
   it { should allow_mass_assignment_of(:body) }

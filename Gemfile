@@ -6,6 +6,7 @@ source 'http://rubygems.org'
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :development, :test do
+  gem 'zeus' # Here though manual says not here, because rubymine needs it.
   gem 'rspec'
   gem 'rspec-rails'
   gem 'shoulda-matchers'

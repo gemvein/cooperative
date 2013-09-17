@@ -2,6 +2,12 @@ class Tag < ActsAsTaggableOn::Tag
   extend FriendlyId
   friendly_id :name
 
+  # Acts as Opengraph gem
+  acts_as_opengraph :values => {
+      :type => 'website',
+      :site_name => Cooperative.configuration.application_name
+  }
+
   def method_missing(meth, *args, &block)
     if meth.to_s =~ /^(.+)_tagged_with$/
       run_tagged_with_method($1, *args, &block)
@@ -46,6 +52,14 @@ class Tag < ActsAsTaggableOn::Tag
       named_tags[tagging.tag.name] = {:name => tagging.tag.name, :count => tagging.tag.taggings.count}
     end
     named_tags.values
+  end
+
+  def url
+    Cooperative::Engine.routes.url_helpers.tag_url(id)
+  end
+
+  def path
+    Cooperative::Engine.routes.url_helpers.tag_path(id)
   end
   
 end

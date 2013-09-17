@@ -4,6 +4,7 @@ class CreateGroupsTable < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.boolean :public, :default => true
+      t.has_attached_file :image
 
       t.timestamps
     end

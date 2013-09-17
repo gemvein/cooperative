@@ -2,5 +2,6 @@
   - add_title @page.title
   - add_keywords @page.keywords
   - add_description @page.description
+  - add_opengraph_data @page
 
   = sanitize @page.body.html_safe unless @page.body.nil?

@@ -22,6 +22,8 @@ describe User do
   # Cancan gem
   it { should respond_to(:can?) }
   it { should respond_to(:cannot?) }
+  # Acts As Opengraph gem
+  it { should respond_to(:opengraph_data) }
 
   # Check that appropriate fields are accessible
   it { should allow_mass_assignment_of(:email) }

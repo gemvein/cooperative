@@ -14,7 +14,12 @@ class User < ActiveRecord::Base
       :styles => Cooperative.configuration.paperclip_options[:users], 
       :default_url => "/assets/cooperative/:style/missing.png"
 
-  
+  # Acts as Opengraph gem
+  acts_as_opengraph :values => {
+      :type => 'profile',
+      :site_name => Cooperative.configuration.application_name
+  }
+
   # Acts as Follower gem
   acts_as_follower
   acts_as_followable
@@ -69,6 +74,22 @@ class User < ActiveRecord::Base
 
   def message_trash
     Message.trash_by(self.id)
+  end
+
+  def title
+    nickname
+  end
+
+  def url
+    Cooperative::Engine.routes.url_helpers.person_url(id)
+  end
+
+  def path
+    Cooperative::Engine.routes.url_helpers.person_path(id)
+  end
+
+  def og_image
+    image.url(:thumb)
   end
 
   def create_default_permissions

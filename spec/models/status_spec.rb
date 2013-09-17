@@ -12,6 +12,8 @@ describe Status do
   it { should have_many(:person_ratings) }
   # Paperclip gem
   it { should have_attached_file(:image) }
+  # Acts As Opengraph gem
+  it { should respond_to(:opengraph_data) }
 
   # Check that appropriate fields are accessible
   it { should allow_mass_assignment_of(:body) }

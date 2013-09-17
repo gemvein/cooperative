@@ -13,6 +13,12 @@ class Page < ActiveRecord::Base
   # Acts as Taggable gem
   acts_as_taggable
 
+  # Acts as Opengraph gem
+  acts_as_opengraph :values => {
+      :type => 'website',
+      :site_name => Cooperative.configuration.application_name
+  }
+
   # Accessible attributes
   attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :tag_list
 
@@ -87,5 +93,13 @@ class Page < ActiveRecord::Base
 
   def test_path
     path_parts.join('/')
+  end
+
+  def url
+    Cooperative::Engine.routes.url_helpers.page_url(id)
+  end
+
+  def og_image
+    image.url(:thumb)
   end
 end

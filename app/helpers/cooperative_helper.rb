@@ -14,7 +14,7 @@ module CooperativeHelper
     unless str
       return ''
     end
-    strip_tags(str).split(/\s+/, n+1)[0...n].join(' ') + '...'
+    truncate strip_tags(str), :length => n, :separator => ' '
   end
 
   def actionable_descriptor(actionable, actionable_icon)
@@ -30,5 +30,9 @@ module CooperativeHelper
 
   def video(url, type, args)
     render :partial => 'layouts/video', :locals => {:url => url, :type => type, :width => args[:width], :height => args[:height]}
+  end
+
+  def add_opengraph(object)
+    content_for :opengraph_meta_tags, opengraph_meta_tags_for(object)
   end
 end

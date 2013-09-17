@@ -1,21 +1,5 @@
 Dummy::Application.routes.draw do
 
-  
-  
-  
-  
-
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
   mount Cooperative::Engine => '/', :as => 'cooperative'
   devise_for :users, :class_name => 'User', :module => :devise
 

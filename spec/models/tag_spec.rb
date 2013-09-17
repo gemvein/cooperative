@@ -6,6 +6,8 @@ describe User do
   it { should have_many(:taggings) }
   # Friendly ID gem
   it { should respond_to(:friendly_id) }
+  # Acts As Opengraph gem
+  it { should respond_to(:opengraph_data) }
 
   context 'Class Methods' do
     include_context 'tags support'

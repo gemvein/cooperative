@@ -5,6 +5,15 @@ describe Group do
   # Acts as Taggable on gem
   it { should have_many(:base_tags).through(:taggings) }
 
+  # Authorization gem
+  it { should respond_to(:accepts_role?) }
+
+  # Acts As Opengraph gem
+  it { should respond_to(:opengraph_data) }
+
+  # Paperclip gem
+  it { should have_attached_file(:image) }
+
   # Check that appropriate fields are accessible
   it { should allow_mass_assignment_of(:name) }
   it { should allow_mass_assignment_of(:description) }
@@ -23,6 +32,8 @@ describe Group do
       it { should include public_group }
       it { should_not include private_group }
     end
+
+    #TODO: test owner and owner=
 
   end
 
