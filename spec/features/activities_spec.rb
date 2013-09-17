@@ -6,7 +6,7 @@ feature 'Activities' do
   include_context 'comments support'
 
   before do
-    sign_in_as follower_user or raise 'Sign In Failed.'
+    sign_in_as follower_user
     visit cooperative.home_path
     page
   end

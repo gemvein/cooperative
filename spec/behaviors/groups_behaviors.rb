@@ -1,4 +1,4 @@
-class ::Capybara::Session
+module CapybaraNodeExtensions
   def groups
     all('.group')
   end

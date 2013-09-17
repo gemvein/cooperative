@@ -56,6 +56,11 @@ Warden.test_mode!
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 Dir["#{File.dirname(__FILE__)}/behaviors/**/*.rb"].each {|f| require f}
 
+if defined?(Capybara::Node)
+  Capybara::Session.send :include, CapybaraNodeExtensions
+  Capybara::Node::Element.send :include, CapybaraNodeExtensions
+end
+
 RSpec.configure do |config|
   config.include Capybara::DSL, :type => feature
   config.include Paperclip::Shoulda::Matchers

@@ -11,6 +11,6 @@ shared_context 'login support' do
       click_button :sign_in.l
     end
     expect(page).to have_content 'Signed in successfully.'
-    return page.has_content? 'Signed in successfully.'
   end
 end
+

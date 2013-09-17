@@ -1,3 +1,9 @@
+module CapybaraNodeExtensions
+  def navbar(containing)
+    find('.navbar', :text => containing)
+  end
+end
+
 shared_examples 'a cooperative page' do |title|
   subject { page }
 
@@ -14,6 +20,8 @@ shared_examples 'a cooperative page' do |title|
     it { should have_selector 'h1', :text => title }
   end
 
+  pending 'providing opengraph data'
+
   describe 'having the required stylesheets' do
     it { should have_xpath '//link[starts-with(@href, \'/assets/cooperative.css\')]', :visible => false }
     it { should have_xpath '//link[starts-with(@href, \'/assets/application.css\')]', :visible => false }
@@ -25,12 +33,26 @@ shared_examples 'a cooperative page' do |title|
   end
 
   describe 'having a bootstrap layout' do
-    it { should have_selector '.navbar', :count => 1 }
+    describe 'containing a navbar' do
+      subject { page.navbar Cooperative.configuration.application_name }
+      it { should have_selector "a.brand[href='#{cooperative.home_path}']", :text => Cooperative.configuration.application_name }
+      it { should have_link :people.l, :href => cooperative.people_path }
+      it { should have_link :groups.l, :href => cooperative.groups_path }
+      it { should have_link :tags.l, :href => cooperative.tags_path }
+      it 'may have a badge, and if it does, it should be a messages link with a number' do
+        navbar = page.navbar(Cooperative.configuration.application_name)
+        if navbar.has_selector? '.badge'
+          expect(navbar).to have_selector "a[href='#{cooperative.messages_path}']", :text => /0-9+/
+        end
+      end
+      it 'should have either a sign in link or a user dropdown menu' do
+        navbar = page.navbar(Cooperative.configuration.application_name)
+        unless navbar.has_link? :sign_in.l, :href => new_user_session_path
+          expect(navbar).to have_selector "a[href='#{cooperative.profile_path}']", :text => /^Logged in as.*/
+        end
+      end
+    end
     it { should have_selector '.container', :minimum => 1 }
-  end
-
-  describe 'showing the configured application name' do
-    it { should have_selector '.brand', :text => Cooperative.configuration.application_name }
   end
 end
 

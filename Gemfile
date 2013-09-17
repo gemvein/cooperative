@@ -54,6 +54,8 @@ gem 'friendly_id'
 gem 'public_activity'
 gem 'acts_as_follower'
 gem 'acts-as-taggable-on'
+gem 'acts_as_opengraph'
+gem 'opengraph'
 
 gem 'coletivo', :git => "git://github.com/nerakdon/coletivo.git"
 gem 'bootstrap_leather', :git => "git://github.com/nerakdon/bootstrap_leather.git"

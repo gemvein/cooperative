@@ -9,7 +9,7 @@ feature 'Groups' do
 
   describe 'visiting the Index page' do
     before do
-      sign_in_as group_joiner or raise 'Sign In Failed.'
+      sign_in_as group_joiner
       visit cooperative.groups_path
     end
     subject { page }
@@ -23,7 +23,7 @@ feature 'Groups' do
 
   describe 'visiting the Show page' do
     before do
-      sign_in_as group_joiner or raise 'Sign In Failed.'
+      sign_in_as group_joiner
       visit cooperative.group_path(public_group)
     end
     subject { page }
@@ -37,7 +37,7 @@ feature 'Groups' do
 
   describe 'creating a new group' do
     before do
-      sign_in_as group_joiner or raise 'Sign In Failed.'
+      sign_in_as group_joiner
       visit cooperative.groups_path
       click_link :create_a_group.l
     end
@@ -65,7 +65,7 @@ feature 'Groups' do
 
   describe 'editing and updating a group' do
     before do
-      sign_in_as group_owner or raise 'Sign In Failed.'
+      sign_in_as group_owner
       visit cooperative.group_path(owned_group)
       click_link :edit_group.l
     end
@@ -94,7 +94,7 @@ feature 'Groups' do
 
   describe 'destroying a group' do
     before do
-      sign_in_as group_owner or raise 'Sign In Failed.'
+      sign_in_as group_owner
       visit cooperative.group_path(owned_group)
       click_link :delete_group.l
     end
