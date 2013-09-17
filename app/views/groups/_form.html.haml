@@ -7,12 +7,12 @@
   = f.text_field :name
   = f.text_area :description
   = f.text_field :tag_list, :class => 'tag-box'
-  = f.check_box :public, :label => 'Make this group public?', :default => true
+  = f.check_box :public, :label => :make_this_group_public.l, :default => true
   .controls
-    = f.submit 'Save'
+    = f.submit :save.l
 
 -add_footer_javascript do
   :javascript
     $('.tag-box').tagit({
-      availableTags: ["#{Group.all_tags.join('", "')}"]});
-    }
+      availableTags: ["#{Group.all_tags.join('", "')}"]
+    });
