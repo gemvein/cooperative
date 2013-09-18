@@ -26,7 +26,9 @@ class Status < ActiveRecord::Base
   attr_reader :image_remote_url
   has_attached_file :image, 
       :styles => Cooperative.configuration.paperclip_options[:statuses], 
-      :default_url => "/assets/cooperative/:style/missing.png"
+      :default_url => "/assets/cooperative/:style/missing.png",
+      :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+      :url => "/system/:attachment/:id/:style/:filename"
 
 
   attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type

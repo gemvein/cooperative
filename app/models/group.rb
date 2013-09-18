@@ -11,6 +11,13 @@ class Group < ActiveRecord::Base
                                   :site_name => Cooperative.configuration.application_name
                                 }
 
+  # Paperclip gem
+  has_attached_file :image,
+                    :styles => Cooperative.configuration.paperclip_options[:groups],
+                    :default_url => "/assets/cooperative/:style/missing.png",
+                    :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+                    :url => "/system/:attachment/:id/:style/:filename"
+
   attr_accessible :description, :name, :public, :tag_list
   validates_presence_of :name
 

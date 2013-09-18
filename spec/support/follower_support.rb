@@ -4,7 +4,7 @@ shared_context 'follower support' do
     for permission in user.permissions_as_permissor
       permission.update_attribute :relationship_type, 'none'
     end
-    user.permissions.reload
+    user.reload
     user
   }
   let!(:public_user) {
@@ -12,7 +12,7 @@ shared_context 'follower support' do
     for permission in user.permissions_as_permissor
       permission.update_attribute :relationship_type, 'public'
     end
-    user.permissions.reload
+    user.reload
     user
   }
   let!(:followed_user) {
@@ -20,7 +20,7 @@ shared_context 'follower support' do
     for permission in user.permissions_as_permissor
       permission.update_attribute :relationship_type, 'user_followers'
     end
-    user.permissions.reload
+    user.reload
     user
   }
   let!(:follower_user) {

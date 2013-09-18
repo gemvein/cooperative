@@ -6,9 +6,11 @@ source 'http://rubygems.org'
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :development, :test do
-  gem 'zeus' # Here though manual says not here, because rubymine needs it.
+  gem 'zeus', '0.13.4.pre2' # Here though manual says not here, because rubymine needs it.
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'minitest'
+  gem 'minitest-reporters'
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'poltergeist'
@@ -22,12 +24,11 @@ group :development, :test do
   gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'database_cleaner', '1.0.1' # problems with sql after this version
-  gem 'rails-dev-boost'
+  gem 'ansi'
 end
 
-
-
-gem 'rails', '3.2.14'
+gem 'rails'
+gem 'protected_attributes'
 gem 'rails-i18n'
 
 gem 'haml'
@@ -51,15 +52,15 @@ gem 'authorization'
 
 gem 'paperclip'
 gem 'nokogiri'
-gem 'friendly_id'
+gem 'friendly_id', :git => 'git://github.com/norman/friendly_id.git'
 gem 'public_activity'
 gem 'acts_as_follower'
 gem 'acts-as-taggable-on'
 gem 'acts_as_opengraph'
 gem 'opengraph'
 
-gem 'coletivo', :git => "git://github.com/nerakdon/coletivo.git"
-gem 'bootstrap_leather', :git => "git://github.com/nerakdon/bootstrap_leather.git"
-gem 'private_person', :git => "git://github.com/nerakdon/private_person.git"
+gem 'coletivo', :git => 'git://github.com/nerakdon/coletivo.git'
+gem 'bootstrap_leather', :git => 'git://github.com/nerakdon/bootstrap_leather.git'
+gem 'private_person', :git => 'git://github.com/nerakdon/private_person.git'
 
 gemspec

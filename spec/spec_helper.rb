@@ -21,8 +21,8 @@ if $LOADED_FEATURES.grep(/spec\/spec_helper\.rb/).any?
   end
 end
 
-ENV["RAILS_ENV"] = 'test'
-require File.expand_path("../dummy/config/environment", __FILE__)
+ENV['RAILS_ENV'] = 'test'
+require File.expand_path('../dummy/config/environment', __FILE__)
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
@@ -39,8 +39,8 @@ end
 Capybara.javascript_driver = :poltergeist
 
 require 'factory_girl_rails'
-#FactoryGirl.definition_file_paths = %w(spec/factories)
-#FactoryGirl.find_definitions
+FactoryGirl.definition_file_paths = %w(spec/factories)
+FactoryGirl.find_definitions
 
 require 'database_cleaner'
 require 'shoulda/matchers'
@@ -77,13 +77,5 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
-  end
-end
-
-def wait_until
-  require 'timeout'
-  Timeout.timeout(Capybara.default_wait_time) do
-    sleep(0.1) until value = yield
-    value
   end
 end

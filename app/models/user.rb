@@ -12,7 +12,9 @@ class User < ActiveRecord::Base
   # Paperclip gem
   has_attached_file :image, 
       :styles => Cooperative.configuration.paperclip_options[:users], 
-      :default_url => "/assets/cooperative/:style/missing.png"
+      :default_url => "/assets/cooperative/:style/missing.png",
+      :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+      :url => "/system/:attachment/:id/:style/:filename"
 
   # Acts as Opengraph gem
   acts_as_opengraph :values => {

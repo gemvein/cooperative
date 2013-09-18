@@ -1,7 +1,6 @@
 module Cooperative
   require 'rails'
   require 'rails-i18n'
-  require 'rails-dev-boost'
   
   require 'cooperative/configuration'
   require 'cooperative/railtie'
