@@ -75,7 +75,7 @@
       <file leaf-file-name="db_scrub.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="48" selection-start="959" selection-end="959" vertical-scroll-proportion="0.45454547" vertical-offset="432" max-vertical-offset="1314">
+            <state line="33" column="32" selection-start="817" selection-end="817" vertical-scroll-proportion="0.36910996" vertical-offset="453" max-vertical-offset="1296">
               <folding />
             </state>
           </provider>
@@ -1135,7 +1135,11 @@
       <created>1379707607912</created>
       <updated>1379707607912</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="This should help.">
+      <created>1379707844090</created>
+      <updated>1379707844090</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers>
       <GitHub shared="false" url="">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1206,7 +1210,6 @@
       <TodoPanelSettings />
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
-    <MESSAGE value="Roles, follows, and permissions models tested and passing." />
     <MESSAGE value="PrivatePerson built as separate gem, then installed" />
     <MESSAGE value="Installed bootstrap_leather, preparing to integrate it &#10;" />
     <MESSAGE value="Updated views to make use of bootstrap_leather. &#10;&#10;Development environment basically working, all tests passing." />
@@ -1231,7 +1234,8 @@
     <MESSAGE value="Could be missing something, but I think this is right." />
     <MESSAGE value="Nope, I was wrong." />
     <MESSAGE value="Trying to figure out why the script is failing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to figure out why the script is failing" />
+    <MESSAGE value="This should help." />
+    <option name="LAST_COMMIT_MESSAGE" value="This should help." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1348,7 +1352,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="48" selection-start="959" selection-end="959" vertical-scroll-proportion="0.45454547" vertical-offset="432" max-vertical-offset="1314">
+        <state line="33" column="32" selection-start="817" selection-end="817" vertical-scroll-proportion="0.36910996" vertical-offset="453" max-vertical-offset="1296">
           <folding />
         </state>
       </provider>
