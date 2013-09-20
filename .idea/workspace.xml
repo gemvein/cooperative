@@ -1,110 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/public/system/images/5/large/hqdefault.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/public/system/images/5/medium/hqdefault.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/public/system/images/5/original/hqdefault.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/public/system/images/5/thumb/hqdefault.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010119_create_groups_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010120_create_messages_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010121_create_pages_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010122_create_statuses_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010123_create_users_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010124_acts_as_follower_migration.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010125_create_activities.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010127_acts_as_taggable_on_migration.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010128_create_person_ratings.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010130_create_permissions_table.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920014700_rolify_create_roles.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/bundle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/bin/bundle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../specjour_rails_app/bin/bundle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.specjour/hooks.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../specjour_rails_app/features/support/minitest_disable.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/lib/tasks/prepare_specjour_dbs.rake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rails" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/bin/rails" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../specjour_rails_app/bin/rails" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dummy/bin/rake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../specjour_rails_app/bin/rake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/spinner.css.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Test Results - All_specs_in__models.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/spinner.css.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/generators/cooperative/install/templates/migrate/create_roles_table.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/generators/cooperative/install/templates/migrate/create_roles_users_table.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/script/rails" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/script/zeus_rspec_runner.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/script/zeus_start" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/dummy/script/rails" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../specjour_rails_app/script/rails" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/dummy/db/migrate/20130917214833_create_comments_table.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010118_create_comments_table.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/development.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/db/test.sqlite3" afterPath="$PROJECT_DIR$/../specjour_rails_app/db/test.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/.rvmrc" afterPath="$PROJECT_DIR$/../specjour/.rvmrc" />
+    <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="Attempting to fix error with g">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock" afterPath="$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/Gemfile" afterPath="$PROJECT_DIR$/../specjour_rails_app/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ability.rb" afterPath="$PROJECT_DIR$/app/models/ability.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/activities_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/activities_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/activity.rb" afterPath="$PROJECT_DIR$/app/models/activity.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/config/application.rb" afterPath="$PROJECT_DIR$/../specjour_rails_app/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/app/models/article.rb" afterPath="$PROJECT_DIR$/../specjour_rails_app/app/models/article.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/app/assets/stylesheets/articles.css.scss" afterPath="$PROJECT_DIR$/../specjour_rails_app/app/assets/stylesheets/articles.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/app/assets/javascripts/articles.js.coffee" afterPath="$PROJECT_DIR$/../specjour_rails_app/app/assets/javascripts/articles.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/app/controllers/articles_controller.rb" afterPath="$PROJECT_DIR$/../specjour_rails_app/app/controllers/articles_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/comments_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/comments_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/cooperative.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/cooperative.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/cooperative.rb" afterPath="$PROJECT_DIR$/lib/cooperative.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/behaviors/cooperative_behaviors.rb" afterPath="$PROJECT_DIR$/spec/behaviors/cooperative_behaviors.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/cooperative_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/cooperative_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/cooperative_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/cooperative_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/database.yml" afterPath="$PROJECT_DIR$/spec/dummy/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/config/environments/development.rb" afterPath="$PROJECT_DIR$/../specjour_rails_app/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/spec/dummy/config/initializers/devise.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/follow.rb" afterPath="$PROJECT_DIR$/app/models/follow.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/follows_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/follows_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/follows_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/follows_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/group.rb" afterPath="$PROJECT_DIR$/app/models/group.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/group_spec.rb" afterPath="$PROJECT_DIR$/spec/models/group_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/groups_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/groups_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/groups_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/groups_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/groups_support.rb" afterPath="$PROJECT_DIR$/spec/support/groups_support.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/app/views/articles/index.html.erb" afterPath="$PROJECT_DIR$/../specjour_rails_app/app/views/articles/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb" afterPath="$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/messages_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/messages_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/page.rb" afterPath="$PROJECT_DIR$/app/models/page.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/pages_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/pages_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/people_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/people_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/people_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/people_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/profile_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/profile_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/ratings_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/ratings_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/role.rb" afterPath="$PROJECT_DIR$/app/models/role.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/routes.rb" afterPath="$PROJECT_DIR$/spec/dummy/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/config/routes.rb" afterPath="$PROJECT_DIR$/../specjour_rails_app/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/lib/specjour/rspec/runner.rb" afterPath="$PROJECT_DIR$/../specjour/lib/specjour/rspec/runner.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/schema.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/config/initializers/secret_token.rb" afterPath="$PROJECT_DIR$/../specjour_rails_app/config/initializers/secret_token.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/status.rb" afterPath="$PROJECT_DIR$/app/models/status.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/status_spec.rb" afterPath="$PROJECT_DIR$/spec/models/status_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/statuses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/statuses_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/statuses_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/statuses_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tags_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tags_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/tags_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/tags_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/tags_support.rb" afterPath="$PROJECT_DIR$/spec/support/tags_support.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/environments/test.rb" afterPath="$PROJECT_DIR$/spec/dummy/config/environments/test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/config/environments/test.rb" afterPath="$PROJECT_DIR$/../specjour_rails_app/config/environments/test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" afterPath="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cooperative.iws" />
@@ -173,154 +72,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/environments/development.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="58" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="630">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="secret_token.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/initializers/secret_token.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="44" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/app/views/articles/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="73" selection-start="416" selection-end="416" vertical-scroll-proportion="-7.3333335" vertical-offset="108" max-vertical-offset="558">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/app/views/articles/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="198">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/app/views/articles/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="378">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/app/views/articles/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="216">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/application.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="47" selection-start="2476" selection-end="2476" vertical-scroll-proportion="0.0" vertical-offset="55" max-vertical-offset="1224">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/environments/test.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="46" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/Rakefile">
+        <entry file="file://$PROJECT_DIR$/../specjour/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cucumber.rake" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/lib/tasks/cucumber.rake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="161" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1278">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="minitest_disable.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/features/support/minitest_disable.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="51" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".rspec" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/.rspec">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/spec/spec_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="23" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="684">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="runner.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/rspec/runner.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="43" selection-start="74" selection-end="74" vertical-scroll-proportion="0.077922076" vertical-offset="0" max-vertical-offset="360">
+            <state line="8" column="14" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/Gemfile">
+        <entry file="file://$PROJECT_DIR$/../specjour/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="19" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile.lock" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock">
+      <file leaf-file-name="specjour.gemspec" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../specjour/specjour.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="12" selection-start="1892" selection-end="1900" vertical-scroll-proportion="-3.8148148" vertical-offset="1283" max-vertical-offset="2862">
+            <state line="30" column="36" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="774">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cucumber" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/script/cucumber">
+      <file leaf-file-name="configuration.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/configuration.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="1998">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_scrub.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="7" selection-start="655" selection-end="655" vertical-scroll-proportion="0.67741936" vertical-offset="252" max-vertical-offset="1152">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install_generator.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="13" selection-start="1082" selection-end="1136" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2412">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="specjour-create_test_dbs.rake" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../specjour/lib/tasks/specjour-create_test_dbs.rake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rakefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="3" selection-start="247" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1044">
               <folding />
             </state>
           </provider>
@@ -360,11 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/cooperative/railtie.rb" />
-        <option value="$PROJECT_DIR$/.specjour/hooks.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/../specjour/.rvmrc" />
-        <option value="$PROJECT_DIR$/../specjour_rails_app/config/application.rb" />
         <option value="$PROJECT_DIR$/../specjour_rails_app/app/models/article.rb" />
         <option value="$PROJECT_DIR$/../specjour_rails_app/app/controllers/articles_controller.rb" />
         <option value="$PROJECT_DIR$/../sandbox/app/controllers/articles_controller.rb" />
@@ -376,6 +189,11 @@
         <option value="$PROJECT_DIR$/../specjour_rails_app/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/../specjour_rails_app/features/support/minitest_disable.rb" />
         <option value="$PROJECT_DIR$/../specjour/lib/specjour/rspec/runner.rb" />
+        <option value="$PROJECT_DIR$/../specjour/lib/tasks/prepare_specjour_dbs.rake" />
+        <option value="$PROJECT_DIR$/../specjour/lib/tasks/specjour-prerelease.rake" />
+        <option value="$PROJECT_DIR$/../specjour/Rakefile" />
+        <option value="$PROJECT_DIR$/../specjour/specjour.gemspec" />
+        <option value="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" />
       </list>
     </option>
   </component>
@@ -447,7 +265,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -457,7 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -471,11 +289,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -485,7 +303,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -503,29 +321,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="support" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -535,71 +339,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="environments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -613,15 +353,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -631,19 +363,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -653,11 +377,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -667,15 +399,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="generators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="install" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -762,11 +502,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../specjour/lib/tasks" />
       <recent name="$PROJECT_DIR$/../specjour_rails_app" />
       <recent name="$PROJECT_DIR$/spec/behaviors" />
       <recent name="$PROJECT_DIR$/spec/support" />
       <recent name="$PROJECT_DIR$/spec/dummy/public" />
-      <recent name="$PROJECT_DIR$/spec/models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config/initializers" />
@@ -776,7 +516,7 @@
       <recent name="$PROJECT_DIR$/spec" />
     </key>
   </component>
-  <component name="RunManager" selected="Rake.prepare_specjour_dbs">
+  <component name="RunManager" selected="Rake.specjour-create_test_dbs">
     <configuration default="false" name="group_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="cooperative" />
@@ -1084,12 +824,38 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
+    <configuration default="false" name="specjour-create_test_dbs" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="cooperative" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/spec/dummy" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="prepare_specjour_dbs" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <list size="15">
       <item index="0" class="java.lang.String" itemvalue="Rails.Development: sandbox" />
       <item index="1" class="java.lang.String" itemvalue="Rails.Production: sandbox" />
       <item index="2" class="java.lang.String" itemvalue="Rake.spec: sandbox" />
       <item index="3" class="java.lang.String" itemvalue="Rake.test: sandbox" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.prepare_specjour_dbs" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.specjour-create_test_dbs" />
       <item index="5" class="java.lang.String" itemvalue="RSpec.cooperative: spec/models" />
       <item index="6" class="java.lang.String" itemvalue="RSpec.cooperative: spec" />
       <item index="7" class="java.lang.String" itemvalue="Rails.Cooperative: development" />
@@ -1400,7 +1166,19 @@
       <created>1379534253625</created>
       <updated>1379534253625</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Fixed deprecation notice re: backtrace_clean_patterns">
+      <created>1379695059879</created>
+      <updated>1379695059879</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Repaired problems with rake.">
+      <created>1379699091579</created>
+      <updated>1379699091579</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Attempting to fix errors with dropping when no db exists.">
+      <created>1379700437433</created>
+      <updated>1379700437433</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers>
       <GitHub shared="false" url="">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1441,19 +1219,19 @@
     <frame x="-1" y="27" width="1368" height="747" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29695025" sideWeight="0.630303" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29695025" sideWeight="0.630303" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5280899" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.505618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5329053" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25454545" sideWeight="0.7351525" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.6492424" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57945424" sideWeight="0.3037879" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29695025" sideWeight="0.36969697" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219697" sideWeight="0.24077046" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26174498" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26966292" sideWeight="0.6219697" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25454545" sideWeight="0.42054576" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.32718122" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3219697" sideWeight="0.49438202" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3219697" sideWeight="0.7030498" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57945424" sideWeight="0.6962121" order="11" side_tool="false" content_ui="tabs" x="10" y="28" width="1319" height="715" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1471,9 +1249,6 @@
       <TodoPanelSettings />
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
-    <MESSAGE value="Got activities working in development again" />
-    <MESSAGE value="Activities controller tested and passing" />
-    <MESSAGE value="Update to readme" />
     <MESSAGE value="Comments controller tested and passing." />
     <MESSAGE value="Follows controller tested and passing." />
     <MESSAGE value="Groups controller tested and passing." />
@@ -1496,7 +1271,10 @@
     <MESSAGE value="Added specificity to the cooperative behaviors.&#10;&#10;Preparing to install opengraph and acts_as_opengraph." />
     <MESSAGE value="Trying to fix deprecation notice in Rails 4" />
     <MESSAGE value="Updated to work with rails 4, all tests passing, though with some deprecation notices." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated to work with rails 4, all tests passing, though with some deprecation notices." />
+    <MESSAGE value="Fixed deprecation notice re: backtrace_clean_patterns" />
+    <MESSAGE value="Repaired problems with rake." />
+    <MESSAGE value="Attempting to fix errors with dropping when no db exists." />
+    <option name="LAST_COMMIT_MESSAGE" value="Attempting to fix errors with dropping when no db exists." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1506,114 +1284,114 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/initializers/secret_token.rb">
+    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/loader.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="44" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2808">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/app/views/articles/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/../specjour/spec/specjour_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="73" selection-start="416" selection-end="416" vertical-scroll-proportion="-7.3333335" vertical-offset="108" max-vertical-offset="558">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/app/views/articles/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/../specjour/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="385">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/app/views/articles/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="385">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/app/views/articles/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/dev_setup.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="58" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/environments/test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="46" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/script/cucumber">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="12" selection-start="1892" selection-end="1900" vertical-scroll-proportion="-3.8148148" vertical-offset="1283" max-vertical-offset="2862">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="262">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../specjour_rails_app/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+        <state line="12" column="19" selection-start="221" selection-end="221" vertical-scroll-proportion="0.8244275" vertical-offset="0" max-vertical-offset="486">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/lib/tasks/cucumber.rake">
+    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="161" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1278">
+        <state line="77" column="12" selection-start="1892" selection-end="1900" vertical-scroll-proportion="0.43829787" vertical-offset="1283" max-vertical-offset="2862">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/features/support/minitest_disable.rb">
+    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/script/cucumber">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="51" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
+        <state line="10" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="0.72289157" vertical-offset="0" max-vertical-offset="288">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/.rspec">
+    <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="231">
+        <state line="10" column="3" selection-start="247" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1044">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/spec/spec_helper.rb">
+    <entry file="file://$PROJECT_DIR$/../specjour/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="23" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+        <state line="8" column="14" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/rspec/runner.rb">
+    <entry file="file://$PROJECT_DIR$/../specjour/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="43" selection-start="74" selection-end="74" vertical-scroll-proportion="0.077922076" vertical-offset="0" max-vertical-offset="360">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="262">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../specjour/specjour.gemspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="36" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../specjour/lib/tasks/specjour-create_test_dbs.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/configuration.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1674" max-vertical-offset="1998">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="13" selection-start="1082" selection-end="1136" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2412">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="7" selection-start="655" selection-end="655" vertical-scroll-proportion="0.67741936" vertical-offset="252" max-vertical-offset="1152">
           <folding />
         </state>
       </provider>
