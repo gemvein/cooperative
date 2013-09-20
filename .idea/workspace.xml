@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/lib/specjour/railtie.rb" afterPath="$PROJECT_DIR$/../specjour/lib/specjour/railtie.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock" afterPath="$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/lib/specjour.rb" afterPath="$PROJECT_DIR$/../specjour/lib/specjour.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -129,7 +129,7 @@
       <file leaf-file-name="specjour.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="41" selection-start="740" selection-end="780" vertical-scroll-proportion="0.5792208" vertical-offset="191" max-vertical-offset="1710">
+            <state line="24" column="22" selection-start="763" selection-end="763" vertical-scroll-proportion="0.2051948" vertical-offset="353" max-vertical-offset="1710">
               <folding />
             </state>
           </provider>
@@ -1140,7 +1140,11 @@
       <created>1379702657302</created>
       <updated>1379702657302</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Attempting to fix errors with dropping when no db exists.">
+      <created>1379702765595</created>
+      <updated>1379702765595</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers>
       <GitHub shared="false" url="">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1353,7 +1357,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="41" selection-start="740" selection-end="780" vertical-scroll-proportion="0.5792208" vertical-offset="191" max-vertical-offset="1710">
+        <state line="24" column="22" selection-start="763" selection-end="763" vertical-scroll-proportion="0.2051948" vertical-offset="353" max-vertical-offset="1710">
           <folding />
         </state>
       </provider>
