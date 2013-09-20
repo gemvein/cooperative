@@ -21,17 +21,14 @@ describe MessagesController do
       before do
         get :index
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in message_recipient
         get :index
       end
-      it { should respond_with(:success) }
-      it { should render_template(:index) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :index
     end
   end
 
@@ -41,17 +38,14 @@ describe MessagesController do
       before do
         get :sent
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in message_recipient
         get :sent
       end
-      it { should respond_with(:success) }
-      it { should render_template(:sent) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :sent
     end
   end
 
@@ -61,17 +55,14 @@ describe MessagesController do
       before do
         get :trash
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in message_recipient
         get :trash
       end
-      it { should respond_with(:success) }
-      it { should render_template(:trash) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :trash
     end
   end
 
@@ -81,25 +72,21 @@ describe MessagesController do
       before do
         get :show, :id => readable_message.id
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in message_recipient
         get :show, :id => readable_message.id
       end
-      it { should respond_with(:success) }
-      it { should render_template(:show) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :show
     end
     context 'when bogus id given' do
       before do
         sign_in message_recipient
         get :show, :id => 10000
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 
@@ -109,17 +96,14 @@ describe MessagesController do
       before do
         get :new
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in message_sender
         get :new
       end
-      it { should respond_with(:success) }
-      it { should render_template(:new) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :new
     end
   end
 
@@ -129,8 +113,7 @@ describe MessagesController do
       before do
         post :create
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       context 'with invalid attributes' do
@@ -138,17 +121,14 @@ describe MessagesController do
           sign_in message_sender
           post :create
         end
-        it { should respond_with(:success) }
-        it { should render_template(:new) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :new
       end
       context 'with valid attributes' do
         before do
           sign_in message_sender
           post :create, :message => {:subject => 'Subject', :body => 'Body', :recipient_nickname => message_recipient.nickname}
         end
-        it { should respond_with(:redirect) }
-        it { should set_the_flash }
+        it_should_behave_like 'the controller responded successful verbose redirect'
       end
     end
   end
@@ -159,33 +139,28 @@ describe MessagesController do
       before do
         get :reply, :id => child_message.id
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the recipient' do
       before do
         sign_in message_nonrecipient
         get :reply, :id => child_message.id
       end
-      it { should respond_with(403) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as the recipient' do
       before do
         sign_in message_sender
         get :reply, :id => child_message.id
       end
-      it { should respond_with(:success) }
-      it { should render_template(:reply) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :reply
     end
     context 'when bogus commentable_id given' do
       before do
         sign_in message_sender
         get :reply, :id => 10000
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 
@@ -195,32 +170,28 @@ describe MessagesController do
       before do
         get :move_to_trash, :id => readable_message.id
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the owner' do
       before do
         sign_in message_nonrecipient
         get :move_to_trash, :id => readable_message.id
       end
-      it { should respond_with(403) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
       before do
         sign_in message_sender
         get :move_to_trash, :id => readable_message.id
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when bogus commentable_id given' do
       before do
         sign_in message_sender
         get :move_to_trash, :id => 10000
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 
@@ -230,31 +201,28 @@ describe MessagesController do
       before do
         get :restore, :id => readable_message.id
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the owner' do
       before do
         sign_in message_nonrecipient
         get :restore, :id => readable_message.id
       end
-      it { should respond_with(403) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
       before do
         sign_in message_sender
         get :restore, :id => readable_message.id
       end
-      it { should respond_with(:redirect) }
+      it_should_behave_like 'the controller responded successful verbose redirect'
     end
     context 'when bogus commentable_id given' do
       before do
         sign_in message_sender
         get :restore, :id => 10000
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 end

@@ -8,15 +8,13 @@ shared_context 'groups support' do
   let!(:public_group) { FactoryGirl.create(:group, :public => true, :name => 'Public Group') }
 
   let!(:private_group) { FactoryGirl.create(:group, :public => false) }
-  let!(:junk_groups) {
+
+  before do
     25.times do
       FactoryGirl.create(:group, :public => true)
     end
-  }
-
-  before do
-    group_owner.has_role 'owner', owned_group
-    group_member.has_role 'member', owned_group
+    group_owner.add_role :owner, owned_group
+    group_member.add_role :member, owned_group
   end
 
 end

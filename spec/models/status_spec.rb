@@ -40,7 +40,7 @@ describe Status do
     include_context 'statuses support'
 
     describe '#build_status' do
-      subject { unshared_status.build_status }
+      subject { unshared_status.build_status(:user => follower_user) }
       it { should be_a_new Status }
       its(:shareable) { should be unshared_status }
     end

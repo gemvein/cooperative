@@ -39,12 +39,6 @@ module Cooperative
       unless ActiveRecord::Base.connection.table_exists? 'pages'
         migration_template 'migrate/create_pages_table.rb', 'db/migrate/create_pages_table.rb' rescue output $!.message
       end
-      unless ActiveRecord::Base.connection.table_exists? 'roles'
-        migration_template 'migrate/create_roles_table.rb', 'db/migrate/create_roles_table.rb' rescue output $!.message
-      end
-      unless ActiveRecord::Base.connection.table_exists? 'roles_users'
-        migration_template 'migrate/create_roles_users_table.rb', 'db/migrate/create_roles_users_table.rb' rescue output $!.message
-      end
       unless ActiveRecord::Base.connection.table_exists? 'statuses'
         migration_template 'migrate/create_statuses_table.rb', 'db/migrate/create_statuses_table.rb' rescue output $!.message
       end
@@ -52,7 +46,14 @@ module Cooperative
         migration_template 'migrate/create_users_table.rb', 'db/migrate/create_users_table.rb' rescue output $!.message
       end
     end
-    
+
+    def install_rolify
+      unless ActiveRecord::Base.connection.table_exists? 'roles'
+        output "Rolify makes it easy to assign roles to users.", :magenta
+        generate("rolify Role User")
+      end
+    end
+
     def install_public_activity
       unless ActiveRecord::Base.connection.table_exists? 'activities'
         output "Public Activity lets users keep up with what's happening", :magenta

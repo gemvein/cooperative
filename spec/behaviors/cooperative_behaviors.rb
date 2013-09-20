@@ -4,6 +4,37 @@ module CapybaraNodeExtensions
   end
 end
 
+shared_examples 'the controller required login on GET' do
+  it { should respond_with(:redirect) }
+  it { should set_the_flash[:alert] }
+end
+
+shared_examples 'the controller required login on POST' do
+  it { should respond_with(401) }
+  it { should_not set_the_flash }
+end
+
+shared_examples 'the controller responded 404: Page Not Found' do
+  it { should respond_with(404) }
+  it { should_not set_the_flash }
+end
+
+shared_examples 'the controller responded 403: Access Denied' do
+  it { should respond_with(403) }
+  it { should_not set_the_flash }
+end
+
+shared_examples 'the controller responded with template' do |template|
+  it { should respond_with(:success) }
+  it { should render_template(template) }
+  it { should_not set_the_flash }
+end
+
+shared_examples 'the controller responded successful verbose redirect' do
+  it { should respond_with(:redirect) }
+  it { should set_the_flash[:notice] }
+end
+
 shared_examples 'a cooperative page' do |title|
   subject { page }
 

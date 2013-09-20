@@ -57,7 +57,7 @@ class GroupsController < CooperativeController
     authorize! :create, @group
     respond_to do |format|
       if @group.save
-        current_user.has_role 'owner', @group
+        current_user.add_role :owner, @group
         format.html { redirect_to cooperative.group_url(@group), :notice => 'Group was successfully created.' }
         format.json { render :json => @group, status: :created, :location => cooperative.group_url(@group) }
       else
@@ -90,7 +90,7 @@ class GroupsController < CooperativeController
   def join
     @group = Group.find(params[:id]) || ( not_found and return )
     authorize! :join, @group
-    current_user.is_member_of @group
+    current_user.add_role :member, @group
 
     respond_to do |format|
       format.html { redirect_to cooperative.group_url(@group), :notice => 'You have joined ' + @group.name + '.' }
@@ -104,8 +104,7 @@ class GroupsController < CooperativeController
   def leave
     @group = Group.find(params[:id]) || ( not_found and return )
     authorize! :leave, @group
-    @role = Role.where(:name => 'member', :authorizable_type => 'Group', :authorizable_id => @group)
-    current_user.roles.delete(@role)
+    current_user.remove_role :member, @group
 
     respond_to do |format|
       format.html { redirect_to cooperative.groups_url, :notice => 'You have left ' + @group.name + '.' }

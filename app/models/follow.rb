@@ -1,5 +1,7 @@
 class Follow < ActiveRecord::Base
 
+  attr_accessible :followable_type, :followable_id
+
   extend ActsAsFollower::FollowerLib
   extend ActsAsFollower::FollowScopes
 

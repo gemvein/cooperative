@@ -40,14 +40,14 @@ class Status < ActiveRecord::Base
   has_many :comments, :as => :commentable
 
   def build_status(status = nil)
-    status ||= Status.new()
+    status ||= Status.new
     status.shareable = self
     status.title ||= title
     status.description ||= description.present? ? description : body
-    if !image_file_name.nil?
+    unless image_file_name.nil?
       status.image_file_name ||= image_file_name
     end
-    if !media_url.nil?
+    unless media_url.nil?
       status.media_url ||= media_url
       status.media_type ||= media_type
     end

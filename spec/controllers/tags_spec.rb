@@ -10,9 +10,7 @@ describe TagsController, 'routing' do
     before do
       get :index
     end
-    it { should respond_with(:success) }
-    it { should render_template(:index) }
-    it { should_not set_the_flash }
+    it_should_behave_like 'the controller responded with template', :index
   end
 
   describe 'GET show' do
@@ -20,8 +18,6 @@ describe TagsController, 'routing' do
     before do
       get :show, :id => 'reading'
     end
-    it { should respond_with(:success) }
-    it { should render_template(:show) }
-    it { should_not set_the_flash }
+    it_should_behave_like 'the controller responded with template', :show
   end
 end

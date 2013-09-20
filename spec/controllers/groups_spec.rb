@@ -20,17 +20,14 @@ describe GroupsController do
       before do
         get :index
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in group_member
         get :index
       end
-      it { should respond_with(:success) }
-      it { should render_template(:index) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :index
     end
   end
 
@@ -40,25 +37,21 @@ describe GroupsController do
       before do
         get :show, :id => public_group.id
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in group_member
         get :show, :id => public_group.id
       end
-      it { should respond_with(:success) }
-      it { should render_template(:show) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :show
     end
     context 'when bogus id given' do
       before do
         sign_in group_member
         get :show, :id => 10000
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 
@@ -68,17 +61,14 @@ describe GroupsController do
       before do
         get :new
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in group_owner
         get :new
       end
-      it { should respond_with(:success) }
-      it { should render_template(:new) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :new
     end
   end
 
@@ -88,8 +78,7 @@ describe GroupsController do
       before do
         post :create
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       context 'with invalid attributes' do
@@ -97,17 +86,14 @@ describe GroupsController do
           sign_in group_owner
           post :create
         end
-        it { should respond_with(:success) }
-        it { should render_template(:new) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :new
       end
       context 'with valid attributes' do
         before do
           sign_in group_owner
           post :create, :group => {:name => 'Group'}
         end
-        it { should respond_with(:redirect) }
-        it { should set_the_flash }
+        it_should_behave_like 'the controller responded successful verbose redirect'
       end
     end
   end
@@ -118,33 +104,28 @@ describe GroupsController do
       before do
         get :edit, :id => owned_group.id
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the owner' do
       before do
         sign_in group_member
         get :edit, :id => owned_group.id
       end
-      it { should respond_with(403) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
       before do
         sign_in group_owner
         get :edit, :id => owned_group.id
       end
-      it { should respond_with(:success) }
-      it { should render_template(:edit) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :edit
     end
     context 'when bogus commentable_id given' do
       before do
         sign_in group_owner
         get :edit, :id => 10000
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 
@@ -154,16 +135,14 @@ describe GroupsController do
       before do
         put :update, :id => owned_group.id, :group => {:name => 'Edited'}
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the owner' do
       before do
         sign_in group_member
         put :update, :id => owned_group.id, :group => {:name => 'Edited'}
       end
-      it { should respond_with(403) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
       context 'with invalid attributes' do
@@ -171,17 +150,14 @@ describe GroupsController do
           sign_in group_owner
           put :update, :id => owned_group.id, :group => {:name => ''}
         end
-        it { should respond_with(:success) }
-        it { should render_template(:edit) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :edit
       end
       context 'with valid attributes' do
         before do
           sign_in group_owner
           put :update, :id => owned_group.id, :group => {:name => 'Edited'}
         end
-        it { should respond_with(:redirect) }
-        it { should set_the_flash }
+        it_should_behave_like 'the controller responded successful verbose redirect'
       end
     end
     context 'when bogus commentable_id given' do
@@ -189,8 +165,7 @@ describe GroupsController do
         sign_in group_member
         put :update, :id => 10000, :group => {:name => 'Edited'}
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 
@@ -200,16 +175,14 @@ describe GroupsController do
       before do
         delete :destroy, :id => owned_group.id
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the owner' do
       before do
         sign_in group_member
         delete :destroy, :id => owned_group.id
       end
-      it { should respond_with(403) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
       before do
@@ -223,8 +196,7 @@ describe GroupsController do
         sign_in group_member
         delete :destroy, :id => 10000
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 
@@ -234,25 +206,21 @@ describe GroupsController do
       before do
         get :join, :id => public_group.id, :format => 'js'
       end
-      it { should respond_with(401) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
       before do
         sign_in group_joiner
         get :join, :id => public_group.id, :format => 'js'
       end
-      it { should respond_with(:success) }
-      it { should render_template(:join) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :join
     end
     context 'when bogus id given' do
       before do
         sign_in group_joiner
         get :join, :id => 10000, :format => 'js'
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 
@@ -262,25 +230,21 @@ describe GroupsController do
       before do
         get :leave, :id => public_group.id, :format => 'js'
       end
-      it { should respond_with(401) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
       before do
         sign_in group_member
         get :leave, :id => owned_group.id, :format => 'js'
       end
-      it { should respond_with(:success) }
-      it { should render_template(:leave) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :leave
     end
     context 'when bogus id given' do
       before do
         sign_in group_member
         get :leave, :id => 10000, :format => 'js'
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 end

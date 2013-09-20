@@ -25,7 +25,7 @@ module Cooperative
 
   require 'cancan'
   require 'devise'
-  require 'authorization'
+  require 'rolify'
   require 'private_person'
 
   require 'paperclip'

@@ -24,6 +24,9 @@ describe User do
   it { should respond_to(:cannot?) }
   # Acts As Opengraph gem
   it { should respond_to(:opengraph_data) }
+  # Rolify gem
+  it { should respond_to(:has_role?) }
+
 
   # Check that appropriate fields are accessible
   it { should allow_mass_assignment_of(:email) }

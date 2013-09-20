@@ -17,8 +17,7 @@ describe RatingsController, 'routing' do
       before do
         get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
       end
-      it { should respond_with(401) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
       context 'as unauthorized' do
@@ -26,17 +25,14 @@ describe RatingsController, 'routing' do
           sign_in unfollowed_user
           get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
         end
-        it { should respond_with(403) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded successful verbose redirect'
       end
       context 'as authorized' do
         before do
           sign_in follower_user
           get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
         end
-        it { should respond_with(:success) }
-        it { should render_template(:rate) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :rate
       end
     end
   end
@@ -47,8 +43,7 @@ describe RatingsController, 'routing' do
       before do
         get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
       end
-      it { should respond_with(401) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
       context 'as unauthorized' do
@@ -56,17 +51,14 @@ describe RatingsController, 'routing' do
           sign_in unfollowed_user
           get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
         end
-        it { should respond_with(403) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded successful verbose redirect'
       end
       context 'as authorized' do
         before do
           sign_in follower_user
           get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
         end
-        it { should respond_with(:success) }
-        it { should render_template(:rate) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :rate
       end
     end
   end

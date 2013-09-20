@@ -5,7 +5,7 @@ class PeopleController < CooperativeController
   # GET /people
   # GET /people.json
   def index
-    @people = User.where({:public => true}).order(:nickname).page(params[:page])
+    @people = User.order(:nickname).page(params[:page])
     
     respond_to do |format|
       format.html # index.html.haml
@@ -16,7 +16,7 @@ class PeopleController < CooperativeController
   # GET /people/1
   # GET /people/1.json
   def show
-    @person = User.find_by_nickname(params[:id])
+    @person = User.friendly.find(params[:id])
     add_breadcrumb @person.nickname, cooperative.person_path(@person)
 
     respond_to do |format|

@@ -14,9 +14,7 @@ describe StatusesController, 'routing' do
       before do
         get :show, :id => public_status.id
       end
-      it { should respond_with(:success) }
-      it { should render_template(:show) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :show
     end
     context 'when the status is limited access' do
       context 'when not logged in' do
@@ -31,17 +29,14 @@ describe StatusesController, 'routing' do
           sign_in unfollowed_user
           get :show, :id => unshared_status.id
         end
-        it { should respond_with(403) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded successful verbose redirect'
       end
       context 'when authorized' do
         before do
           sign_in follower_user
           get :show, :id => unshared_status.id
         end
-        it { should respond_with(:success) }
-        it { should render_template(:show) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :show
       end
     end
   end
@@ -51,17 +46,14 @@ describe StatusesController, 'routing' do
       before do
         get :new
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in followed_user
         get :new
       end
-      it { should respond_with(:success) }
-      it { should render_template(:new) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :new
     end
   end
   describe 'POST create' do
@@ -70,8 +62,7 @@ describe StatusesController, 'routing' do
       before do
         post :create, :format => 'js'
       end
-      it { should respond_with(401) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
       context 'with invalid attributes' do
@@ -79,18 +70,14 @@ describe StatusesController, 'routing' do
           sign_in followed_user
           post :create, :format => 'js'
         end
-        it { should respond_with(:success) }
-        it { should render_template(:create) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :create
       end
       context 'with valid attributes' do
         before do
           sign_in followed_user
           post :create, :status => {:body => 'Body'}, :format => 'js'
         end
-        it { should respond_with(:success) }
-        it { should render_template(:create) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :create
       end
     end
   end
@@ -100,33 +87,28 @@ describe StatusesController, 'routing' do
       before do
         delete :destroy, :id => unshared_status.id, :format => 'js'
       end
-      it { should respond_with(401) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in, but not as the owner' do
       before do
         sign_in unfollowed_user
         delete :destroy, :id => unshared_status.id, :format => 'js'
       end
-      it { should respond_with(403) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
       before do
         sign_in followed_user
         delete :destroy, :id => unshared_status.id, :format => 'js'
       end
-      it { should respond_with(:success) }
-      it { should render_template(:destroy) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :destroy
     end
     context 'when bogus commentable_id given' do
       before do
         sign_in followed_user
         delete :destroy, :id => 10000, :format => 'js'
       end
-      it { should respond_with(404) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded 404: Page Not Found'
     end
   end
 
@@ -136,17 +118,14 @@ describe StatusesController, 'routing' do
       before do
         get :grab, :uri => 'http://www.queenoftarot.com/', :format => 'js'
       end
-      it { should respond_with(401) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
       before do
         sign_in followed_user
         get :grab, :uri => 'http://www.queenoftarot.com/', :format => 'js'
       end
-      it { should respond_with(:success) }
-      it { should render_template(:grab) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :grab
     end
   end
 end

@@ -23,9 +23,7 @@ describe PagesController do
       before do
         get :show, :path => root_parent_page.test_path
       end
-      it { should respond_with(:success) }
-      it { should render_template(:show) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :show
     end
   end
 
@@ -36,34 +34,28 @@ describe PagesController do
         before do
           get :show, :nesting_resource => 'people', :id => page_owner.nickname, :path => owned_parent_page.test_path
         end
-        it { should respond_with(:success) }
-        it { should render_template(:show) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :show
       end
       context 'when the page is limited access' do
         context 'when not logged in' do
           before do
             get :show, :nesting_resource => 'people', :id => private_page_owner.nickname, :path => private_home_page.test_path
           end
-          it { should respond_with(:redirect) }
-          it { should set_the_flash }
+          it_should_behave_like 'the controller required login on GET'
         end
         context 'when logged in but not authorized' do
           before do
             sign_in page_stranger
             get :show, :nesting_resource => 'people', :id => private_page_owner.nickname, :path => private_home_page.test_path
           end
-          it { should respond_with(403) }
-          it { should_not set_the_flash }
+          it_should_behave_like 'the controller responded 403: Access Denied'
         end
         context 'when authorized' do
           before do
             sign_in page_viewer
             get :show, :nesting_resource => 'people', :id => private_page_owner.nickname, :path => private_home_page.test_path
           end
-          it { should respond_with(:success) }
-          it { should render_template(:show) }
-          it { should_not set_the_flash }
+          it_should_behave_like 'the controller responded with template', :show
         end
       end
     end
@@ -73,17 +65,14 @@ describe PagesController do
         before do
           get :new, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(:redirect) }
-        it { should set_the_flash }
+        it_should_behave_like 'the controller required login on GET'
       end
       context 'when logged in' do
         before do
           sign_in page_owner
           get :new, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(:success) }
-        it { should render_template(:new) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :new
       end
     end
     describe 'POST create' do
@@ -93,8 +82,7 @@ describe PagesController do
         before do
           post :create, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(:redirect) }
-        it { should set_the_flash }
+        it_should_behave_like 'the controller required login on GET'
       end
       context 'when logged in' do
         context 'with invalid attributes' do
@@ -102,17 +90,14 @@ describe PagesController do
             sign_in page_owner
             post :create, :nesting_resource => 'people', :person_id => page_owner.nickname
           end
-          it { should respond_with(:success) }
-          it { should render_template(:new) }
-          it { should_not set_the_flash }
+          it_should_behave_like 'the controller responded with template', :new
         end
         context 'with valid attributes' do
           before do
             sign_in page_owner
             post :create, :page => {:title => 'Page', :body => 'Body'}, :nesting_resource => 'people', :person_id => page_owner.nickname
           end
-          it { should respond_with(:redirect) }
-          it { should set_the_flash }
+          it_should_behave_like 'the controller responded successful verbose redirect'
         end
       end
     end
@@ -122,33 +107,28 @@ describe PagesController do
         before do
           get :edit, :id => owned_parent_page.id, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(:redirect) }
-        it { should set_the_flash }
+        it_should_behave_like 'the controller required login on GET'
       end
       context 'when logged in, but not as the owner' do
         before do
           sign_in page_stranger
           get :edit, :id => owned_parent_page.id, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(403) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded successful verbose redirect'
       end
       context 'when logged in as owner' do
         before do
           sign_in page_owner
           get :edit, :id => owned_parent_page.id, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(:success) }
-        it { should render_template(:edit) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded with template', :edit
       end
       context 'when bogus commentable_id given' do
         before do
           sign_in page_owner
           get :edit, :id => 10000, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(404) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded 404: Page Not Found'
       end
     end
     describe 'PUT update' do
@@ -157,16 +137,14 @@ describe PagesController do
         before do
           put :update, :id => owned_parent_page.id, :page => {:title => 'Page', :body => 'Body'}, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(:redirect) }
-        it { should set_the_flash }
+        it_should_behave_like 'the controller required login on GET'
       end
       context 'when logged in, but not as the owner' do
         before do
           sign_in page_stranger
           put :update, :id => owned_parent_page.id, :page => {:title => 'Page', :body => 'Body'}, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(403) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded successful verbose redirect'
       end
       context 'when logged in as owner' do
         context 'with invalid attributes' do
@@ -174,17 +152,14 @@ describe PagesController do
             sign_in page_owner
             put :update, :id => owned_parent_page.id, :page => {:title => '', :body => ''}, :nesting_resource => 'people', :person_id => page_owner.nickname
           end
-          it { should respond_with(:success) }
-          it { should render_template(:edit) }
-          it { should_not set_the_flash }
+          it_should_behave_like 'the controller responded with template', :edit
         end
         context 'with valid attributes' do
           before do
             sign_in page_owner
             put :update, :id => owned_parent_page.id, :page => {:title => 'Page', :body => 'Body'}, :nesting_resource => 'people', :person_id => page_owner.nickname
           end
-          it { should respond_with(:redirect) }
-          it { should set_the_flash }
+          it_should_behave_like 'the controller responded successful verbose redirect'
         end
       end
       context 'when bogus commentable_id given' do
@@ -192,8 +167,7 @@ describe PagesController do
           sign_in page_owner
           put :update, :id => 10000, :page => {:title => 'Page', :body => 'Body'}, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(404) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded 404: Page Not Found'
       end
     end
     describe 'DELETE destroy' do
@@ -202,16 +176,14 @@ describe PagesController do
         before do
           delete :destroy, :id => owned_parent_page.id, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(:redirect) }
-        it { should set_the_flash }
+        it_should_behave_like 'the controller required login on GET'
       end
       context 'when logged in, but not as the owner' do
         before do
           sign_in page_stranger
           delete :destroy, :id => owned_parent_page.id, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(403) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded successful verbose redirect'
       end
       context 'when logged in as owner' do
         before do
@@ -225,8 +197,7 @@ describe PagesController do
           sign_in page_owner
           delete :destroy, :id => 10000, :nesting_resource => 'people', :person_id => page_owner.nickname
         end
-        it { should respond_with(404) }
-        it { should_not set_the_flash }
+        it_should_behave_like 'the controller responded 404: Page Not Found'
       end
     end
   end

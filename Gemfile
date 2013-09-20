@@ -6,12 +6,12 @@ source 'http://rubygems.org'
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :development, :test do
-  gem 'zeus', '0.13.4.pre2' # Here though manual says not here, because rubymine needs it.
+  gem 'specjour', :github => 'nerakdon/specjour', :branch => 'rails4'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'minitest'
   gem 'minitest-reporters'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', :github => 'thoughtbot/shoulda-matchers', :branch => 'dp-rails-four'
   gem 'capybara'
   gem 'poltergeist'
   gem 'rdoc'
@@ -20,14 +20,14 @@ group :development, :test do
   gem 'simplecov'
   gem 'haml-rails'
   gem 'puma'
-  gem 'w3c_rspec_validators'
+  #gem 'w3c_rspec_validators'
   gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'database_cleaner', '1.0.1' # problems with sql after this version
   gem 'ansi'
 end
 
-gem 'rails'
+gem 'rails', '>=4.0.0'
 gem 'protected_attributes'
 gem 'rails-i18n'
 
@@ -47,8 +47,8 @@ gem 'jquery-ui-bootstrap-rails-asset'
 gem 'tinymce-rails'
 
 gem 'cancan'
-gem 'devise'
-gem 'authorization'
+gem 'devise', '>=3.1.0'
+gem 'rolify'
 
 gem 'paperclip'
 gem 'nokogiri'

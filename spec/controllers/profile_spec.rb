@@ -19,9 +19,7 @@ describe ProfileController, 'routing' do
         sign_in followed_user
         get :edit
       end
-      it { should respond_with(:success) }
-      it { should render_template(:edit) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :edit
     end
   end
 
@@ -31,8 +29,7 @@ describe ProfileController, 'routing' do
       before do
         put :update
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       context 'with invalid attributes' do

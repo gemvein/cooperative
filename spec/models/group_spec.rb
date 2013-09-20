@@ -5,8 +5,8 @@ describe Group do
   # Acts as Taggable on gem
   it { should have_many(:base_tags).through(:taggings) }
 
-  # Authorization gem
-  it { should respond_to(:accepts_role?) }
+  # Rolify gem
+  it { should have_many(:roles) }
 
   # Acts As Opengraph gem
   it { should respond_to(:opengraph_data) }
@@ -32,9 +32,6 @@ describe Group do
       it { should include public_group }
       it { should_not include private_group }
     end
-
-    #TODO: test owner and owner=
-
   end
 
 end

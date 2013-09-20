@@ -2,8 +2,8 @@ class Group < ActiveRecord::Base
   # Acts as Taggable gem
   acts_as_taggable
 
-  # Authorization gem
-  acts_as_authorizable
+  # Rolify gem
+  resourcify
 
   # Acts As Opengraph gem
   acts_as_opengraph :values => {
@@ -23,14 +23,6 @@ class Group < ActiveRecord::Base
 
   def self.open_to_the_public
     where(:public => true)
-  end
-
-  def owner
-    has_owners.first
-  end
-  
-  def owner=(user)
-    owner == user
   end
 
   def url

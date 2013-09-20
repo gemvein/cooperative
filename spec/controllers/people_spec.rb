@@ -11,17 +11,14 @@ describe PeopleController, 'routing' do
       before do
         get :index
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in follower_user
         get :index
       end
-      it { should respond_with(:success) }
-      it { should render_template(:index) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :index
     end
   end
 
@@ -31,17 +28,14 @@ describe PeopleController, 'routing' do
       before do
         get :show, :id => followed_user.nickname
       end
-      it { should respond_with(:redirect) }
-      it { should set_the_flash }
+      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       before do
         sign_in follower_user
         get :show, :id => followed_user.nickname
       end
-      it { should respond_with(:success) }
-      it { should render_template(:show) }
-      it { should_not set_the_flash }
+      it_should_behave_like 'the controller responded with template', :show
     end
   end
 end

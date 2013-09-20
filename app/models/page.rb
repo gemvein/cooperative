@@ -74,7 +74,7 @@ class Page < ActiveRecord::Base
     if pageable_type.blank?
       prefix = '/'
     elsif pageable_type == 'User'
-      person = User.find(pageable_id)
+      person = User.friendly.find(pageable_id)
       prefix = '/people/' + person.nickname + '/'
     end
     prefix + 'pages/' + path_parts.join('/')

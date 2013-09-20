@@ -36,8 +36,8 @@ class User < ActiveRecord::Base
   include PublicActivity::Activist
   activist
 
-  # Authorization gem
-  acts_as_authorized_user
+  # Rolify Gem
+  rolify
 
   # FriendlyId gem
   extend FriendlyId
@@ -51,12 +51,17 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :bio, :image, :skill_list, :interest_list, :hobby_list
   validates_presence_of :nickname
+  validate :nickname_valid?
 
   has_many :comments
   has_many :messages, :foreign_key => :recipient_id
   has_many :messages_as_sender, :class_name => 'Message', :foreign_key => :sender_id
   has_many :pages, :as => :pageable
   has_many :statuses
+
+  def nickname_valid? #TODO test this method
+    nickname.match /^([^\s\?,;:'"<>]*[^\s\?,;:'"<>\.-])$/
+  end
 
   def show_me
     following_users.pluck(:id) << id

@@ -11,5 +11,5 @@ shared_context 'tags support' do
 
   let!(:tagged_status) { FactoryGirl.create(:status, :user => tagged_on_skills_user, :body => 'this #aint #no #disco') }
 
-  let!(:reading_tag) { Tag.find('reading') }
+  let!(:reading_tag) { Tag.friendly.find('reading') }
 end

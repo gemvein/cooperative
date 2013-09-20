@@ -1,25 +1,5 @@
-# figure out where we are being loaded from
-if $LOADED_FEATURES.grep(/spec\/spec_helper\.rb/).any?
-  begin
-    raise "foo"
-  rescue => e
-    puts <<-MSG
-  ===================================================
-  It looks like spec_helper.rb has been loaded
-  multiple times. Normalize the require to:
-
-    require "spec/spec_helper"
-
-  Things like File.join and File.expand_path will
-  cause it to be loaded multiple times.
-
-  Loaded this time from:
-
-    #{e.backtrace.join("\n    ")}
-  ===================================================
-    MSG
-  end
-end
+require 'simplecov'
+SimpleCov.start 'rails'
 
 ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../dummy/config/environment', __FILE__)
@@ -27,6 +7,7 @@ require File.expand_path('../dummy/config/environment', __FILE__)
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'rails/all'
+
 require 'rspec'
 require 'rspec/rails'
 require 'capybara/rspec'
@@ -45,7 +26,7 @@ FactoryGirl.find_definitions
 require 'database_cleaner'
 require 'shoulda/matchers'
 require 'paperclip/matchers'
-require 'w3c_rspec_validators'
+#require 'w3c_rspec_validators'
 require 'cooperative'
 
 include Warden::Test::Helpers

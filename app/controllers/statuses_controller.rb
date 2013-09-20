@@ -70,7 +70,7 @@ class StatusesController < CooperativeController
     # get the images
     @images = []
     doc.css('img').each do |img|
-      image_uri = img["src"]
+      image_uri = img['src']
       image_src = URI::join(@uri, image_uri).to_s
       image_size = _get_http_size(image_src)
       @images << {:src => image_src, :size => image_size}
@@ -81,8 +81,8 @@ class StatusesController < CooperativeController
     # get the videos
     @videos = []
     doc.css('embed').each do |video|
-      video_type = video["type"]
-      video_uri = video["src"].gsub('autoplay=1', '')
+      video_type = video['type']
+      video_uri = video['src'].gsub('autoplay=1', '')
       video_src = URI::join(@uri, video_uri).to_s
       video_size = _get_http_size(video_src)
       @videos << {:src => video_src, :size => video_size, :type => video_type}

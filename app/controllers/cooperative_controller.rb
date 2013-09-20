@@ -1,6 +1,9 @@
 class CooperativeController < ActionController::Base
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+
   include Rails.application.routes.url_helpers
   include Rails.application.routes.mounted_helpers
+  include Devise::Controllers::Helpers
 
   protect_from_forgery
   before_filter :set_locale
@@ -16,6 +19,11 @@ class CooperativeController < ActionController::Base
 
   def access_denied
     authenticate_user! and render :status => 403, :layout => 'cooperative', :file => "#{Rails.root}/public/403"
+  end
+
+protected
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << :nickname
   end
 
 private

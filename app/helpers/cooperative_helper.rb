@@ -32,7 +32,7 @@ module CooperativeHelper
     render :partial => 'layouts/video', :locals => {:url => url, :type => type, :width => args[:width], :height => args[:height]}
   end
 
-  def add_opengraph(object)
+  def add_opengraph_data(object)
     content_for :opengraph_meta_tags, opengraph_meta_tags_for(object)
   end
 end

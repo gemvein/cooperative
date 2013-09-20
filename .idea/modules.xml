@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cooperative.iml" filepath="$PROJECT_DIR$/.idea/cooperative.iml" />
       <module fileurl="file://$PROJECT_DIR$/../private_person/.idea/private_person.iml" filepath="$PROJECT_DIR$/../private_person/.idea/private_person.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sandbox/.idea/sandbox.iml" filepath="$PROJECT_DIR$/../sandbox/.idea/sandbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../specjour/.idea/specjour.iml" filepath="$PROJECT_DIR$/../specjour/.idea/specjour.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../specjour_rails_app/.idea/specjour_rails_app.iml" filepath="$PROJECT_DIR$/../specjour_rails_app/.idea/specjour_rails_app.iml" />
     </modules>
   </component>
 </project>
