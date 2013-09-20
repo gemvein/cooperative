@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock" afterPath="$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" afterPath="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -74,7 +75,7 @@
       <file leaf-file-name="db_scrub.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="54" selection-start="770" selection-end="770" vertical-scroll-proportion="0.30806845" vertical-offset="432" max-vertical-offset="1296">
+            <state line="34" column="48" selection-start="959" selection-end="959" vertical-scroll-proportion="0.45454547" vertical-offset="432" max-vertical-offset="1314">
               <folding />
             </state>
           </provider>
@@ -1130,7 +1131,11 @@
       <created>1379707353447</created>
       <updated>1379707353447</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Trying to figure out why the script is failing">
+      <created>1379707607912</created>
+      <updated>1379707607912</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers>
       <GitHub shared="false" url="">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1201,7 +1206,6 @@
       <TodoPanelSettings />
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
-    <MESSAGE value="Messages controller tested and passing." />
     <MESSAGE value="Roles, follows, and permissions models tested and passing." />
     <MESSAGE value="PrivatePerson built as separate gem, then installed" />
     <MESSAGE value="Installed bootstrap_leather, preparing to integrate it &#10;" />
@@ -1226,7 +1230,8 @@
     <MESSAGE value="Attempting to circumvent Rails 4 bug" />
     <MESSAGE value="Could be missing something, but I think this is right." />
     <MESSAGE value="Nope, I was wrong." />
-    <option name="LAST_COMMIT_MESSAGE" value="Nope, I was wrong." />
+    <MESSAGE value="Trying to figure out why the script is failing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to figure out why the script is failing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1343,7 +1348,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="54" selection-start="770" selection-end="770" vertical-scroll-proportion="0.30806845" vertical-offset="432" max-vertical-offset="1296">
+        <state line="34" column="48" selection-start="959" selection-end="959" vertical-scroll-proportion="0.45454547" vertical-offset="432" max-vertical-offset="1314">
           <folding />
         </state>
       </provider>
