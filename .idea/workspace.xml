@@ -111,7 +111,7 @@
       <file leaf-file-name="db_scrub.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="163" selection-start="1517" selection-end="1517" vertical-scroll-proportion="0.62068963" vertical-offset="792" max-vertical-offset="1296">
+            <state line="57" column="88" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.6980609" vertical-offset="774" max-vertical-offset="1278">
               <folding />
             </state>
           </provider>
@@ -1261,7 +1261,11 @@
       <created>1379705602149</created>
       <updated>1379705602149</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Attempting to fix errors with dropping when no db exists.">
+      <created>1379706270267</created>
+      <updated>1379706270267</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers>
       <GitHub shared="false" url="">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1474,7 +1478,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="163" selection-start="1517" selection-end="1517" vertical-scroll-proportion="0.62068963" vertical-offset="792" max-vertical-offset="1296">
+        <state line="57" column="88" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.6980609" vertical-offset="774" max-vertical-offset="1278">
           <folding />
         </state>
       </provider>
