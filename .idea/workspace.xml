@@ -182,7 +182,7 @@
       <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="45" selection-start="475" selection-end="475" vertical-scroll-proportion="0.64819944" vertical-offset="54" max-vertical-offset="612">
+            <state line="16" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.49861497" vertical-offset="108" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
@@ -1301,7 +1301,11 @@
       <created>1379707092665</created>
       <updated>1379707092665</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Could be missing something, but I think this is right.">
+      <created>1379707162132</created>
+      <updated>1379707162132</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers>
       <GitHub shared="false" url="">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1514,7 +1518,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="475" selection-end="475" vertical-scroll-proportion="0.64819944" vertical-offset="54" max-vertical-offset="612">
+        <state line="16" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.49861497" vertical-offset="108" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
