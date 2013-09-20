@@ -75,7 +75,16 @@
       <file leaf-file-name="db_scrub.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="89" selection-start="879" selection-end="879" vertical-scroll-proportion="0.3821138" vertical-offset="453" max-vertical-offset="1296">
+            <state line="57" column="32" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.52845526" vertical-offset="831" max-vertical-offset="1314">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="worker.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/worker.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="94" column="35" selection-start="2146" selection-end="2192" vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="1890">
               <folding />
             </state>
           </provider>
@@ -1151,7 +1160,11 @@
       <created>1379708218797</created>
       <updated>1379708218797</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Corrected backtrace variable.">
+      <created>1379708331428</created>
+      <updated>1379708331428</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers>
       <GitHub shared="false" url="">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1222,7 +1235,6 @@
       <TodoPanelSettings />
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
-    <MESSAGE value="PrivatePerson built as separate gem, then installed" />
     <MESSAGE value="Installed bootstrap_leather, preparing to integrate it &#10;" />
     <MESSAGE value="Updated views to make use of bootstrap_leather. &#10;&#10;Development environment basically working, all tests passing." />
     <MESSAGE value="Cooperative now configuring Bootstrap Leather via a railtie." />
@@ -1247,7 +1259,8 @@
     <MESSAGE value="Nope, I was wrong." />
     <MESSAGE value="Trying to figure out why the script is failing" />
     <MESSAGE value="This should help." />
-    <option name="LAST_COMMIT_MESSAGE" value="This should help." />
+    <MESSAGE value="Corrected backtrace variable." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected backtrace variable." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1341,13 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/worker.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="26" selection-start="2158" selection-end="2173" vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="1890">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/dummy/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
@@ -1362,9 +1368,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/worker.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="35" selection-start="2146" selection-end="2192" vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="1890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="89" selection-start="879" selection-end="879" vertical-scroll-proportion="0.3821138" vertical-offset="453" max-vertical-offset="1296">
+        <state line="57" column="32" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.52845526" vertical-offset="831" max-vertical-offset="1314">
           <folding />
         </state>
       </provider>
