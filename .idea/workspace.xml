@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/config/database.yml" afterPath="$PROJECT_DIR$/../specjour_rails_app/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" afterPath="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cooperative.iws" />
@@ -71,145 +71,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour/Rakefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="14" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="specjour.gemspec" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour/specjour.gemspec">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="36" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="774">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="configuration.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/configuration.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="1998">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db_scrub.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="db_scrub.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="88" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1278">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="specjour.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="41" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="1692">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dev_setup.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/dev_setup.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filter_parameter_logging.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/initializers/filter_parameter_logging.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dispatcher.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/dispatcher.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1350" max-vertical-offset="3168">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fork.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/fork.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="576">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loader.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/loader.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2808">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="worker.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/worker.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="26" selection-start="2158" selection-end="2173" vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="1890">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/database.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.49861497" vertical-offset="108" max-vertical-offset="612">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/dummy/config/database.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="install_generator.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="13" selection-start="1082" selection-end="1136" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2412">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rakefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="3" selection-start="247" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1044">
+            <state line="31" column="54" selection-start="770" selection-end="770" vertical-scroll-proportion="0.30806845" vertical-offset="432" max-vertical-offset="1296">
               <folding />
             </state>
           </provider>
@@ -233,7 +98,7 @@
       </list>
     </option>
     <option name="SYNC_SETTING" value="DONT" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../specjour_rails_app" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../specjour" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -262,9 +127,9 @@
         <option value="$PROJECT_DIR$/../specjour/specjour.gemspec" />
         <option value="$PROJECT_DIR$/../specjour/lib/specjour/railtie.rb" />
         <option value="$PROJECT_DIR$/../specjour/lib/specjour.rb" />
-        <option value="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" />
         <option value="$PROJECT_DIR$/../specjour/lib/specjour/worker.rb" />
         <option value="$PROJECT_DIR$/../specjour_rails_app/config/database.yml" />
+        <option value="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" />
       </list>
     </option>
   </component>
@@ -410,7 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -420,29 +285,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dummy" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -452,41 +299,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1305,7 +1126,11 @@
       <created>1379707162132</created>
       <updated>1379707162132</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Nope, I was wrong.">
+      <created>1379707353447</created>
+      <updated>1379707353447</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers>
       <GitHub shared="false" url="">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1376,7 +1201,6 @@
       <TodoPanelSettings />
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
-    <MESSAGE value="Groups controller tested and passing." />
     <MESSAGE value="Messages controller tested and passing." />
     <MESSAGE value="Roles, follows, and permissions models tested and passing." />
     <MESSAGE value="PrivatePerson built as separate gem, then installed" />
@@ -1401,7 +1225,8 @@
     <MESSAGE value="Attempting to fix errors with dropping when no db exists." />
     <MESSAGE value="Attempting to circumvent Rails 4 bug" />
     <MESSAGE value="Could be missing something, but I think this is right." />
-    <option name="LAST_COMMIT_MESSAGE" value="Could be missing something, but I think this is right." />
+    <MESSAGE value="Nope, I was wrong." />
+    <option name="LAST_COMMIT_MESSAGE" value="Nope, I was wrong." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1448,7 +1273,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="247" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1044">
+        <state line="10" column="3" selection-start="247" selection-end="262" vertical-scroll-proportion="0.17603911" vertical-offset="108" max-vertical-offset="1044">
           <folding />
         </state>
       </provider>
@@ -1477,13 +1302,6 @@
     <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/dispatcher.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3168">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="88" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1278">
           <folding />
         </state>
       </provider>
@@ -1518,7 +1336,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.49861497" vertical-offset="108" max-vertical-offset="612">
+        <state line="16" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.70415646" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="54" selection-start="770" selection-end="770" vertical-scroll-proportion="0.30806845" vertical-offset="432" max-vertical-offset="1296">
           <folding />
         </state>
       </provider>
