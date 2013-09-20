@@ -75,7 +75,7 @@
       <file leaf-file-name="db_scrub.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="32" selection-start="817" selection-end="817" vertical-scroll-proportion="0.36910996" vertical-offset="453" max-vertical-offset="1296">
+            <state line="32" column="17" selection-start="789" selection-end="789" vertical-scroll-proportion="0.32198954" vertical-offset="453" max-vertical-offset="1296">
               <folding />
             </state>
           </provider>
@@ -1139,7 +1139,11 @@
       <created>1379707844090</created>
       <updated>1379707844090</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="This should help.">
+      <created>1379708041339</created>
+      <updated>1379708041339</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers>
       <GitHub shared="false" url="">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1352,7 +1356,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="32" selection-start="817" selection-end="817" vertical-scroll-proportion="0.36910996" vertical-offset="453" max-vertical-offset="1296">
+        <state line="32" column="17" selection-start="789" selection-end="789" vertical-scroll-proportion="0.32198954" vertical-offset="453" max-vertical-offset="1296">
           <folding />
         </state>
       </provider>
