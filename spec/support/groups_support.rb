@@ -1,15 +1,16 @@
-shared_context 'groups support' do
-  let!(:group_owner) { FactoryGirl.create(:user) }
-  let!(:group_member) { FactoryGirl.create(:user) }
-  let!(:group_joiner) { FactoryGirl.create(:user) }
+module GroupsContext
+  extend RSpec::SharedContext
+  before :each do
+    group_owner =   FactoryGirl.create(:user)
+    group_member =   FactoryGirl.create(:user)
+    group_joiner =   FactoryGirl.create(:user)
 
-  let!(:owned_group) { FactoryGirl.create(:group, :public => true) }
+    owned_group =   FactoryGirl.create(:group, :public => true)
 
-  let!(:public_group) { FactoryGirl.create(:group, :public => true, :name => 'Public Group') }
+    public_group =   FactoryGirl.create(:group, :public => true, :name => 'Public Group')
 
-  let!(:private_group) { FactoryGirl.create(:group, :public => false) }
+    private_group =   FactoryGirl.create(:group, :public => false)
 
-  before do
     25.times do
       FactoryGirl.create(:group, :public => true)
     end

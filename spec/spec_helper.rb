@@ -1,7 +1,4 @@
-require 'simplecov'
-SimpleCov.start 'rails'
-
-ENV['RAILS_ENV'] = 'test'
+ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../dummy/config/environment', __FILE__)
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
@@ -32,19 +29,13 @@ require 'cooperative'
 include Warden::Test::Helpers
 Warden.test_mode!
 
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
-Dir["#{File.dirname(__FILE__)}/behaviors/**/*.rb"].each {|f| require f}
-
-if defined?(Capybara::Node)
-  Capybara::Session.send :include, CapybaraNodeExtensions
-  Capybara::Node::Element.send :include, CapybaraNodeExtensions
-end
+require 'shared_files'
 
 RSpec.configure do |config|
   config.include Capybara::DSL, :type => feature
   config.include Paperclip::Shoulda::Matchers
+  config.include Cooperative::SharedContexts
+  config.include Cooperative::SharedExamples
   config.use_transactional_fixtures = false
 
   config.before(:suite) do

@@ -15,7 +15,7 @@ RSpec::Matchers.define :be_commentable do
 
   failure_message_for_should do |commentable|
     if commentable.is_a? Capybara::Result
-      "expected #{commentable.map {|x| x[:id]} * ', '} to be commentable"
+      "expected #{commentable.map { |x| x[:id] } * ', '} to be commentable"
     else
       "expected #{commentable.class.name} #{commentable.id.to_s} to be commentable"
     end
@@ -23,7 +23,7 @@ RSpec::Matchers.define :be_commentable do
 
   failure_message_for_should_not do |commentable|
     if commentable.is_a? Capybara::Result
-      "expected #{commentable.map {|x| x[:id]} * ', '} to not be commentable"
+      "expected #{commentable.map { |x| x[:id] } * ', '} to not be commentable"
     else
       "expected #{commentable.class.name} #{commentable.id.to_s} to not be commentable"
     end

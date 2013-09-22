@@ -1,12 +1,14 @@
 require 'spec_helper'
 
 describe ProfileController, 'routing' do
+
   routes { Cooperative::Engine.routes }
   it { should route(:get, '/profile').to(:action => 'edit') }
   it { should route(:put, '/profile').to(:action => 'update') }
 
   describe 'GET edit' do
-    include_context 'follower support'
+
+    extend Followers
     context 'when not logged in' do
       before do
         get :edit
@@ -24,7 +26,8 @@ describe ProfileController, 'routing' do
   end
 
   describe 'PUT update' do
-    include_context 'follower support'
+
+    extend Followers
     context 'when not logged in' do
       before do
         put :update

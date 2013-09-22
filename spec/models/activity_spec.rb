@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Activity do
   # Check that gems are installed
   # PrivatePerson gem
-  it { should have_many :permissions}
+  it { should have_many :permissions }
 
   # Public Activity gem
   it { should belong_to :owner }
@@ -13,7 +13,8 @@ describe Activity do
   context 'Class Methods' do
     describe '#find_all_by_users' do
       context 'when full' do
-        include_context 'activities support'
+        include BasicUsersContext
+        include ActivitiesContext
         subject { Activity.find_all_by_users([followed_user, follower_user]) }
         it { should have_at_least(9).items }
         it { should include created_page_activity }
@@ -25,7 +26,7 @@ describe Activity do
       end
 
       context 'when empty' do
-        include_context 'follower support'
+        include BasicUsersContext
         subject { Activity.find_all_by_users([followed_user, follower_user]).empty? }
         it { should be true }
       end

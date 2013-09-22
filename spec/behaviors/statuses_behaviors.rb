@@ -33,10 +33,10 @@ shared_examples 'a page with a status form' do |selector, namespace|
         end
         it 'handles @mentions' do
           within selector do
-            fill_in "#{namespace}_status_body", :with => "This is a mention of @#{follower_user.nickname}."
+            fill_in "#{namespace}_status_body", :with => "This is a mention of @#{ActivitiesContext.follower_user.nickname}."
             click_button :set_status.l
           end
-          expect(page).to have_selector 'a[href=\'/people/' + follower_user.nickname + '\']', :text => "@#{follower_user.nickname}", :count => 1
+          expect(page).to have_selector 'a[href=\'/people/' + ActivitiesContext.follower_user.nickname + '\']', :text => "@#{ActivitiesContext.follower_user.nickname}", :count => 1
         end
         it 'handles http:// links' do
           within selector do

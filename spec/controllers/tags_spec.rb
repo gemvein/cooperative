@@ -1,12 +1,13 @@
 require 'spec_helper'
 
 describe TagsController, 'routing' do
+
   routes { Cooperative::Engine.routes }
   it { should route(:get, '/tags').to(:action => 'index') }
   it { should route(:get, '/tags/foo').to(:action => 'show', :id => 'foo') }
 
   describe 'GET index' do
-    include_context 'tags support'
+    extend Tags
     before do
       get :index
     end
@@ -14,7 +15,7 @@ describe TagsController, 'routing' do
   end
 
   describe 'GET show' do
-    include_context 'tags support'
+    extend Tags
     before do
       get :show, :id => 'reading'
     end

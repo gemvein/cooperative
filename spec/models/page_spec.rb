@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Page do
   # Check that gems are installed
   # PrivatePerson gem
-  it { should have_many :permissions}
+  it { should have_many :permissions }
   # Public Activity gem
   it { should have_many(:activities) }
   # Friendly ID gem
@@ -33,7 +33,7 @@ describe Page do
   it { should have_many(:children) }
 
   context 'Class Methods' do
-    include_context 'pages support'
+    extend Pages
 
     describe '#find_all_root_pages' do
       subject { Page.find_all_root_pages }
@@ -124,7 +124,7 @@ describe Page do
   end
 
   context 'Instance Methods' do
-    include_context 'pages support'
+    extend Pages
 
     describe '#should_generate_new_friendly_id?' do
       context 'when new' do

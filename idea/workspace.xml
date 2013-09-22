@@ -246,7 +246,7 @@
     <file path="/messages_helper.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378312142833" ignored="false" />
     <file path="/comments_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378335559608" ignored="false" />
     <file path="/comments.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378327367861" ignored="false" />
-    <file path="/follower_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1379105150184" ignored="false" />
+    <file path="/followers_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1379105150184" ignored="false" />
     <file path="/groups.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378327335925" ignored="false" />
     <file path="/groups_support.rb" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378410175026" ignored="false" />
     <file path="/edit.html.haml" changelist="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" time="1378748324048" ignored="false" />

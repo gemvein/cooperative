@@ -1,15 +1,16 @@
 require 'spec_helper'
 
 describe StatusesController, 'routing' do
+
   routes { Cooperative::Engine.routes }
   it { should route(:get, '/statuses/new').to(:action => 'new') }
   it { should route(:post, '/statuses').to(:action => 'create') }
   it { should route(:get, '/statuses/1').to(:action => 'show', :id => 1) }
   it { should route(:delete, '/statuses/1').to(:action => 'destroy', :id => 1) }
   it { should route(:get, '/statuses/grab').to(:action => 'grab') }
-  
+
   describe 'GET show' do
-    include_context 'statuses support'
+    extend Statuses
     context 'when the status is public' do
       before do
         get :show, :id => public_status.id
@@ -33,7 +34,7 @@ describe StatusesController, 'routing' do
       end
       context 'when authorized' do
         before do
-          sign_in follower_user
+          sign_in ActivitiesContext.follower_user
           get :show, :id => unshared_status.id
         end
         it_should_behave_like 'the controller responded with template', :show
@@ -41,7 +42,7 @@ describe StatusesController, 'routing' do
     end
   end
   describe 'GET new' do
-    include_context 'statuses support'
+    extend Statuses
     context 'when not logged in' do
       before do
         get :new
@@ -57,7 +58,7 @@ describe StatusesController, 'routing' do
     end
   end
   describe 'POST create' do
-    include_context 'statuses support'
+    extend Statuses
     context 'when not logged in' do
       before do
         post :create, :format => 'js'
@@ -82,7 +83,7 @@ describe StatusesController, 'routing' do
     end
   end
   describe 'DELETE destroy' do
-    include_context 'statuses support'
+    extend Statuses
     context 'when not logged in' do
       before do
         delete :destroy, :id => unshared_status.id, :format => 'js'
@@ -113,7 +114,8 @@ describe StatusesController, 'routing' do
   end
 
   describe 'GET grab' do
-    include_context 'follower support'
+
+    extend Followers
     context 'when not logged in' do
       before do
         get :grab, :uri => 'http://www.queenoftarot.com/', :format => 'js'

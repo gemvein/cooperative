@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe GroupsController do
+
   routes { Cooperative::Engine.routes }
   describe 'routing' do
     it { should route(:get, '/groups').to(:action => 'index') }
@@ -15,7 +16,7 @@ describe GroupsController do
   end
 
   describe 'GET index' do
-    include_context 'groups support'
+    extend Groups
     context 'when not logged in' do
       before do
         get :index
@@ -32,7 +33,7 @@ describe GroupsController do
   end
 
   describe 'GET show' do
-    include_context 'groups support'
+    extend Groups
     context 'when not logged in' do
       before do
         get :show, :id => public_group.id
@@ -56,7 +57,7 @@ describe GroupsController do
   end
 
   describe 'GET new' do
-    include_context 'groups support'
+    extend Groups
     context 'when not logged in' do
       before do
         get :new
@@ -73,7 +74,7 @@ describe GroupsController do
   end
 
   describe 'POST create' do
-    include_context 'groups support'
+    extend Groups
     context 'when not logged in' do
       before do
         post :create
@@ -99,7 +100,7 @@ describe GroupsController do
   end
 
   describe 'GET edit' do
-    include_context 'groups support'
+    extend Groups
     context 'when not logged in' do
       before do
         get :edit, :id => owned_group.id
@@ -130,7 +131,7 @@ describe GroupsController do
   end
 
   describe 'PUT update' do
-    include_context 'groups support'
+    extend Groups
     context 'when not logged in' do
       before do
         put :update, :id => owned_group.id, :group => {:name => 'Edited'}
@@ -170,7 +171,7 @@ describe GroupsController do
   end
 
   describe 'DELETE destroy' do
-    include_context 'groups support'
+    extend Groups
     context 'when not logged in' do
       before do
         delete :destroy, :id => owned_group.id
@@ -201,7 +202,7 @@ describe GroupsController do
   end
 
   describe 'GET join' do
-    include_context 'groups support'
+    extend Groups
     context 'when not logged in' do
       before do
         get :join, :id => public_group.id, :format => 'js'
@@ -225,7 +226,7 @@ describe GroupsController do
   end
 
   describe 'GET leave' do
-    include_context 'groups support'
+    extend Groups
     context 'when not logged in' do
       before do
         get :leave, :id => public_group.id, :format => 'js'

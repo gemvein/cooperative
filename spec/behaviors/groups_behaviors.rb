@@ -6,11 +6,11 @@ end
 
 RSpec::Matchers.define :be_joinable do
   define_method :joinable_ids do |actual|
-    actual.map{|x| x[:id] if was_joined?(x)}.compact
+    actual.map { |x| x[:id] if was_joined?(x) }.compact
   end
 
   define_method :unjoinable_ids do |actual|
-    actual.map{|x| x[:id] unless was_joined?(x)}.compact
+    actual.map { |x| x[:id] unless was_joined?(x) }.compact
   end
 
   define_method :is_joinable? do |actual|
@@ -49,11 +49,11 @@ end
 
 RSpec::Matchers.define :be_leaveable do
   define_method :leaveable_ids do |actual|
-    actual.map{|x| x[:id] if was_left?(x)}.compact
+    actual.map { |x| x[:id] if was_left?(x) }.compact
   end
 
   define_method :unleaveable_ids do |actual|
-    actual.map{|x| x[:id] unless was_left?(x)}.compact
+    actual.map { |x| x[:id] unless was_left?(x) }.compact
   end
 
   define_method :is_leaveable? do |actual|

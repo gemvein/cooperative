@@ -37,10 +37,10 @@ describe Status do
   it { should have_many(:comments) }
 
   context 'Instance Methods' do
-    include_context 'statuses support'
+    extend Statuses
 
     describe '#build_status' do
-      subject { unshared_status.build_status(:user => follower_user) }
+      subject { unshared_status.build_status(:user => ActivitiesContext.follower_user) }
       it { should be_a_new Status }
       its(:shareable) { should be unshared_status }
     end
@@ -52,7 +52,7 @@ describe Status do
 
     describe '#path' do
       subject { unshared_status.path }
-      it { should eq '/statuses/' + unshared_status.id.to_s  }
+      it { should eq '/statuses/' + unshared_status.id.to_s }
     end
 
     describe '#tokenize_tags' do

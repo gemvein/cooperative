@@ -21,7 +21,7 @@ describe Message do
   it { should have_many(:children) }
 
   context 'Class Methods' do
-    include_context 'messages support'
+    extend Messages
 
     describe '#unread' do
       subject { Message.unread }
@@ -67,7 +67,7 @@ describe Message do
   end
 
   context 'Instance Methods' do
-    include_context 'messages support'
+    extend Messages
 
     describe '#you_cant_send_messages_to_yourself' do
       context 'when valid' do
@@ -127,7 +127,7 @@ describe Message do
 
     describe '#recipient_nickname=' do
       subject {
-        message = FactoryGirl.create(:message, :sender => message_sender, :recipient_nickname => message_recipient.nickname )
+        message = FactoryGirl.create(:message, :sender => message_sender, :recipient_nickname => message_recipient.nickname)
         message.recipient
       }
       it { should eq message_recipient }

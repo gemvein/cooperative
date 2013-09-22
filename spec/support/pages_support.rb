@@ -1,26 +1,25 @@
-shared_context 'pages support' do
-  let!(:page_owner) {
-    user = FactoryGirl.create(:user)
-    user.wildcard_permit! 'public', 'Page'
-    user
-  }
-  let!(:page_follower) { FactoryGirl.create(:user) }
-  let!(:page_stranger) { FactoryGirl.create(:user) }
-  let!(:page_viewer) { FactoryGirl.create(:user) }
-  let!(:private_page_owner) { FactoryGirl.create(:user) }
+module PagesContext
+  extend RSpec::SharedContext
+  before :each do
+    page_owner = FactoryGirl.create(:user)
+    page_owner.wildcard_permit! 'public', 'Page'
 
-  let!(:root_parent_page) { FactoryGirl.create(:page, :title => 'Parent') }
-  let!(:root_child_page) { FactoryGirl.create(:page, :title => 'Child', :parent => root_parent_page) }
-  let!(:root_grandchild_page) { FactoryGirl.create(:page, :title => 'Grandchild', :parent => root_child_page) }
+    page_follower =   FactoryGirl.create(:user)
+    page_stranger =   FactoryGirl.create(:user)
+    page_viewer =   FactoryGirl.create(:user)
+    private_page_owner =   FactoryGirl.create(:user)
 
-  let!(:owned_parent_page) { FactoryGirl.create(:page, :title => 'Parent', :pageable => page_owner) }
-  let!(:owned_child_page) { FactoryGirl.create(:page, :title => 'Child', :pageable => page_owner, :parent => owned_parent_page) }
-  let!(:owned_grandchild_page) { FactoryGirl.create(:page, :title => 'Grandchild', :pageable => page_owner, :parent => owned_child_page) }
+    root_parent_page =   FactoryGirl.create(:page, :title => 'Parent')
+    root_child_page =   FactoryGirl.create(:page, :title => 'Child', :parent => root_parent_page)
+    root_grandchild_page =   FactoryGirl.create(:page, :title => 'Grandchild', :parent => root_child_page)
 
-  let!(:private_home_page) { FactoryGirl.create(:page, :title => 'Home', :pageable => private_page_owner) }
-  let!(:private_inner_page) { FactoryGirl.create(:page, :title => 'Inner', :pageable => private_page_owner, :parent => private_home_page) }
+    owned_parent_page =   FactoryGirl.create(:page, :title => 'Parent', :pageable => page_owner)
+    owned_child_page =   FactoryGirl.create(:page, :title => 'Child', :pageable => page_owner, :parent => owned_parent_page)
+    owned_grandchild_page =   FactoryGirl.create(:page, :title => 'Grandchild', :pageable => page_owner, :parent => owned_child_page)
 
-  before do
+    private_home_page =   FactoryGirl.create(:page, :title => 'Home', :pageable => private_page_owner)
+    private_inner_page =   FactoryGirl.create(:page, :title => 'Inner', :pageable => private_page_owner, :parent => private_home_page)
+
     page_follower.follow page_owner
     private_page_owner.follow page_viewer
   end

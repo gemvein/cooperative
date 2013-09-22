@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :user do
-    sequence(:nickname) {|n| "person#{n}" }
+    sequence(:nickname) { |n| "person#{n}" }
     email { "#{nickname}@example.com".downcase }
-    bio   "<p>
+    bio "<p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra purus eget lectus adipiscing faucibus. Suspendisse vehicula, sapien ut accumsan facilisis, dui nunc elementum nulla, vel pretium ante risus non leo. Nullam rutrum suscipit orci. Aliquam at augue ac nulla eleifend eleifend a nec lorem. Maecenas rhoncus odio ac magna egestas ultrices. Integer tristique aliquam auctor. Pellentesque eget nisi tortor. Ut accumsan, enim ut facilisis adipiscing, libero neque sodales mi, eget sagittis metus justo nec nunc. Suspendisse potenti. Curabitur iaculis tortor lobortis nunc eleifend scelerisque.
           </p>
           <p>

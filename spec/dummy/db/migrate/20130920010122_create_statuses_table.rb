@@ -19,6 +19,7 @@ class CreateStatusesTable < ActiveRecord::Migration
     add_index :statuses, :user_id
     add_index :statuses, [:shareable_type, :shareable_id]
   end
+
   def down
     drop_table :statuses
   end

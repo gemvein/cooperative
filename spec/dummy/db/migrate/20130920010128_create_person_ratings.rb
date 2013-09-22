@@ -2,10 +2,10 @@ class CreatePersonRatings < ActiveRecord::Migration
   def self.up
     create_table :person_ratings do |t|
       t.integer :person_id
-      t.string  :person_type
+      t.string :person_type
 
       t.integer :rateable_id
-      t.string  :rateable_type
+      t.string :rateable_type
 
       t.decimal :weight, :precision => 5, :scale => 2
 

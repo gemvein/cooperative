@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe PagesController do
+
   routes { Cooperative::Engine.routes }
 
   describe 'routing' do
@@ -18,7 +19,7 @@ describe PagesController do
   end
 
   describe 'at the root' do
-    include_context 'pages support'
+    extend Pages
     describe 'GET show' do
       before do
         get :show, :path => root_parent_page.test_path
@@ -28,7 +29,7 @@ describe PagesController do
   end
 
   describe 'within a person' do
-    include_context 'pages support'
+    extend Pages
     describe 'GET show' do
       context 'when the page is public' do
         before do
@@ -60,7 +61,7 @@ describe PagesController do
       end
     end
     describe 'GET new' do
-      include_context 'pages support'
+      extend Pages
       context 'when not logged in' do
         before do
           get :new, :nesting_resource => 'people', :person_id => page_owner.nickname
@@ -77,7 +78,7 @@ describe PagesController do
     end
     describe 'POST create' do
 
-      include_context 'pages support'
+      extend Pages
       context 'when not logged in' do
         before do
           post :create, :nesting_resource => 'people', :person_id => page_owner.nickname
@@ -102,7 +103,7 @@ describe PagesController do
       end
     end
     describe 'GET edit' do
-      include_context 'pages support'
+      extend Pages
       context 'when not logged in' do
         before do
           get :edit, :id => owned_parent_page.id, :nesting_resource => 'people', :person_id => page_owner.nickname
@@ -132,7 +133,7 @@ describe PagesController do
       end
     end
     describe 'PUT update' do
-      include_context 'pages support'
+      extend Pages
       context 'when not logged in' do
         before do
           put :update, :id => owned_parent_page.id, :page => {:title => 'Page', :body => 'Body'}, :nesting_resource => 'people', :person_id => page_owner.nickname
@@ -171,7 +172,7 @@ describe PagesController do
       end
     end
     describe 'DELETE destroy' do
-      include_context 'pages support'
+      extend Pages
       context 'when not logged in' do
         before do
           delete :destroy, :id => owned_parent_page.id, :nesting_resource => 'people', :person_id => page_owner.nickname

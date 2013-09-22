@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe MessagesController do
+
   routes { Cooperative::Engine.routes }
 
   describe 'routing' do
@@ -16,7 +17,7 @@ describe MessagesController do
   end
 
   describe 'GET index' do
-    include_context 'messages support'
+    extend Messages
     context 'when not logged in' do
       before do
         get :index
@@ -33,7 +34,7 @@ describe MessagesController do
   end
 
   describe 'GET sent' do
-    include_context 'messages support'
+    extend Messages
     context 'when not logged in' do
       before do
         get :sent
@@ -50,7 +51,7 @@ describe MessagesController do
   end
 
   describe 'GET trash' do
-    include_context 'messages support'
+    extend Messages
     context 'when not logged in' do
       before do
         get :trash
@@ -67,7 +68,7 @@ describe MessagesController do
   end
 
   describe 'GET show' do
-    include_context 'messages support'
+    extend Messages
     context 'when not logged in' do
       before do
         get :show, :id => readable_message.id
@@ -91,7 +92,7 @@ describe MessagesController do
   end
 
   describe 'GET new' do
-    include_context 'messages support'
+    extend Messages
     context 'when not logged in' do
       before do
         get :new
@@ -108,7 +109,7 @@ describe MessagesController do
   end
 
   describe 'POST create' do
-    include_context 'messages support'
+    extend Messages
     context 'when not logged in' do
       before do
         post :create
@@ -134,7 +135,7 @@ describe MessagesController do
   end
 
   describe 'GET reply' do
-    include_context 'messages support'
+    extend Messages
     context 'when not logged in' do
       before do
         get :reply, :id => child_message.id
@@ -165,7 +166,7 @@ describe MessagesController do
   end
 
   describe 'GET move_to_trash' do
-    include_context 'messages support'
+    extend Messages
     context 'when not logged in' do
       before do
         get :move_to_trash, :id => readable_message.id
@@ -196,7 +197,7 @@ describe MessagesController do
   end
 
   describe 'GET restore' do
-    include_context 'messages support'
+    extend Messages
     context 'when not logged in' do
       before do
         get :restore, :id => readable_message.id

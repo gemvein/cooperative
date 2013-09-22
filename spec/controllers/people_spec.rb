@@ -1,12 +1,14 @@
 require 'spec_helper'
 
 describe PeopleController, 'routing' do
+
   routes { Cooperative::Engine.routes }
   it { should route(:get, '/people').to(:action => 'index') }
   it { should route(:get, '/people/nickname').to(:action => 'show', :id => 'nickname') }
 
   describe 'GET index' do
-    include_context 'follower support'
+
+    extend Followers
     context 'when not logged in' do
       before do
         get :index
@@ -15,7 +17,7 @@ describe PeopleController, 'routing' do
     end
     context 'when logged in' do
       before do
-        sign_in follower_user
+        sign_in ActivitiesContext.follower_user
         get :index
       end
       it_should_behave_like 'the controller responded with template', :index
@@ -23,7 +25,8 @@ describe PeopleController, 'routing' do
   end
 
   describe 'GET show' do
-    include_context 'follower support'
+
+    extend Followers
     context 'when not logged in' do
       before do
         get :show, :id => followed_user.nickname
@@ -32,7 +35,7 @@ describe PeopleController, 'routing' do
     end
     context 'when logged in' do
       before do
-        sign_in follower_user
+        sign_in ActivitiesContext.follower_user
         get :show, :id => followed_user.nickname
       end
       it_should_behave_like 'the controller responded with template', :show

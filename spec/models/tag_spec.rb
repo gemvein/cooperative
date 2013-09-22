@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe User do
+describe Tag do
   # Check that gems are installed
   # Acts as Taggable on gem
   it { should have_many(:taggings) }
@@ -10,20 +10,20 @@ describe User do
   it { should respond_to(:opengraph_data) }
 
   context 'Class Methods' do
-    include_context 'tags support'
+    extend Tags
 
     describe '#total_item_counts' do
       subject { Tag.total_item_counts }
-      it { should include({:name => 'reading', :count => 5})}
-      it { should include({:name => 'apprehension', :count => 3})}
-      it { should include({:name => 'disco', :count => 1})}
+      it { should include({:name => 'reading', :count => 5}) }
+      it { should include({:name => 'apprehension', :count => 3}) }
+      it { should include({:name => 'disco', :count => 1}) }
 
     end
 
   end
 
   context 'Instance Methods' do
-    include_context 'tags support'
+    extend Tags
 
     describe '#recent_users' do
       subject { reading_tag.recent_users }

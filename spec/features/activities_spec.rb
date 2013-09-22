@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 feature 'Activities' do
-  include_context 'login support'
-  include_context 'activities support'
-  include_context 'comments support'
+  extend Login
+  extend Activities
+  extend Comments
 
   before do
-    sign_in_as follower_user
+    sign_in_as ActivitiesContext.follower_user
     visit cooperative.home_path
     page
   end

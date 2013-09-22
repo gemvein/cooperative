@@ -1,8 +1,9 @@
 require 'spec_helper'
 
 feature 'Groups' do
-  include_context 'login support'
-  include_context 'groups support'
+
+  extend Login
+  extend Groups
 
   before do
   end

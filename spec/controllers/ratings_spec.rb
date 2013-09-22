@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe RatingsController, 'routing' do
+
   routes { Cooperative::Engine.routes }
   for nesting_resource in %w{statuses}
     it { should route(:get, "/#{nesting_resource}/1/rate/2").to(:action => 'rate', :id => 1, :rating => 2) }
@@ -12,7 +13,7 @@ describe RatingsController, 'routing' do
   end
 
   describe 'GET rate' do
-    include_context 'activities support'
+    extend Activities
     context 'when not logged in' do
       before do
         get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
@@ -29,7 +30,7 @@ describe RatingsController, 'routing' do
       end
       context 'as authorized' do
         before do
-          sign_in follower_user
+          sign_in ActivitiesContext.follower_user
           get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
         end
         it_should_behave_like 'the controller responded with template', :rate
@@ -38,7 +39,7 @@ describe RatingsController, 'routing' do
   end
 
   describe 'GET unrate' do
-    include_context 'activities support'
+    extend Activities
     context 'when not logged in' do
       before do
         get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
@@ -55,7 +56,7 @@ describe RatingsController, 'routing' do
       end
       context 'as authorized' do
         before do
-          sign_in follower_user
+          sign_in ActivitiesContext.follower_user
           get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
         end
         it_should_behave_like 'the controller responded with template', :rate

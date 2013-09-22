@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20130920014700) do
 
   create_table "activities", force: true do |t|
-    t.integer  "trackable_id"
-    t.string   "trackable_type"
-    t.integer  "owner_id"
-    t.string   "owner_type"
-    t.string   "key"
-    t.text     "parameters"
-    t.integer  "recipient_id"
-    t.string   "recipient_type"
+    t.integer "trackable_id"
+    t.string "trackable_type"
+    t.integer "owner_id"
+    t.string "owner_type"
+    t.string "key"
+    t.text "parameters"
+    t.integer "recipient_id"
+    t.string "recipient_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 20130920014700) do
   add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type"
 
   create_table "comments", force: true do |t|
-    t.integer  "user_id"
-    t.string   "commentable_type"
-    t.integer  "commentable_id"
-    t.text     "body"
+    t.integer "user_id"
+    t.string "commentable_type"
+    t.integer "commentable_id"
+    t.text "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,11 +43,11 @@ ActiveRecord::Schema.define(version: 20130920014700) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "follows", force: true do |t|
-    t.integer  "followable_id",                   null: false
-    t.string   "followable_type",                 null: false
-    t.integer  "follower_id",                     null: false
-    t.string   "follower_type",                   null: false
-    t.boolean  "blocked",         default: false, null: false
+    t.integer "followable_id", null: false
+    t.string "followable_type", null: false
+    t.integer "follower_id", null: false
+    t.string "follower_type", null: false
+    t.boolean "blocked", default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -56,25 +56,25 @@ ActiveRecord::Schema.define(version: 20130920014700) do
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows"
 
   create_table "groups", force: true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.boolean  "public",             default: true
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
+    t.string "name"
+    t.text "description"
+    t.boolean "public", default: true
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "messages", force: true do |t|
-    t.integer  "sender_id"
-    t.integer  "recipient_id"
-    t.integer  "parent_id"
-    t.string   "subject"
-    t.text     "body"
-    t.boolean  "deleted_by_sender"
-    t.boolean  "deleted_by_recipient"
+    t.integer "sender_id"
+    t.integer "recipient_id"
+    t.integer "parent_id"
+    t.string "subject"
+    t.text "body"
+    t.boolean "deleted_by_sender"
+    t.boolean "deleted_by_recipient"
     t.datetime "read_at"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -85,14 +85,14 @@ ActiveRecord::Schema.define(version: 20130920014700) do
   add_index "messages", ["sender_id", "deleted_by_sender"], name: "index_messages_on_sender_id_and_deleted_by_sender"
 
   create_table "pages", force: true do |t|
-    t.integer  "parent_id"
-    t.string   "pageable_type"
-    t.integer  "pageable_id"
-    t.string   "slug"
-    t.string   "title"
-    t.text     "description"
-    t.text     "keywords"
-    t.text     "body"
+    t.integer "parent_id"
+    t.string "pageable_type"
+    t.integer "pageable_id"
+    t.string "slug"
+    t.string "title"
+    t.text "description"
+    t.text "keywords"
+    t.text "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -102,11 +102,11 @@ ActiveRecord::Schema.define(version: 20130920014700) do
   add_index "pages", ["slug"], name: "index_pages_on_slug"
 
   create_table "permissions", force: true do |t|
-    t.string   "permissor_type"
-    t.integer  "permissor_id"
-    t.string   "permissible_type"
-    t.integer  "permissible_id"
-    t.string   "relationship_type", default: "none"
+    t.string "permissor_type"
+    t.integer "permissor_id"
+    t.string "permissible_type"
+    t.integer "permissible_id"
+    t.string "relationship_type", default: "none"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -115,11 +115,11 @@ ActiveRecord::Schema.define(version: 20130920014700) do
   add_index "permissions", ["permissor_type", "permissor_id"], name: "index_permissions_on_permissor_type_and_permissor_id"
 
   create_table "person_ratings", force: true do |t|
-    t.integer  "person_id"
-    t.string   "person_type"
-    t.integer  "rateable_id"
-    t.string   "rateable_type"
-    t.decimal  "weight",        precision: 5, scale: 2
+    t.integer "person_id"
+    t.string "person_type"
+    t.integer "rateable_id"
+    t.string "rateable_type"
+    t.decimal "weight", precision: 5, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -127,9 +127,9 @@ ActiveRecord::Schema.define(version: 20130920014700) do
   add_index "person_ratings", ["rateable_type"], name: "index_person_ratings_on_rateable_type"
 
   create_table "roles", force: true do |t|
-    t.string   "name"
-    t.integer  "resource_id"
-    t.string   "resource_type"
+    t.string "name"
+    t.integer "resource_id"
+    t.string "resource_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -138,20 +138,20 @@ ActiveRecord::Schema.define(version: 20130920014700) do
   add_index "roles", ["name"], name: "index_roles_on_name"
 
   create_table "statuses", force: true do |t|
-    t.integer  "user_id"
-    t.string   "shareable_type"
-    t.integer  "shareable_id"
-    t.text     "body"
-    t.string   "url"
-    t.string   "title"
-    t.text     "description"
-    t.string   "media_url"
-    t.string   "media_type"
+    t.integer "user_id"
+    t.string "shareable_type"
+    t.integer "shareable_id"
+    t.text "body"
+    t.string "url"
+    t.string "title"
+    t.text "description"
+    t.string "media_url"
+    t.string "media_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
     t.datetime "image_updated_at"
   end
 
@@ -159,12 +159,12 @@ ActiveRecord::Schema.define(version: 20130920014700) do
   add_index "statuses", ["user_id"], name: "index_statuses_on_user_id"
 
   create_table "taggings", force: true do |t|
-    t.integer  "tag_id"
-    t.integer  "taggable_id"
-    t.string   "taggable_type"
-    t.integer  "tagger_id"
-    t.string   "tagger_type"
-    t.string   "context",       limit: 128
+    t.integer "tag_id"
+    t.integer "taggable_id"
+    t.string "taggable_type"
+    t.integer "tagger_id"
+    t.string "tagger_type"
+    t.string "context", limit: 128
     t.datetime "created_at"
   end
 
@@ -176,31 +176,31 @@ ActiveRecord::Schema.define(version: 20130920014700) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0
+    t.integer "sign_in_count", default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "confirmation_token"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
-    t.integer  "failed_attempts",        default: 0
-    t.string   "unlock_token"
+    t.string "unconfirmed_email"
+    t.integer "failed_attempts", default: 0
+    t.string "unlock_token"
     t.datetime "locked_at"
-    t.string   "authentication_token"
-    t.string   "nickname"
-    t.text     "bio"
+    t.string "authentication_token"
+    t.string "nickname"
+    t.text "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
     t.datetime "image_updated_at"
   end
 

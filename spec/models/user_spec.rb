@@ -54,15 +54,16 @@ describe User do
   context 'Instance Methods' do
 
     describe '#show_me' do
-      include_context 'follower support'
-      subject { follower_user.show_me }
+      require Gem.loaded_specs['cooperative'].full_gem_path + '/spec/support/followers_support'
+      extend Followers
+      subject { ActivitiesContext.follower_user.show_me }
       it { should have_exactly(2).items }
-      it { should include follower_user.id }
+      it { should include ActivitiesContext.follower_user.id }
       it { should include followed_user.id }
     end
 
     describe '#activities' do
-      include_context 'activities support'
+      extend Activities
       subject { followed_user.activities }
       it { should have_at_least(5).items }
       it { should include created_page_activity }
@@ -74,8 +75,8 @@ describe User do
     end
 
     describe '#activities_as_follower' do
-      include_context 'activities support'
-      subject { follower_user.activities_as_follower }
+      extend Activities
+      subject { ActivitiesContext.follower_user.activities_as_follower }
       it { should have_at_least(6).items }
       it { should include created_page_activity }
       it { should include edited_page_activity }
@@ -86,13 +87,14 @@ describe User do
     end
 
     describe '#ability' do
-      include_context 'follower support'
+      require Gem.loaded_specs['cooperative'].full_gem_path + '/spec/support/followers_support'
+      extend Followers
       subject { followed_user.ability }
       it { should be_an Ability }
     end
 
     describe '#message_trash' do
-      include_context 'messages support'
+      extend Messages
       subject { message_sender.message_trash }
       it { should have_exactly(2).items }
       it { should include trash_by_sender_message }

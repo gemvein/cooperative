@@ -6,7 +6,8 @@ source 'http://rubygems.org'
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :development, :test do
-  gem 'specjour', :github => 'nerakdon/specjour', :branch => 'rails4'
+  #gem 'specjour', :github => 'nerakdon/specjour', :branch => 'rails4'
+  gem 'specjour', :path => '~/Sites/specjour'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'minitest'
@@ -17,7 +18,6 @@ group :development, :test do
   gem 'rdoc'
   gem 'bundler'
   gem 'jeweler'
-  gem 'simplecov'
   gem 'haml-rails'
   gem 'puma'
   #gem 'w3c_rspec_validators'

@@ -1,10 +1,10 @@
 RSpec::Matchers.define :be_rateable do
   define_method :rateable_ids do |actual|
-    actual.map{|x| x[:id] if was_rated?(x)}.compact
+    actual.map { |x| x[:id] if was_rated?(x) }.compact
   end
 
   define_method :unrateable_ids do |actual|
-    actual.map{|x| x[:id] unless was_rated?(x)}.compact
+    actual.map { |x| x[:id] unless was_rated?(x) }.compact
   end
 
   define_method :is_rateable? do |actual|
@@ -37,7 +37,7 @@ RSpec::Matchers.define :be_rateable do
     if rateable.is_a? Capybara::Result
       "expected #{rateable_ids(rateable) * ', '} to not be rateable"
     else
-    "expected #{rateable[:id]} to not be rateable"
+      "expected #{rateable[:id]} to not be rateable"
     end
   end
 end

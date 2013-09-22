@@ -2,7 +2,8 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, :type => :controller
 end
 
-shared_context 'login support' do
+module LoginContext
+  extend RSpec::SharedContext
   def sign_in_as(user)
     visit new_user_session_path
     within '#new_user' do

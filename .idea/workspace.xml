@@ -1,21 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock" afterPath="$PROJECT_DIR$/../specjour_rails_app/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" afterPath="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" />
+    <list default="true" id="2be0524b-2623-4e43-bea4-ee6892b0c912" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/support/0_basic_users_support.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/shared_files.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/support/follower_support.rb" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/support/users_support.rb" afterPath="$PROJECT_DIR$/spec/support/login_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/../specjour/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010120_create_messages_table.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010120_create_messages_table.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010121_create_pages_table.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010121_create_pages_table.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010122_create_statuses_table.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010122_create_statuses_table.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010123_create_users_table.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010123_create_users_table.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010124_acts_as_follower_migration.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010124_acts_as_follower_migration.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010125_create_activities.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010125_create_activities.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010128_create_person_ratings.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010128_create_person_ratings.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010130_create_permissions_table.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/migrate/20130920010130_create_permissions_table.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/public/403.html" afterPath="$PROJECT_DIR$/spec/dummy/public/403.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/public/404.html" afterPath="$PROJECT_DIR$/spec/dummy/public/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/public/422.html" afterPath="$PROJECT_DIR$/spec/dummy/public/422.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/public/500.html" afterPath="$PROJECT_DIR$/spec/dummy/public/500.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/activities_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/activities_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/activities_spec.rb" afterPath="$PROJECT_DIR$/spec/features/activities_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/activities_support.rb" afterPath="$PROJECT_DIR$/spec/support/activities_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/activity_spec.rb" afterPath="$PROJECT_DIR$/spec/models/activity_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/spec/specjour/cli_spec.rb" afterPath="$PROJECT_DIR$/../specjour/spec/specjour/cli_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/app/assets/stylesheets/customizable_bootstrap/colors.css.scss" afterPath="$PROJECT_DIR$/spec/dummy/app/assets/stylesheets/customizable_bootstrap/colors.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/comment_spec.rb" afterPath="$PROJECT_DIR$/spec/models/comment_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/behaviors/comments_behaviors.rb" afterPath="$PROJECT_DIR$/spec/behaviors/comments_behaviors.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/comments_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/comments_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/comments_support.rb" afterPath="$PROJECT_DIR$/spec/support/comments_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config.ru" afterPath="$PROJECT_DIR$/spec/dummy/config.ru" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/initializers/cooperative.rb" afterPath="$PROJECT_DIR$/spec/dummy/config/initializers/cooperative.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/environments/development.rb" afterPath="$PROJECT_DIR$/spec/dummy/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/spec/dummy/config/initializers/devise.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/follow_spec.rb" afterPath="$PROJECT_DIR$/spec/models/follow_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/follows_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/follows_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/group_spec.rb" afterPath="$PROJECT_DIR$/spec/models/group_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/behaviors/groups_behaviors.rb" afterPath="$PROJECT_DIR$/spec/behaviors/groups_behaviors.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/groups_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/groups_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/groups_spec.rb" afterPath="$PROJECT_DIR$/spec/features/groups_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/groups_support.rb" afterPath="$PROJECT_DIR$/spec/support/groups_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.specjour/hooks.rb" afterPath="$PROJECT_DIR$/.specjour/hooks.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/app/assets/stylesheets/customizable_bootstrap/index.css.scss" afterPath="$PROJECT_DIR$/spec/dummy/app/assets/stylesheets/customizable_bootstrap/index.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/app/assets/stylesheets/customizable_bootstrap/layers.css.scss" afterPath="$PROJECT_DIR$/spec/dummy/app/assets/stylesheets/customizable_bootstrap/layers.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/message_spec.rb" afterPath="$PROJECT_DIR$/spec/models/message_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/messages_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/messages_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/messages_support.rb" afterPath="$PROJECT_DIR$/spec/support/messages_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/page_spec.rb" afterPath="$PROJECT_DIR$/spec/models/page_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/pages_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/pages_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/pages_support.rb" afterPath="$PROJECT_DIR$/spec/support/pages_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/people_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/people_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../specjour/spec/specjour/printer_spec.rb" afterPath="$PROJECT_DIR$/../specjour/spec/specjour/printer_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/profile_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/profile_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/bin/rails" afterPath="$PROJECT_DIR$/spec/dummy/bin/rails" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/behaviors/rateable_behaviors.rb" afterPath="$PROJECT_DIR$/spec/behaviors/rateable_behaviors.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/ratings_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/ratings_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/schema.rb" afterPath="$PROJECT_DIR$/spec/dummy/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/status_spec.rb" afterPath="$PROJECT_DIR$/spec/models/status_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/behaviors/statuses_behaviors.rb" afterPath="$PROJECT_DIR$/spec/behaviors/statuses_behaviors.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/statuses_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/statuses_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/statuses_support.rb" afterPath="$PROJECT_DIR$/spec/support/statuses_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/tag_spec.rb" afterPath="$PROJECT_DIR$/spec/models/tag_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/tags_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/tags_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/tags_support.rb" afterPath="$PROJECT_DIR$/spec/support/tags_support.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/config/environments/test.rb" afterPath="$PROJECT_DIR$/spec/dummy/config/environments/test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories/users.rb" afterPath="$PROJECT_DIR$/spec/factories/users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idea/workspace.xml" afterPath="$PROJECT_DIR$/idea/workspace.xml" />
     </list>
     <ignored path="cooperative.iws" />
     <ignored path=".idea/workspace.xml" />
-    <ignored path="../private_person/.idea/misc.xml" />
-    <ignored path="../private_person/.idea/workspace.xml" />
-    <ignored path="../private_person/.idea/modules.xml" />
-    <ignored path="../private_person/.idea/private_person.iml" />
-    <ignored path="../private_person/.idea/encodings.xml" />
-    <ignored path="../private_person/.idea/.rakeTasks" />
-    <ignored path="../private_person/.idea/scopes/scope_settings.xml" />
-    <ignored path="../private_person/.idea/vcs.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,32 +90,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="false" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/cooperative@All_specs_in__spec__1_.coverage" NAME="private_person: spec Coverage Results" MODIFIED="1379534048314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../private_person" />
-    <SUITE FILE_PATH="coverage/cooperative@Zeus.coverage" NAME="Zeus Coverage Results" MODIFIED="1379479920160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/cooperative@FollowsController_routing.coverage" NAME="FollowsController routing Coverage Results" MODIFIED="1379549272054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@group_spec.coverage" NAME="group_spec Coverage Results" MODIFIED="1379643929356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@All_specs_in__models.coverage" NAME="cooperative: spec/models Coverage Results" MODIFIED="1379535160273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@db_migrate.coverage" NAME="db:migrate Coverage Results" MODIFIED="1379643889017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/dummy" />
-    <SUITE FILE_PATH="coverage/cooperative@db_create.coverage" NAME="prepare_specjour_dbs Coverage Results" MODIFIED="1379662463525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/dummy" />
-    <SUITE FILE_PATH="coverage/cooperative@activity_spec__1_.coverage" NAME="activity_spec (1) Coverage Results" MODIFIED="1379607958373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@cooperative__spec_models.coverage" NAME="cooperative: spec/models Coverage Results" MODIFIED="1379644019654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@activities_spec.coverage" NAME="activities_spec Coverage Results" MODIFIED="1379547992067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@log_clear.coverage" NAME="log:clear Coverage Results" MODIFIED="1379652187163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/dummy" />
-    <SUITE FILE_PATH="coverage/cooperative@All_specs_in__spec.coverage" NAME="All specs in: spec Coverage Results" MODIFIED="1379516336575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/dummy" />
-    <SUITE FILE_PATH="coverage/cooperative@ActivitiesController_GET_index_when_not_logged_in.coverage" NAME="ActivitiesController GET index when not logged in Coverage Results" MODIFIED="1379547565813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/cooperative@gemspec_generate__private_person.coverage" NAME="gemspec:generate: private_person Coverage Results" MODIFIED="1379534216589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../private_person" />
-    <SUITE FILE_PATH="coverage/cooperative@db_rollback.coverage" NAME="db:rollback Coverage Results" MODIFIED="1379642845935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/dummy" />
-    <SUITE FILE_PATH="coverage/cooperative@db_test_load.coverage" NAME="db:test:load Coverage Results" MODIFIED="1379643899375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/dummy" />
-    <SUITE FILE_PATH="coverage/cooperative@clobber__cooperative.coverage" NAME="clobber: cooperative Coverage Results" MODIFIED="1379605124072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@Cooperative__development.coverage" NAME="Cooperative: development Coverage Results" MODIFIED="1379551591433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@activity_spec.coverage" NAME="activity_spec Coverage Results" MODIFIED="1379607844919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@follows_spec.coverage" NAME="follows_spec Coverage Results" MODIFIED="1379549279723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@zeus_test.coverage" NAME="zeus test Coverage Results" MODIFIED="1379515674346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@cooperative__spec.coverage" NAME="cooperative: spec Coverage Results" MODIFIED="1379650383958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@cooperative__spec_models_activity_spec.coverage" NAME="cooperative: spec/models/activity_spec Coverage Results" MODIFIED="1379632731117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@FollowsController_GET_index.coverage" NAME="FollowsController GET index Coverage Results" MODIFIED="1379650316621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@Start_Zeus_Server.coverage" NAME="Start Zeus Server Coverage Results" MODIFIED="1379632258496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cooperative@Cooperative.coverage" NAME="Cooperative Coverage Results" MODIFIED="1379515587220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spec/dummy" />
+    <SUITE FILE_PATH="coverage/cooperative@activity_spec.coverage" NAME="activity_spec Coverage Results" MODIFIED="1379846159983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -57,61 +98,97 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="DatabaseView">
-    <flatten value="false" />
-    <groupTables value="false" />
-    <sortChildren value="false" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="ExportTestResults" outputFolder="$USER_HOME$/Desktop" openResultsInEditor="true" userTempatePath="" />
   <component name="FavoritesManager">
-    <favorites_list name="cooperative">
-      <favorite_root url="file://$PROJECT_DIR$/config/locales/en.yml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-      <favorite_root url="file://$PROJECT_DIR$/config/routes.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-    </favorites_list>
+    <favorites_list name="cooperative" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="db_scrub.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
+      <file leaf-file-name="shared_files.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/shared_files.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="34" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.8050541" vertical-offset="598" max-vertical-offset="1332">
+            <state line="3" column="24" selection-start="42" selection-end="95" vertical-scroll-proportion="-0.6923077" vertical-offset="0" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/database.yml">
+      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="612">
+            <state line="1" column="8" selection-start="36" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database_tasks.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p247@specjour/gems/activerecord-4.0.0/lib/active_record/tasks/database_tasks.rb">
+      <file leaf-file-name="groups_support.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/support/groups_support.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="76" selection-start="5036" selection-end="5041" vertical-scroll-proportion="-7.0" vertical-offset="2241" max-vertical-offset="3762">
+            <state line="1" column="29" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sqlite_database_tasks.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p247@specjour/gems/activerecord-4.0.0/lib/active_record/tasks/sqlite_database_tasks.rb">
+      <file leaf-file-name="statuses_support.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/support/statuses_support.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="37" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1044">
+            <state line="3" column="17" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="worker.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/worker.rb">
+      <file leaf-file-name="activity_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/models/activity_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="35" selection-start="2146" selection-end="2192" vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="1890">
+            <state line="20" column="44" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="0_basic_users_support.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/support/0_basic_users_support.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="48" selection-start="767" selection-end="767" vertical-scroll-proportion="-4.3846154" vertical-offset="0" max-vertical-offset="555">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activities_support.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/support/activities_support.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="49" selection-start="461" selection-end="461" vertical-scroll-proportion="0.29013538" vertical-offset="0" max-vertical-offset="705">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="follows_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/controllers/follows_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="60" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="1335">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statuses_behaviors.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/behaviors/statuses_behaviors.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="82" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages_support.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/support/messages_support.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="29" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
@@ -124,24 +201,8 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
-  <component name="GeneratorOptions">
-    <option name="ENVIRONMENT" value="development" />
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Karen Lundgren &lt;karen.e.lun..." />
-        <option value="Karen Lundgren &lt;karen.e.lundgren@gmail.com&gt;" />
-      </list>
-    </option>
-    <option name="SYNC_SETTING" value="DONT" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../specjour" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-        <entry key="$PROJECT_DIR$/../specjour" value="master" />
-      </map>
-    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
     <option name="myDateState">
@@ -151,52 +212,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../specjour_rails_app/app/views/articles/index.html.erb" />
-        <option value="$PROJECT_DIR$/../specjour_rails_app/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/../specjour_rails_app/Gemfile" />
-        <option value="$PROJECT_DIR$/../specjour_rails_app/spec/spec_helper.rb" />
-        <option value="$PROJECT_DIR$/../specjour_rails_app/features/support/minitest_disable.rb" />
-        <option value="$PROJECT_DIR$/../specjour/lib/specjour/rspec/runner.rb" />
-        <option value="$PROJECT_DIR$/../specjour/lib/tasks/prepare_specjour_dbs.rake" />
-        <option value="$PROJECT_DIR$/../specjour/lib/tasks/specjour-prerelease.rake" />
-        <option value="$PROJECT_DIR$/../specjour/Rakefile" />
-        <option value="$PROJECT_DIR$/../specjour/specjour.gemspec" />
-        <option value="$PROJECT_DIR$/../specjour/lib/specjour/railtie.rb" />
-        <option value="$PROJECT_DIR$/../specjour/lib/specjour.rb" />
-        <option value="$PROJECT_DIR$/../specjour/lib/specjour/worker.rb" />
-        <option value="$PROJECT_DIR$/../specjour_rails_app/config/database.yml" />
-        <option value="$USER_HOME$/.rvm/gems/ruby-2.0.0-p247@specjour/gems/activerecord-4.0.0/lib/active_record/tasks/sqlite_database_tasks.rb" />
-        <option value="$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb" />
+        <option value="$PROJECT_DIR$/spec/support/follower_support.rb" />
+        <option value="$PROJECT_DIR$/spec/support/groups_support.rb" />
+        <option value="$PROJECT_DIR$/spec/support/messages_support.rb" />
+        <option value="$PROJECT_DIR$/spec/support/pages_support.rb" />
+        <option value="$PROJECT_DIR$/spec/support/users_support.rb" />
+        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
+        <option value="$PROJECT_DIR$/spec/support/comments_support.rb" />
+        <option value="$PROJECT_DIR$/spec/support/tags_support.rb" />
+        <option value="$PROJECT_DIR$/spec/behaviors/statuses_behaviors.rb" />
+        <option value="$PROJECT_DIR$/spec/controllers/follows_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/support/statuses_support.rb" />
+        <option value="$PROJECT_DIR$/spec/shared_files.rb" />
+        <option value="$PROJECT_DIR$/spec/support/followers_support.rb" />
+        <option value="$PROJECT_DIR$/spec/models/activity_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/support/0_basic_users_support.rb" />
+        <option value="$PROJECT_DIR$/spec/support/activities_support.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="27" />
-    <option name="width" value="1368" />
-    <option name="height" value="747" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Ruby</id>
-          </State>
-          <State>
-            <id>Spelling</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Spelling</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
+    <option name="x" value="207" />
+    <option name="y" value="58" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -205,7 +244,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -214,7 +253,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
-      <showMembers ProjectPane="true" />
+      <showMembers />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
@@ -246,7 +285,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord (v4.0.0, RVM: ruby-2.0.0-p247 [specjour]) [gem]" />
+              <option name="myItemId" value="rspec-core (v2.14.5, RVM: ruby-2.0.0-p247 [cooperative]) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rspec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rspec-core (v2.14.5, RVM: ruby-2.0.0-p247 [cooperative]) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rspec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rspec-core (v2.14.5, RVM: ruby-2.0.0-p247 [cooperative]) [gem]" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -264,15 +351,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord (v4.0.0, RVM: ruby-2.0.0-p247 [specjour]) [gem]" />
+              <option name="myItemId" value="rspec-core (v2.14.5, RVM: ruby-2.0.0-p247 [cooperative]) [gem]" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="active_record" />
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -282,23 +377,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord (v4.0.0, RVM: ruby-2.0.0-p247 [specjour]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="active_record" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
+              <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -308,7 +391,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="cooperative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="support" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,15 +409,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,11 +427,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,15 +445,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
+              <option name="myItemId" value="factories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -368,11 +463,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour_rails_app" />
+              <option name="myItemId" value="cooperative" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".specjour" />
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,147 +481,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="specjour" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specjour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specjour" />
+              <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="behaviors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specjour" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Problems" />
-        <subPane subId="Tests">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RSpec" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.RSpecFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cooperative" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ControllersFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
-    <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sandbox" />
-    <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="project.settings.patched" value="true" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
-    <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5" />
     <property name="options.searchVisible" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../specjour/lib/tasks" />
-      <recent name="$PROJECT_DIR$/../specjour_rails_app" />
-      <recent name="$PROJECT_DIR$/spec/behaviors" />
-      <recent name="$PROJECT_DIR$/spec/support" />
-      <recent name="$PROJECT_DIR$/spec/dummy/public" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/config/initializers" />
-      <recent name="$PROJECT_DIR$/app/models" />
-      <recent name="$PROJECT_DIR$/spec/dummy" />
-      <recent name="$PROJECT_DIR$/spec/behaviors" />
-      <recent name="$PROJECT_DIR$/spec" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Rake.specjour-create_test_dbs">
-    <configuration default="false" name="group_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+  <component name="RunManager" selected="RSpec.activity_spec">
+    <configuration default="false" name="activity_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="cooperative" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -536,55 +524,17 @@
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="rcov">
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/group_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/activity_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyCover" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyCover" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="FollowsController GET index" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="cooperative" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/controllers/follows_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="FollowsController GET index" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -597,9 +547,9 @@
       <method />
     </configuration>
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
-      <module name="cooperative" />
+      <module name="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/spec/dummy" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -639,7 +589,7 @@
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
@@ -648,7 +598,7 @@
     </configuration>
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="cooperative" />
+      <module name="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
@@ -657,7 +607,7 @@
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="rcov">
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
@@ -666,7 +616,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
@@ -675,22 +625,6 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ZeusRunConfigurationType" factoryName="Zeus Server">
-      <module name="" />
-      <ZEUS_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <ZEUS_RUN_CONFIGURATION NAME="WORK DIR" VALUE="" />
-      <ZEUS_RUN_CONFIGURATION NAME="SHOULD_USE_SDK" VALUE="false" />
-      <ZEUS_RUN_CONFIGURATION NAME="ALTERN_SDK_NAME" VALUE="" />
-      <ZEUS_RUN_CONFIGURATION NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="rcov" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <ZEUS_RUN_CONFIG_SETTING NAME="ZEUS_COMMAND_NAME" VALUE="" />
-      <ZEUS_RUN_CONFIG_SETTING NAME="ZEUS_COMMAND_ARGS" VALUE="" />
       <method />
     </configuration>
     <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
@@ -743,37 +677,17 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="IrbRunConfigurationType" factoryName="IRB console">
-      <module name="" />
-      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="" />
-      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
-      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
-      <module name="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+    <configuration default="false" name="All specs in: spec" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="specjour_rails_app" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs>
-        <env name="ANSICON" value="" />
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
@@ -783,31 +697,32 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$MODULE_DIR$/spec" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="$USER_HOME$/run_with_specjour.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="true" type="RackRunConfigurationType" factoryName="Rack">
-      <module name="" />
-      <RACK_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RACK_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RACK_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RACK_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RACK_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
+    <configuration default="false" name="test: cooperative" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="cooperative" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
@@ -816,23 +731,18 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RACK_CONFIG_SETTINGS_ID NAME="PORT" VALUE="9292" />
-      <RACK_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
-      <RACK_CONFIG_SETTINGS_ID NAME="CONFIG_FILE" VALUE="" />
-      <RACK_CONFIG_SETTINGS_ID NAME="RACK_SERVER_TYPE" VALUE="Default" />
-      <RACK_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
-    <configuration default="false" name="specjour-create_test_dbs" type="RakeRunConfigurationType" factoryName="Rake">
+    <configuration default="false" name="spec: cooperative" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="cooperative" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/spec/dummy" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -845,37 +755,77 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="prepare_specjour_dbs" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <list size="15">
-      <item index="0" class="java.lang.String" itemvalue="Rails.Development: sandbox" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Production: sandbox" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.spec: sandbox" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.test: sandbox" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.specjour-create_test_dbs" />
-      <item index="5" class="java.lang.String" itemvalue="RSpec.cooperative: spec/models" />
-      <item index="6" class="java.lang.String" itemvalue="RSpec.cooperative: spec" />
-      <item index="7" class="java.lang.String" itemvalue="Rails.Cooperative: development" />
-      <item index="8" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="9" class="java.lang.String" itemvalue="Rake.db:test:load" />
-      <item index="10" class="java.lang.String" itemvalue="Rake.db:rollback" />
-      <item index="11" class="java.lang.String" itemvalue="Rake.routes" />
-      <item index="12" class="java.lang.String" itemvalue="Rake.log:clear" />
-      <item index="13" class="java.lang.String" itemvalue="RSpec.group_spec" />
-      <item index="14" class="java.lang.String" itemvalue="RSpec.FollowsController GET index" />
+    <configuration default="false" name="Production: cooperative" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="cooperative" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Development: cooperative" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="cooperative" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="RSpec.All specs in: spec" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.test: cooperative" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.spec: cooperative" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Production: cooperative" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Development: cooperative" />
+      <item index="5" class="java.lang.String" itemvalue="RSpec.activity_spec" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.FollowsController GET index" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.group_spec" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="RSpec.activity_spec" />
       </list>
     </recent_temporary>
   </component>
@@ -899,466 +849,36 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="df08a90a-ed66-4f4d-8d25-05e782ed9cc6" name="Default" comment="" />
-      <created>1367938968459</created>
-      <updated>1367938968459</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Got tests working, and added scaffolding for statuses">
-      <created>1367941704370</created>
-      <updated>1367941704370</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Got status creation working">
-      <created>1367977932331</created>
-      <updated>1367977932331</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Improved status form">
-      <created>1367978417501</created>
-      <updated>1367978417501</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Got statuses working as expected.">
-      <created>1368330389562</created>
-      <updated>1368330389562</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Got statuses working as expected.">
-      <created>1368330494256</created>
-      <updated>1368330494256</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Got statuses working as expected.">
-      <created>1368330517866</created>
-      <updated>1368330517866</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Changed weird support contexts to have more logical names.">
-      <created>1368484570719</created>
-      <updated>1368484570719</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Switched existing features to requests, because features will come later.">
-      <created>1368543778710</created>
-      <updated>1368543778710</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added missing model specs">
-      <created>1368715582142</created>
-      <updated>1368715582142</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Added missing model specs">
-      <created>1368727734856</created>
-      <updated>1368727734856</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Created default avatar">
-      <created>1368727810543</created>
-      <updated>1368727810543</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Created missing request specs">
-      <created>1368729147596</created>
-      <updated>1368729147596</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Commiting last working copy from a couple weeks ago">
-      <created>1370450418042</created>
-      <updated>1370450418042</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Added dimension to statuses such as tokenization">
-      <created>1377150526329</created>
-      <updated>1377150526330</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Got jquery-ui-bootstrap-rails-asset installed">
-      <created>1377167297762</created>
-      <updated>1377167297762</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Fixed bug with multiple remote form submits">
-      <created>1377197023855</created>
-      <updated>1377197023855</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Added activities to person page">
-      <created>1377206840298</created>
-      <updated>1377206840298</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Added infinite scroll">
-      <created>1377390385622</created>
-      <updated>1377390385622</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Lots of updates to comments, activities, and the tokenizer.">
-      <created>1377481259846</created>
-      <updated>1377481259846</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Improvements to status body parsing of mentions; fixed access to mentions">
-      <created>1377508227849</created>
-      <updated>1377508227849</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Replaced acts_as_commentable; comments system now complete.">
-      <created>1377627734641</created>
-      <updated>1377627734641</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Added videos to statuses">
-      <created>1377655961395</created>
-      <updated>1377655961395</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Added voting">
-      <created>1377745861313</created>
-      <updated>1377745861313</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Minor improvements to tags' display of statuses">
-      <created>1377790600165</created>
-      <updated>1377790600165</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Updates to .gitignore">
-      <created>1377800238090</created>
-      <updated>1377800238090</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Improved install process">
-      <created>1377800895744</created>
-      <updated>1377800895744</updated>
-    </task>
-    <task id="LOCAL-00027" summary="User model written, tests passing.">
-      <created>1378058136732</created>
-      <updated>1378058136732</updated>
-    </task>
-    <task id="LOCAL-00028" summary="User model written, tests passing.">
-      <created>1378058382245</created>
-      <updated>1378058382245</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Group and comment model specs written, tests passing.">
-      <created>1378067988175</created>
-      <updated>1378067988175</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Message model specs written, tests passing.">
-      <created>1378077613739</created>
-      <updated>1378077613739</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Message model specs written, tests passing.">
-      <created>1378077802887</created>
-      <updated>1378077802887</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Page model specs written, tests passing.">
-      <created>1378082924233</created>
-      <updated>1378082924233</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Status model specs written, tests passing.">
-      <created>1378085779679</created>
-      <updated>1378085779679</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Tags model specs written, tests passing.">
-      <created>1378090331023</created>
-      <updated>1378090331023</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Tags model specs written, tests passing.">
-      <created>1378090454346</created>
-      <updated>1378090454346</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Back on track, I hope.">
-      <created>1378263636655</created>
-      <updated>1378263636655</updated>
-    </task>
-    <task id="LOCAL-00037" summary="All routing tested and passing.">
-      <created>1378310981841</created>
-      <updated>1378310981841</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Got activities working in development again">
-      <created>1378314641026</created>
-      <updated>1378314641026</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Activities controller tested and passing">
-      <created>1378323087611</created>
-      <updated>1378323087611</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Update to readme">
-      <created>1378323640344</created>
-      <updated>1378323640344</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Update to readme">
-      <created>1378323837180</created>
-      <updated>1378323837180</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Comments controller tested and passing.">
-      <created>1378350834872</created>
-      <updated>1378350834872</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Follows controller tested and passing.">
-      <created>1378355800233</created>
-      <updated>1378355800233</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Groups controller tested and passing.">
-      <created>1378410891190</created>
-      <updated>1378410891190</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Messages controller tested and passing.">
-      <created>1378428390460</created>
-      <updated>1378428390460</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Roles, follows, and permissions models tested and passing.">
-      <created>1378488824829</created>
-      <updated>1378488824829</updated>
-    </task>
-    <task id="LOCAL-00047" summary="PrivatePerson built as separate gem, then installed">
-      <created>1378584297596</created>
-      <updated>1378584297596</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Installed bootstrap_leather, preparing to integrate it &#10;">
-      <created>1378745302518</created>
-      <updated>1378745302518</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Updated views to make use of bootstrap_leather. &#10;&#10;Development environment basically working, all tests passing.">
-      <created>1378757543323</created>
-      <updated>1378757543323</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Cooperative now configuring Bootstrap Leather via a railtie.">
-      <created>1378765810862</created>
-      <updated>1378765810863</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Breadcrumbs fixed">
-      <created>1378844487030</created>
-      <updated>1378844487030</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Dropdowns fixed, breadcrumbs removed.">
-      <created>1378913175162</created>
-      <updated>1378913175162</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Dropdowns fixed, breadcrumbs disabled for now">
-      <created>1378913294694</created>
-      <updated>1378913294694</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Pages controller specs written, all tests passing.">
-      <created>1379100438199</created>
-      <updated>1379100438200</updated>
-    </task>
-    <task id="LOCAL-00055" summary="People, Profile, and Ratings controllers' specs written, all tests passing.">
-      <created>1379103736953</created>
-      <updated>1379103736954</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Statuses and Tags controllers' specs written, all tests passing.">
-      <created>1379110379360</created>
-      <updated>1379110379360</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Haven't referred to these once.  Getting rid of them.  &#10;&#10;Can always use repository if I really need it.">
-      <created>1379110709310</created>
-      <updated>1379110709310</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Latest working copy">
-      <created>1379179014666</created>
-      <updated>1379179014666</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Latest working copy">
-      <created>1379180034794</created>
-      <updated>1379180034794</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Latest working copy">
-      <created>1379180158861</created>
-      <updated>1379180158881</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Activities integration tests written and passing.&#10;&#10;Good start on groups integration tests.">
-      <created>1379385136980</created>
-      <updated>1379385136981</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Groups integration tests written and passing.">
-      <created>1379434351486</created>
-      <updated>1379434351486</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Added specificity to the cooperative behaviors.&#10;&#10;Preparing to install opengraph and acts_as_opengraph.">
-      <created>1379450018274</created>
-      <updated>1379450018274</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Trying to fix deprecation notice in Rails 4">
-      <created>1379532111023</created>
-      <updated>1379532111024</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Trying to fix deprecation notice in Rails 4">
-      <created>1379532412757</created>
-      <updated>1379532412758</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Updated to work with rails 4, all tests passing, though with some deprecation notices.">
-      <created>1379534153726</created>
-      <updated>1379534153727</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Updated to work with rails 4, all tests passing, though with some deprecation notices.">
-      <created>1379534253625</created>
-      <updated>1379534253625</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Fixed deprecation notice re: backtrace_clean_patterns">
-      <created>1379695059879</created>
-      <updated>1379695059879</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Repaired problems with rake.">
-      <created>1379699091579</created>
-      <updated>1379699091579</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379700437433</created>
-      <updated>1379700437433</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379700659830</created>
-      <updated>1379700659830</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379701709845</created>
-      <updated>1379701709845</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379702552243</created>
-      <updated>1379702552243</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379702657302</created>
-      <updated>1379702657302</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379702765595</created>
-      <updated>1379702765595</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379702839229</created>
-      <updated>1379702839229</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379703201233</created>
-      <updated>1379703201233</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379703431288</created>
-      <updated>1379703431288</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379705602149</created>
-      <updated>1379705602149</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Attempting to fix errors with dropping when no db exists.">
-      <created>1379706270267</created>
-      <updated>1379706270267</updated>
-    </task>
-    <task id="LOCAL-00081" summary="Attempting to circumvent Rails 4 bug">
-      <created>1379706458485</created>
-      <updated>1379706458485</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Could be missing something, but I think this is right.">
-      <created>1379706743100</created>
-      <updated>1379706743100</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Could be missing something, but I think this is right.">
-      <created>1379707092665</created>
-      <updated>1379707092665</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Could be missing something, but I think this is right.">
-      <created>1379707162132</created>
-      <updated>1379707162132</updated>
-    </task>
-    <task id="LOCAL-00085" summary="Nope, I was wrong.">
-      <created>1379707353447</created>
-      <updated>1379707353447</updated>
-    </task>
-    <task id="LOCAL-00086" summary="Trying to figure out why the script is failing">
-      <created>1379707607912</created>
-      <updated>1379707607912</updated>
-    </task>
-    <task id="LOCAL-00087" summary="This should help.">
-      <created>1379707844090</created>
-      <updated>1379707844090</updated>
-    </task>
-    <task id="LOCAL-00088" summary="This should help.">
-      <created>1379708041339</created>
-      <updated>1379708041339</updated>
-    </task>
-    <task id="LOCAL-00089" summary="This should help.">
-      <created>1379708112930</created>
-      <updated>1379708112930</updated>
-    </task>
-    <task id="LOCAL-00090" summary="This should help.">
-      <created>1379708218797</created>
-      <updated>1379708218797</updated>
-    </task>
-    <task id="LOCAL-00091" summary="Corrected backtrace variable.">
-      <created>1379708331428</created>
-      <updated>1379708331428</updated>
-    </task>
-    <task id="LOCAL-00092" summary="This seems to be needed too.">
-      <created>1379708699341</created>
-      <updated>1379708699341</updated>
-    </task>
-    <task id="LOCAL-00093" summary="Ok, fine, if you want to be that way.">
-      <created>1379708772499</created>
-      <updated>1379708772499</updated>
-    </task>
-    <option name="localTasksCounter" value="94" />
-    <servers>
-      <GitHub shared="false" url="">
-        <commitMessageFormat>{id} {summary}</commitMessageFormat>
-        <password>dfe3dfdddfdddf9fdf9adf9adfc7df84</password>
-        <token />
-        <option name="loginAnonymously" value="false" />
-        <option name="repoAuthor" value="nerakdon" />
-        <option name="repoName" value="cooperative" />
-        <option name="shouldFormatCommitMessage" value="false" />
-        <option name="useHttpAuthentication" value="false" />
-        <option name="useProxy" value="false" />
-        <option name="user" value="" />
-        <username>nerakdon</username>
-      </GitHub>
-    </servers>
-  </component>
-  <component name="TodoView" selected-index="0">
-    <todo-panel id="selected-file">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-    <todo-panel id="default-changelist">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
+      <changelist id="2be0524b-2623-4e43-bea4-ee6892b0c912" name="Default" comment="" />
+      <created>1379822806377</created>
+      <updated>1379822806377</updated>
+    </task>
+    <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1368" height="747" extended-state="6" />
+    <frame x="207" y="58" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29695025" sideWeight="0.630303" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5280899" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5329053" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25454545" sideWeight="0.7351525" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.6492424" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5329053" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219697" sideWeight="0.24077046" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26174498" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26966292" sideWeight="0.6219697" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25454545" sideWeight="0.42054576" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.32718122" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3219697" sideWeight="0.4670947" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57945424" sideWeight="0.6962121" order="11" side_tool="false" content_ui="tabs" x="10" y="28" width="1319" height="715" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3306544" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3306544" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.66934556" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.6739496" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29695025" sideWeight="0.630303" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5280899" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5329053" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25454545" sideWeight="0.7351525" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.6492424" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5329053" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219697" sideWeight="0.24077046" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26174498" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26966292" sideWeight="0.6219697" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25454545" sideWeight="0.42054576" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.32718122" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3219697" sideWeight="0.4670947" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.6739496" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57945424" sideWeight="0.6962121" order="11" side_tool="false" content_ui="tabs" x="10" y="28" width="1319" height="715" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1367,170 +887,123 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
-    <MESSAGE value="Cooperative now configuring Bootstrap Leather via a railtie." />
-    <MESSAGE value="Breadcrumbs fixed" />
-    <MESSAGE value="Dropdowns fixed, breadcrumbs removed." />
-    <MESSAGE value="Dropdowns fixed, breadcrumbs disabled for now" />
-    <MESSAGE value="Pages controller specs written, all tests passing." />
-    <MESSAGE value="People, Profile, and Ratings controllers' specs written, all tests passing." />
-    <MESSAGE value="Statuses and Tags controllers' specs written, all tests passing." />
-    <MESSAGE value="Haven't referred to these once.  Getting rid of them.  &#10;&#10;Can always use repository if I really need it." />
-    <MESSAGE value="Latest working copy" />
-    <MESSAGE value="Activities integration tests written and passing.&#10;&#10;Good start on groups integration tests." />
-    <MESSAGE value="Groups integration tests written and passing." />
-    <MESSAGE value="Added specificity to the cooperative behaviors.&#10;&#10;Preparing to install opengraph and acts_as_opengraph." />
-    <MESSAGE value="Trying to fix deprecation notice in Rails 4" />
-    <MESSAGE value="Updated to work with rails 4, all tests passing, though with some deprecation notices." />
-    <MESSAGE value="Fixed deprecation notice re: backtrace_clean_patterns" />
-    <MESSAGE value="Repaired problems with rake." />
-    <MESSAGE value="Attempting to fix errors with dropping when no db exists." />
-    <MESSAGE value="Attempting to circumvent Rails 4 bug" />
-    <MESSAGE value="Could be missing something, but I think this is right." />
-    <MESSAGE value="Nope, I was wrong." />
-    <MESSAGE value="Trying to figure out why the script is failing" />
-    <MESSAGE value="This should help." />
-    <MESSAGE value="Corrected backtrace variable." />
-    <MESSAGE value="This seems to be needed too." />
-    <MESSAGE value="Ok, fine, if you want to be that way." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ok, fine, if you want to be that way." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-    </breakpoint-manager>
+    <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/generators/cooperative/install/install_generator.rb">
+    <entry file="file://$PROJECT_DIR$/spec/controllers/comments_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="1082" selection-end="1136" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2412">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/specjour.gemspec">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p247@cooperative/gems/rspec-core-2.14.5/lib/rspec/core/shared_context.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="36" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="774">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/Rakefile">
+    <entry file="file://$PROJECT_DIR$/spec/support/comments_support.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="530">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
+    <entry file="file://$PROJECT_DIR$/spec/support/login_support.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="247" selection-end="262" vertical-scroll-proportion="0.17603911" vertical-offset="108" max-vertical-offset="1044">
+        <state line="17" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour.rb">
+    <entry file="file://$PROJECT_DIR$/spec/support/pages_support.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="41" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="1692">
+        <state line="1" column="29" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/dev_setup.rb">
+    <entry file="file://$PROJECT_DIR$/spec/support/tags_support.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="262">
+        <state line="17" column="3" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/initializers/filter_parameter_logging.rb">
+    <entry file="file://$PROJECT_DIR$/spec/support/messages_support.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="385">
+        <state line="1" column="29" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/dispatcher.rb">
+    <entry file="file://$PROJECT_DIR$/spec/behaviors/statuses_behaviors.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3168">
+        <state line="35" column="82" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0" vertical-offset="353" max-vertical-offset="990">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/fork.rb">
+    <entry file="file://$PROJECT_DIR$/spec/controllers/follows_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+        <state line="18" column="60" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="1335">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/loader.rb">
+    <entry file="file://$PROJECT_DIR$/spec/support/statuses_support.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2808">
+        <state line="3" column="17" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/dummy/config/database.yml">
+    <entry file="file://$PROJECT_DIR$/spec/support/groups_support.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
+        <state line="1" column="29" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/worker.rb">
+    <entry file="file://$PROJECT_DIR$/spec/models/activity_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="35" selection-start="2146" selection-end="2192" vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="1890">
+        <state line="20" column="44" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p247@specjour/gems/activerecord-4.0.0/lib/active_record/tasks/database_tasks.rb">
+    <entry file="file://$PROJECT_DIR$/spec/shared_files.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="76" selection-start="5036" selection-end="5041" vertical-scroll-proportion="-7.0" vertical-offset="2241" max-vertical-offset="3762">
+        <state line="3" column="24" selection-start="42" selection-end="95" vertical-scroll-proportion="-0.6923077" vertical-offset="0" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour_rails_app/config/database.yml">
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0" vertical-offset="103" max-vertical-offset="612">
+        <state line="1" column="8" selection-start="36" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p247@specjour/gems/activerecord-4.0.0/lib/active_record/tasks/sqlite_database_tasks.rb">
+    <entry file="file://$PROJECT_DIR$/spec/support/0_basic_users_support.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="37" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1044">
+        <state line="19" column="48" selection-start="767" selection-end="767" vertical-scroll-proportion="-4.3846154" vertical-offset="0" max-vertical-offset="555">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../specjour/lib/specjour/db_scrub.rb">
+    <entry file="file://$PROJECT_DIR$/spec/support/activities_support.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="34" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.8050541" vertical-offset="598" max-vertical-offset="1332">
+        <state line="10" column="49" selection-start="461" selection-end="461" vertical-scroll-proportion="0.29013538" vertical-offset="0" max-vertical-offset="705">
           <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <last-edited>Uncovered</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
 

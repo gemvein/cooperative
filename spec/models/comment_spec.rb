@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Comment do
   # PrivatePerson gem
-  it { should have_many :permissions}
+  it { should have_many :permissions }
   # Check that appropriate fields are accessible
   it { should allow_mass_assignment_of(:body) }
   it { should allow_mass_assignment_of(:commentable_id) }
@@ -18,7 +18,7 @@ describe Comment do
 
   describe 'Class Methods' do
     describe '.find_by_commentable' do
-      include_context 'comments support'
+      extend Comments
       subject { Comment.find_by_commentable(owned_status) }
       it { should include owned_comment }
       it { should include followed_comment }

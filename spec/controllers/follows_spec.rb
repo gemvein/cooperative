@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe FollowsController do
+
   routes { Cooperative::Engine.routes }
   describe 'routing' do
     for nicknamed_nesting_resource in %w{people}
@@ -12,7 +13,7 @@ describe FollowsController do
   end
 
   describe 'GET index' do
-    include_context 'follower support'
+    extend Followers
     context 'when not logged in' do
       before do
         get :index, :nesting_resource => 'people', :person_id => followed_user.nickname
@@ -21,15 +22,15 @@ describe FollowsController do
     end
     context 'when logged in' do
       before do
-        sign_in follower_user
-        get :index, :nesting_resource => 'people', :person_id => follower_user.nickname
+        sign_in ActivitiesContext.follower_user
+        get :index, :nesting_resource => 'people', :person_id => ActivitiesContext.follower_user.nickname
       end
       it_should_behave_like 'the controller responded with template', :index
     end
   end
 
   describe 'GET followers' do
-    include_context 'follower support'
+    extend Followers
     context 'when not logged in' do
       before do
         get :followers, :nesting_resource => 'people', :id => followed_user.nickname
@@ -39,14 +40,15 @@ describe FollowsController do
     context 'when logged in' do
       before do
         sign_in followed_user
-        get :followers, :nesting_resource => 'people', :id => follower_user.nickname
+        get :followers, :nesting_resource => 'people', :id => ActivitiesContext.follower_user.nickname
       end
       it_should_behave_like 'the controller responded with template', :followers
     end
   end
 
   describe 'POST create' do
-    include_context 'follower support'
+
+    extend Followers
     context 'when not logged in' do
       before do
         post :create, :nesting_resource => 'people', :person_id => followed_user.nickname, :format => :js
@@ -55,7 +57,7 @@ describe FollowsController do
     end
     context 'when logged in' do
       before do
-        sign_in follower_user
+        sign_in ActivitiesContext.follower_user
         post :create, :nesting_resource => 'people', :person_id => followed_user.nickname, :format => :js
       end
       it_should_behave_like 'the controller responded with template', :create
@@ -63,7 +65,8 @@ describe FollowsController do
   end
 
   describe 'DELETE destroy' do
-    include_context 'follower support'
+
+    extend Followers
     context 'when not logged in' do
       before do
         delete :destroy, :nesting_resource => 'people', :id => followed_user.nickname, :format => :js
@@ -72,7 +75,7 @@ describe FollowsController do
     end
     context 'when logged in' do
       before do
-        sign_in follower_user
+        sign_in ActivitiesContext.follower_user
         delete :destroy, :nesting_resource => 'people', :id => followed_user.nickname, :format => :js
       end
       it_should_behave_like 'the controller responded with template', :destroy
