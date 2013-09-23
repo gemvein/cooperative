@@ -8,16 +8,16 @@ describe PeopleController, 'routing' do
 
   describe 'GET index' do
 
-    extend Followers
+    include BasicUsersContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :index
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
-        sign_in ActivitiesContext.follower_user
+      before :each do
+        sign_in follower_user
         get :index
       end
       it_should_behave_like 'the controller responded with template', :index
@@ -26,16 +26,16 @@ describe PeopleController, 'routing' do
 
   describe 'GET show' do
 
-    extend Followers
+    include BasicUsersContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :show, :id => followed_user.nickname
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
-        sign_in ActivitiesContext.follower_user
+      before :each do
+        sign_in follower_user
         get :show, :id => followed_user.nickname
       end
       it_should_behave_like 'the controller responded with template', :show

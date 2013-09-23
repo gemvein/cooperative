@@ -37,7 +37,7 @@ describe Status do
   it { should have_many(:comments) }
 
   context 'Instance Methods' do
-    extend Statuses
+    include StatusesContext
 
     describe '#build_status' do
       subject { unshared_status.build_status(:user => ActivitiesContext.follower_user) }

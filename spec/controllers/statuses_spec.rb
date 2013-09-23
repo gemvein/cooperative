@@ -10,47 +10,49 @@ describe StatusesController, 'routing' do
   it { should route(:get, '/statuses/grab').to(:action => 'grab') }
 
   describe 'GET show' do
-    extend Statuses
+    include StatusesContext
     context 'when the status is public' do
-      before do
+      before :each do
         get :show, :id => public_status.id
       end
       it_should_behave_like 'the controller responded with template', :show
     end
     context 'when the status is limited access' do
       context 'when not logged in' do
-        before do
+        before :each do
           get :show, :id => unshared_status.id
         end
         it { should respond_with(:redirect) }
         it { should set_the_flash }
       end
       context 'when logged in but not authorized' do
-        before do
+        before :each do
           sign_in unfollowed_user
           get :show, :id => unshared_status.id
         end
+
         it_should_behave_like 'the controller responded successful verbose redirect'
       end
       context 'when authorized' do
-        before do
-          sign_in ActivitiesContext.follower_user
+        before :each do
+          sign_in follower_user
           get :show, :id => unshared_status.id
         end
+
         it_should_behave_like 'the controller responded with template', :show
       end
     end
   end
   describe 'GET new' do
-    extend Statuses
+    include StatusesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :new
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in followed_user
         get :new
       end
@@ -58,54 +60,56 @@ describe StatusesController, 'routing' do
     end
   end
   describe 'POST create' do
-    extend Statuses
+    include StatusesContext
     context 'when not logged in' do
-      before do
+      before :each do
         post :create, :format => 'js'
       end
-      it_should_behave_like 'the controller required login on POST'
+      it_sActivitiesContext.followed_userlike 'the controller required login on POST'
     end
     context 'when logged in' do
       context 'with invalid attributes' do
-        before do
+        before :each do
           sign_in followed_user
-          post :create, :format => 'js'
+          post :crActivitiesContext.followed_user => 'js'
         end
+
         it_should_behave_like 'the controller responded with template', :create
       end
       context 'with valid attributes' do
-        before do
+        before :each do
           sign_in followed_user
           post :create, :status => {:body => 'Body'}, :format => 'js'
         end
+
         it_should_behave_like 'the controller responded with template', :create
       end
     end
   end
   describe 'DELETE destroy' do
-    extend Statuses
+    include StatusesContext
     context 'when not logged in' do
-      before do
+      before :each do
         delete :destroy, :id => unshared_status.id, :format => 'js'
       end
       it_should_behave_like 'the controller required login on POST'
     end
-    context 'when logged in, but not as the owner' do
-      before do
+    context 'when logged in but not as the owner' do
+      before :each do
         sign_in unfollowed_user
         delete :destroy, :id => unshared_status.id, :format => 'js'
       end
       it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
-      before do
+      before :each do
         sign_in followed_user
         delete :destroy, :id => unshared_status.id, :format => 'js'
       end
       it_should_behave_like 'the controller responded with template', :destroy
     end
     context 'when bogus commentable_id given' do
-      before do
+      before :each do
         sign_in followed_user
         delete :destroy, :id => 10000, :format => 'js'
       end
@@ -115,15 +119,15 @@ describe StatusesController, 'routing' do
 
   describe 'GET grab' do
 
-    extend Followers
+    include BasicUsersContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :grab, :uri => 'http://www.queenoftarot.com/', :format => 'js'
       end
       it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in followed_user
         get :grab, :uri => 'http://www.queenoftarot.com/', :format => 'js'
       end

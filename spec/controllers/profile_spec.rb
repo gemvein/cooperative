@@ -8,16 +8,16 @@ describe ProfileController, 'routing' do
 
   describe 'GET edit' do
 
-    extend Followers
+    include BasicUsersContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :edit
       end
       it { should respond_with(302) }
       it { should set_the_flash }
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in followed_user
         get :edit
       end
@@ -27,19 +27,20 @@ describe ProfileController, 'routing' do
 
   describe 'PUT update' do
 
-    extend Followers
+    include BasicUsersContext
     context 'when not logged in' do
-      before do
+      before :each do
         put :update
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      context 'with invalid attributes' do
-        before do
+      context 'with invalActivitiesContext.followed_user' do
+        before :each do
           sign_in followed_user
           put :update, :profile => {:bio => 'Lorem ipsum'}
         end
+
         it { should respond_with(:redirect) }
         it { should set_the_flash }
       end

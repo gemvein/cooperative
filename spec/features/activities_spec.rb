@@ -1,12 +1,15 @@
 require 'spec_helper'
 
 feature 'Activities' do
-  extend Login
-  extend Activities
-  extend Comments
+  include LoginContext
+  include ActivitiesContext
+  include CommentsContext
 
-  before do
-    sign_in_as ActivitiesContext.follower_user
+  include SharedBehaviors
+  include StatusesBehaviors
+
+  before :each do
+    sign_in_as follower_user
     visit cooperative.home_path
     page
   end

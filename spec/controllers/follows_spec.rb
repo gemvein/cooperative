@@ -13,34 +13,34 @@ describe FollowsController do
   end
 
   describe 'GET index' do
-    extend Followers
+    include BasicUsersContext
     context 'when not logged in' do
-      before do
-        get :index, :nesting_resource => 'people', :person_id => followed_user.nickname
+      before :each do
+        get :index, :nesting_resource => 'people', :person_id => ActivitiesContext.followed_user.nickname
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
-        sign_in ActivitiesContext.follower_user
-        get :index, :nesting_resource => 'people', :person_id => ActivitiesContext.follower_user.nickname
+      before :each do
+        sign_in follower_user
+        get :index, :nesting_resource => 'people', :person_id => follower_user.nickname
       end
       it_should_behave_like 'the controller responded with template', :index
     end
   end
 
   describe 'GET followers' do
-    extend Followers
+    include BasicUsersContext
     context 'when not logged in' do
-      before do
-        get :followers, :nesting_resource => 'people', :id => followed_user.nickname
+      before :each do
+        get :followers, :nesting_resource => 'people', :id => ActivitiesContext.followed_user.nickname
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
-        sign_in followed_user
-        get :followers, :nesting_resource => 'people', :id => ActivitiesContext.follower_user.nickname
+      before :each do
+        sign_in ActivitiesContext.followed_user
+        get :followers, :nesting_resource => 'people', :id => follower_user.nickname
       end
       it_should_behave_like 'the controller responded with template', :followers
     end
@@ -48,17 +48,17 @@ describe FollowsController do
 
   describe 'POST create' do
 
-    extend Followers
+    include BasicUsersContext
     context 'when not logged in' do
-      before do
-        post :create, :nesting_resource => 'people', :person_id => followed_user.nickname, :format => :js
+      before :each do
+        post :create, :nesting_resource => 'people', :person_id => ActivitiesContext.followed_user.nickname, :format => :js
       end
       it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
-      before do
-        sign_in ActivitiesContext.follower_user
-        post :create, :nesting_resource => 'people', :person_id => followed_user.nickname, :format => :js
+      before :each do
+        sign_in follower_user
+        post :create, :nesting_resource => 'people', :person_id => ActivitiesContext.followed_user.nickname, :format => :js
       end
       it_should_behave_like 'the controller responded with template', :create
     end
@@ -66,17 +66,17 @@ describe FollowsController do
 
   describe 'DELETE destroy' do
 
-    extend Followers
+    include BasicUsersContext
     context 'when not logged in' do
-      before do
-        delete :destroy, :nesting_resource => 'people', :id => followed_user.nickname, :format => :js
+      before :each do
+        delete :destroy, :nesting_resource => 'people', :id => ActivitiesContext.followed_user.nickname, :format => :js
       end
       it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
-      before do
-        sign_in ActivitiesContext.follower_user
-        delete :destroy, :nesting_resource => 'people', :id => followed_user.nickname, :format => :js
+      before :each do
+        sign_in follower_user
+        delete :destroy, :nesting_resource => 'people', :id => ActivitiesContext.followed_user.nickname, :format => :js
       end
       it_should_behave_like 'the controller responded with template', :destroy
     end

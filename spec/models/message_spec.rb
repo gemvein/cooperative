@@ -21,7 +21,7 @@ describe Message do
   it { should have_many(:children) }
 
   context 'Class Methods' do
-    extend Messages
+    include MessagesContext
 
     describe '#unread' do
       subject { Message.unread }
@@ -67,7 +67,7 @@ describe Message do
   end
 
   context 'Instance Methods' do
-    extend Messages
+    include MessagesContext
 
     describe '#you_cant_send_messages_to_yourself' do
       context 'when valid' do

@@ -13,50 +13,52 @@ describe RatingsController, 'routing' do
   end
 
   describe 'GET rate' do
-    extend Activities
+    include ActivitiesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
       end
       it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
       context 'as unauthorized' do
-        before do
-          sign_in unfollowed_user
+        before :each do
+ActivitiesContext.followed_usern_in unfollowed_user
           get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
         end
+
         it_should_behave_like 'the controller responded successful verbose redirect'
       end
       context 'as authorized' do
-        before do
-          sign_in ActivitiesContext.follower_user
+        before :each do
+          sign_in follower_user
           get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
         end
+
         it_should_behave_like 'the controller responded with template', :rate
       end
     end
   end
 
   describe 'GET unrate' do
-    extend Activities
+    include ActivitiesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
       end
       it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
       context 'as unauthorized' do
-        before do
+        before :each do
           sign_in unfollowed_user
           get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
         end
         it_should_behave_like 'the controller responded successful verbose redirect'
       end
       context 'as authorized' do
-        before do
-          sign_in ActivitiesContext.follower_user
+        before :each do
+          sign_in follower_user
           get :rate, :nesting_resource => 'statuses', :id => followed_status.id, :rating => 1, :format => 'js'
         end
         it_should_behave_like 'the controller responded with template', :rate

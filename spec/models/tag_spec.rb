@@ -10,7 +10,7 @@ describe Tag do
   it { should respond_to(:opengraph_data) }
 
   context 'Class Methods' do
-    extend Tags
+    include TagsContext
 
     describe '#total_item_counts' do
       subject { Tag.total_item_counts }
@@ -23,7 +23,7 @@ describe Tag do
   end
 
   context 'Instance Methods' do
-    extend Tags
+    include TagsContext
 
     describe '#recent_users' do
       subject { reading_tag.recent_users }

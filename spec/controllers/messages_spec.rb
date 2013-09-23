@@ -17,15 +17,15 @@ describe MessagesController do
   end
 
   describe 'GET index' do
-    extend Messages
+    include MessagesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :index
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in message_recipient
         get :index
       end
@@ -34,15 +34,15 @@ describe MessagesController do
   end
 
   describe 'GET sent' do
-    extend Messages
+    include MessagesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :sent
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in message_recipient
         get :sent
       end
@@ -51,15 +51,15 @@ describe MessagesController do
   end
 
   describe 'GET trash' do
-    extend Messages
+    include MessagesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :trash
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in message_recipient
         get :trash
       end
@@ -68,22 +68,22 @@ describe MessagesController do
   end
 
   describe 'GET show' do
-    extend Messages
+    include MessagesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :show, :id => readable_message.id
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in message_recipient
         get :show, :id => readable_message.id
       end
       it_should_behave_like 'the controller responded with template', :show
     end
     context 'when bogus id given' do
-      before do
+      before :each do
         sign_in message_recipient
         get :show, :id => 10000
       end
@@ -92,15 +92,15 @@ describe MessagesController do
   end
 
   describe 'GET new' do
-    extend Messages
+    include MessagesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :new
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in message_sender
         get :new
       end
@@ -109,55 +109,57 @@ describe MessagesController do
   end
 
   describe 'POST create' do
-    extend Messages
+    include MessagesContext
     context 'when not logged in' do
-      before do
+      before :each do
         post :create
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       context 'with invalid attributes' do
-        before do
+        before :each do
           sign_in message_sender
           post :create
         end
+
         it_should_behave_like 'the controller responded with template', :new
       end
       context 'with valid attributes' do
-        before do
+        before :each do
           sign_in message_sender
           post :create, :message => {:subject => 'Subject', :body => 'Body', :recipient_nickname => message_recipient.nickname}
         end
+
         it_should_behave_like 'the controller responded successful verbose redirect'
       end
     end
   end
 
   describe 'GET reply' do
-    extend Messages
+    include MessagesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :reply, :id => child_message.id
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the recipient' do
-      before do
+      before :each do
         sign_in message_nonrecipient
         get :reply, :id => child_message.id
       end
       it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as the recipient' do
-      before do
+      before :each do
         sign_in message_sender
         get :reply, :id => child_message.id
       end
       it_should_behave_like 'the controller responded with template', :reply
     end
     context 'when bogus commentable_id given' do
-      before do
+      before :each do
         sign_in message_sender
         get :reply, :id => 10000
       end
@@ -166,29 +168,29 @@ describe MessagesController do
   end
 
   describe 'GET move_to_trash' do
-    extend Messages
+    include MessagesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :move_to_trash, :id => readable_message.id
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the owner' do
-      before do
+      before :each do
         sign_in message_nonrecipient
         get :move_to_trash, :id => readable_message.id
       end
       it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
-      before do
+      before :each do
         sign_in message_sender
         get :move_to_trash, :id => readable_message.id
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when bogus commentable_id given' do
-      before do
+      before :each do
         sign_in message_sender
         get :move_to_trash, :id => 10000
       end
@@ -197,29 +199,29 @@ describe MessagesController do
   end
 
   describe 'GET restore' do
-    extend Messages
+    include MessagesContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :restore, :id => readable_message.id
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the owner' do
-      before do
+      before :each do
         sign_in message_nonrecipient
         get :restore, :id => readable_message.id
       end
       it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
-      before do
+      before :each do
         sign_in message_sender
         get :restore, :id => readable_message.id
       end
       it_should_behave_like 'the controller responded successful verbose redirect'
     end
     context 'when bogus commentable_id given' do
-      before do
+      before :each do
         sign_in message_sender
         get :restore, :id => 10000
       end

@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe ActivitiesController do
-
   routes { Cooperative::Engine.routes }
 
   describe 'routing' do
@@ -9,19 +8,22 @@ describe ActivitiesController do
   end
 
   describe 'GET index' do
-    extend Activities
     context 'when not logged in' do
-      before do
-        get :index
+      it_should_behave_like 'the controller required login on GET' do
+        include BasicUsersContext
+        before do
+          get :index
+        end
       end
-      it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
-        sign_in ActivitiesContext.follower_user
-        get :index
+      it_should_behave_like 'the controller responded with template', :index do
+        include ActivitiesContext
+        before do
+          sign_in follower_user
+          get :index
+        end
       end
-      it_should_behave_like 'the controller responded with template', :index
     end
   end
 end

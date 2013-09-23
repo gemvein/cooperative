@@ -26,8 +26,7 @@ describe Group do
   context 'Class Methods' do
 
     describe '#open_to_the_public' do
-      extend Groups
-
+      include GroupsContext
       subject { Group.open_to_the_public }
       it { should include public_group }
       it { should_not include private_group }

@@ -16,15 +16,15 @@ describe GroupsController do
   end
 
   describe 'GET index' do
-    extend Groups
+    include GroupsContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :index
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in group_member
         get :index
       end
@@ -33,22 +33,22 @@ describe GroupsController do
   end
 
   describe 'GET show' do
-    extend Groups
+    include GroupsContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :show, :id => public_group.id
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in group_member
         get :show, :id => public_group.id
       end
       it_should_behave_like 'the controller responded with template', :show
     end
     context 'when bogus id given' do
-      before do
+      before :each do
         sign_in group_member
         get :show, :id => 10000
       end
@@ -57,15 +57,15 @@ describe GroupsController do
   end
 
   describe 'GET new' do
-    extend Groups
+    include GroupsContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :new
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in group_owner
         get :new
       end
@@ -74,55 +74,57 @@ describe GroupsController do
   end
 
   describe 'POST create' do
-    extend Groups
+    include GroupsContext
     context 'when not logged in' do
-      before do
+      before :each do
         post :create
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in' do
       context 'with invalid attributes' do
-        before do
+        before :each do
           sign_in group_owner
           post :create
         end
+
         it_should_behave_like 'the controller responded with template', :new
       end
       context 'with valid attributes' do
-        before do
+        before :each do
           sign_in group_owner
           post :create, :group => {:name => 'Group'}
         end
+
         it_should_behave_like 'the controller responded successful verbose redirect'
       end
     end
   end
 
   describe 'GET edit' do
-    extend Groups
+    include GroupsContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :edit, :id => owned_group.id
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the owner' do
-      before do
+      before :each do
         sign_in group_member
         get :edit, :id => owned_group.id
       end
       it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
-      before do
+      before :each do
         sign_in group_owner
         get :edit, :id => owned_group.id
       end
       it_should_behave_like 'the controller responded with template', :edit
     end
     context 'when bogus commentable_id given' do
-      before do
+      before :each do
         sign_in group_owner
         get :edit, :id => 10000
       end
@@ -131,15 +133,15 @@ describe GroupsController do
   end
 
   describe 'PUT update' do
-    extend Groups
+    include GroupsContext
     context 'when not logged in' do
-      before do
+      before :each do
         put :update, :id => owned_group.id, :group => {:name => 'Edited'}
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the owner' do
-      before do
+      before :each do
         sign_in group_member
         put :update, :id => owned_group.id, :group => {:name => 'Edited'}
       end
@@ -147,22 +149,24 @@ describe GroupsController do
     end
     context 'when logged in as owner' do
       context 'with invalid attributes' do
-        before do
+        before :each do
           sign_in group_owner
           put :update, :id => owned_group.id, :group => {:name => ''}
         end
+
         it_should_behave_like 'the controller responded with template', :edit
       end
       context 'with valid attributes' do
-        before do
+        before :each do
           sign_in group_owner
           put :update, :id => owned_group.id, :group => {:name => 'Edited'}
         end
+
         it_should_behave_like 'the controller responded successful verbose redirect'
       end
     end
     context 'when bogus commentable_id given' do
-      before do
+      before :each do
         sign_in group_member
         put :update, :id => 10000, :group => {:name => 'Edited'}
       end
@@ -171,29 +175,29 @@ describe GroupsController do
   end
 
   describe 'DELETE destroy' do
-    extend Groups
+    include GroupsContext
     context 'when not logged in' do
-      before do
+      before :each do
         delete :destroy, :id => owned_group.id
       end
       it_should_behave_like 'the controller required login on GET'
     end
     context 'when logged in, but not as the owner' do
-      before do
+      before :each do
         sign_in group_member
         delete :destroy, :id => owned_group.id
       end
       it_should_behave_like 'the controller responded 403: Access Denied'
     end
     context 'when logged in as owner' do
-      before do
+      before :each do
         sign_in group_owner
         delete :destroy, :id => owned_group.id
       end
       it { should respond_with(:redirect) }
     end
     context 'when bogus commentable_id given' do
-      before do
+      before :each do
         sign_in group_member
         delete :destroy, :id => 10000
       end
@@ -202,22 +206,22 @@ describe GroupsController do
   end
 
   describe 'GET join' do
-    extend Groups
+    include GroupsContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :join, :id => public_group.id, :format => 'js'
       end
       it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in group_joiner
         get :join, :id => public_group.id, :format => 'js'
       end
       it_should_behave_like 'the controller responded with template', :join
     end
     context 'when bogus id given' do
-      before do
+      before :each do
         sign_in group_joiner
         get :join, :id => 10000, :format => 'js'
       end
@@ -226,22 +230,22 @@ describe GroupsController do
   end
 
   describe 'GET leave' do
-    extend Groups
+    include GroupsContext
     context 'when not logged in' do
-      before do
+      before :each do
         get :leave, :id => public_group.id, :format => 'js'
       end
       it_should_behave_like 'the controller required login on POST'
     end
     context 'when logged in' do
-      before do
+      before :each do
         sign_in group_member
         get :leave, :id => owned_group.id, :format => 'js'
       end
       it_should_behave_like 'the controller responded with template', :leave
     end
     context 'when bogus id given' do
-      before do
+      before :each do
         sign_in group_member
         get :leave, :id => 10000, :format => 'js'
       end

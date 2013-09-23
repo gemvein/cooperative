@@ -33,7 +33,7 @@ describe Page do
   it { should have_many(:children) }
 
   context 'Class Methods' do
-    extend Pages
+    include PagesContext
 
     describe '#find_all_root_pages' do
       subject { Page.find_all_root_pages }
@@ -124,7 +124,7 @@ describe Page do
   end
 
   context 'Instance Methods' do
-    extend Pages
+    include PagesContext
 
     describe '#should_generate_new_friendly_id?' do
       context 'when new' do

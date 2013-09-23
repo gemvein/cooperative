@@ -60,7 +60,7 @@ class User < ActiveRecord::Base
   has_many :statuses
 
   def nickname_valid? #TODO test this method
-    nickname.match /^([^\s\?,;:'"<>]*[^\s\?,;:'"<>\.-])$/
+    nickname.present? and nickname.match /^([^\s\?,;:'"<>]*[^\s\?,;:'"<>\.-])$/
   end
 
   def show_me

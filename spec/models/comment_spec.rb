@@ -18,7 +18,9 @@ describe Comment do
 
   describe 'Class Methods' do
     describe '.find_by_commentable' do
-      extend Comments
+      include BasicUsersContext
+      include ActivitiesContext
+      include CommentsContext
       subject { Comment.find_by_commentable(owned_status) }
       it { should include owned_comment }
       it { should include followed_comment }

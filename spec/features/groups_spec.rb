@@ -1,15 +1,10 @@
 require 'spec_helper'
 
 feature 'Groups' do
-
-  extend Login
-  extend Groups
-
-  before do
-  end
-
+  include LoginContext
+  include GroupsContext
   describe 'visiting the Index page' do
-    before do
+    before :each do
       sign_in_as group_joiner
       visit cooperative.groups_path
     end
@@ -23,7 +18,7 @@ feature 'Groups' do
   end
 
   describe 'visiting the Show page' do
-    before do
+    before :each do
       sign_in_as group_joiner
       visit cooperative.group_path(public_group)
     end
@@ -37,7 +32,7 @@ feature 'Groups' do
   end
 
   describe 'creating a new group' do
-    before do
+    before :each do
       sign_in_as group_joiner
       visit cooperative.groups_path
       click_link :create_a_group.l
@@ -46,14 +41,14 @@ feature 'Groups' do
     it_should_behave_like 'a cooperative page', :new_group.l
     describe 'new form' do
       context 'with invalid attributes' do
-        before do
+        before :each do
           click_button :save.l
         end
         it_should_behave_like 'a page with an object error', 'Group'
 
       end
       context 'with valid attributes' do
-        before do
+        before :each do
           fill_in 'group[name]', :with => 'Groups are Keen'
           fill_in 'group[description]', :with => 'Lorem ipsum dolor sit amet.'
           fill_in 'group[tag_list]', :with => 'tag1, tag2, tag3'
@@ -65,7 +60,7 @@ feature 'Groups' do
   end
 
   describe 'editing and updating a group' do
-    before do
+    before :each do
       sign_in_as group_owner
       visit cooperative.group_path(owned_group)
       click_link :edit_group.l
@@ -74,7 +69,7 @@ feature 'Groups' do
     it_should_behave_like 'a cooperative page', :edit_group.l
     describe 'edit form' do
       context 'with invalid attributes' do
-        before do
+        before :each do
           fill_in 'group[name]', :with => ''
           click_button :save.l
         end
@@ -82,7 +77,7 @@ feature 'Groups' do
 
       end
       context 'with valid attributes' do
-        before do
+        before :each do
           fill_in 'group[name]', :with => 'This has been edited.'
           fill_in 'group[description]', :with => 'Lorem ipsum dolor sit amet.'
           fill_in 'group[tag_list]', :with => 'tag1, tag2, tag3'
@@ -94,7 +89,7 @@ feature 'Groups' do
   end
 
   describe 'destroying a group' do
-    before do
+    before :each do
       sign_in_as group_owner
       visit cooperative.group_path(owned_group)
       click_link :delete_group.l

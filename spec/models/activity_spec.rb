@@ -15,7 +15,7 @@ describe Activity do
       context 'when full' do
         include BasicUsersContext
         include ActivitiesContext
-        subject { Activity.find_all_by_users([followed_user, follower_user]) }
+        subject { Activity.find_all_by_users([ActivitiesContext.followed_user, follower_user]) }
         it { should have_at_least(9).items }
         it { should include created_page_activity }
         it { should include edited_page_activity }
@@ -27,7 +27,7 @@ describe Activity do
 
       context 'when empty' do
         include BasicUsersContext
-        subject { Activity.find_all_by_users([followed_user, follower_user]).empty? }
+        subject { Activity.fActivitiesContext.followed_userers([followed_user, follower_user]).empty? }
         it { should be true }
       end
 
