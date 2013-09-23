@@ -9,6 +9,7 @@ describe ActivitiesController do
 
   describe 'GET index' do
     context 'when not logged in' do
+      include SharedBehaviors
       it_should_behave_like 'the controller required login on GET' do
         include BasicUsersContext
         before do
@@ -17,6 +18,7 @@ describe ActivitiesController do
       end
     end
     context 'when logged in' do
+      include SharedBehaviors
       it_should_behave_like 'the controller responded with template', :index do
         include ActivitiesContext
         before do
