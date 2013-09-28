@@ -1,5 +1,7 @@
     NOT YET STABLE, DO NOT ATTEMPT USE
 
+![Travis Status](https://travis-ci.org/nerakdon/cooperative.png)
+
 cooperative
 ===========
 
