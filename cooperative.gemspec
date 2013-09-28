@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Karen Lundgren"]
-  s.date = "2013-09-27"
+  s.date = "2013-09-28"
   s.description = "Cooperative provides Social Networking abilities to Rails 4 apps."
   s.email = "webmaster@sourcherryweb.com"
   s.extra_rdoc_files = [
@@ -201,8 +201,8 @@ Gem::Specification.new do |s|
     "lib/generators/cooperative/install/templates/migrate/create_messages_table.rb",
     "lib/generators/cooperative/install/templates/migrate/create_pages_table.rb",
     "lib/generators/cooperative/install/templates/migrate/create_roles_table.rb",
-    "lib/generators/cooperative/install/templates/migrate/create_roles_users_table.rb",
     "lib/generators/cooperative/install/templates/migrate/create_statuses_table.rb",
+    "lib/generators/cooperative/install/templates/migrate/create_users_roles_table.rb",
     "lib/generators/cooperative/install/templates/migrate/create_users_table.rb",
     "lib/generators/cooperative/utils.rb",
     "script/rails",
@@ -248,12 +248,17 @@ Gem::Specification.new do |s|
     "spec/dummy/config/initializers/devise.rb",
     "spec/dummy/config/initializers/inflections.rb",
     "spec/dummy/config/initializers/mime_types.rb",
+    "spec/dummy/config/initializers/rolify.rb",
     "spec/dummy/config/initializers/secret_token.rb",
     "spec/dummy/config/initializers/session_store.rb",
     "spec/dummy/config/initializers/wrap_parameters.rb",
     "spec/dummy/config/locales/devise.en.yml",
     "spec/dummy/config/locales/en.yml",
     "spec/dummy/config/routes.rb",
+    "spec/dummy/db/development.sqlite3",
+    "spec/dummy/db/migrate/.keep",
+    "spec/dummy/db/schema.rb",
+    "spec/dummy/db/test.sqlite3",
     "spec/dummy/lib/assets/.gitkeep",
     "spec/dummy/public/403.html",
     "spec/dummy/public/404.html",
@@ -2015,7 +2020,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<jquery-ui-bootstrap-rails-asset>, [">= 0"])
       s.add_runtime_dependency(%q<tinymce-rails>, [">= 0"])
       s.add_runtime_dependency(%q<cancan>, [">= 0"])
-      s.add_runtime_dependency(%q<devise>, [">= 0"])
+      s.add_runtime_dependency(%q<devise>, [">= 3.1.0"])
       s.add_runtime_dependency(%q<rolify>, [">= 0"])
       s.add_runtime_dependency(%q<paperclip>, [">= 0"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
@@ -2029,6 +2034,21 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<bootstrap_leather>, [">= 0"])
       s.add_runtime_dependency(%q<private_person>, [">= 0"])
       s.add_runtime_dependency(%q<cooperative>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<rspec-rails>, [">= 0"])
+      s.add_development_dependency(%q<shoulda-matchers>, [">= 0"])
+      s.add_development_dependency(%q<capybara>, [">= 0"])
+      s.add_development_dependency(%q<poltergeist>, [">= 0"])
+      s.add_development_dependency(%q<rdoc>, [">= 0"])
+      s.add_development_dependency(%q<bundler>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<simplecov>, [">= 0"])
+      s.add_development_dependency(%q<haml-rails>, [">= 0"])
+      s.add_development_dependency(%q<puma>, [">= 0"])
+      s.add_development_dependency(%q<sqlite3>, [">= 0"])
+      s.add_development_dependency(%q<factory_girl_rails>, [">= 0"])
+      s.add_development_dependency(%q<database_cleaner>, ["= 1.0.1"])
+      s.add_development_dependency(%q<parallel_tests>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<rspec-rails>, [">= 0"])
       s.add_development_dependency(%q<shoulda-matchers>, [">= 0"])
@@ -2155,7 +2175,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<jquery-ui-bootstrap-rails-asset>, [">= 0"])
       s.add_dependency(%q<tinymce-rails>, [">= 0"])
       s.add_dependency(%q<cancan>, [">= 0"])
-      s.add_dependency(%q<devise>, [">= 0"])
+      s.add_dependency(%q<devise>, [">= 3.1.0"])
       s.add_dependency(%q<rolify>, [">= 0"])
       s.add_dependency(%q<paperclip>, [">= 0"])
       s.add_dependency(%q<nokogiri>, [">= 0"])
@@ -2169,6 +2189,21 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<bootstrap_leather>, [">= 0"])
       s.add_dependency(%q<private_person>, [">= 0"])
       s.add_dependency(%q<cooperative>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
+      s.add_dependency(%q<rspec-rails>, [">= 0"])
+      s.add_dependency(%q<shoulda-matchers>, [">= 0"])
+      s.add_dependency(%q<capybara>, [">= 0"])
+      s.add_dependency(%q<poltergeist>, [">= 0"])
+      s.add_dependency(%q<rdoc>, [">= 0"])
+      s.add_dependency(%q<bundler>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<simplecov>, [">= 0"])
+      s.add_dependency(%q<haml-rails>, [">= 0"])
+      s.add_dependency(%q<puma>, [">= 0"])
+      s.add_dependency(%q<sqlite3>, [">= 0"])
+      s.add_dependency(%q<factory_girl_rails>, [">= 0"])
+      s.add_dependency(%q<database_cleaner>, ["= 1.0.1"])
+      s.add_dependency(%q<parallel_tests>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<rspec-rails>, [">= 0"])
       s.add_dependency(%q<shoulda-matchers>, [">= 0"])
@@ -2296,7 +2331,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<jquery-ui-bootstrap-rails-asset>, [">= 0"])
     s.add_dependency(%q<tinymce-rails>, [">= 0"])
     s.add_dependency(%q<cancan>, [">= 0"])
-    s.add_dependency(%q<devise>, [">= 0"])
+    s.add_dependency(%q<devise>, [">= 3.1.0"])
     s.add_dependency(%q<rolify>, [">= 0"])
     s.add_dependency(%q<paperclip>, [">= 0"])
     s.add_dependency(%q<nokogiri>, [">= 0"])
@@ -2310,6 +2345,21 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<bootstrap_leather>, [">= 0"])
     s.add_dependency(%q<private_person>, [">= 0"])
     s.add_dependency(%q<cooperative>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
+    s.add_dependency(%q<rspec-rails>, [">= 0"])
+    s.add_dependency(%q<shoulda-matchers>, [">= 0"])
+    s.add_dependency(%q<capybara>, [">= 0"])
+    s.add_dependency(%q<poltergeist>, [">= 0"])
+    s.add_dependency(%q<rdoc>, [">= 0"])
+    s.add_dependency(%q<bundler>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<simplecov>, [">= 0"])
+    s.add_dependency(%q<haml-rails>, [">= 0"])
+    s.add_dependency(%q<puma>, [">= 0"])
+    s.add_dependency(%q<sqlite3>, [">= 0"])
+    s.add_dependency(%q<factory_girl_rails>, [">= 0"])
+    s.add_dependency(%q<database_cleaner>, ["= 1.0.1"])
+    s.add_dependency(%q<parallel_tests>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<rspec-rails>, [">= 0"])
     s.add_dependency(%q<shoulda-matchers>, [">= 0"])

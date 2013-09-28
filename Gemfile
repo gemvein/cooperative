@@ -14,7 +14,6 @@ group :development, :test do
   gem 'rdoc'
   gem 'bundler'
   gem 'jeweler'
-  gem 'simplecov'
   gem 'haml-rails'
   gem 'puma'
   #gem 'w3c_rspec_validators'
@@ -23,7 +22,8 @@ group :development, :test do
   gem 'database_cleaner', '1.0.1' # problems with sql after this version
 end
 
-gem "parallel_tests", :group => :development
+gem 'parallel_tests', :group => :development
+gem 'coveralls', :require => false
 
 gem 'rails'
 gem 'protected_attributes'
@@ -46,7 +46,7 @@ gem 'tinymce-rails'
 
 gem 'cancan'
 gem 'devise', '>=3.1.0'
-gem 'rolify', :path => '~/Sites/rolify'
+gem 'rolify', :git => 'git://github.com/nerakdon/rolify.git'
 
 gem 'paperclip'
 gem 'nokogiri'
@@ -57,8 +57,8 @@ gem 'acts-as-taggable-on'
 gem 'acts_as_opengraph'
 gem 'opengraph'
 
-gem 'coletivo', :git => "git://github.com/nerakdon/coletivo.git"
-gem 'bootstrap_leather', :git => "git://github.com/nerakdon/bootstrap_leather.git"
-gem 'private_person', :git => "git://github.com/nerakdon/private_person.git"
+gem 'coletivo', :git => 'git://github.com/nerakdon/coletivo.git'
+gem 'bootstrap_leather', :git => 'git://github.com/nerakdon/bootstrap_leather.git'
+gem 'private_person', :git => 'git://github.com/nerakdon/private_person.git'
 
 gemspec
