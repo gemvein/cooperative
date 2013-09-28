@@ -8,6 +8,7 @@ class Ability
     can [:index], Activity do |activity|
       current_user.is_permitted? activity.owner, activity
     end
+    can [:index], Activity, :owner => current_user
 
     # Comments
     can [:read, :rate], Comment do |comment|
@@ -25,24 +26,24 @@ class Ability
     # Groups
     can [:new, :create], Group if !current_user.new_record?
     can :join, Group.open_to_the_public do |group|
-      !( current_user.has_role?('moderator', group) or current_user.has_role?('owner', group))
+      !( current_user.has_role?(:moderator, group) or current_user.has_role?(:owner, group))
     end
     can :join, Group do |group|
-      current_user.has_role?('invitee', group)
+      current_user.has_role?(:invitee, group)
     end
     can :leave, Group do |group|
-      current_user.has_role? 'member', group
+      current_user.has_role? :member, group
     end
     can :index, Group
     can :read, Group, :public => true
     can [:read, :participate], Group do |group|
-      current_user.has_role?('member', group)
+      current_user.has_role?(:member, group)
     end
     can [:read, :participate, :moderate], Group do |group|
-      current_user.has_role?('moderator', group)
+      current_user.has_role?(:moderator, group)
     end
     can [:read, :participate, :moderate, :edit, :update, :destroy], Group do |group|
-      current_user == group.owner
+      current_user.has_role?(:owner, group)
     end
 
     # Messages

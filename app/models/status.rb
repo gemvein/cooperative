@@ -16,30 +16,38 @@ class Status < ActiveRecord::Base
   # Cooperative extension to the Coletivo gem
   acts_as_rateable
 
+  # Acts as Opengraph gem
+  acts_as_opengraph :values => {
+      :type => 'website',
+      :site_name => Cooperative.configuration.application_name
+  }
+
   # Paperclip gem
   attr_reader :image_remote_url
-  has_attached_file :image, 
-      :styles => Cooperative.configuration.paperclip_options[:statuses], 
-      :default_url => "/assets/cooperative/:style/missing.png"
+  has_attached_file :image,
+                    :styles => Cooperative.configuration.paperclip_options[:statuses],
+                    :default_url => "/assets/cooperative/:style/missing.png",
+                    :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+                    :url => "/system/:attachment/:id/:style/:filename"
 
 
   attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type
   validates_presence_of :body, :user
-  
+
   belongs_to :user
   belongs_to :shareable, :polymorphic => true
   has_many :statuses, :as => :shareable
   has_many :comments, :as => :commentable
 
   def build_status(status = nil)
-    status ||= Status.new()
+    status ||= Status.new
     status.shareable = self
     status.title ||= title
     status.description ||= description.present? ? description : body
-    if !image_file_name.nil?
+    unless image_file_name.nil?
       status.image_file_name ||= image_file_name
     end
-    if !media_url.nil?
+    unless media_url.nil?
       status.media_url ||= media_url
       status.media_type ||= media_type
     end
@@ -71,5 +79,17 @@ class Status < ActiveRecord::Base
         create_activity(:mentioned_in, :owner => user, :recipient => recipient)
       end
     end
+  end
+
+  def url
+    Cooperative::Engine.routes.url_helpers.status_url(id)
+  end
+
+  def og_image
+    image.url(:thumb)
+  end
+
+  def title
+    :status_by_nickname.l :nickname => user.nickname
   end
 end

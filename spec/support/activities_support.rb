@@ -33,10 +33,10 @@ shared_context 'activities support' do
   let!(:flame_war_status) { FactoryGirl.create(:status, :user => followed_user) }
   let!(:flame_war_status_activity) { Activity.find(flame_war_status.activities.find_by_key('status.create').id) }
 
-  let!(:junk_statuses) {
+  before do
     25.times do
       FactoryGirl.create(:status, :user => followed_user)
     end
-  }
+  end
 
 end

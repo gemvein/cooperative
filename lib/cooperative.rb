@@ -1,7 +1,7 @@
 module Cooperative
   require 'rails'
   require 'rails-i18n'
-  require 'rails-dev-boost'
+  require 'parallel_tests'
   
   require 'cooperative/configuration'
   require 'cooperative/railtie'
@@ -26,7 +26,7 @@ module Cooperative
 
   require 'cancan'
   require 'devise'
-  require 'authorization'
+  require 'rolify'
   require 'private_person'
 
   require 'paperclip'

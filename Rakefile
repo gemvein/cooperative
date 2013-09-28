@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "https://github.com/nerakdon/cooperative.git"
   gem.license = "MIT"
   gem.summary = %Q{Cooperative Social Engine}
-  gem.description = %Q{Cooperative provides Social Networking abilities to Rails 3 apps.}
+  gem.description = %Q{Cooperative provides Social Networking abilities to Rails 4 apps.}
   gem.email = "webmaster@sourcherryweb.com"
   gem.authors = ["Karen Lundgren"]
   # dependencies defined in Gemfile

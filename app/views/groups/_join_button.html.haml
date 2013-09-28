@@ -1,4 +1,4 @@
 -if can? :leave, group
   =link_to icon('remove') + :leave_group.l, cooperative.leave_group_path(group), :class => 'btn btn-warning', :remote => true
 -elsif can? :join, group
-  =link_to icon('remove') + :join_group.l, cooperative.join_group_path(group), :class => 'btn btn-success', :remote => true
+  =link_to icon('check') + :join_group.l, cooperative.join_group_path(group), :class => 'btn btn-success', :remote => true

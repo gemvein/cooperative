@@ -20,7 +20,10 @@ shared_examples 'a cooperative page' do |title|
     it { should have_selector 'h1', :text => title }
   end
 
-  pending 'providing opengraph data'
+  describe 'providing opengraph data' do
+    it { should have_xpath '//meta[@name=\'og:title\']', :visible => false }
+    it { should have_xpath '//meta[@name=\'og:image_url\']', :visible => false }
+  end
 
   describe 'having the required stylesheets' do
     it { should have_xpath '//link[starts-with(@href, \'/assets/cooperative.css\')]', :visible => false }

@@ -17,16 +17,16 @@ group :development, :test do
   gem 'simplecov'
   gem 'haml-rails'
   gem 'puma'
-  gem 'w3c_rspec_validators'
+  #gem 'w3c_rspec_validators'
   gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'database_cleaner', '1.0.1' # problems with sql after this version
-  gem 'rails-dev-boost'
 end
 
+gem "parallel_tests", :group => :development
 
-
-gem 'rails', '3.2.14'
+gem 'rails'
+gem 'protected_attributes'
 gem 'rails-i18n'
 
 gem 'haml'
@@ -45,12 +45,12 @@ gem 'jquery-ui-bootstrap-rails-asset'
 gem 'tinymce-rails'
 
 gem 'cancan'
-gem 'devise'
-gem 'authorization'
+gem 'devise', '>=3.1.0'
+gem 'rolify', :path => '~/Sites/rolify'
 
 gem 'paperclip'
 gem 'nokogiri'
-gem 'friendly_id'
+gem 'friendly_id', :github => 'norman/friendly_id', :branch => '5.0-stable'
 gem 'public_activity'
 gem 'acts_as_follower'
 gem 'acts-as-taggable-on'

@@ -14,12 +14,12 @@ RSpec::Matchers.define :be_joinable do
   end
 
   define_method :is_joinable? do |actual|
-    actual.click_link :join_group.l
+    actual.click_link ' ' + :join_group.l
     was_joined? actual
   end
 
   define_method :was_joined? do |actual|
-    actual.has_selector? 'a', :text => :leave_group.l
+    actual.has_selector? 'a', :text => /#{:leave_group.l}$/
   end
 
   match do |group|
@@ -57,13 +57,13 @@ RSpec::Matchers.define :be_leaveable do
   end
 
   define_method :is_leaveable? do |actual|
-    actual.click_link :join_group.l
-    actual.click_link :leave_group.l
+    actual.click_link ' ' + :join_group.l
+    actual.click_link ' ' + :leave_group.l
     was_left? actual
   end
 
   define_method :was_left? do |actual|
-    actual.has_selector? 'a', :text => :join_group.l
+    actual.has_selector? 'a', :text => /#{:join_group.l}$/
   end
 
   match do |group|

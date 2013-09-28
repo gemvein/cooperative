@@ -1,7 +1,7 @@
 Cooperative::Engine.routes.draw do
 
   root :to => 'activities#index', :as => 'home'
-  match '/pages/*path' => 'pages#show', :as => 'show'
+  match '/pages/*path' => 'pages#show', :via => :get, :as => 'show'
 
   get '/profile' => 'profile#edit', :as => 'profile'
   put '/profile' => 'profile#update'
@@ -35,7 +35,7 @@ Cooperative::Engine.routes.draw do
     end
     resources :follows, :only => [:create, :index]
     resources :pages, :except => [:show, :index]
-    match 'pages/*path' => 'pages#show', :as => 'show'
+    match 'pages/*path' => 'pages#show', :via => :get, :as => 'show'
   end
 
   resources :messages, :only => [:index, :show, :new, :create] do

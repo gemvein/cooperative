@@ -29,8 +29,8 @@ class User < ActiveRecord::Base
   include PublicActivity::Activist
   activist
 
-  # Authorization gem
-  acts_as_authorized_user
+  # Rolify gem
+  rolify
 
   # FriendlyId gem
   extend FriendlyId
@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
   has_many :statuses
 
   def show_me
-    following_users.pluck(:id) << id
+    following_users.pluck(:id) + [id]
   end
 
   def activities
@@ -78,6 +78,17 @@ class User < ActiveRecord::Base
     end
     self.permit! 'following_users', self
     self.permit! 'user_followers', self
+  end
+
+  def follow(followable)
+    unless followable.id.nil?
+      if(self.follows.where(:followable_id => followable.id, :followable_type => followable.class.name).empty?)
+        follow = Follow.new()
+        follow.follower = self
+        follow.followable = followable
+        follow.save!
+      end
+    end
   end
 end
 
