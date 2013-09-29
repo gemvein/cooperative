@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2be0524b-2623-4e43-bea4-ee6892b0c912" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" afterPath="$PROJECT_DIR$/spec/dummy/db/test.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cooperative.iws" />
@@ -744,7 +743,11 @@
       <created>1380430526181</created>
       <updated>1380430526181</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Activities feature specs closer to passing">
+      <created>1380430627273</created>
+      <updated>1380430627273</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
