@@ -57,7 +57,7 @@ gem 'acts_as_opengraph'
 gem 'opengraph'
 
 gem 'coletivo', :git => 'git://github.com/nerakdon/coletivo.git'
-gem 'bootstrap_leather', :git => 'git://github.com/nerakdon/bootstrap_leather.git'
-gem 'private_person', :path => '~/Sites/private_person'
+gem 'bootstrap_leather'
+gem 'private_person'
 
 gemspec
