@@ -29,7 +29,6 @@ class StatusesController < CooperativeController
 
     respond_to do |format|
       if @status.save
-        @activity = @status.activities.first
         format.js
       else
         format.js

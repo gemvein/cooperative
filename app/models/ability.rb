@@ -4,12 +4,6 @@ class Ability
   def initialize(current_user)
     current_user ||= User.new # guest current_user (not logged in)
 
-    # Activities
-    can [:index], Activity do |activity|
-      current_user.is_permitted? activity.owner, activity
-    end
-    can [:index], Activity, :owner => current_user
-
     # Comments
     can [:read, :rate], Comment do |comment|
       current_user.is_permitted? comment.user, comment
@@ -79,12 +73,6 @@ class Ability
       current_user.is_permitted?(user, user)
     end
     can [:follow, :message], User if !current_user.new_record?
-    cannot :message, User do |user|
-      user.follows.blocked.include? current_user
-    end
-    cannot :message, User do |user|
-      current_user.follows.blocked.include? user # No fair doing the opposite, either.
-    end
 
     # Tags
     can [:read], Tag

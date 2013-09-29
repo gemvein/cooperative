@@ -48,38 +48,6 @@ describe User do
 
   context 'Instance Methods' do
 
-    describe '#show_me' do
-      include_context 'follower support'
-      subject { follower_user.show_me }
-      it { should have_exactly(2).items }
-      it { should include follower_user.id }
-      it { should include followed_user.id }
-    end
-
-    describe '#activities' do
-      include_context 'activities support'
-      subject { followed_user.activities }
-      it { should have_at_least(5).items }
-      it { should include created_page_activity }
-      it { should include edited_page_activity }
-      it { should include deleted_page_activity }
-      it { should include followed_status_activity }
-      it { should_not include owned_status_activity }
-      it { should include mentioned_in_status_activity }
-    end
-
-    describe '#activities_as_follower' do
-      include_context 'activities support'
-      subject { follower_user.activities_as_follower }
-      it { should have_at_least(6).items }
-      it { should include created_page_activity }
-      it { should include edited_page_activity }
-      it { should include deleted_page_activity }
-      it { should include owned_status_activity }
-      it { should include followed_status_activity }
-      it { should include mentioned_in_status_activity }
-    end
-
     describe '#ability' do
       include_context 'follower support'
       subject { followed_user.ability }

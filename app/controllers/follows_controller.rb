@@ -6,10 +6,16 @@ class FollowsController < CooperativeController
   def index
     @person = User.friendly.find(params[:person_id])
     authorize! :show, @person
-    @follows = @person.following_users.order(:nickname) || []
+    @follows = @person.publishers
 
     respond_to do |format|
-      format.json { render :json => @follows }
+      format.json {
+        @formatted_follows = [{:val => '', :meta => ''}]
+        for follow in @follows
+          @formatted_follows << {:val => follow.nickname, :meta => follow.image.url(:thumb)}
+        end
+        render :json => @formatted_follows
+      }
     end
   end
 
@@ -18,7 +24,7 @@ class FollowsController < CooperativeController
   def followers
     @person = User.friendly.find(params[:id])
     authorize! :show, @person
-    @followers = @person.followers
+    @followers = @person.subscribers
 
     respond_to do |format|
       format.json {
@@ -34,7 +40,7 @@ class FollowsController < CooperativeController
   # POST /people/nickname/follows.js
   def create
     @person = User.friendly.find(params[:person_id])
-    current_user.follow(@person)
+    ChalkDust.subscribe(current_user, :to => @person)
 
     respond_to do |format|
       format.js
@@ -44,7 +50,7 @@ class FollowsController < CooperativeController
   # DELETE /people/nickname/follows.js
   def destroy
     @person = User.friendly.find(params[:id])
-    current_user.stop_following(@person)
+    ChalkDust.unsubscribe(current_user, :from => @person)
 
     respond_to do |format|
       format.js

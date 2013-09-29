@@ -51,14 +51,13 @@ gem 'rolify', :git => 'git://github.com/nerakdon/rolify.git'
 gem 'paperclip'
 gem 'nokogiri'
 gem 'friendly_id', :github => 'norman/friendly_id', :branch => '5.0-stable'
-gem 'public_activity'
-gem 'acts_as_follower'
+gem 'chalk_dust', :git => 'git://github.com/krisleech/chalk_dust.git'
 gem 'acts-as-taggable-on'
 gem 'acts_as_opengraph'
 gem 'opengraph'
 
 gem 'coletivo', :git => 'git://github.com/nerakdon/coletivo.git'
 gem 'bootstrap_leather', :git => 'git://github.com/nerakdon/bootstrap_leather.git'
-gem 'private_person', :git => 'git://github.com/nerakdon/private_person.git'
+gem 'private_person', :path => '~/Sites/private_person'
 
 gemspec

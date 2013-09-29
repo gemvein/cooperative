@@ -2,9 +2,9 @@
 
 class User < ActiveRecord::Base
   # PrivatePerson gem
-  acts_as_permissor :of => [:following_users, :user_followers], :class_name => 'User'
+  acts_as_permissor :of => [:subscribers, :publishers], :class_name => 'User'
   acts_as_permissible :by => :self
-  after_create :create_default_permissions
+  after_create :create_default_permissions, :self_subscribe
 
   # Cancan gem
   delegate :can?, :cannot?, :to => :ability
@@ -14,20 +14,11 @@ class User < ActiveRecord::Base
       :styles => Cooperative.configuration.paperclip_options[:users], 
       :default_url => "/assets/cooperative/:style/missing.png"
 
-  
-  # Acts as Follower gem
-  acts_as_follower
-  acts_as_followable
-
   # Acts as Taggable On gem
   acts_as_taggable_on :skills, :interests, :hobbies
 
   # Coletivo gem
   has_own_preferences
-
-  # Public Activity gem
-  include PublicActivity::Activist
-  activist
 
   # Rolify gem
   rolify
@@ -51,18 +42,6 @@ class User < ActiveRecord::Base
   has_many :pages, :as => :pageable
   has_many :statuses
 
-  def show_me
-    following_users.pluck(:id) + [id]
-  end
-
-  def activities
-    Activity.where('id IN (?)', activities_as_owner_ids|activities_as_recipient_ids).order('created_at desc')
-  end
-
-  def activities_as_follower
-    Activity.find_all_by_users(show_me)
-  end
-
   def ability
     @ability ||= Ability.new(self)
   end
@@ -72,23 +51,24 @@ class User < ActiveRecord::Base
   end
 
   def create_default_permissions
-    for type in %w{Activity Comment Page Status}
-      self.wildcard_permit! 'following_users', type
-      self.wildcard_permit! 'user_followers', type
+    for type in %w{Comment Page Status}
+      self.wildcard_permit! 'subscribers', type
+      self.wildcard_permit! 'publishers', type
     end
-    self.permit! 'following_users', self
-    self.permit! 'user_followers', self
+    self.permit! 'subscribers', self
+    self.permit! 'publishers', self
   end
 
-  def follow(followable)
-    unless followable.id.nil?
-      if(self.follows.where(:followable_id => followable.id, :followable_type => followable.class.name).empty?)
-        follow = Follow.new()
-        follow.follower = self
-        follow.followable = followable
-        follow.save!
-      end
-    end
+  def self_subscribe
+    ChalkDust.self_subscribe(self)
+  end
+
+  def subscribers
+    ChalkDust.subscribers_of(self)
+  end
+
+  def publishers
+    ChalkDust.publishers_of(self)
   end
 end
 

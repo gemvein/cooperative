@@ -1,14 +1,11 @@
 class Status < ActiveRecord::Base
+  after_create :create_activity
 
   # PrivatePerson gem
   acts_as_permissible :by => :user
 
   before_save  :tokenize_tags
   after_create :tokenize_mentions
-
-  # Public Activity gem
-  include PublicActivity::Model
-  tracked :owner => :user
 
   # Acts as Taggable gem
   acts_as_taggable
@@ -76,13 +73,13 @@ class Status < ActiveRecord::Base
     for mention in body.scan /@([^\s\?,;:'"<>]+[^\s\?,;:'"<>\.-])/
       recipient = User.find_by_nickname(mention)
       if user.can? :mention, recipient
-        create_activity(:mentioned_in, :owner => user, :recipient => recipient)
+        ChalkDust.publish_event(recipient, 'mentioned in', self)
       end
     end
   end
 
   def url
-    Cooperative::Engine.routes.url_helpers.status_url(id)
+    Cooperative::Engine.routes.url_helpers.status_url(id, :only_path => true)
   end
 
   def og_image
@@ -91,5 +88,9 @@ class Status < ActiveRecord::Base
 
   def title
     :status_by_nickname.l :nickname => user.nickname
+  end
+
+  def create_activity
+    ChalkDust.publish_event(user, 'created', self)
   end
 end

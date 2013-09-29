@@ -1,5 +1,5 @@
-<% if(@activity) %>
-    $('#activities').prepend('<%= escape_javascript(render_activity @activity) %>');
+<% unless(@status.new_record?) %>
+    $('#activities').prepend('<%= escape_javascript(render @status) %>');
     $('.status_people').html('');
 	$('.status_grab').html('<div class="spinner"></div>');
 	$('.status_grab_group').hide();
