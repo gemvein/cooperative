@@ -1,0 +1,6 @@
+.activity.clearfix.infinitescroll-item
+  - case activity.event
+    - when 'created' do
+      = render "#{activity.class.name.downcase}/created"
+    - when 'mentioned in' do
+      = render "#{activity.class.name.downcase}/mentioned_in"

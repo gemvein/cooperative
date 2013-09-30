@@ -26,7 +26,6 @@ gem 'parallel_tests', :group => :development
 gem 'coveralls', :require => false
 
 gem 'rails'
-gem 'protected_attributes'
 gem 'rails-i18n'
 
 gem 'haml'
@@ -51,13 +50,13 @@ gem 'rolify', :git => 'git://github.com/nerakdon/rolify.git'
 gem 'paperclip'
 gem 'nokogiri'
 gem 'friendly_id', :github => 'norman/friendly_id', :branch => '5.0-stable'
-gem 'chalk_dust', :git => 'git://github.com/krisleech/chalk_dust.git'
+gem 'chalk_dust', :git => 'git://github.com/nerakdon/chalk_dust.git'
 gem 'acts-as-taggable-on'
 gem 'acts_as_opengraph'
 gem 'opengraph'
 
 gem 'coletivo', :git => 'git://github.com/nerakdon/coletivo.git'
 gem 'bootstrap_leather'
-gem 'private_person'
+gem 'private_person', :git => 'git://github.com/nerakdon/private_person.git'
 
 gemspec

@@ -1,5 +1,7 @@
 <% unless(@status.new_record?) %>
-    $('#activities').prepend('<%= escape_javascript(render @status) %>');
+    console.log('<%= @activity.to_json %>');
+    console.log('<%= @activity.to_json %>');
+    $('#activities').prepend('<%= escape_javascript(render @activity) %>');
     $('.status_people').html('');
 	$('.status_grab').html('<div class="spinner"></div>');
 	$('.status_grab_group').hide();

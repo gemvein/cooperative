@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   # PrivatePerson gem
   acts_as_permissor :of => [:subscribers, :publishers], :class_name => 'User'
   acts_as_permissible :by => :self
-  after_create :create_default_permissions, :self_subscribe
+  after_create :after_create
 
   # Cancan gem
   delegate :can?, :cannot?, :to => :ability
@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :bio, :image, :skill_list, :interest_list, :hobby_list
+  # attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :bio, :image, :skill_list, :interest_list, :hobby_list
   validates_presence_of :nickname
 
   has_many :comments
@@ -48,6 +48,11 @@ class User < ActiveRecord::Base
 
   def message_trash
     Message.trash_by(self.id)
+  end
+
+  def after_create
+    create_default_permissions
+    self_subscribe
   end
 
   def create_default_permissions

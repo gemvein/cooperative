@@ -1,5 +1,4 @@
 class Status < ActiveRecord::Base
-  after_create :create_activity
 
   # PrivatePerson gem
   acts_as_permissible :by => :user
@@ -28,7 +27,7 @@ class Status < ActiveRecord::Base
                     :url => "/system/:attachment/:id/:style/:filename"
 
 
-  attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type
+  # attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type
   validates_presence_of :body, :user
 
   belongs_to :user
@@ -88,9 +87,5 @@ class Status < ActiveRecord::Base
 
   def title
     :status_by_nickname.l :nickname => user.nickname
-  end
-
-  def create_activity
-    ChalkDust.publish_event(user, 'created', self)
   end
 end

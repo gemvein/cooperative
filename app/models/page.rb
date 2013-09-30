@@ -16,7 +16,7 @@ class Page < ActiveRecord::Base
   acts_as_taggable
 
   # Accessible attributes
-  attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :tag_list
+  # attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :tag_list
 
   # Required attributes
   validates_presence_of :slug, :title, :body

@@ -28,7 +28,8 @@ class StatusesController < CooperativeController
     @status.user = current_user
 
     respond_to do |format|
-      if @status.save
+      if @status.save && ChalkDust.publish_event(current_user, 'created', @status)
+        @activity = ChalkDust::ActivityItem.where(:event => 'created', :target_type => 'Status', :target_id => @status.id)
         format.js
       else
         format.js

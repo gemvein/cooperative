@@ -55,4 +55,11 @@ private
   def polymorphic_resource
     params[:nesting_resource] || request.fullpath.split('/')[1] || nil
   end
+
+  def activity_params(performer, event, target, options = {})
+    performer.require(:id)
+    event.require(:to_s)
+    target.require(:id)
+    options.permit(:root, :topic)
+  end
 end
