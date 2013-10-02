@@ -65,7 +65,7 @@ class User < ActiveRecord::Base
   end
 
   def self_subscribe
-    ChalkDust.self_subscribe(self)
+    ChalkDust.subscribe(self, :to => self, :topic => :all)
   end
 
   def subscribers

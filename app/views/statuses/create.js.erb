@@ -1,12 +1,15 @@
-<% unless(@status.new_record?) %>
-    console.log('<%= @activity.to_json %>');
-    console.log('<%= @activity.to_json %>');
-    $('#activities').prepend('<%= escape_javascript(render @activity) %>');
+<% if(!@status.new_record? && !@status.activity.nil?) %>
+    $('#activities').prepend('<%= escape_javascript(render :partial => 'activities/activity', :locals => {:activity => @status.activity}) %>');
     $('.status_people').html('');
 	$('.status_grab').html('<div class="spinner"></div>');
 	$('.status_grab_group').hide();
 	$('.spinner').spin('small');
-<% else %>
+    $('.status_body, .status_title, .status_description, .status_image_remote_url, .status_media_url, .status_media_type').val('');
+<% elsif(error_messages(@status)) %>
     $('#activities').prepend('<%= escape_javascript(error_messages(@status)) %>');
+    $('.alert').hide().toggle('highlight');
+    $('.status_body, .status_title, .status_description, .status_image_remote_url, .status_media_url, .status_media_type').val('');
+<% else %>
+    $('#activities').prepend('<%= escape_javascript(alert('alert-error', :an_unknown_error_occurred.l)) %>');
+    $('.alert').hide().toggle('highlight');
 <% end %>
-$('.status_body, .status_title, .status_description, .status_image_remote_url, .status_media_url, .status_media_type').val('');

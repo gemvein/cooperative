@@ -21,7 +21,7 @@ shared_context 'pages support' do
   let!(:private_inner_page) { FactoryGirl.create(:page, :title => 'Inner', :pageable => private_page_owner, :parent => private_home_page) }
 
   before do
-    page_follower.follow page_owner
-    private_page_owner.follow page_viewer
+    ChalkDust.subscribe(page_follower, :to => page_owner)
+    ChalkDust.subscribe(private_page_owner, :to => page_viewer)
   end
 end

@@ -4,7 +4,7 @@ class Status < ActiveRecord::Base
   acts_as_permissible :by => :user
 
   before_save  :tokenize_tags
-  after_create :tokenize_mentions
+  after_create :after_create
 
   # Acts as Taggable gem
   acts_as_taggable
@@ -77,6 +77,15 @@ class Status < ActiveRecord::Base
     end
   end
 
+  def create_activity
+    ChalkDust.publish_event(user, 'created', self, :root => user) or raise :activity_not_created.l
+  end
+
+  def after_create
+    tokenize_mentions
+    create_activity
+  end
+
   def url
     Cooperative::Engine.routes.url_helpers.status_url(id, :only_path => true)
   end
@@ -86,6 +95,11 @@ class Status < ActiveRecord::Base
   end
 
   def title
-    :status_by_nickname.l :nickname => user.nickname
+    'temp'
+    #:status_by_nickname.l :nickname => user.nickname
+  end
+
+  def activity
+    ChalkDust::ActivityItem.where(:event => 'created', :target_type => 'Status', :target_id => id).first
   end
 end

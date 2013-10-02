@@ -6,7 +6,7 @@
       - elsif !status.image_file_name.nil?
         .span3.pull-right= thumbnail link_to image_tag(status.image.url(:medium)), status.url
       %h3= link_to status.title, status.url
-      %p= tokenize status.description
+      %p= tokenize status.description.to_s
       -if !status.shareable.nil?
         %cite
           = :posted_by.l
