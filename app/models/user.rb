@@ -65,7 +65,7 @@ class User < ActiveRecord::Base
   end
 
   def self_subscribe
-    ChalkDust.subscribe(self, :to => self, :topic => :all)
+    ChalkDust.subscribe(self, :to => self)
   end
 
   def subscribers
@@ -74,6 +74,14 @@ class User < ActiveRecord::Base
 
   def publishers
     ChalkDust.publishers_of(self)
+  end
+
+  def activities
+    ChalkDust::ActivityItem.where(:performer => self)
+  end
+
+  def activities_as_subscriber
+    ChalkDust.activity_feed_for(self, :topic => :all)
   end
 end
 

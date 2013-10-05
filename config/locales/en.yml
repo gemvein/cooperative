@@ -100,6 +100,7 @@ en:
   skills: "Skills"
   subject: "Subject"
   status: "Status"
+  status_by_nickname: "Status by %{nickname}"
   statuses: "Statuses"
   tagged_with: "Tagged With"
   tags: "Tags"

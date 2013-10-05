@@ -20,6 +20,8 @@ shared_examples 'a page with a status form' do |selector, namespace|
         within selector do
           fill_in "#{namespace}_status_body", :with => 'I had a rooster and the rooster pleased me.'
           click_button :set_status.l
+          sleep 60
+          save_and_open_page
         end
         expect(page).to have_content 'I had a rooster and the rooster pleased me.'
       end

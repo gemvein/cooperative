@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Karen Lundgren"]
-  s.date = "2013-09-30"
+  s.date = "2013-10-04"
   s.description = "Cooperative provides Social Networking abilities to Rails 4 apps."
   s.email = "webmaster@sourcherryweb.com"
   s.extra_rdoc_files = [
@@ -86,12 +86,8 @@ Gem::Specification.new do |s|
     "app/models/status.rb",
     "app/models/tag.rb",
     "app/models/user.rb",
-    "app/views/activities/_activity.html.haml",
     "app/views/activities/_menu_item.html.haml",
     "app/views/activities/index.html.haml",
-    "app/views/activities/page/_created.html.haml",
-    "app/views/activities/status/_created.html.haml",
-    "app/views/activities/status/_mentioned_in.html.haml",
     "app/views/comments/_comment.html.haml",
     "app/views/comments/_comments.html.haml",
     "app/views/comments/_form.html.haml",
@@ -115,6 +111,8 @@ Gem::Specification.new do |s|
     "app/views/groups/leave.js.erb",
     "app/views/groups/new.html.haml",
     "app/views/groups/show.html.haml",
+    "app/views/layouts/422.html.haml",
+    "app/views/layouts/422.js.erb",
     "app/views/layouts/_actionable_descriptor.html.haml",
     "app/views/layouts/_tinymce_init.html.haml",
     "app/views/layouts/_video.html.haml",
@@ -223,7 +221,9 @@ Gem::Specification.new do |s|
     "spec/cooperative_spec.rb",
     "spec/dummy/.rspec",
     "spec/dummy/Rakefile",
+    "spec/dummy/app/assets/javascripts/application.js",
     "spec/dummy/app/assets/javascripts/customizable_bootstrap/index.js",
+    "spec/dummy/app/assets/stylesheets/application.css.scss",
     "spec/dummy/app/assets/stylesheets/customizable_bootstrap/colors.css.scss",
     "spec/dummy/app/assets/stylesheets/customizable_bootstrap/font.css.scss",
     "spec/dummy/app/assets/stylesheets/customizable_bootstrap/grid.css.scss",
@@ -2031,6 +2031,21 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<shoulda-matchers>, [">= 0"])
       s.add_development_dependency(%q<capybara>, [">= 0"])
       s.add_development_dependency(%q<poltergeist>, [">= 0"])
+      s.add_development_dependency(%q<launchy>, [">= 0"])
+      s.add_development_dependency(%q<rdoc>, [">= 0"])
+      s.add_development_dependency(%q<bundler>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<haml-rails>, [">= 0"])
+      s.add_development_dependency(%q<puma>, [">= 0"])
+      s.add_development_dependency(%q<sqlite3>, [">= 0"])
+      s.add_development_dependency(%q<factory_girl_rails>, [">= 0"])
+      s.add_development_dependency(%q<database_cleaner>, ["= 1.0.1"])
+      s.add_development_dependency(%q<parallel_tests>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<rspec-rails>, [">= 0"])
+      s.add_development_dependency(%q<shoulda-matchers>, [">= 0"])
+      s.add_development_dependency(%q<capybara>, [">= 0"])
+      s.add_development_dependency(%q<poltergeist>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, [">= 0"])
       s.add_development_dependency(%q<bundler>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
@@ -2222,6 +2237,21 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<bootstrap_leather>, [">= 0"])
       s.add_dependency(%q<private_person>, [">= 0"])
       s.add_dependency(%q<cooperative>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
+      s.add_dependency(%q<rspec-rails>, [">= 0"])
+      s.add_dependency(%q<shoulda-matchers>, [">= 0"])
+      s.add_dependency(%q<capybara>, [">= 0"])
+      s.add_dependency(%q<poltergeist>, [">= 0"])
+      s.add_dependency(%q<launchy>, [">= 0"])
+      s.add_dependency(%q<rdoc>, [">= 0"])
+      s.add_dependency(%q<bundler>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<haml-rails>, [">= 0"])
+      s.add_dependency(%q<puma>, [">= 0"])
+      s.add_dependency(%q<sqlite3>, [">= 0"])
+      s.add_dependency(%q<factory_girl_rails>, [">= 0"])
+      s.add_dependency(%q<database_cleaner>, ["= 1.0.1"])
+      s.add_dependency(%q<parallel_tests>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<rspec-rails>, [">= 0"])
       s.add_dependency(%q<shoulda-matchers>, [">= 0"])
@@ -2419,6 +2449,21 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<bootstrap_leather>, [">= 0"])
     s.add_dependency(%q<private_person>, [">= 0"])
     s.add_dependency(%q<cooperative>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
+    s.add_dependency(%q<rspec-rails>, [">= 0"])
+    s.add_dependency(%q<shoulda-matchers>, [">= 0"])
+    s.add_dependency(%q<capybara>, [">= 0"])
+    s.add_dependency(%q<poltergeist>, [">= 0"])
+    s.add_dependency(%q<launchy>, [">= 0"])
+    s.add_dependency(%q<rdoc>, [">= 0"])
+    s.add_dependency(%q<bundler>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<haml-rails>, [">= 0"])
+    s.add_dependency(%q<puma>, [">= 0"])
+    s.add_dependency(%q<sqlite3>, [">= 0"])
+    s.add_dependency(%q<factory_girl_rails>, [">= 0"])
+    s.add_dependency(%q<database_cleaner>, ["= 1.0.1"])
+    s.add_dependency(%q<parallel_tests>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<rspec-rails>, [">= 0"])
     s.add_dependency(%q<shoulda-matchers>, [">= 0"])

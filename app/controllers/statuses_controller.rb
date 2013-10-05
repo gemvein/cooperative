@@ -1,5 +1,5 @@
 class StatusesController < CooperativeController
-  before_filter :only => [:create, :new, :update] do
+  before_filter :only =>[ :create, :new, :update] do
     params[:status] = status_params
   end
   add_breadcrumb :activities.l, '/activities'
@@ -38,8 +38,7 @@ class StatusesController < CooperativeController
   # DELETE /statuses/1.js
   # @status loaded by cancan
   def destroy
-    @activity = @status.activities.first
-    @status.destroy
+    @status.destroy!
     respond_to do |format|
       format.js
     end

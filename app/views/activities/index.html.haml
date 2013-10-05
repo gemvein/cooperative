@@ -8,7 +8,8 @@
 
 #activities.infinitescroll
   - for activity in @activities
-    = render 'activities/activity', :activity => activity
+    - if !activity.target.nil? && can?(:read, activity.target)
+      = render 'activities/activity', :activity => activity
   = paginate @activities, :engine_namespace => cooperative
 
 = follows_auto_complete '.active .tokenizer', cooperative.person_follows_path(:person_id => current_user.nickname, :format => 'json')

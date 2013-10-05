@@ -6,7 +6,7 @@ class FollowsController < CooperativeController
   def index
     @person = User.friendly.find(params[:person_id])
     authorize! :show, @person
-    @follows = @person.publishers
+    @follows = BootstrapPager.paginate_array(@person.publishers).page(params[:page])
 
     respond_to do |format|
       format.json {
@@ -16,6 +16,7 @@ class FollowsController < CooperativeController
         end
         render :json => @formatted_follows
       }
+      format.html
     end
   end
 
@@ -24,7 +25,7 @@ class FollowsController < CooperativeController
   def followers
     @person = User.friendly.find(params[:id])
     authorize! :show, @person
-    @followers = @person.subscribers
+    @followers = BootstrapPager.paginate_array(@person.subscribers).page(params[:page])
 
     respond_to do |format|
       format.json {
@@ -34,6 +35,7 @@ class FollowsController < CooperativeController
         end
         render :json => @formatted_followers
       }
+      format.html
     end
   end
 

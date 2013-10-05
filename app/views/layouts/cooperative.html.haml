@@ -42,7 +42,7 @@
         .span9
           -#%ol.breadcrumb= render_breadcrumbs :tag => :li
           = render_h1
-          = alert_flash_messages
+          #messages= alert_flash_messages
           = yield
         .span3.pull-right
           = render_widgets

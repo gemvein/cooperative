@@ -19,8 +19,9 @@ RSpec::Matchers.define :be_rateable do
 
   match do |rateable|
     if rateable.is_a? Capybara::Result
-      !rateable.any? { |member| !is_rateable? member }
+      rateable.all? { |member| is_rateable? member }
     else
+      puts rateable.class.name
       is_rateable? rateable
     end
   end

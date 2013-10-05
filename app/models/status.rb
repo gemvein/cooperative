@@ -78,7 +78,10 @@ class Status < ActiveRecord::Base
   end
 
   def create_activity
-    ChalkDust.publish_event(user, 'created', self, :root => user) or raise :activity_not_created.l
+    ChalkDust.publish_event(user, 'created', self, :root => user)
+    if self.activity.nil?
+      raise :activity_not_saved.l
+    end
   end
 
   def after_create
@@ -95,8 +98,7 @@ class Status < ActiveRecord::Base
   end
 
   def title
-    'temp'
-    #:status_by_nickname.l :nickname => user.nickname
+    user.nil? ? nil : :status_by_nickname.l(:nickname => user.nickname)
   end
 
   def activity
