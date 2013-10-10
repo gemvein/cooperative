@@ -1,0 +1,2 @@
+.activity.clearfix.infinitescroll-item
+  = render "#{activity.target.class.name.downcase.pluralize}/activities/#{activity.event.gsub(' ', '_')}", :activity => activity

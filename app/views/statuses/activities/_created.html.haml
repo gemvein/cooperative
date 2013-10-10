@@ -1,0 +1,25 @@
+- status = activity.target or Status.find(status_id)
+- if can? :read, status
+  - namespace = 'status_' + status.id.to_s
+  .status{:id => namespace}
+    - add_tab :show.l, 'show_' + namespace do
+      .span2
+        = thumbnail link_to image_tag(activity.owner.image.url(:medium)), cooperative.person_path(activity.owner.nickname)
+      .span4.pull-right
+        = actionable_descriptor status, 'check'
+        = tokenize status.body
+        - if can? :destroy, status
+          = link_to icon('trash'), cooperative.status_path(status, :format => :js), :method => :delete, :remote => true, :class => 'pull-right', data: { :confirm => :are_you_sure.l }
+        = render 'statuses/shareable', :status => status
+        .comments.clearfix{:id => namespace + '_comments_div'}
+          - unless status.comments.empty?
+            = render :partial => 'comments/comments', :locals => {:comments => status.comments}
+        - if can? :comment, status
+          = render :partial => 'comments/form', :locals => {:commentable => status, :activity_type => 'create'}
+    - add_tab badge(status.statuses.count.to_s, 'info') + :share.l, 'share_' + namespace do
+      = render :partial => 'statuses/form_for_sharing', :locals => {:status => status.build_status}
+    - add_tab :vote.l, 'vote_' + namespace, :before_link => rating_toggle(status) do
+      %div{:id => namespace + '_ratings_info'}= ratings_info status, :rates_name => :votes.l.downcase, :rated_name => :voted.l.downcase
+      %div{:id => namespace + '_vote_large_primary'}= rating_vote status, 'btn btn-primary btn-large'
+
+    = render_tabs 'left'

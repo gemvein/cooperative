@@ -1,0 +1,15 @@
+-if can? :index, activity.trackable
+  - unless activity.trackable.nil?
+    .activity.clearfix.infinitescroll-item
+      .status{:id => 'status_' + activity.trackable.id.to_s + '_mentions_' + activity.recipient.nickname}
+        - add_tab :show.l, 'show_status_' + activity.trackable.id.to_s + '_mentions_' + activity.recipient.nickname do
+          .span1
+            = thumbnail link_to image_tag(activity.recipient.image.url(:thumb)), cooperative.person_path(activity.recipient)
+          .span6
+            .muted
+              = icon 'user'
+              = :nickname_was_mentioned_in_a_status.l :nickname => link_to(activity.recipient.nickname, cooperative.person_path(activity.recipient)).html_safe
+              = activity.trackable.created_at
+            .well= render activity.trackable
+
+        = render_tabs 'left'

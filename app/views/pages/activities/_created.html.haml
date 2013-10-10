@@ -1,0 +1,13 @@
+.activity.clearfix.infinitescroll-item
+  .thumbnail.span1
+    = link_to image_tag(activity.owner.image.url(:thumb)), cooperative.person_path(activity.owner)
+  .span5
+    %i.icon-plus
+      &nbsp;
+    = link_to activity.owner.nickname, cooperative.person_path(activity.owner)
+    added a page
+
+    - if activity.trackable
+      = link_to activity.trackable.title, activity.trackable.path
+    - else
+      which has since been removed

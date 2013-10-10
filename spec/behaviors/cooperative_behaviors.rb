@@ -64,7 +64,9 @@ end
 shared_examples 'a page with an infinite scroll area' do
 
   context 'before scrolling' do
-    subject { page }
+    subject { page
+      page.save_screenshot('scroll.png')
+    }
     it { should have_selector '.infinitescroll', :count => 1 }
     it { should have_selector '.infinitescroll-item', :count => 25 }
     it { should have_selector 'nav.pagination a[rel=next]' }
