@@ -99,7 +99,7 @@ private
   def _get_http_size(url)
     uri = URI(url)
     Net::HTTP.start(uri.host, uri.port) do |http|
-        # Send a HEAD requesti
+        # Send a HEAD request
         response = http.head(uri.path)
 
         # Get the Content-Length header from response['Your-Header-Here']

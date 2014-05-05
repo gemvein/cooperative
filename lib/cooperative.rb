@@ -12,7 +12,6 @@ module Cooperative
   require 'haml'
   require 'haml-rails'
   require 'customizable_bootstrap'
-  require 'font-awesome-sass-rails'
   require 'bootstrap_forms'
   require 'bootstrap_leather'
   require 'breadcrumbs_on_rails'

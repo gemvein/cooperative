@@ -5,35 +5,31 @@ source 'http://rubygems.org'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
-group :development, :test do
+group :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'poltergeist'
-  gem 'rdoc'
-  gem 'bundler'
-  gem 'jeweler'
-  gem 'haml-rails'
-  gem 'puma'
-  #gem 'w3c_rspec_validators'
   gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'database_cleaner', '1.0.1' # problems with sql after this version
 end
 
-gem 'parallel_tests', :group => :development
+gem 'rdoc'
+gem 'bundler'
+gem 'jeweler'
+
 gem 'coveralls', :require => false
 
-gem 'rails'
+gem 'rails', '>= 4.1'
 gem 'protected_attributes'
 gem 'rails-i18n'
 
 gem 'haml'
 gem 'haml-rails'
 
-gem 'customizable_bootstrap'
-gem 'font-awesome-sass-rails'
+gem 'customizable_bootstrap', '>= 0.10.2'
 
 gem 'bootstrap_forms'
 gem 'breadcrumbs_on_rails'

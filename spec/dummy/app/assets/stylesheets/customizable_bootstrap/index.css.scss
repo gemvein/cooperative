@@ -2,12 +2,12 @@
 // You'll break it.
 //
 // Actually, you can customize it at will.
+//
+// Special thanks to pikock http://www.pikock.com/, who provided the less on which this sass was based.
 
 @import './font';
 @import './colors';
-@import './grid';
-@import './layers';
+@import './spacing';
 @import 'bootstrap';
-@import 'bootstrap-responsive';
-@import 'font-awesome';
+// @import 'font-awesome';
 @import './overrides';

@@ -1,0 +1,52 @@
+$padding-base-vertical: 6px;
+$padding-base-horizontal: 12px;
+$padding-large-vertical: 10px;
+$padding-large-horizontal: 16px;
+$padding-small-vertical: 5px;
+$padding-small-horizontal: 10px;
+$border-radius-base: 4px;
+$border-radius-large: 6px;
+$border-radius-small: 3px;
+$line-height-large: 1.33;
+$line-height-small: 1.5;
+
+
+$input-border-radius: $border-radius-base;
+$input-height-base: ($line-height-large + ($padding-base-vertical * 2) + 2);
+$input-height-large: (floor($padding-large-horizontal * $line-height-large) + ($padding-large-vertical * 2) + 2);
+$input-height-small: (floor($padding-small-horizontal * $line-height-small) + ($padding-small-vertical * 2) + 2);
+
+$table-cell-padding: 8px;
+$table-condensed-cell-padding: 5px;
+$table-cell-padding: 8px;
+$table-condensed-cell-padding: 5px;
+
+$navbar-height: 50px;
+$navbar-margin-bottom: $line-height-large;
+
+$navbar-border-radius: $border-radius-base;
+$navbar-padding-horizontal: $padding-base-horizontal;
+$navbar-padding-vertical: (($navbar-height - $line-height-large) / 2);
+
+$nav-link-padding: 10px 15px;
+
+$nav-pills-border-radius: $border-radius-base;
+
+$jumbotron-padding: 30px;
+
+
+$pager-border-radius: 15px;
+
+
+$tooltip-max-width: 200px;
+
+$tooltip-arrow-width: 5px;
+
+
+$popover-max-width: 276px;
+
+$popover-arrow-width: 10px;
+$popover-arrow-outer-width: ($popover-arrow-width + 1);
+
+
+$list-group-border-radius: $border-radius-base;
