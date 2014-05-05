@@ -4,11 +4,7 @@ class Status < ActiveRecord::Base
   acts_as_permissible :by => :user
 
   before_save  :tokenize_tags
-  after_create :tokenize_mentions
-
-  # Public Activity gem
-  include PublicActivity::Model
-  tracked :owner => :user
+  after_create :after_create
 
   # Acts as Taggable gem
   acts_as_taggable
@@ -31,7 +27,7 @@ class Status < ActiveRecord::Base
                     :url => "/system/:attachment/:id/:style/:filename"
 
 
-  attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type
+  # attr_accessible :body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type
   validates_presence_of :body, :user
 
   belongs_to :user
@@ -76,13 +72,25 @@ class Status < ActiveRecord::Base
     for mention in body.scan /@([^\s\?,;:'"<>]+[^\s\?,;:'"<>\.-])/
       recipient = User.find_by_nickname(mention)
       if user.can? :mention, recipient
-        create_activity(:mentioned_in, :owner => user, :recipient => recipient)
+        ChalkDust.publish_event(recipient, 'mentioned in', self)
       end
     end
   end
 
+  def create_activity
+    ChalkDust.publish_event(user, 'created', self, :root => user)
+    if self.activity.nil?
+      raise :activity_not_saved.l
+    end
+  end
+
+  def after_create
+    tokenize_mentions
+    create_activity
+  end
+
   def url
-    Cooperative::Engine.routes.url_helpers.status_url(id)
+    Cooperative::Engine.routes.url_helpers.status_url(id, :only_path => true)
   end
 
   def og_image
@@ -90,6 +98,10 @@ class Status < ActiveRecord::Base
   end
 
   def title
-    :status_by_nickname.l :nickname => user.nickname
+    user.nil? ? nil : :status_by_nickname.l(:nickname => user.nickname)
+  end
+
+  def activity
+    ChalkDust::ActivityItem.where(:event => 'created', :target_type => 'Status', :target_id => id).first
   end
 end

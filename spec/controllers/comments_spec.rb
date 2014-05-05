@@ -21,6 +21,7 @@ describe CommentsController do
       before do
         sign_in follower_user
         post :create, :comment => {:commentable_id => owned_status.id, :commentable_type => 'Status', :body => 'Lorem ipsum'}, :format => :js
+        page.save_screenshot 'screenshot.png'
       end
       it { should respond_with(:success) }
       it { should render_template(:create) }

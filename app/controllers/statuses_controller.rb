@@ -1,4 +1,7 @@
 class StatusesController < CooperativeController
+  before_filter :only =>[ :create, :new, :update] do
+    params[:status] = status_params
+  end
   add_breadcrumb :activities.l, '/activities'
   load_and_authorize_resource
   
@@ -26,22 +29,16 @@ class StatusesController < CooperativeController
   # @status loaded by cancan
   def create
     @status.user = current_user
-
+    @status.save!
     respond_to do |format|
-      if @status.save
-        @activity = @status.activities.first
-        format.js
-      else
-        format.js
-      end
+      format.js
     end
   end
 
   # DELETE /statuses/1.js
   # @status loaded by cancan
   def destroy
-    @activity = @status.activities.first
-    @status.destroy
+    @status.destroy!
     respond_to do |format|
       format.js
     end
@@ -95,6 +92,10 @@ class StatusesController < CooperativeController
   end
   
 private
+
+  def status_params
+    params.require(:status).permit(:body, :url, :title, :description, :image_remote_url, :shareable_id, :shareable_type, :tag_list, :media_url, :media_type)
+  end
 
   def _get_http_size(url)
     uri = URI(url)

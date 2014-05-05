@@ -1,5 +1,6 @@
 RSpec::Matchers.define :be_commentable do
   define_method :is_commentable? do |actual|
+    actual.click_link :show.l
     actual.fill_in 'comment[body]', :with => 'I had a rooster and the rooster pleased me.'
     actual.click_button :comment.l
     actual.has_selector? '.comment p', :text => 'I had a rooster and the rooster pleased me.'

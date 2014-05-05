@@ -1,11 +1,11 @@
-- status = activity.trackable or Status.find(status_id)
-- namespace = 'status_' + status.id.to_s
-.activity.clearfix.infinitescroll-item
+- status = activity.target or Status.find(status_id)
+- if can? :read, status
+  - namespace = 'status_' + status.id.to_s
   .status{:id => namespace}
     - add_tab :show.l, 'show_' + namespace do
-      .span1
-        = thumbnail link_to image_tag(activity.owner.image.url(:thumb)), cooperative.person_path(activity.owner.nickname)
-      .span6
+      .span2
+        = thumbnail link_to image_tag(activity.owner.image.url(:medium)), cooperative.person_path(activity.owner.nickname)
+      .span4.pull-right
         = actionable_descriptor status, 'check'
         = tokenize status.body
         - if can? :destroy, status

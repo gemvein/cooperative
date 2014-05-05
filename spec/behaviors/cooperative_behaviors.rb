@@ -20,11 +20,6 @@ shared_examples 'a cooperative page' do |title|
     it { should have_selector 'h1', :text => title }
   end
 
-  describe 'providing opengraph data' do
-    it { should have_xpath '//meta[@name=\'og:title\']', :visible => false }
-    it { should have_xpath '//meta[@name=\'og:image_url\']', :visible => false }
-  end
-
   describe 'having the required stylesheets' do
     it { should have_xpath '//link[starts-with(@href, \'/assets/cooperative.css\')]', :visible => false }
     it { should have_xpath '//link[starts-with(@href, \'/assets/application.css\')]', :visible => false }
@@ -59,10 +54,19 @@ shared_examples 'a cooperative page' do |title|
   end
 end
 
+shared_examples 'an opengraph node' do
+  describe 'providing opengraph data' do
+    it { should have_xpath '//meta[@name=\'og:title\']', :visible => false }
+    it { should have_xpath '//meta[@name=\'og:image_url\']', :visible => false }
+  end
+end
+
 shared_examples 'a page with an infinite scroll area' do
 
   context 'before scrolling' do
-    subject { page }
+    subject { page
+      page.save_screenshot('scroll.png')
+    }
     it { should have_selector '.infinitescroll', :count => 1 }
     it { should have_selector '.infinitescroll-item', :count => 25 }
     it { should have_selector 'nav.pagination a[rel=next]' }

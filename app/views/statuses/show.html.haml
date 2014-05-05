@@ -1,8 +1,8 @@
-- add_title :status.l
+- add_title @status.title
 - add_tab :show.l, 'show_status_' + @status.id.to_s do
   .span1
     = thumbnail link_to image_tag(@status.user.image.url(:thumb)), cooperative.person_path(@status.user.nickname)
-  .span6
+  .span5.pull-right
     = actionable_descriptor @status, 'check'
     = tokenize @status.body
     - if can? :destroy, @status
@@ -15,7 +15,7 @@
       .span1
         = thumbnail link_to image_tag(current_user.image.url(:thumb)), cooperative.person_path(current_user.nickname)
       .span4{:id => 'status_' + @status.id.to_s + '_comment_form'}
-        = render :partial => 'comments/form', :locals => {:commentable => @status}
+        = render :partial => 'comments/form', :locals => {:commentable => @status, :activity_type => 'show'}
 - add_tab badge(@status.statuses.count, 'info') + :share.l, 'share_status_' + @status.id.to_s do
   = render :partial => 'statuses/form_for_sharing', :locals => {:status => @status.build_status}
 - add_tab :vote.l, 'vote_status_' + @status.id.to_s do

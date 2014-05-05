@@ -17,7 +17,7 @@
   %h2= :groups.l
   %ul
     -for group in @tag.groups_tagged_with.first(5)
-      %li= link_to group.name, cooperative.people_path(group)
+      %li= link_to group.name, cooperative.group_path(group)
 
 -if !@tag.pages_tagged_with.empty?
   %h2= :pages.l

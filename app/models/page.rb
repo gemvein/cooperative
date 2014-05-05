@@ -1,10 +1,12 @@
 class Page < ActiveRecord::Base
+  after_create :create_activity
+
   # PrivatePerson gem
   acts_as_permissible :by => :user
 
   # Public Activity gem
-  include PublicActivity::Model
-  tracked :owner => :pageable
+  #include PublicActivity::Model
+  #tracked :owner => :pageable
 
   # Friendly ID gem
   extend FriendlyId
@@ -14,7 +16,7 @@ class Page < ActiveRecord::Base
   acts_as_taggable
 
   # Accessible attributes
-  attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :tag_list
+  # attr_accessible :body, :description, :keywords, :public, :title, :parent_id, :tag_list
 
   # Required attributes
   validates_presence_of :slug, :title, :body
@@ -87,5 +89,9 @@ class Page < ActiveRecord::Base
 
   def test_path
     path_parts.join('/')
+  end
+
+  def create_activity
+    ChalkDust.publish_event(pageable, 'added', self)
   end
 end

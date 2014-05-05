@@ -4,7 +4,7 @@ class CommentsController < CooperativeController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = current_user.comments.new(params[:comment])
+    @comment = current_user.comments.new(comment_params)
     @commentable = @comment.commentable || ( not_found and return )
     authorize! :create, @comment
     @comment.save!
@@ -24,5 +24,11 @@ class CommentsController < CooperativeController
     respond_to do |format|
       format.js
     end
+  end
+
+private
+
+  def comment_params
+    params.require(:comment).permit(:body, :commentable_id, :commentable_type)
   end
 end

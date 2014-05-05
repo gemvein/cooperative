@@ -3,6 +3,8 @@
 
 en:
   about_nickname: "About %{nickname}"
+  activity_not_saved: 'Activity not saved.'
+  an_unknown_error_occurred: 'An unknown error occurred.'
   are_you_sure: "Are you sure?"
   admin_dashboard: "Admin Dashboard"
   activities: "Activities"
@@ -98,6 +100,7 @@ en:
   skills: "Skills"
   subject: "Subject"
   status: "Status"
+  status_by_nickname: "Status by %{nickname}"
   statuses: "Statuses"
   tagged_with: "Tagged With"
   tags: "Tags"

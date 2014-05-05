@@ -15,7 +15,7 @@ ul.nav-tabs {
 
 .tabs-left {
 
-  .nav-tabs {
+  ul.nav-tabs {
     margin-right: 0;
 
     li {
@@ -27,5 +27,6 @@ ul.nav-tabs {
     border: 1px solid #ddd;
     border-left-color: transparent;
     height: 100%;
+    margin-left: 0;
   }
 }

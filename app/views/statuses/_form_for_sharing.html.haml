@@ -24,7 +24,7 @@
         -if status.description
           %p= tokenize status.description
 
-        -if status.shareable
+        -if status.shareable and !status.shareable.user.nil?
           %cite
             = :posted_by.l
             = link_to status.shareable.user.nickname, cooperative.person_path(status.shareable.user.nickname)

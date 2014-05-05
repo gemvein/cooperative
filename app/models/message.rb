@@ -1,5 +1,5 @@
 class Message < ActiveRecord::Base
-  attr_accessible :recipient_id, :sender_id, :subject, :body, :parent_id, :recipient_nickname
+  # attr_accessible :recipient_id, :sender_id, :subject, :body, :parent_id, :recipient_nickname
   validates_presence_of :body, :sender
   validates_presence_of :subject, :if => "parent.nil?"
   validates_presence_of :recipient_nickname

@@ -5,7 +5,7 @@ class Group < ActiveRecord::Base
   # Rolify gem
   resourcify
 
-  attr_accessible :description, :name, :public, :tag_list
+  # attr_accessible :description, :name, :public, :tag_list
   validates_presence_of :name
 
   def self.open_to_the_public

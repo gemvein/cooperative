@@ -1,6 +1,7 @@
     NOT YET STABLE, DO NOT ATTEMPT USE
 
 ![Travis Status](https://travis-ci.org/nerakdon/cooperative.png)
+[![Coverage Status](https://coveralls.io/repos/nerakdon/cooperative/badge.png?branch=rails4)](https://coveralls.io/r/nerakdon/cooperative?branch=rails4)
 
 cooperative
 ===========
@@ -22,14 +23,10 @@ Installation
 
 First, add the gem to your Gemfile
 
-    gem "cooperative", :git => "git://github.com/nerakdon/cooperative.git"
+    gem 'cooperative', :git => 'git://github.com/nerakdon/cooperative.git'
     
 Next, run the following commands
 
     > bundle install
     > rails g cooperative:install
     > rake db:migrate
-
-Add-ons
-------------
-* Cooperative plays nice with rails_admin gem, and they make great buddies.

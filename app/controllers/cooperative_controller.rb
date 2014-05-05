@@ -11,6 +11,7 @@ class CooperativeController < ActionController::Base
 
   rescue_from CanCan::AccessDenied, :with => :access_denied
   rescue_from ActiveRecord::RecordNotFound, :with => :not_found
+  rescue_from ActiveRecord::RecordInvalid, :with => :object_error
   
   #add_breadcrumb :home.l, '/'
 
@@ -20,6 +21,15 @@ class CooperativeController < ActionController::Base
 
   def access_denied
     authenticate_user! and render :status => 403, :layout => 'cooperative', :file => "#{Rails.root}/public/403"
+  end
+
+  def object_error(exception)
+    @exception = exception
+    respond_to do |format|
+      format.html { render :status => 422, :layout => 'cooperative', :file => "layouts/422" }
+      format.js { render :status => 422, :file => 'layouts/422' }
+    end
+
   end
 
 protected
@@ -54,5 +64,12 @@ private
 
   def polymorphic_resource
     params[:nesting_resource] || request.fullpath.split('/')[1] || nil
+  end
+
+  def activity_params(performer, event, target, options = {})
+    performer.require(:id)
+    event.require(:to_s)
+    target.require(:id)
+    options.permit(:root, :topic)
   end
 end

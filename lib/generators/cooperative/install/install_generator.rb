@@ -53,17 +53,10 @@ module Cooperative
       end
     end
     
-    def install_public_activity
-      unless ActiveRecord::Base.connection.table_exists? 'activities'
-        output "Public Activity lets users keep up with what's happening", :magenta
-        generate("public_activity:migration")
-      end
-    end
-
-    def install_acts_as_follower
-      unless ActiveRecord::Base.connection.table_exists? 'follows'
-        output "Acts as Follower lets one model follow another.", :magenta
-        generate("acts_as_follower")
+    def install_chalk_dust
+      unless ActiveRecord::Base.connection.table_exists? 'activity_items'
+        output "Chalk Dust lets users keep up with what's happening", :magenta
+        generate("chalk_dust:install_migrations")
       end
     end
     
@@ -78,13 +71,6 @@ module Cooperative
       unless ActiveRecord::Base.connection.table_exists? 'person_ratings'
         output "Coletivo is a rating and recommendation engine.", :magenta
         generate("coletivo")
-      end
-    end
-
-    def install_private_person
-      unless ActiveRecord::Base.connection.table_exists? 'permissions'
-        output "Private Person gives users control over their own privacy.", :magenta
-        generate("private_person:install")
       end
     end
 

@@ -65,6 +65,8 @@ class PagesController < CooperativeController
 
     respond_to do |format|
       if @page.save
+        ChalkDust.publish_event(current_user, 'created', @page)
+        @activity = ChalkDust::ActivityItem.where(:event => 'created', :target => @page).first
         format.html { redirect_to @page.path, :notice => 'Page was successfully created.' }
         format.json { render :json => @page, :status => :created, :location => @page }
       else
