@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :theme, :bio, :image, :skill_list, :interest_list, :hobby_list
+  # attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :theme, :bio, :image, :skill_list, :interest_list, :hobby_list
   validates_presence_of :nickname
 
   # Bootswitch gem
@@ -69,7 +69,7 @@ class User < ActiveRecord::Base
   end
 
   def self_subscribe
-    ChalkDust.subscribe(self, :to => self)
+    ChalkDust.self_subscribe(self)
   end
 
   def subscribers

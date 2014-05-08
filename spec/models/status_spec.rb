@@ -4,25 +4,12 @@ describe Status do
   # Check that gems are installed
   # PrivatePerson gem
   it { should have_many :permissions }
-  # Public Activity gem
-  it { should have_many(:activities) }
   # Acts as Taggable on gem
   it { should have_many(:base_tags).through(:taggings) }
   # Coletivo gem
   it { should have_many(:person_ratings) }
   # Paperclip gem
   it { should have_attached_file(:image) }
-
-  # Check that appropriate fields are accessible
-  it { should allow_mass_assignment_of(:body) }
-  it { should allow_mass_assignment_of(:url) }
-  it { should allow_mass_assignment_of(:description) }
-  it { should allow_mass_assignment_of(:image_remote_url) }
-  it { should allow_mass_assignment_of(:shareable_id) }
-  it { should allow_mass_assignment_of(:shareable_type) }
-  it { should allow_mass_assignment_of(:media_url) }
-  it { should allow_mass_assignment_of(:media_type) }
-  it { should allow_mass_assignment_of(:tag_list) }
 
   # Check that validations are happening properly
   it { should validate_presence_of(:user) }

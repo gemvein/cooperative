@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Karen Lundgren"]
-  s.date = "2014-05-07"
+  s.date = "2014-05-08"
   s.description = "Cooperative provides Social Networking abilities to Rails 4 apps."
   s.email = "webmaster@sourcherryweb.com"
   s.extra_rdoc_files = [
@@ -172,18 +172,18 @@ Gem::Specification.new do |s|
     "app/views/tags/_tag_list.html.haml",
     "app/views/tags/index.html.haml",
     "app/views/tags/show.html.haml",
-    "app/views/user/_menu_item.html.haml",
-    "app/views/user/confirmations/new.html.haml",
-    "app/views/user/mailer/confirmation_instructions.html.haml",
-    "app/views/user/mailer/reset_password_instructions.html.haml",
-    "app/views/user/mailer/unlock_instructions.html.haml",
-    "app/views/user/passwords/edit.html.haml",
-    "app/views/user/passwords/new.html.haml",
-    "app/views/user/registrations/edit.html.haml",
-    "app/views/user/registrations/new.html.haml",
-    "app/views/user/sessions/new.html.haml",
-    "app/views/user/shared/_links.haml",
-    "app/views/user/unlocks/new.html.haml",
+    "app/views/users/_menu_item.html.haml",
+    "app/views/users/confirmations/new.html.haml",
+    "app/views/users/mailer/confirmation_instructions.html.haml",
+    "app/views/users/mailer/reset_password_instructions.html.haml",
+    "app/views/users/mailer/unlock_instructions.html.haml",
+    "app/views/users/passwords/edit.html.haml",
+    "app/views/users/passwords/new.html.haml",
+    "app/views/users/registrations/edit.html.haml",
+    "app/views/users/registrations/new.html.haml",
+    "app/views/users/sessions/new.html.haml",
+    "app/views/users/shared/_links.haml",
+    "app/views/users/unlocks/new.html.haml",
     "config/initializers/devise.rb",
     "config/initializers/time_formats.rb",
     "config/locales/en.yml",
@@ -272,6 +272,13 @@ Gem::Specification.new do |s|
     "spec/dummy/db/migrate/20130929005901_chalk_dust_create_tables.rb",
     "spec/dummy/db/schema.rb",
     "spec/dummy/db/test.sqlite3",
+    "spec/dummy/db/test2.sqlite3",
+    "spec/dummy/db/test3.sqlite3",
+    "spec/dummy/db/test4.sqlite3",
+    "spec/dummy/db/test5.sqlite3",
+    "spec/dummy/db/test6.sqlite3",
+    "spec/dummy/db/test7.sqlite3",
+    "spec/dummy/db/test8.sqlite3",
     "spec/dummy/lib/assets/.gitkeep",
     "spec/dummy/public/403.html",
     "spec/dummy/public/404.html",
@@ -286,6 +293,10 @@ Gem::Specification.new do |s|
     "spec/dummy/public/system/statuses/images/000/000/004/medium/hqdefault.jpg",
     "spec/dummy/public/system/statuses/images/000/000/004/original/hqdefault.jpg",
     "spec/dummy/public/system/statuses/images/000/000/004/thumb/hqdefault.jpg",
+    "spec/dummy/public/system/users/images/000/000/001/large/Screenshot_from_2013-09-20_11_39_30.png",
+    "spec/dummy/public/system/users/images/000/000/001/medium/Screenshot_from_2013-09-20_11_39_30.png",
+    "spec/dummy/public/system/users/images/000/000/001/original/Screenshot_from_2013-09-20_11_39_30.png",
+    "spec/dummy/public/system/users/images/000/000/001/thumb/Screenshot_from_2013-09-20_11_39_30.png",
     "spec/factories/comments.rb",
     "spec/factories/groups.rb",
     "spec/factories/messages.rb",
@@ -336,9 +347,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<jeweler>, [">= 0"])
       s.add_runtime_dependency(%q<coveralls>, [">= 0"])
       s.add_runtime_dependency(%q<rails>, [">= 4.1"])
-      s.add_runtime_dependency(%q<protected_attributes>, [">= 0"])
       s.add_runtime_dependency(%q<rails-i18n>, [">= 0"])
-      s.add_runtime_dependency(%q<haml>, [">= 0"])
       s.add_runtime_dependency(%q<haml-rails>, [">= 0"])
       s.add_runtime_dependency(%q<bootstrap_forms>, [">= 0"])
       s.add_runtime_dependency(%q<breadcrumbs_on_rails>, [">= 0"])
@@ -371,9 +380,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<coveralls>, [">= 0"])
       s.add_dependency(%q<rails>, [">= 4.1"])
-      s.add_dependency(%q<protected_attributes>, [">= 0"])
       s.add_dependency(%q<rails-i18n>, [">= 0"])
-      s.add_dependency(%q<haml>, [">= 0"])
       s.add_dependency(%q<haml-rails>, [">= 0"])
       s.add_dependency(%q<bootstrap_forms>, [">= 0"])
       s.add_dependency(%q<breadcrumbs_on_rails>, [">= 0"])
@@ -407,9 +414,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<coveralls>, [">= 0"])
     s.add_dependency(%q<rails>, [">= 4.1"])
-    s.add_dependency(%q<protected_attributes>, [">= 0"])
     s.add_dependency(%q<rails-i18n>, [">= 0"])
-    s.add_dependency(%q<haml>, [">= 0"])
     s.add_dependency(%q<haml-rails>, [">= 0"])
     s.add_dependency(%q<bootstrap_forms>, [">= 0"])
     s.add_dependency(%q<breadcrumbs_on_rails>, [">= 0"])

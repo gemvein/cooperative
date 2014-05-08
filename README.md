@@ -1,5 +1,6 @@
     NOT YET STABLE, DO NOT ATTEMPT USE
 
+[![GitHub version](https://badge.fury.io/gh/nerakdon%2Fcooperative.svg)](http://badge.fury.io/gh/nerakdon%2Fcooperative)
 [![Build Status](https://travis-ci.org/nerakdon/cooperative.svg)](https://travis-ci.org/nerakdon/cooperative)
 [![Coverage Status](https://coveralls.io/repos/nerakdon/cooperative/badge.png)](https://coveralls.io/r/nerakdon/cooperative)
 

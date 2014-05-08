@@ -1,5 +1,5 @@
 class StatusesController < CooperativeController
-  before_filter :only =>[ :create, :new, :update] do
+  before_action :only => [:create, :new] do
     params[:status] = status_params
   end
   add_breadcrumb :activities.l, '/activities'

@@ -102,6 +102,6 @@ class Status < ActiveRecord::Base
   end
 
   def activity
-    ChalkDust::ActivityItem.where(:event => 'created', :target_type => 'Status', :target_id => id).first
+    ChalkDust::ActivityItem.where(:event => 'created', :target_type => 'Status', :target_id => id, :topic => 'status').first
   end
 end

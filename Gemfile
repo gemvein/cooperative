@@ -23,7 +23,6 @@ gem 'jeweler'
 gem 'coveralls', :require => false
 
 gem 'rails', '>= 4.1'
-gem 'protected_attributes'
 gem 'rails-i18n'
 
 gem 'haml-rails'
@@ -49,7 +48,7 @@ gem 'acts-as-taggable-on'
 gem 'acts_as_opengraph'
 gem 'opengraph'
 
-gem 'chalk_dust', :git => 'git://github.com/nerakdon/chalk_dust.git'
+gem 'chalk_dust', :path => '~/Sites/chalk_dust'
 gem 'coletivo', :git => 'git://github.com/nerakdon/coletivo.git'
 gem 'bootstrap_leather', :git => 'git://github.com/nerakdon/bootstrap_leather.git'
 gem 'private_person', :git => 'git://github.com/nerakdon/private_person.git'
