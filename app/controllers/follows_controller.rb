@@ -1,5 +1,5 @@
 class FollowsController < CooperativeController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   # GET /people/nickname/follows
   # GET /people/nickname/follows.json

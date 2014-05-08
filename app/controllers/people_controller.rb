@@ -1,5 +1,5 @@
 class PeopleController < CooperativeController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   add_breadcrumb :people.l, '/people'
 
   # GET /people

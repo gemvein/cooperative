@@ -22,6 +22,8 @@ describe User do
   # Cancan gem
   it { should respond_to(:can?) }
   it { should respond_to(:cannot?) }
+  # Bootswitch gem
+  it { should respond_to(:themes)}
 
   # Check that appropriate fields are accessible
   it { should allow_mass_assignment_of(:email) }

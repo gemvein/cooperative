@@ -1,5 +1,6 @@
 Cooperative::Engine.routes.draw do
 
+  devise_for :users, :class_name => 'User', :module => :devise
   root :to => 'activities#index', :as => 'home'
   match '/pages/*path' => 'pages#show', :via => :get, :as => 'show'
 

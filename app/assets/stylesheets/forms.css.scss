@@ -2,7 +2,7 @@
   font-weight: bold;
 }
 .required:before {
-  color: $brand-danger;
+  font-weight: bold;
   content: '(*Required) ';
   display: inline;
 }

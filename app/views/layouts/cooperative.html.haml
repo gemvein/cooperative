@@ -19,17 +19,18 @@
     - if @rss_title && @rss_url
       = auto_discovery_link_tag(:rss, @rss_url, {:title => @rss_title})
 
-    = stylesheet_link_tag 'cooperative'
+    = theme_stylesheet_link_tag
     = stylesheet_link_tag 'application'
+
     = render_head_css
 
   %body{:class => controller.controller_name}
     = nav_bar do
-      = nav_list do
+      = nav_list :class => 'navbar-nav navbar-left' do
         = render 'people/menu_item'
         = render 'groups/menu_item'
         = render 'tags/menu_item'
-      = nav_list :class => 'pull-right' do
+      = nav_list :class => 'navbar-nav navbar-right' do
         = render 'messages/menu_item'
         = render 'users/menu_item'
 
@@ -51,10 +52,10 @@
       = nav_list :class =>  'nav-pills' do
         = pages_menu_items
         - if signed_in?
-          = nav_item :sign_out.l, destroy_user_session_path, :method => 'delete'
+          = nav_item :sign_out.l, cooperative.destroy_user_session_path, :method => 'delete'
         - else
-          = nav_item :sign_in.l, new_user_session_path
-          = nav_item :sign_up.l, new_user_registration_path
+          = nav_item :sign_in.l, cooperative.new_user_session_path
+          = nav_item :sign_up.l, cooperative.new_user_registration_path
 
     %footer
       = javascript_include_tag 'cooperative'

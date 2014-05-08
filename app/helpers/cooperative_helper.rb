@@ -1,4 +1,11 @@
 module CooperativeHelper
+  def user_theme
+    if user_signed_in?
+      current_user.theme
+    else
+      Bootswitch.configuration.default_theme
+    end
+  end
 
   def tinymce_init
     render('layouts/tinymce_init')

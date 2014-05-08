@@ -11,6 +11,6 @@ describe Role do
   it { should validate_presence_of(:name) }
 
   # Check relationships
-  it { should have_and_belong_to_many(:users) }
+  it { should have_and_belong_to_many(:user) }
   it { should belong_to(:authorizable) }
 end

@@ -1,5 +1,5 @@
 class ActivitiesController < CooperativeController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   add_breadcrumb :activities.l, '/activities'
 
   # GET /activities

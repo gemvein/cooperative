@@ -1,5 +1,5 @@
 class GroupsController < CooperativeController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   
   # GET /groups
   # GET /groups.json

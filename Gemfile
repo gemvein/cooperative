@@ -26,10 +26,7 @@ gem 'rails', '>= 4.1'
 gem 'protected_attributes'
 gem 'rails-i18n'
 
-gem 'haml'
 gem 'haml-rails'
-
-gem 'customizable_bootstrap', '>= 0.10.2'
 
 gem 'bootstrap_forms'
 gem 'breadcrumbs_on_rails'
@@ -37,11 +34,10 @@ gem 'bootstrap_pager'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'jquery-ui-bootstrap-rails-asset'
 gem 'tinymce-rails'
 
 gem 'cancan'
-gem 'devise', '>=3.1.0'
+gem 'devise'
 gem 'rolify', :git => 'git://github.com/nerakdon/rolify.git'
 
 gem 'paperclip'
@@ -53,8 +49,11 @@ gem 'acts-as-taggable-on'
 gem 'acts_as_opengraph'
 gem 'opengraph'
 
+gem 'chalk_dust', :git => 'git://github.com/nerakdon/chalk_dust.git'
 gem 'coletivo', :git => 'git://github.com/nerakdon/coletivo.git'
 gem 'bootstrap_leather', :git => 'git://github.com/nerakdon/bootstrap_leather.git'
 gem 'private_person', :git => 'git://github.com/nerakdon/private_person.git'
+gem 'bootswitch'
+gem 'erb2haml'
 
 gemspec

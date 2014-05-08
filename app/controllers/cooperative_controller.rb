@@ -1,6 +1,6 @@
 class CooperativeController < ActionController::Base
 
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   include Rails.application.routes.url_helpers
   include Rails.application.routes.mounted_helpers
@@ -33,8 +33,11 @@ class CooperativeController < ActionController::Base
   end
 
 protected
+
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :nickname
+    devise_parameter_sanitizer.for(:sign_up) do |u|
+      u.permit :nickname, :email, :password, :password_confirmation
+    end
   end
 
 private

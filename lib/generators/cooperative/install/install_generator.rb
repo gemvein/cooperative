@@ -48,14 +48,14 @@ module Cooperative
       unless ActiveRecord::Base.connection.table_exists? 'statuses'
         migration_template 'migrate/create_statuses_table.rb', 'db/migrate/create_statuses_table.rb' rescue output $!.message
       end
-      unless ActiveRecord::Base.connection.table_exists? 'users'
+      unless ActiveRecord::Base.connection.table_exists? 'user'
         migration_template 'migrate/create_users_table.rb', 'db/migrate/create_users_table.rb' rescue output $!.message
       end
     end
     
     def install_chalk_dust
       unless ActiveRecord::Base.connection.table_exists? 'activity_items'
-        output "Chalk Dust lets users keep up with what's happening", :magenta
+        output "Chalk Dust lets user keep up with what's happening", :magenta
         generate("chalk_dust:install_migrations")
       end
     end
@@ -76,7 +76,7 @@ module Cooperative
 
     def install_private_person
       unless ActiveRecord::Base.connection.table_exists? 'permissions'
-        output "Private Person gives users control over their own privacy.", :magenta
+        output "Private Person gives user control over their own privacy.", :magenta
         generate("private_person:install")
       end
     end
@@ -87,15 +87,15 @@ module Cooperative
     end
 
     def install_devise
-      output "Devise is used to authenticate users.", :magenta
-      generate("devise:install")
+      output "Devise is used to authenticate user.", :magenta
+      generate("user:install")
     end
 
     def add_route
       output "Adding Cooperative to your routes.rb file", :magenta
       gsub_file "config/routes.rb", /mount Cooperative::Engine => '\/.*', :as => 'cooperative'/, ''
-      gsub_file "config/routes.rb", /devise_for :users, :class_name => 'User', :module => :devise/, ''
-      route("mount Cooperative::Engine => '/', :as => 'cooperative'\n  #devise_for :users, :class_name => 'User', :module => :devise")
+      gsub_file "config/routes.rb", /devise_for :user, :class_name => 'User', :module => :user/, ''
+      route("mount Cooperative::Engine => '/', :as => 'cooperative'\n  #devise_for :user, :class_name => 'User', :module => :user")
     end
     
     def self.next_migration_number(dirname)

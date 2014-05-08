@@ -1,5 +1,5 @@
 class ProfileController < CooperativeController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   add_breadcrumb :my_profile.l, '/profile'
   
   # GET /pages/1/edit

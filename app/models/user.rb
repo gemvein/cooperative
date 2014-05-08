@@ -11,8 +11,9 @@ class User < ActiveRecord::Base
 
   # Paperclip gem
   has_attached_file :image, 
-      :styles => Cooperative.configuration.paperclip_options[:users], 
+      :styles => Cooperative.configuration.paperclip_options[:user],
       :default_url => "/assets/cooperative/:style/missing.png"
+  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   # Acts as Taggable On gem
   acts_as_taggable_on :skills, :interests, :hobbies
@@ -28,13 +29,16 @@ class User < ActiveRecord::Base
   friendly_id :nickname
   
   # Devise gem
-  # Include default devise modules. Others available are:
+  # Include default user modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
-  # attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :bio, :image, :skill_list, :interest_list, :hobby_list
+  attr_accessible :email, :nickname, :password, :password_confirmation, :remember_me, :public, :theme, :bio, :image, :skill_list, :interest_list, :hobby_list
   validates_presence_of :nickname
+
+  # Bootswitch gem
+  validates_inclusion_of :theme, in: Bootswitch.configuration.themes + [nil]
 
   has_many :comments
   has_many :messages, :foreign_key => :recipient_id

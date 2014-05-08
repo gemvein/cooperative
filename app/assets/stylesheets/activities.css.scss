@@ -4,7 +4,7 @@
 
 .activities {
   .activity {
-    @extend .well;
+    border: solid 1px #000;
   }
   .activity, .modal-body {
       blockquote p {

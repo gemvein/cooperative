@@ -37,6 +37,7 @@ class CreateUsersTable < ActiveRecord::Migration
       ## Specific to Cooperative
       t.string :nickname
       t.text :bio
+      t.string :theme
 
       t.timestamps
     end

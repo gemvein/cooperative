@@ -1,5 +1,5 @@
 class RatingsController < CooperativeController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   # GET /statuses/1/rate/5.js
   def rate

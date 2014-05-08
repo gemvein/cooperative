@@ -2,6 +2,7 @@
 = bootstrap_form_for(@user, :url => cooperative.profile_path, :html => { :method => :put, :class => 'form form-horizontal' }) do |f|
   =f.file_field :image, :label => :profile_image.l
   =f.text_area :bio, :class => 'wysiwyg'
+  = f.select :theme, Bootswitch.configuration.themes
   = f.text_field :skill_list, :class => 'skill-tag-box'
   = f.text_field :interest_list, :class => 'interest-tag-box'
   = f.text_field :hobby_list, :class => 'hobby-tag-box'

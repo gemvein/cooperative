@@ -1,5 +1,5 @@
 class MessagesController < CooperativeController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   add_breadcrumb :inbox.l, '/messages'
 
   # GET /messages

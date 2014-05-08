@@ -12,8 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui-bootstrap
-//= require customizable_bootstrap
 //= require spin.min
 //= require jquery.spin
 //= require tinymce

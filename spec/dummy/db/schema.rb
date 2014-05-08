@@ -199,7 +199,7 @@ ActiveRecord::Schema.define(version: 20130929005901) do
     t.string "name"
   end
 
-  create_table "users", force: true do |t|
+  create_table "user", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -220,6 +220,7 @@ ActiveRecord::Schema.define(version: 20130929005901) do
     t.string   "authentication_token"
     t.string   "nickname"
     t.text     "bio"
+    t.string   "theme"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -228,12 +229,12 @@ ActiveRecord::Schema.define(version: 20130929005901) do
     t.datetime "image_updated_at"
   end
 
-  add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true
-  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+  add_index "user", ["authentication_token"], name: "index_users_on_authentication_token", unique: true
+  add_index "user", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+  add_index "user", ["email"], name: "index_users_on_email", unique: true
+  add_index "user", ["nickname"], name: "index_users_on_nickname", unique: true
+  add_index "user", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "user", ["unlock_token"], name: "index_users_on_unlock_token", unique: true
 
   create_table "users_roles", id: false, force: true do |t|
     t.integer "user_id"

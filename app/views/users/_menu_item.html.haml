@@ -1,16 +1,16 @@
 -if signed_in?
-  =dropdown_nav_item :logged_in_as.l + ' ' + current_user.nickname, cooperative.profile_path, params[:controller] == 'users' do
+  =dropdown_nav_item :logged_in_as.l + ' ' + current_user.nickname, cooperative.profile_path, params[:controller] == 'user' do
     -if can?(:access, :rails_admin)
       =nav_item :admin_dashboard.l, rails_admin.dashboard_path
       %li.divider
     = nav_item :edit_my_profile.l, cooperative.profile_path
-    = nav_item :edit_my_account.l, edit_user_registration_path
+    = nav_item :edit_my_account.l, cooperative.edit_user_registration_path
     %li.divider
     = nav_item :inbox.l, cooperative.messages_path
     %li.divider
     = nav_item :my_pages.l, cooperative.person_pages_path(current_user)
     %li.divider
-    = nav_item :sign_out.l, destroy_user_session_path, :method => 'delete'
+    = nav_item :sign_out.l, cooperative.destroy_user_session_path, :method => 'delete'
 -else
-  = nav_item :sign_in.l, new_user_session_path
-  = nav_item :sign_up.l, new_user_registration_path
+  = nav_item :sign_in.l, cooperative.new_user_session_path
+  = nav_item :sign_up.l, cooperative.new_user_registration_path
