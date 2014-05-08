@@ -1,7 +1,8 @@
     NOT YET STABLE, DO NOT ATTEMPT USE
 
-[![Build Status](https://travis-ci.org/nerakdon/cooperative.svg?branch=rails4)](https://travis-ci.org/nerakdon/cooperative)
-[![Coverage Status](https://coveralls.io/repos/nerakdon/cooperative/badge.png?branch=rails4)](https://coveralls.io/r/nerakdon/cooperative?branch=rails4)
+[![Build Status](https://travis-ci.org/nerakdon/cooperative.svg)](https://travis-ci.org/nerakdon/cooperative)
+[![Coverage Status](https://coveralls.io/repos/nerakdon/cooperative/badge.png)](https://coveralls.io/r/nerakdon/cooperative)
+
 cooperative
 ===========
 
