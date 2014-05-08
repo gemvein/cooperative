@@ -12,8 +12,7 @@ Designed as a full-service Rails 4 Mountable Engine, Cooperative can have you up
 
 It uses devise for authentication, and incorporates a number of popular gems with a great deal of custom code, in order to provide the savvy developer with a head-start at developing any Social Web 2.0 application. Buzzwords?  We've got them all.
 
-* Customizable Bootstrap with SASS
-* jQuery & jQueryUI-Bootstrap
+* Bootstrap provided by bootstrap-sass and souped up with bootswitch to swap out bootswatch themes.
 * Statuses, Comments, Pages, Posts, and Tags
 * Users, Follows, Groups, and Roles
 * Votes, Ratings, and (soon) the resulting Recommendations based on Euclidean Distance and Pearson’s Correlation Coefficient
